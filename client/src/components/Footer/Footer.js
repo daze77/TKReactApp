@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import SubFooter from './SubFooter'
 import './Footer.css'
@@ -36,6 +37,8 @@ function Footer(){
                                 <li><a href="">Art & Destination</a> </li>
                                 <li><a href="">Sitemap</a> </li>
                                 <li><a href="">Contact Us</a> </li>
+                                <li><Link to="/PrivacyPolicy">Privacy Policys</Link></li>
+
                             </ul>
                         </div>
 

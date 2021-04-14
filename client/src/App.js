@@ -29,6 +29,7 @@ import WallCoverings from './pages/WallCoverings'
 import WTP from './pages/WTP'
 import ArtandDesign from './pages/ArtandDesign'
 import About from './pages/TheArtist/TheArtist'
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
 
 
 
@@ -63,6 +64,8 @@ function App() {
         <Route exact path='/PrintingandServices' component={PrintingandServices} />
         <Route exact path='/Testimonials' component={Testimonials} />
         <Route exact path='/Contact' component={Contact} />
+        <Route exact path='/PrivacyPolicy' component={PrivacyPolicy} />
+
 
 
 
