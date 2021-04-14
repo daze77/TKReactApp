@@ -12,6 +12,19 @@ import Footer from './components/Footer/Footer'
 import Homepage from './pages/Homepage'
 import TheArtist from './pages/TheArtist/TheArtist'
 import GalleryCollection from './pages/GalleryCollection/GalleryCollection'
+import HospitalityandDesign from './pages/HospitalityandDesign/HospitalityandDesign'
+import Lighting from './pages/Lighting/Lighting'
+import Installations from './pages/Installations/Installations'
+
+
+import TheFrameShop from './pages/TheFrameShop/TheFrameShop'
+
+import PrintingandServices from './pages/PrintingandServices/PrintingandServices'
+
+import Testimonials from './pages/Testimonials/Testimonials'
+
+import Contact from './pages/Contact/Contact'
+
 import WallCoverings from './pages/WallCoverings'
 import WTP from './pages/WTP'
 import ArtandDesign from './pages/ArtandDesign'
@@ -23,6 +36,10 @@ import About from './pages/TheArtist/TheArtist'
 
 import logo from './logo.svg';
 import './App.css';
+
+
+// css
+import './pages/pages.css'
 
 
 function App() {
@@ -38,6 +55,16 @@ function App() {
 
         <Route exact path='/TheArtist' component={TheArtist} />
         <Route exact path='/GalleryCollection' component={GalleryCollection} />
+        <Route exact path='/HospitalityandDesign' component={HospitalityandDesign} />
+        <Route exact path='/Lighting' component={Lighting} />
+        <Route exact path='/TheFrameShop' component={TheFrameShop} />
+        <Route exact path='/Installations' component={Installations} />
+
+        <Route exact path='/PrintingandServices' component={PrintingandServices} />
+        <Route exact path='/Testimonials' component={Testimonials} />
+        <Route exact path='/Contact' component={Contact} />
+
+
 
         <Route exact path='/WallCoverings' component={WallCoverings} />
 

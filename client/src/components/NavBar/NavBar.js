@@ -61,10 +61,10 @@ function NavBar(){
                                     PRODUCTS
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li class="dropdown-item"><NavLink to="/GalleryCollection">Gallery Collection</NavLink></li>
-                                    <li class="dropdown-item"><NavLink to="/WallCoverings">Wall Coverings</NavLink></li>
-                                    <li class="dropdown-item"><NavLink to="/WTP">World Travel Photography</NavLink></li>
-                                    <li class="dropdown-item"><NavLink to="/ArtandDesign">Art & Design</NavLink></li>
+                                    <NavLink to="/GalleryCollection"><li class="dropdown-item">Gallery Collection</li></NavLink>
+                                    <NavLink to="/WallCoverings"><li class="dropdown-item">Wall Coverings</li></NavLink>
+                                    <NavLink to="/WTP"><li class="dropdown-item">World Travel Photography</li></NavLink>
+                                    <NavLink to="/ArtandDesign"><li class="dropdown-item">Art & Design</li></NavLink>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -72,14 +72,14 @@ function NavBar(){
                                     SERVICES
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li class="dropdown-item"><NavLink to="/HospitalityandDesign">Hospitality & Design</NavLink></li>
-                                    <li class="dropdown-item"><NavLink to="/Installation">Installations</NavLink></li>
-                                    <li class="dropdown-item"><NavLink to="/Lighting">Lighting</NavLink></li>
-                                    <li class="dropdown-item"><NavLink to="/TheFrameShop">The Frame Shop</NavLink></li>
-                                    <li class="dropdown-item"><NavLink to="/PrintingandServices">Printing & Services</NavLink></li>
-                                    <li class="dropdown-item"><NavLink to="/Testimonials">Testimonials</NavLink></li>
-                                    <li class="dropdown-item"><NavLink to="/TheArtist">TheArtist</NavLink></li>
-                                    <li class="dropdown-item"><NavLink to="/Contact">Contact</NavLink></li>
+                                    <NavLink to="/HospitalityandDesign"><li class="dropdown-item">Hospitality & Design</li></NavLink>
+                                    <NavLink to="/Installations"><li class="dropdown-item">Installations</li></NavLink>
+                                    <NavLink to="/Lighting"><li class="dropdown-item">Lighting</li></NavLink>
+                                    <NavLink to="/TheFrameShop"><li class="dropdown-item">The Frame Shop</li></NavLink>
+                                    <NavLink to="/PrintingandServices"><li class="dropdown-item">Printing & Services</li></NavLink>
+                                    <NavLink to="/Testimonials"><li class="dropdown-item">Testimonials</li></NavLink>
+                                    <NavLink to="/TheArtist"><li class="dropdown-item">TheArtist</li></NavLink>
+                                    <NavLink to="/Contact"><li class="dropdown-item">Contact</li></NavLink>
 
                                 </ul>
                             </li>
