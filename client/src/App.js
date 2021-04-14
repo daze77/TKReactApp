@@ -11,7 +11,7 @@ import Footer from './components/Footer/Footer'
 // pages
 import Homepage from './pages/Homepage'
 import TheArtist from './pages/TheArtist/TheArtist'
-import GalleryCollection from './pages/GalleryCollection'
+import GalleryCollection from './pages/GalleryCollection/GalleryCollection'
 import WallCoverings from './pages/WallCoverings'
 import WTP from './pages/WTP'
 import ArtandDesign from './pages/ArtandDesign'
