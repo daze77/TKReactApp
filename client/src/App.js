@@ -9,6 +9,11 @@ import Footer from './components/Footer/Footer'
 
 
 // pages
+import Login from './pages/Login'
+import Logout from './pages/Logout'
+
+import Register from './pages/Register'
+
 import Homepage from './pages/Homepage'
 import TheArtist from './pages/TheArtist/TheArtist'
 import GalleryCollection from './pages/GalleryCollection/GalleryCollection'
@@ -50,7 +55,9 @@ function App() {
       <BrowserRouter>
         <NavBar />
       
-
+        <Route exact path='/Login' component={Login} />
+        <Route exact path='/Logout' component={Logout} />
+        <Route exact path='/Register' component={Register} />
         <Route exact path={['/', 'index']} component={Homepage} />
         <Route exact path='/About' component={About} />
 

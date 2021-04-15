@@ -3,6 +3,7 @@ import { Redirect, NavLink, useLocation  } from "react-router-dom"
 import { useStoreContext } from "../../utils/GlobalStore"
 import fetchJSON from '../../utils/API'
 import logo from '../../assets/logo/logo.png'
+import NavLogin from './NavLogin'
 
 
 let timeout
@@ -53,8 +54,8 @@ function NavBar(){
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
-                    <NavLink to="/" class="navbar-brand" className="nav-link" activeClassName="active"><img src={logo} alt=""  />   <strong>   </strong></NavLink>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <NavLink to="/" class="navbar-brand" className="nav-link" activeClassName="active"><img src={logo} alt=""  /> </NavLink>
+                    <div class="collapse navbar-collapse me-1 ms-5" id="navbarTogglerDemo02">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -84,25 +85,21 @@ function NavBar(){
                                 </ul>
                             </li>
 
-                            {!name && <li class="nav-item"> <NavLink to="/Login" className="nav-link" activeClassName="active">Login</NavLink></li>}
 
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/TheArtist" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    THE ARTIST
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <NavLink to="/TheArtist"><li class="dropdown-item">TheArtist</li></NavLink>
+                                    <NavLink to="/Testimonials"><li class="dropdown-item">Testimonials</li></NavLink>
+                                    <NavLink to="/Contact"><li class="dropdown-item">Contact</li></NavLink>
+
+                                </ul>
+                            </li>
                         </ul>
-                        {name && 
-                            <div class="d-flex">
-                                <div class="mx-3">
-                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Welcome back <u>{name}</u>
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                                <li class="nav-item"> <NavLink to="/Logout" className="nav-link" activeClassName="active">Logout</NavLink></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        }
+                        <NavLogin />
                         <br/>
                     </div>
                 </div>
