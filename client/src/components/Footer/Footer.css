@@ -5,25 +5,25 @@
 
 }
 
-#footerright{
+/* #footerright{
     background-color: lightgrey;
     color: black;
     padding: 20px
-}
+} */
 
-#footerleftimage{
+/* #footerleftimage{
 
-    background-color: slategray;
+    background-color: slategray; */
     /* background-image: url(../../assets/images/tracks.jpg); */
-    background-size: cover;
+    /* background-size: cover;
     position:relative;
     padding: 30px;
-}
+} */
 
-#footerlefttext{
+/* #footerlefttext{
     font-weight: bolder;
 
-}
+} */
 
 .footerContact{
     display: block;
