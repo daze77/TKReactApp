@@ -2,16 +2,10 @@ import React from 'react'
 
 
 
-
 function Social(){
-
-
-
 
     return(
         <>
-
-
             <div class="footerpart1right">
                 <ul class="social-icons icon-circle icon-rotate list-unstyled list-inline">
                     <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -22,24 +16,12 @@ function Social(){
                 </ul>
             </div>
 
-
-
-
-
-
-
-
         </>
 
 
 
     )
-
-
-
-
 }
-
 
 
 export default Social
