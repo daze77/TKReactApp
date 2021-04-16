@@ -3,19 +3,13 @@ import React, {useState} from 'react'
 import Card from '../../components/Card/Card'
 import Media from "../../utils/ShowsTVFilm.json"
 
-import Tonykphoto07 from '../../assets/images/media/tonykphoto07.jpg'
-import Tonykphoto08 from '../../assets/images/media/tonykphoto08.jpg'
 
-import Tonykphoto09 from '../../assets/images/media/tonykphoto09.jpg'
-import Tonykphoto11 from '../../assets/images/media/tonykphoto11.jpg'
-import Tonykphoto12 from '../../assets/images/media/tonykphoto12.jpg'
-import Tonykphoto13 from '../../assets/images/media/shows-television-film1.jpg'
 
 
 
 function ShowsTVFilm(){
   
-
+    
 
 
 
@@ -37,6 +31,7 @@ function ShowsTVFilm(){
                             Title={media.Title}
                             Image={media.Image}
                             ImageName={media.ImageName}
+                    
                        />
 
                    ))}
