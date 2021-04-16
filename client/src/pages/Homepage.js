@@ -12,7 +12,7 @@ function Homepage(){
     return(
     <>
         <div>
-            <h1>Test HomePage</h1>
+            
             <Carousel />
 
         </div>

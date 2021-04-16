@@ -16,6 +16,7 @@ function Footer(){
     return(
         <>
             <footer>
+                <hr />
                 <div class="container">
                     <FooterLinks />
                 </div>
@@ -23,6 +24,8 @@ function Footer(){
 
                 <Subscriptions />
                 <SubFooter />
+
+                
 
 
             </footer>
