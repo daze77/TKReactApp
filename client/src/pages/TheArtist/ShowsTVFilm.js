@@ -23,7 +23,7 @@ function ShowsTVFilm(){
                 <h1>Shows, Television and Film</h1> 
                 <hr/>  
 
-                <div class="row row-cols-1 row-cols-md-2">
+                <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
                    {Media.map(media => (
                        <Card
                             Id={media.Id}

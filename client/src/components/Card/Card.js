@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Card.css'
+
 import Tonykphoto07 from '../../assets/images/media/tonykphoto07.jpg'
 import Tonykphoto08 from '../../assets/images/media/tonykphoto08.jpg'
 import Tonykphoto09 from '../../assets/images/media/tonykphoto09.jpg'
@@ -28,11 +30,13 @@ function Card(props){
 
     return(
         <>
-            <div class="card mb-3">
-                <img src={mediaObj[props.ImageName]} class="card-img-top" alt={props.ImageName}/>
-                <div class="card-body">
-                    <h5 class="card-title">{props.Show}</h5>
-                    <p class="card-text">{props.Title}</p>
+            <div class="col">
+                <div class="card h-100 mb-1" id="cardformat">
+                    <img key={props.Id} src={mediaObj[props.ImageName]} class="card-img-top" alt={props.ImageName}/>
+                    <div class="card-body">
+                        <h5 class="card-title">{props.Show}</h5>
+                        <p class="card-text">{props.Title}</p>
+                    </div>
                 </div>
             </div>
 
