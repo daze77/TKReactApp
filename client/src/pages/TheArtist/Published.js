@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Pub from "../../utils/Published.json"
+import PubCard from '../../components/PublishedCard/PublishedCard'
+
 
 
 function Published(){
@@ -17,6 +20,18 @@ function Published(){
                 <hr/>  
 
                 <div>
+                    <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+                    {Pub.map(pub => (
+                        <PubCard
+                                Id={pub.Id}
+                                Title={pub.Title}
+                                Image={pub.Image}
+                                ImageName={pub.ImageName}
+                        
+                        />
+
+                        ))}
+                    </div>
                     <ul>
                         <li>Designer Guys</li>
                         <li>Whose Design is it Anyway</li>

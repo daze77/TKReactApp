@@ -9,13 +9,6 @@ import Tonykphoto11 from '../../assets/images/media/tonykphoto11.jpg'
 import Tonykphoto12 from '../../assets/images/media/tonykphoto12.jpg'
 import Tonykphoto13 from '../../assets/images/media/shows-television-film1.jpg'
 
-
-
-
-
-
-
-
 function Card(props){
 
 
