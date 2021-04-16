@@ -1,8 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
+
+import Card from '../../components/Card/Card'
+import Media from "../../utils/ShowsTVFilm.json"
+
+import Tonykphoto07 from '../../assets/images/media/tonykphoto07.jpg'
+import Tonykphoto08 from '../../assets/images/media/tonykphoto08.jpg'
+
+import Tonykphoto09 from '../../assets/images/media/tonykphoto09.jpg'
+import Tonykphoto11 from '../../assets/images/media/tonykphoto11.jpg'
+import Tonykphoto12 from '../../assets/images/media/tonykphoto12.jpg'
+import Tonykphoto13 from '../../assets/images/media/shows-television-film1.jpg'
 
 
 
 function ShowsTVFilm(){
+  
+
 
 
 
@@ -16,23 +29,18 @@ function ShowsTVFilm(){
                 <h1>Shows, Television and Film</h1> 
                 <hr/>  
 
-                <div class="row row-cols-1 row-cols-md-3">
-                    <div class="col">
-                        {/* <img src={Pic1}/>
-                        <img src={Pic2}/> */}
+                <div class="row row-cols-1 row-cols-md-2">
+                   {Media.map(media => (
+                       <Card
+                            Id={media.Id}
+                            Show={media.Show}
+                            Title={media.Title}
+                            Image={media.Image}
+                            ImageName={media.ImageName}
+                       />
 
-                    </div>
-                    <div class="col">
-                        {/* <img src={Pic3}/>
-                        <img src={Pic4}/> */}
-                    </div>
-                    <div class="col">
-                        {/* <img src={Pic5}/>
-                        <img src={Pic6}/> */}
-
-                    </div>
-
-                    
+                   ))}
+  
                 </div>
                 <div>
                     <ul>

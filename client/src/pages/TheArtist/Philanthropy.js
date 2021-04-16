@@ -1,8 +1,11 @@
 import React from 'react'
 
-import TonyPhoto04 from '../../assets/tkimages/tonykphoto04.jpg'
-import TonyPhoto05 from '../../assets/tkimages/tonykphoto05.jpg'
-import TonyPhoto06 from '../../assets/tkimages/tonykphoto06.jpg'
+
+
+import TonyPhoto04 from '../../assets/images/tkimages/tonykphoto04.jpg'
+import TonyPhoto05 from '../../assets/images/tkimages/tonykphoto05.jpg'
+import TonyPhoto06 from '../../assets/images/tkimages/tonykphoto06.jpg'
+
 
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import tonykphoto from '../../assets/tkimages/tonykphoto.jpg'
+import tonykphoto from '../../assets/images/tkimages/tonykphoto.jpg'
 
 
 
