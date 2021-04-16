@@ -1,4 +1,5 @@
 import React from 'react'
+import './TheArtist.css'
 
 
 
@@ -11,7 +12,7 @@ function PhotographyTips(){
     <>
 
 
-        <div class="container">
+        <div class="container" id="phototips">
             <section>
                 <h1>Photography Tips</h1> 
                 <hr/>  

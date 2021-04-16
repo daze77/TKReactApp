@@ -2,6 +2,7 @@ import React from 'react'
 
 import './TheArtist.css'
 import Biography from './Biography'
+import UpcomingShows from './UpcomingShows'
 import Philanthropy from './Philanthropy'
 import ShowsTVFilm from './ShowsTVFilm'
 import Published from './Published'
@@ -25,6 +26,7 @@ function TheArtist(){
         <div class="container">
 
             <Biography />
+            <UpcomingShows />
             <Philanthropy />
             <ShowsTVFilm />
             <Published />

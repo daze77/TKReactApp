@@ -78,9 +78,7 @@ function NavBar(){
                                     <NavLink to="/Lighting"><li class="dropdown-item">Lighting</li></NavLink>
                                     <NavLink to="/TheFrameShop"><li class="dropdown-item">The Frame Shop</li></NavLink>
                                     <NavLink to="/PrintingandServices"><li class="dropdown-item">Printing & Services</li></NavLink>
-                                    <NavLink to="/Testimonials"><li class="dropdown-item">Testimonials</li></NavLink>
-                                    <NavLink to="/TheArtist"><li class="dropdown-item">TheArtist</li></NavLink>
-                                    <NavLink to="/Contact"><li class="dropdown-item">Contact</li></NavLink>
+
 
                                 </ul>
                             </li>
