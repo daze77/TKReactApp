@@ -1,5 +1,9 @@
 import React from 'react'
 
+import TonyPhoto04 from '../../assets/tkimages/tonykphoto04.jpg'
+import TonyPhoto05 from '../../assets/tkimages/tonykphoto05.jpg'
+import TonyPhoto06 from '../../assets/tkimages/tonykphoto06.jpg'
+
 
 
 function Philanthropy(){
@@ -9,14 +13,18 @@ function Philanthropy(){
 
     return(
     <>
-
-
         <div class="container">
             <section>
                 <h1>Philanthropy</h1> 
                 <hr/>  
-                <div class="row ">
-                    <div class="col-md-9">
+                <div class="clearfix">
+
+                    <img src={TonyPhoto04} class="col-sm-12 col-md-4 float-md-end mb-3 ms-md-5" alt="..."/>
+                    <img src={TonyPhoto05} class="col-sm-12 col-md-4 float-md-end mb-3 ms-md-5"alt="..."/>
+                    <img src={TonyPhoto06} class="col-sm-12 col-md-4 float-md-end mb-3 ms-md-5"alt="..."/>
+
+
+                    <div class="col-md-12">
                         <ul>
                             <li>Design for Hope, Partnered with Dusk to Dawn Interiors, Thunder Bay, August 4, 2011</li>
                             <li>Raised over $7000 for cancer research, donated to the Thunder Bay Regional Health Sciences Centre</li>
@@ -33,18 +41,16 @@ function Philanthropy(){
                                     <li>Greek America Foundation 40 Under 40, Class 2012 recognition</li>
                                     <li>Photography appeared on a not-for-profit fundraising calendar distributed to over 300 corporations</li>
                                 </ul>
-                         </ul>
-
+                        </ul>
                     </div>
-                    <div class="col-md-3">
-                        <div class="img-fluid">
-                            {/* <img class="img-fluid float-lg-end" src={tonykphoto} alt="Tony Koukos in action photographing"/> */}
-                        </div>
-                    </div>
-
-                </div>
+            </div>
             </section>
         </div>
+
+
+
+   
+
 
 
 
