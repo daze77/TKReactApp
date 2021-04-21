@@ -13,7 +13,6 @@ function Travelogue(){
         <div class="container">
             <h1>Travelogue</h1>
             <hr />
-
             <TravelLogueCard />
 
 
