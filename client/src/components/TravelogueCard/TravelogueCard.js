@@ -38,9 +38,6 @@ function TravelogueCard(){
 
     return(
     <>
-                {/* {Col1.map(Country=>(console.log(Country.Country)))} */}
-                {/* {Col1.map(Cities=>(console.log(Cities.Cities)))} */}
-
         
                 <div class="clearfix">
                     <img src={Passport} class="col-sm-12 col-md-4 float-md-start mb-3 me-3" alt="..."/>
@@ -49,34 +46,21 @@ function TravelogueCard(){
                         <p>Over 40 countries and counting!</p>
                     </div>
                 </div>
+
+
                 <div>
-                    {Col1.map(places =>(
+
+                {Col1.map((places) =>(
                         <TravelLocations
                             Country={places.Country}
+                            Cities={places.Cities.map((cities)=> <li>{cities}</li>)}
                             />
                     
-                    ))}            
-                </div>
-                <div>
-                    
-                    
+                    ))}    
 
                     
                     
-{/*                     
-                    {Col1.map((places) =>(places.Cities.map((cities)=>(
 
-                        <TravelLocations
-                            Country={places.Country}
-    
-                        />
-
-
-                    ))
-                 
-                    
-
-                    ))}             */}
                 </div>
 
 
