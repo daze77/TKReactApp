@@ -26,6 +26,7 @@ function HomeGrid(){
                                 Title={hgrid.Title}
                                 Image={hgrid.Image}
                                 ImageName={hgrid.ImageName}
+                                Link={hgrid.Link}
                         
                         />
 

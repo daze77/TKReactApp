@@ -1,5 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, Route} from 'react-router-dom'
+
 
 
 
@@ -30,6 +31,8 @@ function FooterLinks(){
                         <Link to="ArtandDestination"><li>Art & Destination</li></Link>
                         <Link to="/Contact"><li>Contact Us</li></Link>
                         <Link to="/PrivacyPolicy"><li>Privacy Policy</li></Link>
+                        <Link to="/Travelogue"><li>Travelogue</li></Link>
+
 
                     </ul>
                 </div>
@@ -49,6 +52,10 @@ function FooterLinks(){
 
 
             </div>
+
+
+
+
 
         </>
 

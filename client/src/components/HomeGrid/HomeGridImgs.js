@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 
 import Homelinkimg01 from '../../assets/images/homepage/homelinkimg01.jpg'
@@ -36,13 +37,15 @@ function HomeGridImgs(props){
     return(
         <>
             <div class="col">
-                <div class="card h-100 mb-1" id="cardformat">
-                    <img key={props.Id} src={homeObj[props.ImageName]} class="card-img-top" alt={props.ImageName}/>
-                    <div class="card-body">
-                        <h5 class="card-title">{props.Show}</h5>
-                        <p class="card-text">{props.Title}</p>
+                <Link to={props.Link}>
+                    <div class="card h-100 mb-1" id="cardformat">
+                        <img key={props.Id} src={homeObj[props.ImageName]} class="card-img-top" alt={props.ImageName}/>
+                        <div class="card-body">
+                            <h5 class="card-title">{props.Show}</h5>
+                            <p class="card-text">{props.Title}</p>
+                        </div>
                     </div>
-                </div>
+                </Link>
             </div>
 
         </>

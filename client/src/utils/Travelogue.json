@@ -1,0 +1,325 @@
+[
+    {
+        "Id": 1,
+        "Country": "Argentina",
+        "Cities": ["Buenos Aires"]
+
+    },
+    {
+        "Id": 2,
+        "Country": "Australlia",
+        "Cities": ["Airlie Beach", "Blue Mountains", "Brisbane", "Byron Bay", "Cairns", "Fraser Island", "Great Ocean Road", "Great Barrier Reef Scuba-diving", "Hervey Bay", "Melbourne", "Nice", "Noosa", "Surfer’s Paradise", "Sydney", "South Molle Island", "Whitsunday Islands", "Whitsunday Island Reef (Whitehaven Beach)", " Wollongong"]
+        
+    },
+    {
+        "Id": 3,
+        "Country": "AUSTRIA",
+        "Cities": ["Hopfgarten", "Vienna"]
+
+    },
+    {
+        "Id": 4,
+        "Country": "BOSNIA AND HERCEGOVINA",
+        "Cities": ["Metkovic", "Mostar"]
+
+    },
+    {
+        "Id": 5,
+        "Country": "BELGIUM",
+        "Cities": ["Brugge", "Brussels"]
+
+    },
+    {
+        "Id": 6,
+        "Country": "BRAZIL",
+        "Cities": ["Buzios", "Caraiva", "Espelho", "Florianopolis", "Ille Grande", "Paraty", "Rio de Janeiro"]
+
+    },
+    {
+        "Id": 7,
+        "Country": "CAMBODIA",
+        "Cities": ["Siem Reap", "Angkor Temples"]
+
+    },
+    {
+        "Id": 8,
+        "Country": "CANADA",
+        "Cities": ["Banff", "Calgary", "Montreal", "Muskoka Lakes", "Niagara Falls", "Nipigon (Hometown)", "Ottawa", "Quebec City", "Thunder Bay (1995-2007)", "Toronto (Present)", "Vancouver", "Victoria / Vancouver Island", "Whistler", "Winnipeg"]
+
+    },
+    {
+        "Id": 9,
+        "Country": "CARIBBEAN",
+        "Cities": ["Anguilla", "Bahamas", "Barbados", "Bequia", "Grenada", "Martinique", "Petit Bateaux", "St. Bart’s", "St. Lucia", "St. Maarten", "St. Vincent and the Grenadines", "Tobago Quays", "Union Island"]
+
+    },
+    {
+        "Id": 10,
+        "Country": "COLOMBIA",
+        "Cities": ["Cartagena", "Isla Encanto"]
+
+    },
+    {
+        "Id": 11,
+        "Country": "COSTA RICA",
+        "Cities": ["Santa Teresa", "Montezuma", "Manuel Antonio", "San Jose Aires"]
+
+    },
+    {
+        "Id": 12,
+        "Country": "CROATIA",
+        "Cities": ["Bisevo", "Brac", "Dubrovnik", "Hvar", "Kolocep", "Korcula", "Lopud", "Sipan", "Split", "Trogir", "Vis"]
+
+    },
+    {
+        "Id": 13,
+        "Country": "CUBA",
+        "Cities": ["Havana"]
+
+    },
+    {
+        "Id": 14,
+        "Country": "CZECH REPUBLIC",
+        "Cities": ["Czesky-Krumlov", "Prague"]
+
+    },
+    {
+        "Id": 15,
+        "Country": "DENMARK",
+        "Cities": ["Copenhagen"]
+
+    },
+    {
+        "Id": 16,
+        "Country": "DOMINICAN REPUBLIC",
+        "Cities": ["Puerto Plata", "Suva"]
+
+    },
+    {
+        "Id": 17,
+        "Country": "ENGLAND",
+        "Cities": ["London", "Oxford"]
+
+    },
+    {
+        "Id": 18,
+        "Country": "ESTONIA",
+        "Cities": ["Tallinn"]
+
+    },
+    {
+        "Id": 19,
+        "Country": "FIJI",
+        "Cities": ["Suva"]
+
+    },
+    {
+        "Id": 20,
+        "Country": "FINLAND",
+        "Cities": ["Helsinki"]
+
+    },
+    {
+        "Id": 21,
+        "Country": "FRANCE",
+        "Cities": ["Aigues Mortes", "Aix-en-Provence", "Amboise", "Azay-le-Rideau", "Antibes", "Avignon", "Beaujolais", "Blois", "Calenques", "Cannes", "Cassis", "Chantilly", "Chenonceau", "Cheverny", "Dijon", "Fontainbleau", "Giverny", "Gordhes", "Grenoble", "Langeais", "Lille", "Loire Valley", "Marseille", "Mont St. Michelle", "Montpellier", "Nice", "Paris", "Pont du Gard", "Tours", "Villandry"]
+
+    },
+    {
+        "Id": 22,
+        "Country": "GERMANY",
+        "Cities": ["Berlin", "Heidelberg", "Munich"]
+
+    },
+    {
+        "Id": 23,
+        "Country": "GREECE",
+        "Cities": ["Andritsena (Father’s Birthplace)", "Athens", "Epidavros", "Korinthos", "Koufopoulon (Mother’s Birthplace)", "Meteora", "Monemvasia", "Mystra", "Nafplion", "Olympia", "Patras", "Portorafti", "Sounion", "Thessaloniki"]
+    },
+    {
+        "Id": 24,
+        "Country": "GREEK ISLANDS",
+        "Cities": ["Aegina", "Amorgos", "Ano Koufonissi", "Anti-Paros", "Antithira", "Corfu", "Crete", "Delos", "Folegandros", "Hydra", "Ios", "Ithaki", "Karpathos", "Kastellorizo", "Kato Koufonissi", "Kefalonia", "Kimilos", "Kos", "Kounoupoi", "Lefkada", "Leros", "Milos", "Mykonos", "Naxos", "Paros", "Patmos", "Poros", "Rineia", "Rhodes", "Santorini", "Serifos", "Sifnos", "Skiathos", "Skopellos", "Spetses", "Symi", "Syros", "Tinos", "Zakynthos"]
+
+    },
+    {
+        "Id": 25,
+        "Country": "HOLLAND",
+        "Cities": ["Amsterdam"]
+
+    },
+    {
+        "Id": 26,
+        "Country": "HONG KONG",
+        "Cities": [""]
+
+    },
+    {
+        "Id": 27,
+        "Country": "ICELAND",
+        "Cities": ["Reyjakvic"]
+
+    },
+    {
+        "Id": 28,
+        "Country": "INDONESIA",
+        "Cities": ["Bali"]
+
+    },
+    {
+        "Id": 29,
+        "Country": "ITALY",
+        "Cities": ["Alberobello", "Amalfi", "Arrezzo", "Assissi", "Bellagio", "Bologna", "Brescia", "Burano", "Capri", "Castelfranco", "Catania", "Corniglia", "Cortona", "Ferrara", "Fiesole", "Florence", "Ischia", "Isola D’Elba", "La Madellana", "Lago Di Como", "Lago Di Garda", "Lago Di Maggiore", "Lago D’Iseo", "Lago D’Orta", "Lecce", "Lecco", "Lido", "Lucca", "Manarola", "Menaggio", "Milan", "Monterosso", "Murano", "Naples", "Olbia", "Orvieto", "Padova", "Parma", "Perugia", "Pescara", "Pisa", "Positano", "Procida", "Riomaggiore", "Rome", "San Gimignano", "Santa Margherita", "Sienna", "Sorrento", "Tivoli", "Torremina", "Treviso", "Udine", "Urbino", "Varenna", "Venice", "Vernazza", "Verona"]
+
+    },
+    {
+        "Id": 30,
+        "Country": "ITALY- AEOLEAN ISLANDS",
+        "Cities": ["Alicudi", "Felicudi", "Lipari", "Panarea", "Stromboli", "Vulcano"]
+
+    },
+    {
+        "Id": 31,
+        "Country": "JAPAN",
+        "Cities": ["Tokyo"]
+
+    },
+    {
+        "Id": 32,
+        "Country": "LAOS",
+        "Cities": ["Luang Prabang"]
+
+    },
+    {
+        "Id": 33,
+        "Country": "LIECHTENSTEIN",
+        "Cities": ["Vaduz"]
+
+    },
+    {
+        "Id": 34,
+        "Country": "MEXICO",
+        "Cities": ["Acapulco", "Cancun", "Myan Riviera", "Playa Del Carmen", "Cozumel"]
+
+    },
+    {
+        "Id": 35,
+        "Country": "MONACO",
+        "Cities": ["Monte Carlo"]
+
+    },
+
+    {
+        "Id": 36,
+        "Country": "MONTENEGRO",
+        "Cities": ["Budva", "Herceg-Novi", "Kotor"]
+
+    },
+    {
+        "Id": 37,
+        "Country": "MORROCO",
+        "Cities": ["Ait Ben Haddou", "Aremd", "Casablanca", "Dades Gorges", "Essauira", "Fes", "Imlil", "Marrakech", "Meknes", "Merzouga", "Ouarzazate", "Rabat", "Sahara Dessert", "Tineghir", "Todgha Gorges", "Volubulis"]
+
+    },
+    {
+        "Id": 38,
+        "Country": "MYANMAR",
+        "Cities": ["Bagano", "Bago", "Golden Rock", "Inle Lake", "Kalaw", "Mandalay", "Mount Popa", "Pindaya Caves", "Tokyo", "Yangon"]
+
+    },
+    {
+        "Id": 39,
+        "Country": "NAMIBIA",
+        "Cities": ["Sossuvlie", "Swakopmund", "Deadvlei", "Windhoek", "Etosha National Park"]
+
+    },
+    {
+        "Id": 40,
+        "Country": "NEW ZEALAND",
+        "Cities": ["Auckland", "Bay of Islands", "Christchurch", "Franz Josef Glacier", "Milford Sound", "Paihia", "Queenstown", "Rororua", "Taupo", "Waitomo", "Wellington"]
+
+    },
+    {
+        "Id": 41,
+        "Country": "PANAMA",
+        "Cities": ["Panama City", "San Blas Islands"]
+
+    },
+    {
+        "Id": 42,
+        "Country": "PHILIPPINES",
+        "Cities": ["Palawan", "Boracay", "Manilla"]
+
+    },
+    {
+        "Id": 43,
+        "Country": "RUSSIA",
+        "Cities": ["St. Petersburg"]
+
+    },
+    {
+        "Id": 44,
+        "Country": "SINGAPORE",
+        "Cities": [""]
+
+    },
+    {
+        "Id": 45,
+        "Country": "SOUTH AFRICA",
+        "Cities": ["Capetown", "South Cape/Stelenbosch Wine Region", "Johannsburg", "Gansbaii- Great White Shark Diving", "Tanda Tula (National Park)"]
+
+    },
+    {
+        "Id": 46,
+        "Country": "SPAIN",
+        "Cities": ["Avila", "Barcelona", "Bilbao", "Cadaques", "Cordoba", "Costa del Sol", "Fuertaventura", "Grenada", "Ibiza", "Lanzarote", "Madrid", "Pamplona", "Salamenca", "San Sebastien", "Seville", "Sitges", "Teneriffe", "Toledo", "Valencia"]
+
+    },
+    {
+        "Id": 47,
+        "Country": "SWEDEN",
+        "Cities": ["Stockholm"]
+
+    },
+    {
+        "Id": 48,
+        "Country": "SWITZERLAND",
+        "Cities": ["Lauterbrunnen", "Lucerne"]
+
+    },
+    {
+        "Id": 49,
+        "Country": "THAILAND",
+        "Cities": ["Anthon National Park", "Ayutthaya", "Bangkok", "Chang Mai", "Damnoen Saduak", "Koh Samui", "Koh Phi Phi", "Koh Similan", "Koh Tapu (James Bond Island)", "Krabi", "Phang Nga Bay", "Phanom Rung", "Phimai", "Phuket"]
+
+    },
+    {
+        "Id": 50,
+        "Country": "TURKEY",
+        "Cities": ["Istanbul"]
+
+    },
+    {
+        "Id": 51,
+        "Country": "UNITED STATES",
+        "Cities": ["Fort Lauderdale", "Las Vegas", "Los Angeles", "Miami", "Minneapolis", "New York", "Quay West", "San Diego", "Washington D.C."]
+
+    },
+    {
+        "Id": 52,
+        "Country": "URUGUAY",
+        "Cities": ["Colonia"]
+
+    },
+    {
+        "Id": 53,
+        "Country": "VIETNAM",
+        "Cities": ["Denang", "Halong Bay", "Hanoi", "Ho Chi Minh", "Hoi An", "Hue"]
+
+    }
+]
+
+
+
+
+

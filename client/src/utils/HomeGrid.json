@@ -5,56 +5,71 @@
         "Id": 1,
         "Title": "HOSPITALITY & DEISGN",
         "Image": "homelinkimg01.jpg",
-        "ImageName": "Homelinkimg01"
+        "ImageName": "Homelinkimg01",
+        "Link": "HospitalityandDesign"
 
     },
     {
         "Id": 2,
         "Title": "INSTALLATIONS",
         "Image": "homelinkimg012.jpg",
-        "ImageName": "Homelinkimg02"
+        "ImageName": "Homelinkimg02",
+        "Link": "Installations"
+
 
     },
     {
         "Id": 3,
         "Title": "PRODUCTS",
         "Image": "homelinkimg03.jpg",
-        "ImageName": "Homelinkimg03"
+        "ImageName": "Homelinkimg03",
+        "Link": ""
+
 
     },
     {
         "Id": 4,
         "Title": "TESTIMONIALS",
         "Image": "homelinkimg04.jpg",
-        "ImageName": "Homelinkimg04"
+        "ImageName": "Homelinkimg04",
+        "Link": "Testimonials"
+
 
     },
     {
         "Id": 5,
         "Title": "LIGHTING",
         "Image": "homelinkimg05.jpg",
-        "ImageName": "Homelinkimg05"
+        "ImageName": "Homelinkimg05",
+        "Link": "Lighting"
+
 
     },
     {
         "Id": 6,
         "Title": "THE FRAME SHOP",
         "Image": "homelinkimg06.jpg",
-        "ImageName": "Homelinkimg06"
+        "ImageName": "Homelinkimg06",
+        "Link": "TheFrameShop"
+
 
     },
     {
         "Id": 7,
         "Title": "PRINTING SERVICES",
         "Image": "homelinkimg07.jpg",
-        "ImageName": "Homelinkimg07"
+        "ImageName": "Homelinkimg07",
+        "Link": "PrintingandServices"
+
 
     },
     {
         "Id": 8,
         "Title": "",
         "Image": "homelinkimg08.jpg",
-        "ImageName": "Homelinkimg08"
+        "ImageName": "Homelinkimg08",
+        "Link": "TheArtist"
+
 
     }
 
