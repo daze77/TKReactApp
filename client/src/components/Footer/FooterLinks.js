@@ -54,6 +54,7 @@ function FooterLinks(){
                                 <Link to="ArtandDestination"><li>Art & Destination</li></Link>
                                 <Link to="/Contact"><li>Contact Us</li></Link>
                                 <Link to="/PrivacyPolicy"><li>Privacy Policy</li></Link>
+                                <Link to="/Videos"><li>Videos</li></Link>
 
                             </ul>
 

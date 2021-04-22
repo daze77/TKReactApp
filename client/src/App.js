@@ -38,6 +38,7 @@ import ArtandDesign from './pages/ArtandDesign'
 import About from './pages/TheArtist/TheArtist'
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
 import Travelogue from './pages/Travelogue/Travelogue'
+import Videos from './pages/Videos/Videos'
 
 
 
@@ -76,6 +77,8 @@ function App() {
         <Route exact path='/Contact' component={Contact} />
         <Route exact path='/PrivacyPolicy' component={PrivacyPolicy} />
         <Route exact path='/Travelogue' component={Travelogue} />
+        <Route exact path='/Videos' component={Videos} />
+
 
 
 
