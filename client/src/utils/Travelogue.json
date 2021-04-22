@@ -1,13 +1,13 @@
 [
     {
         "Id": 1,
-        "Country": "Argentina",
+        "Country": "ARGENTINA",
         "Cities": ["Buenos Aires"]
 
     },
     {
         "Id": 2,
-        "Country": "Australlia",
+        "Country": "AUSTRALIA",
         "Cities": ["Airlie Beach", "Blue Mountains", "Brisbane", "Byron Bay", "Cairns", "Fraser Island", "Great Ocean Road", "Great Barrier Reef Scuba-diving", "Hervey Bay", "Melbourne", "Nice", "Noosa", "Surfer’s Paradise", "Sydney", "South Molle Island", "Whitsunday Islands", "Whitsunday Island Reef (Whitehaven Beach)", " Wollongong"]
         
     },

@@ -26,3 +26,16 @@ blockquote {
 #phototips li, p{
   padding-bottom: 15px;
 }
+
+
+li, p{
+  color: #818181;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size:1.2em; 
+  text-align:justify; 
+  line-height:1.25em; 
+}
+
+p a {
+  color: #818181;
+}

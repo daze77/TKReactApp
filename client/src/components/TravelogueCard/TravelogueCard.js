@@ -19,10 +19,6 @@ function TravelogueCard(){
     const Col4 = TravelLogueJSON.filter((country, index) => (index>36))
 
 
-
-
-
-
     return(
     <>
         
@@ -40,7 +36,7 @@ function TravelogueCard(){
                 {Col1.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
-                        Cities={places.Cities.map((cities)=> <li>{cities}</li>)}
+                        Cities={places.Cities.map((cities)=> <li clsss="visitedcities">{cities}</li>)}
                     />
                 ))}    
             </div>
@@ -48,7 +44,7 @@ function TravelogueCard(){
                 {Col2.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
-                        Cities={places.Cities.map((cities)=> <li>{cities}</li>)}
+                        Cities={places.Cities.map((cities)=> <li clsss="visitedcities">{cities}</li>)}
                     />
                 ))}    
             </div>
@@ -56,7 +52,7 @@ function TravelogueCard(){
                 {Col3.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
-                        Cities={places.Cities.map((cities)=> <li>{cities}</li>)}
+                        Cities={places.Cities.map((cities)=> <li clsss="visitedcities">{cities}</li>)}
                     />
                 ))}    
             </div>
@@ -64,7 +60,7 @@ function TravelogueCard(){
                 {Col4.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
-                        Cities={places.Cities.map((cities)=> <li>{cities}</li>)}
+                        Cities={places.Cities.map((cities)=> <li clsss="visitedcities">{cities}</li>)}
                     />
                 ))}    
             </div>

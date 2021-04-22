@@ -1,0 +1,23 @@
+.visitedcountries{
+    color: #64b60d;
+    font-weight: bolder;
+    background-color: #f1f1f1;
+    display:block;
+    text-align: left;
+    padding: 11px
+
+
+
+
+}
+
+#travelList{
+    list-style-type: none;
+}
+
+.visitedcities{
+    font-weight: bolder;
+    font-size: 10pt;
+
+    
+}

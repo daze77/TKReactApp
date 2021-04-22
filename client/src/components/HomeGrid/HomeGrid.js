@@ -19,7 +19,7 @@ function HomeGrid(){
 
     return(
         <>
-                    <div class="gridpadding row row-cols-1 row-cols-md-4 g-4 mb-5">
+                    <div class="gridpadding row row-cols-2 row-cols-md-4 g-4 mb-5">
                     {HomeGridJSON.map(hgrid => (
                         <HomeGridImgs
                                 Id={hgrid.Id}
