@@ -1,6 +1,6 @@
 import React from 'react'
 
-import AddressCard from './Address'
+import AddressCard from '../../components/Address/Address'
 import './Contact.css'
 
 

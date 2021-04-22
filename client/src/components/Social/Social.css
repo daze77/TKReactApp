@@ -15,14 +15,14 @@
   
   /*Change icons size here*/
   .social-icons .fab {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   /*Change icons circle size and color here*/
   .social-icons .fab {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     /* margin: auto; */
-    line-height: 35px;
+    line-height: 30px;
     text-align: center;
     color: #FFF;
     -webkit-transition: all 0.3s ease-in-out;
@@ -50,5 +50,9 @@
   .social-icons .fab.fa-instagram{background-color:#d6249f;background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);}
   .social-icons .fa-twitter,.social-icons .fab.fa-twitter{background-color:#32CCFE;} 
   .social-icons .fa-linkedin,.social-icons .fa-linkedin-in{background-color:#0E76A8;} 
+
+  .social-icons ul{
+    margin-bottom: 0px;
+  }
   
   

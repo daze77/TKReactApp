@@ -4,14 +4,14 @@
 
 .card-img-overlay:hover{
  background-color: rgba(0,0,0,0.5);
- transition: 0.8s
+ transition: 0.7s
 
 
 }
 
 .card-img-overlay:hover .card-title{
     background-color: rgba(0,0,0,0);
-    transition: 0.8s
+    transition: 0.7s
    
    
    }
@@ -24,6 +24,7 @@
     font-weight: bolder;
 
 }
+
 
 div.col:last-child .card-title{
     background-color: inherit;

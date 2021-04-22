@@ -5,33 +5,6 @@
 
 }
 
-/* #footerright{
-    background-color: lightgrey;
-    color: black;
-    padding: 20px
-} */
-
-/* #footerleftimage{
-
-    background-color: slategray; */
-    /* background-image: url(../../assets/images/tracks.jpg); */
-    /* background-size: cover;
-    position:relative;
-    padding: 30px;
-} */
-
-/* #footerlefttext{
-    font-weight: bolder;
-
-} */
-
-.footerContact{
-    display: block;
-    font-size: 15px;
-    font-weight: bolder;
-}
-
-
 
 #subfooter{
     background-color: black;
@@ -47,6 +20,10 @@
 
 #subcopyright{
     font-size: 12px;
+}
+
+footer ul {
+    padding-left: 0px;
 }
 
 footer li {
@@ -79,9 +56,6 @@ footer a, a:link, a:visited, a:hover, a:active{
 
 
 .subscriptions {
-    padding: 15px 150px;
+    padding: 15px 25px;
 }
-
-
-
 

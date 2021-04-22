@@ -20,7 +20,7 @@ function Footer(){
                 <div class="container">
                     <FooterLinks />
                 </div>
-                <Social />
+                {/* <Social /> */}
 
                 <Subscriptions />
                 <SubFooter />
