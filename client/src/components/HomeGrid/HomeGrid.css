@@ -25,3 +25,11 @@
 
 }
 
+div.col:last-child .card-title{
+    background-color: inherit;
+    margin-bottom: 0px;
+    padding: 10px 15px 10px 10px;
+    color: ivory;
+    font-weight: bolder;
+
+}

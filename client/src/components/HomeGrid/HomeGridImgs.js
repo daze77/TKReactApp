@@ -36,31 +36,17 @@ function HomeGridImgs(props){
 
     return(
         <>
-            {/* <div class="col">
+            <div class="col">
                 <Link to={props.Link}>
-                    <div class="card h-100 mb-1" id="cardformat">
-                        <img key={props.Id} src={homeObj[props.ImageName]} class="card-img-top" alt={props.ImageName}/>
-                        <h5 class="card-title text-end">{props.Title}</h5>
-                        <div class="card-body">
-                            <h5 class="card-title text-end">{props.Title}</h5>
+                    <div class="card">
+                        <img key={props.Id} src={homeObj[props.ImageName]} class="card-img" alt={props.ImageName}/>
+                        <div class="card-img-overlay">
+                            <h5 class="card-title position-absolute bottom-0 end-0 w-100 text-end">{props.Title}</h5>
                         </div>
                     </div>
                 </Link>
-            </div> */}
-
-            <div class="col">
-                <div class="card">
-                    <img key={props.Id} src={homeObj[props.ImageName]} class="card-img" alt="..."/>
-                    <div class="card-img-overlay">
-                        <h5 class="card-title position-absolute bottom-0 end-0 w-100 text-end">{props.Title}</h5>
-                    </div>
-                </div>
             </div>
-
         </>
-
-
-
     )
 }
 
