@@ -4,10 +4,13 @@ import {StoreProvider} from "./utils/GlobalStore"
 
 
 
+
+
 // components
 
 import NavBar from './components/NavBar/NavBar'
 import Footer from './components/Footer/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 
 // pages
@@ -39,6 +42,8 @@ import About from './pages/TheArtist/TheArtist'
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
 import Travelogue from './pages/Travelogue/Travelogue'
 import Videos from './pages/Videos/Videos'
+import TravelTips from './pages/TravelTips/TravelTips'
+
 
 
 
@@ -58,7 +63,7 @@ function App() {
     <StoreProvider>
       <BrowserRouter>
         <NavBar />
-      
+      <ScrollToTop />
         <Route exact path='/Login' component={Login} />
         <Route exact path='/Logout' component={Logout} />
         <Route exact path='/Register' component={Register} />
@@ -78,6 +83,8 @@ function App() {
         <Route exact path='/PrivacyPolicy' component={PrivacyPolicy} />
         <Route exact path='/Travelogue' component={Travelogue} />
         <Route exact path='/Videos' component={Videos} />
+        <Route exact path='/Travel-Tips' component={TravelTips} />
+
 
 
 

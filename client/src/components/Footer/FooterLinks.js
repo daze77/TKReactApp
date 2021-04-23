@@ -28,6 +28,8 @@ function FooterLinks(){
                                 <Link to="/Contact"><li>Contact Us</li></Link>
                                 <Link to="/PrivacyPolicy"><li>Privacy Policy</li></Link>
                                 <Link to="/Travelogue"><li>Travelogue</li></Link>
+                                <Link to="/Travel-Tips"><li>Travel Tips</li></Link>
+
 
 
                             </ul>
