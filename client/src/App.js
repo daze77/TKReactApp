@@ -44,6 +44,8 @@ import Travelogue from './pages/Travelogue/Travelogue'
 import Videos from './pages/Videos/Videos'
 import TravelTips from './pages/TravelTips/TravelTips'
 import ReturnPolicy from './pages/ReturnPolicy/ReturnPolicy'
+import CustomerService from './pages/CustomerService/CustomerService'
+
 
 
 
@@ -88,6 +90,8 @@ function App() {
         <Route exact path='/Videos' component={Videos} />
         <Route exact path='/Travel-Tips' component={TravelTips} />
         <Route exact path='/ReturnPolicy' component={ReturnPolicy} />
+        <Route exact path='/CustomerService' component={CustomerService} />
+
 
 
 

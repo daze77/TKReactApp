@@ -47,6 +47,8 @@ function FooterLinks(){
                                 <Link to="/Contact"><li>Contact Us</li></Link>
                                 <Link to="/PrivacyPolicy"><li>Privacy Policy</li></Link>
                                 <Link to="/ReturnPolicy"><li>Return Policy</li></Link>
+                                <Link to="/CustomerService"><li>Customer Service</li></Link>
+
 
 
                             </ul>
