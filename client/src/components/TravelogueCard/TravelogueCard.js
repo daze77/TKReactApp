@@ -23,7 +23,7 @@ function TravelogueCard(){
     <>
         
         <div class="clearfix">
-            <img src={Passport} class="col-sm-12 col-md-4 float-md-start mb-3 me-3" alt="..."/>
+            <img src={Passport} class="col-sm-12 col-md-8 float-md-start mb-3 me-3" alt="..."/>
             <div>
                 <h3>TONY KOUKOS' PASSPORT</h3>
                 <p>Over 40 countries and counting!</p>
