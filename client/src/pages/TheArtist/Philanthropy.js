@@ -21,13 +21,12 @@ function Philanthropy(){
                 <h1>Philanthropy</h1> 
                 <hr/>  
                 <div class="clearfix">
-
-                    <img src={TonyPhoto04} class="col-sm-12 col-md-4 float-md-end mb-3 ms-md-5" alt="..."/>
-                    <img src={TonyPhoto05} class="col-sm-12 col-md-4 float-md-end mb-3 ms-md-5"alt="..."/>
-                    <img src={TonyPhoto06} class="col-sm-12 col-md-4 float-md-end mb-3 ms-md-5"alt="..."/>
-
-
-                    <div class="col-md-12">
+                    <div class="col-sm-12 col-md-4 float-md-end ">
+                    <img src={TonyPhoto04} class="col-sm-12 mb-3 ms-md-5" alt="..."/>
+                    <img src={TonyPhoto05} class="col-sm-12 mb-3 ms-md-5" alt="..."/>
+                    <img src={TonyPhoto06} class="col-sm-12 mb-3 ms-md-5" alt="..."/>
+                    </div>
+                    <div class="col-sm-12 col-md-8">
                         <ul>
                             <li>Design for Hope, Partnered with Dusk to Dawn Interiors, Thunder Bay, August 4, 2011</li>
                             <li>Raised over $7000 for cancer research, donated to the Thunder Bay Regional Health Sciences Centre</li>
@@ -46,7 +45,8 @@ function Philanthropy(){
                                 </ul>
                         </ul>
                     </div>
-            </div>
+                </div>
+
             </section>
         </div>
 
