@@ -2,21 +2,21 @@
     padding: 5px 20px 5px 20px;
 }
 
-.card-img-overlay:hover{
+.homegrid .card-img-overlay:hover{
  background-color: rgba(0,0,0,0.5);
  transition: 0.7s
 
 
 }
 
-.card-img-overlay:hover .card-title{
+.homegrid .card-img-overlay:hover .card-title{
     background-color: rgba(0,0,0,0);
     transition: 0.7s
    
    
    }
 
-.card-title{
+.homegrid .card-title{
     background-color: rgba(0,0,0,0.5);
     margin-bottom: 0px;
     padding: 10px 15px 10px 10px;
@@ -26,7 +26,7 @@
 }
 
 
-div.col:last-child .card-title{
+div.col:last-child .homegrid .card-title{
     background-color: inherit;
     margin-bottom: 0px;
     padding: 10px 15px 10px 10px;

@@ -63,6 +63,7 @@ function App() {
     <StoreProvider>
       <BrowserRouter>
         <NavBar />
+        <hr />
       <ScrollToTop />
         <Route exact path='/Login' component={Login} />
         <Route exact path='/Logout' component={Logout} />

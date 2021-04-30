@@ -4,23 +4,27 @@ import './TravelTips.css'
 
 function TravelTips() {
 
-    const allParagraphs = document.querySelectorAll("p")
-    // const paragraphArray = [allParagraphs.map(pargraphs => pargraphs.innerHTML)]
-    // const test = allParagraphs[1].innerHTML
-    // const test2 =allParagraphs.map((a)=>a)
-    
+ 
+    const allParagraphs = Array.from(document.querySelectorAll("p"))
+    console.log('new P', allParagraphs)
 
-    // console.log('this is a list of all Paragraphs on this page', allParagraphs, 'this is the innerHTML', test)
-    // console.log('this is the innerHTML', test2)
+    const test = ["a","b","c","d","e"]
+    console.log(test)
+
+    let allP = document.querySelector("p")
+    console.log('this is p what now', allP)
+
+
+    // const a = array.from(document.querySelectorAll("p"))
+    // let b = 
 
 
 
+    function update(){
+        test.map((q)=>document.querySelector("p").innerHTML=q)
 
-    function getAllParagraphs(){
-        const allParagraphs = document.querySelectorAll("p")
-        console.log('this is a list of all Paragraphs on this page', allParagraphs)
     }
-
+    // update()
 
     return(
     

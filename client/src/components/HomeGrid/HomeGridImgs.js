@@ -38,7 +38,7 @@ function HomeGridImgs(props){
         <>
             <div class="col">
                 <Link to={props.Link}>
-                    <div class="card">
+                    <div class="card homegrid">
                         <img key={props.Id} src={homeObj[props.ImageName]} class="card-img" alt={props.ImageName}/>
                         <div class="card-img-overlay">
                             <h5 class="card-title position-absolute bottom-0 end-0 w-100 text-end">{props.Title}</h5>
