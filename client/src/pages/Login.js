@@ -61,37 +61,39 @@ function Login(){
 
     return (
         <>
-            { authOk ? <Redirect to='/' /> : '' }
-            <form ref={refForm}>
-            <div class="card mt-5">
-                <div class="card-header">
-                    <h1>Login</h1>
-                </div>
-                <div class="card-body">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input ref={inputEmail} id="email" type="email" class="form-control" required />
-                        <div class="invalid-feedback">
-                            Please enter your login email
-                        </div>
+            <div class="container">
+                { authOk ? <Redirect to='/' /> : '' }
+                <form ref={refForm}>
+                <div class="card mt-5">
+                    <div class="card-header">
+                        <h1>Login</h1>
                     </div>
-                    <div class="mb-3">
-                        <label for="userPassword">Password</label>
-                        <input ref={inputPassword} id="userPassword" type="password" class="form-control"  pattern=".{8,}" required />
-                        <div class="invalid-feedback">
-                            Please enter your password (8 chars min)
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input ref={inputEmail} id="email" type="email" class="form-control" required />
+                            <div class="invalid-feedback">
+                                Please enter your login email
+                            </div>
                         </div>
+                        <div class="mb-3">
+                            <label for="userPassword">Password</label>
+                            <input ref={inputPassword} id="userPassword" type="password" class="form-control"  pattern=".{8,}" required />
+                            <div class="invalid-feedback">
+                                Please enter your password (8 chars min)
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="card-footer">
+                        <button onClick={userLogin} type="button" class="btn btn-primary mx-1">Login</button>
+                        &nbsp; 
+                        <input ref={inputRememberMe} id='rememberMe' type="checkbox" />                        
+                        <label class='text-secondary' for='rememberMe'>Remember Me</label> &nbsp;
+                        <Link to="/register" class="mx-3">Need to Register?</Link>
                     </div>
-                </div>                    
-                <div class="card-footer">
-                    <button onClick={userLogin} type="button" class="btn btn-primary mx-1">Login</button>
-                    &nbsp; 
-                    <input ref={inputRememberMe} id='rememberMe' type="checkbox" />                        
-                    <label class='text-secondary' for='rememberMe'>Remember Me</label> &nbsp;
-                    <Link to="/register" class="mx-3">Need to Register?</Link>
                 </div>
+                </form>
             </div>
-            </form>
         </>
     )
 }

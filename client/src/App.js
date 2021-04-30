@@ -43,6 +43,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
 import Travelogue from './pages/Travelogue/Travelogue'
 import Videos from './pages/Videos/Videos'
 import TravelTips from './pages/TravelTips/TravelTips'
+import ReturnPolicy from './pages/ReturnPolicy/ReturnPolicy'
+
 
 
 
@@ -85,6 +87,8 @@ function App() {
         <Route exact path='/Travelogue' component={Travelogue} />
         <Route exact path='/Videos' component={Videos} />
         <Route exact path='/Travel-Tips' component={TravelTips} />
+        <Route exact path='/ReturnPolicy' component={ReturnPolicy} />
+
 
 
 

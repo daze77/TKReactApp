@@ -59,3 +59,7 @@ footer a, a:link, a:visited, a:hover, a:active{
     padding: 15px 25px;
 }
 
+
+.fa-phone{
+    transform: rotate(100deg);
+}

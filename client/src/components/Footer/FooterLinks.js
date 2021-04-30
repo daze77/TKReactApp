@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, Route} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import AddressCard from '../../components/Address/Address'
 
 
@@ -15,6 +15,9 @@ function FooterLinks(){
                 <div class="col-lg-4 col-md-12 mb-4 mb-md-5">
                     <h3>Contact Us</h3>
                     <AddressCard />
+                    <br />
+                    <span><a href="tel:+1-416-305-5430"><i class="fas fa-phone"></i> 416.305.5430</a></span><br />
+                    <span><a href="mailto:tony@tonykoukos.com"><i class="far fa-envelope"></i> tony@tonykoukos.com</a></span>
                 </div>
                 <div class="col-lg-8 col-md-12 mb-4 mb-md-0">
                     <div class="row">
@@ -43,6 +46,8 @@ function FooterLinks(){
                                 <Link to="ArtandDestination"><li>Art & Destination</li></Link>
                                 <Link to="/Contact"><li>Contact Us</li></Link>
                                 <Link to="/PrivacyPolicy"><li>Privacy Policy</li></Link>
+                                <Link to="/ReturnPolicy"><li>Return Policy</li></Link>
+
 
                             </ul>
 
