@@ -13,7 +13,7 @@ function TravelLocations(props){
 
         <ul>
             <li id="travelList"><span class="visitedcountries">{props.Country}</span>
-                <ul>
+                <ul id="cityliststyle">
                     {props.Cities}
                 </ul>
             </li>

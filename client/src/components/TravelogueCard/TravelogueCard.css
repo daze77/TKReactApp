@@ -11,13 +11,14 @@
 
 }
 
-#travelList{
+#travelList, #cityliststyle {
     list-style-type: none;
 }
 
-.visitedcities{
-    font-weight: bolder;
-    font-size: 10pt;
+li.visitedcities, p.visitedcities{
+
+    text-align: left 
 
     
 }
+

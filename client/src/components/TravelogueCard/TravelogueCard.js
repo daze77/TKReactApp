@@ -36,7 +36,7 @@ function TravelogueCard(){
                 {Col1.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
-                        Cities={places.Cities.map((cities)=> <li clsss="visitedcities">{cities}</li>)}
+                        Cities={places.Cities.map((cities)=> <li class="visitedcities"><i class="fas fa-caret-right"></i> {cities}</li>)}
                     />
                 ))}    
             </div>
@@ -44,7 +44,7 @@ function TravelogueCard(){
                 {Col2.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
-                        Cities={places.Cities.map((cities)=> <li clsss="visitedcities">{cities}</li>)}
+                        Cities={places.Cities.map((cities)=> <li class="visitedcities"><i class="fas fa-caret-right"></i> {cities}</li>)}
                     />
                 ))}    
             </div>
@@ -52,7 +52,7 @@ function TravelogueCard(){
                 {Col3.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
-                        Cities={places.Cities.map((cities)=> <li clsss="visitedcities">{cities}</li>)}
+                        Cities={places.Cities.map((cities)=> <li class="visitedcities"><i class="fas fa-caret-right"></i> {cities}</li>)}
                     />
                 ))}    
             </div>
@@ -60,7 +60,7 @@ function TravelogueCard(){
                 {Col4.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
-                        Cities={places.Cities.map((cities)=> <li clsss="visitedcities">{cities}</li>)}
+                        Cities={places.Cities.map((cities)=> <li class="visitedcities"><i class="fas fa-caret-right"></i> {cities}</li>)}
                     />
                 ))}    
             </div>
