@@ -1,0 +1,16 @@
+.gallerygrid .card-img-overlay:hover{
+        background-color: rgba(0,0,0,0.5);
+        
+}
+
+.gallerygrid .card-img-overlay:hover .card-title{
+        color: #64b60d;
+        
+}
+
+.card-title{
+        color: white;
+        font-size: 33px;
+        line-height: 31px;
+}
+
