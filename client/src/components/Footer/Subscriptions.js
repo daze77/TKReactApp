@@ -59,12 +59,6 @@ function Subscriptions(){
                 <div class="col-md-3 pt-4">
                     <Social />
                 </div>
-
-
-                
-
-                
-
             </div>
 
             

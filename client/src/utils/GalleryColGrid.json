@@ -1,0 +1,59 @@
+
+
+[
+    {
+        "Id": 1,
+        "Title": "ABSTRACT",
+        "Image": "abstract.jpg",
+        "ImageName": "abstract",
+        "Link": "GalleryCollection/Abstract"
+
+    },
+    {
+        "Id": 2,
+        "Title": "CLASSICS",
+        "Image": "classics.jpg",
+        "ImageName": "classics",
+        "Link": "GalleryCollection/Classics"
+
+
+    },
+    {
+        "Id": 3,
+        "Title": "OPULENCE",
+        "Image": "opulence.jpg",
+        "ImageName": "opulence",
+        "Link": "GalleryCollection/Opulence"
+
+
+    },
+    {
+        "Id": 4,
+        "Title": "PEOPLE",
+        "Image": "people.jpg",
+        "ImageName": "people",
+        "Link": "GalleryCollection/People"
+
+
+    },
+    {
+        "Id": 5,
+        "Title": "MODERN",
+        "Image": "themodern.jpg",
+        "ImageName": "themodern",
+        "Link": "GalleryCollection/TheModern"
+
+
+    },
+    {
+        "Id": 6,
+        "Title": "URBANO",
+        "Image": "urbano.jpg",
+        "ImageName": "urbano",
+        "Link": "GalleryCollection/Urbano"
+
+
+    }
+
+]
+

@@ -48,6 +48,12 @@ import CustomerService from './pages/CustomerService/CustomerService'
 
 
 
+import Abstract from './pages/GalleryCollection/Abstract'
+import Classics from './pages/GalleryCollection/Classics'
+import People from './pages/GalleryCollection/People'
+import TheModern from './pages/GalleryCollection/TheModern'
+import Urbano from './pages/GalleryCollection/Urbano'
+import Opulence from './pages/GalleryCollection/Opulence'
 
 
 
@@ -91,6 +97,15 @@ function App() {
         <Route exact path='/Travel-Tips' component={TravelTips} />
         <Route exact path='/ReturnPolicy' component={ReturnPolicy} />
         <Route exact path='/CustomerService' component={CustomerService} />
+
+
+        <Route exact path='/GalleryCollection/Abstract' component={Abstract} />
+        <Route exact path='/GalleryCollection/Classics' component={Classics} />
+        <Route exact path='/GalleryCollection/Opulence' component={Opulence} />
+        <Route exact path='/GalleryCollection/People' component={People} />
+        <Route exact path='/GalleryCollection/TheModern' component={TheModern} />
+        <Route exact path='/GalleryCollection/Urbano' component={Urbano} />
+
 
 
 
