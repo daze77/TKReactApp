@@ -36,7 +36,7 @@ import Testimonials from './pages/Testimonials/Testimonials'
 import Contact from './pages/Contact/Contact'
 
 import WallCoverings from './pages/WallCoverings'
-import WTP from './pages/WTP'
+import WTP from './pages/WTP/WTP'
 import ArtandDesign from './pages/ArtandDesign'
 import About from './pages/TheArtist/TheArtist'
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'

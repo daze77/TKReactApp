@@ -53,7 +53,7 @@ function GalleryCollection(){
 
                         Id = {gallery.imgae}
                         Title ={gallery.Title}
-                        Image = {ImgObj[gallery.ImageName]}
+                        ImageName = {ImgObj[gallery.ImageName]}
                         Link = {gallery.Link}
 
                         />

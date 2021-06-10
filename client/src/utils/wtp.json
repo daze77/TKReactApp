@@ -1,0 +1,58 @@
+
+
+[
+    {
+        "Id": 1,
+        "Title": "ABSTRACT",
+        "Image": "ff18dfdb14ad3487b493f1fb99289bb4.jpg",
+        "ImageName": "ff18dfdb14ad3487b493f1fb99289bb4",
+        "Link": ""
+
+    },
+    {
+        "Id": 2,
+        "Title": "CLASSICS",
+        "Image": "fc3873b8d2b10b524ad075d9f500428f.jpg",
+        "ImageName": "fc3873b8d2b10b524ad075d9f500428f",
+        "Link": ""
+
+
+    },
+    {
+        "Id": 3,
+        "Title": "OPULENCE",
+        "Image": "f9b769dd6f12b195170ae1fa2815a7dd.jpg",
+        "ImageName": "f9b769dd6f12b195170ae1fa2815a7dd",
+        "Link": ""
+
+
+    },
+    {
+        "Id": 4,
+        "Title": "PEOPLE",
+        "Image": "f8842d13b30693a245596b97f6c81310.jpg",
+        "ImageName": "f8842d13b30693a245596b97f6c81310",
+        "Link": ""
+
+
+    },
+    {
+        "Id": 5,
+        "Title": "MODERN",
+        "Image": "f81479b2c5378b62daa23d2c8ae736bb.jpg",
+        "ImageName": "f81479b2c5378b62daa23d2c8ae736bb",
+        "Link": ""
+
+
+    },
+    {
+        "Id": 6,
+        "Title": "URBANO",
+        "Image": "f67a4f93a317a81686278569296918e2.jpg",
+        "ImageName": "f67a4f93a317a81686278569296918e2",
+        "Link": ""
+
+
+    }
+
+]
