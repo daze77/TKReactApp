@@ -117,7 +117,7 @@ function App() {
 
         <Route exact path='/WallCoverings' component={WallCoverings} />
 
-        <Route exact path='/WTP' component={WTP} />
+        <Route exact path='/WorldTravelPhotography' component={WTP} />
 
         <Route exact path='/ArtandDesign' component={ArtandDesign} />
 

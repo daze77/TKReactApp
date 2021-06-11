@@ -24,7 +24,7 @@ function WTP(){
                 <h1>World Travel Photography</h1>
                 <hr />
 
-                <div class="row row-cols-1 row-cols-md-4 g-3 wtpCollection">
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 wtpCollection">
                     {WTPJSON.map( wtp =>(
 
                         <WTPCard 

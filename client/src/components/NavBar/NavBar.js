@@ -64,7 +64,7 @@ function NavBar(){
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <NavLink to="/GalleryCollection"><li class="dropdown-item">Gallery Collection</li></NavLink>
                                     <NavLink to="/WallCoverings"><li class="dropdown-item">Wall Coverings</li></NavLink>
-                                    <NavLink to="/WTP"><li class="dropdown-item">World Travel Photography</li></NavLink>
+                                    <NavLink to="/WorldTravelPhotography"><li class="dropdown-item">World Travel Photography</li></NavLink>
                                     <NavLink to="/ArtandDesign"><li class="dropdown-item">Art & Design</li></NavLink>
                                 </ul>
                             </li>
