@@ -3,7 +3,9 @@ import React from 'react'
 import ClassicsCard from '../../components/GalleryCard/GalleryCard'
 import GCJSON  from '../../utils/GalleryColGrid.json'
 
+console.log(GCJSON[0].SubLink)
 
+console.log()
 
 function Classics() {
 
@@ -23,7 +25,9 @@ return(
 
 
             <div class="row row-cols-1 row-cols-md-3 g-3 wtpCollection">
-                {GCJSON.map( gcA =>( gcA.SubLink.map(gcAS => (
+                {GCJSON[1].SubLink.map( gcAS => (
+
+                   
 
                     <ClassicsCard 
 
@@ -39,7 +43,7 @@ return(
                     ))
 
 
-                ))}
+                }
 
             </div>
 

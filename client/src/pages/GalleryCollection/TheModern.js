@@ -21,7 +21,7 @@ return(
 
 
             <div class="row row-cols-1 row-cols-md-3 g-3 wtpCollection">
-                {GCJSON.map( gcA =>( gcA.SubLink.map(gcAS => (
+                {GCJSON[4].SubLink.map(gcAS => (
 
                     <TheModernCard 
 
@@ -37,7 +37,7 @@ return(
                     ))
 
 
-                ))}
+                }
 
             </div>
 
