@@ -35,9 +35,9 @@ import Testimonials from './pages/Testimonials/Testimonials'
 
 import Contact from './pages/Contact/Contact'
 
-import WallCoverings from './pages/WallCoverings'
+import WallCoverings from './pages/WallCoverings/WallCoverings'
 import WTP from './pages/WTP/WTP'
-import ArtandDesign from './pages/ArtandDesign'
+import ArtandDesign from './pages/ArtAndDesign/ArtandDesign'
 import About from './pages/TheArtist/TheArtist'
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
 import Travelogue from './pages/Travelogue/Travelogue'
