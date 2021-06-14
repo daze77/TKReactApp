@@ -1,4 +1,6 @@
 import React from 'react'
+import { useLocation  } from "react-router-dom"
+
 
 import './Footer.css'
 
@@ -13,8 +15,13 @@ import Social from '../Social/Social'
 function Footer(){
 
 
+    const location = useLocation()
+
     return(
         <>
+
+        {location.pathname!=='/HomePageAlternate'&&
+
             <footer>
                 <hr />
                 <div class="container">
@@ -29,6 +36,7 @@ function Footer(){
 
 
             </footer>
+        }
 
 
         </>

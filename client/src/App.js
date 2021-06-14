@@ -1,7 +1,6 @@
-import React from 'react'
-import {BrowserRouter, Route} from "react-router-dom"
+import React, {useEffect} from 'react'
+import {BrowserRouter, Route, useLocation} from "react-router-dom"
 import {StoreProvider} from "./utils/GlobalStore"
-import { matchPath } from "react-router";
 
 
 
@@ -69,27 +68,39 @@ import './App.css';
 import './pages/pages.css'
 
 
+// function Profile() {
+//   const location = useLocation();
+//   useEffect(() => {
+//     const currentPath = location.pathname;
+//     const searchParams = new URLSearchParams(location.search);
+//   }, [location]);
+//   return <p>Profile</p>;
+// }
+// Profile()
+//   console.log(Profile)
 
 
-function App() {
 
+function App(location) {
 
-  
+  console.log(location.location)
 
   return (
     <>
+    <StoreProvider>
         <BrowserRouter>
 
-          <Route exact path='/HomePageAlternate' component={HomePageAlternate} />
       </BrowserRouter>
+      </StoreProvider>
 
 
 
     <StoreProvider>
       <BrowserRouter>
 
+
+
       <NavBar />
-        <hr />
       <ScrollToTop />
         <Route exact path='/Login' component={Login} />
         <Route exact path='/Logout' component={Logout} />
@@ -127,6 +138,9 @@ function App() {
 
         <Route exact path='/WallCoverings' component={WallCoverings} />
         <Route exact path='/WorldTravelPhotography' component={WTP} />
+
+        <Route exact path='/HomePageAlternate' component={HomePageAlternate} />
+
 
 
       <Footer />
