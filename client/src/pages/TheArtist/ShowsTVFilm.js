@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 import Card from '../../components/Card/Card'
 import Media from "../../utils/ShowsTVFilm.json"

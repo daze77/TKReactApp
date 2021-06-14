@@ -66,3 +66,24 @@ div.mainnav a:visited, div.mainnav a:link{
     padding: 5px 0px 5px 0px;
     
 }
+
+
+
+
+.social li{
+    display: inline-block;
+    list-style: none;
+    color: azure;
+    padding: 8px;
+}
+
+.social li i:hover {
+    
+        transform: scale(2.1);
+ 
+
+}
+
+.social li i {
+    transition: all 0.2s ease-in-out
+}

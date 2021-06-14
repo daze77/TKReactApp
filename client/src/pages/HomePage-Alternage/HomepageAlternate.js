@@ -2,6 +2,8 @@ import React from 'react'
 
 import './HomepageAlternate.css'
 
+import logo from '../../assets/logo/logo.png'
+
 
 
 function showMenu(){
@@ -25,7 +27,7 @@ function HomePageAlt(){
 
                     
                     <a href="index.html">
-                        <img src="../images/Logo/logo.png"/>
+                        <img src={logo}/>
                     </a>
                 </div>
                 <div class="social">

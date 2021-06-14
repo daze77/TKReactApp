@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react'
-import {BrowserRouter, Route, useLocation} from "react-router-dom"
+import React from 'react'
+import {BrowserRouter, Route} from "react-router-dom"
 import {StoreProvider} from "./utils/GlobalStore"
 
 
@@ -60,7 +60,7 @@ import HomePageAlternate from './pages/HomePage-Alternage/HomepageAlternate'
 
 
 
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 
@@ -87,11 +87,7 @@ function App(location) {
 
   return (
     <>
-    <StoreProvider>
-        <BrowserRouter>
-
-      </BrowserRouter>
-      </StoreProvider>
+ 
 
 
 

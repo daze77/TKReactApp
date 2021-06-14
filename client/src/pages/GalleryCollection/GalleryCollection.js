@@ -3,12 +3,7 @@ import React from 'react'
 import GalleryCard from '../../components/GalleryCard/GalleryCard'
 import GalleryJSON from '../../utils/GalleryColGrid.json'
 
-import Pic1 from '../../assets/images/gallery/abstract.jpg'
-import Pic2 from '../../assets/images/gallery/classics.jpg'
-import Pic3 from '../../assets/images/gallery/opulence.jpg'
-import Pic4 from '../../assets/images/gallery/people.jpg'
-import Pic5 from '../../assets/images/gallery/themodern.jpg'
-import Pic6 from '../../assets/images/gallery/urbano.jpg'
+
 
 
 import abstract from '../../assets/images/gallery/abstract.jpg'
@@ -21,7 +16,6 @@ import urbano from '../../assets/images/gallery/urbano.jpg'
 
 
 import './GalleryCollection.css'
-import { PromiseProvider } from 'mongoose'
 
 
 function GalleryCollection(){

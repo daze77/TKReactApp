@@ -15,16 +15,6 @@ function TravelTips() {
     console.log('this is p what now', allP)
 
 
-    // const a = array.from(document.querySelectorAll("p"))
-    // let b = 
-
-
-
-    function update(){
-        test.map((q)=>document.querySelector("p").innerHTML=q)
-
-    }
-    // update()
 
     return(
     

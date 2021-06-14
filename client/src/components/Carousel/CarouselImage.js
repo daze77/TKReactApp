@@ -26,7 +26,7 @@ function CarouselImage(props){
     return(
         <>  
            
-            <div class="carousel-item">
+            <div class="carousel-item" key={props.Id}>
                 <img src={CarouselImg[props.Id]} class="d-block w-100" alt={props.Id}/>
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Auto slide label</h5>

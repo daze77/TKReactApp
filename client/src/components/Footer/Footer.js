@@ -7,7 +7,6 @@ import './Footer.css'
 import SubFooter from './SubFooter'
 import FooterLinks from './FooterLinks'
 import Subscriptions from './Subscriptions'
-import Social from '../Social/Social'
 
 
 
@@ -20,14 +19,13 @@ function Footer(){
     return(
         <>
 
-        {location.pathname!=='/HomePageAlternate'&&
+        {location.pathname!=='/HomePageAlternate' &&
 
             <footer>
                 <hr />
                 <div class="container">
                     <FooterLinks />
                 </div>
-                {/* <Social /> */}
 
                 <Subscriptions />
                 <SubFooter />

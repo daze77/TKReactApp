@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Redirect, NavLink, useLocation  } from "react-router-dom"
+import { NavLink, useLocation  } from "react-router-dom"
 import { useStoreContext } from "../../utils/GlobalStore"
 import fetchJSON from '../../utils/API'
 import logo from '../../assets/logo/logo.png'
