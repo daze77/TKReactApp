@@ -1,6 +1,7 @@
 import React from 'react'
 import {BrowserRouter, Route} from "react-router-dom"
 import {StoreProvider} from "./utils/GlobalStore"
+import { matchPath } from "react-router";
 
 
 
@@ -56,6 +57,7 @@ import Urbano from './pages/GalleryCollection/Urbano'
 import Opulence from './pages/GalleryCollection/Opulence'
 
 
+import HomePageAlternate from './pages/HomePage-Alternage/HomepageAlternate'
 
 
 
@@ -67,12 +69,26 @@ import './App.css';
 import './pages/pages.css'
 
 
+
+
 function App() {
+
+
+  
+
   return (
+    <>
+        <BrowserRouter>
+
+          <Route exact path='/HomePageAlternate' component={HomePageAlternate} />
+      </BrowserRouter>
+
+
 
     <StoreProvider>
       <BrowserRouter>
-        <NavBar />
+
+      <NavBar />
         <hr />
       <ScrollToTop />
         <Route exact path='/Login' component={Login} />
@@ -97,6 +113,8 @@ function App() {
         <Route exact path='/Travel-Tips' component={TravelTips} />
         <Route exact path='/ReturnPolicy' component={ReturnPolicy} />
         <Route exact path='/CustomerService' component={CustomerService} />
+        <Route exact path='/ArtandDesign' component={ArtandDesign} />
+
 
 
         <Route exact path='/GalleryCollection/Abstract' component={Abstract} />
@@ -107,30 +125,28 @@ function App() {
         <Route exact path='/GalleryCollection/Urbano' component={Urbano} />
 
 
-
-
-
-
-
-
-
-
         <Route exact path='/WallCoverings' component={WallCoverings} />
-
         <Route exact path='/WorldTravelPhotography' component={WTP} />
 
-        <Route exact path='/ArtandDesign' component={ArtandDesign} />
 
-   
-
-      
-      
-      
-      
       <Footer />
       </BrowserRouter>
 
     </StoreProvider>
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+    </>
 
 
   );

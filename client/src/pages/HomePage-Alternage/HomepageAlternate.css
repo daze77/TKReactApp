@@ -1,0 +1,68 @@
+#coverpage{
+    background: url(../../assets//images/homepage/fotis-fotopoulos-ujDvxfzU_VU-unsplash.jpg) no-repeat center fixed;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+div.mainnav a:visited, div.mainnav a:link{
+    color: azure;
+    display: block;
+}
+
+#pagewrapper{
+    padding: 5px 50px;
+    margin: auto;
+}
+
+.coverheader{
+    padding: 20px 0px;
+    width: 100%;
+    position:relative;
+    display: block;
+}
+
+.sitelogo{
+    display: absolute;
+}
+
+.social{
+    display: inline-block;
+    position:  absolute;
+    bottom: 0;
+    right: 0; 
+    padding: 20px
+}
+
+.covercontentbody{
+    margin: 0px 50px;
+    padding: 5px 250px;
+}
+
+.covermainnav{
+    margin: auto;
+    text-align: center;
+    display: none;
+
+}
+
+.covermainnav p{
+    margin: auto;
+    padding: 20px;
+    color: azure;
+    text-align: center;
+    font-size: xx-large;
+    border-bottom: azure 1px solid;
+}
+
+.covermainnav ul{
+    text-align:center;
+    padding: 5px 20px;
+}
+
+.covermainnav li{
+    list-style: none;
+    color:azure;
+    padding: 5px 0px 5px 0px;
+    
+}

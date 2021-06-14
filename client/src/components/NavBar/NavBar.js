@@ -41,14 +41,18 @@ function NavBar(){
     }, [ location ])
     
     useEffect( function(){
-      // on load let's get try to get the  session (if one exists)
+      // on load let's  try to get the  session (if one exists)
       if( localStorage.session && !authOk ){
         loadUserSession()
       }
     }, [] )
 
+    console.log(`this is the url path`, )
+
     return (
         <>
+
+        {(location !== '/HomePageAlternate') && 
             <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,13 +100,16 @@ function NavBar(){
 
                                 </ul>
                             </li>
+                            <NavLink to="/HomePageAlternate"><li class="nav-link">ALTERNATE HOMEPAGE</li></NavLink>
+
+
                         </ul>
                         <NavLogin />
                         <br/>
                     </div>
                 </div>
             </nav>
-
+}
 
         </>
 
