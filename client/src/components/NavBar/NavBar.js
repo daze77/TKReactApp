@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { NavLink, useLocation  } from "react-router-dom"
 import { useStoreContext } from "../../utils/GlobalStore"
 import fetchJSON from '../../utils/API'
-import logo from '../../assets/logo/logo.png'
 import NavLogin from './NavLogin'
 import LogoSymbol from '../../components/Logo/Logo'
 
@@ -103,6 +102,8 @@ function NavBar(){
                                     </ul>
                                 </li>
                                 <NavLink to="/HomePageAlternate"><li class="nav-link">ALTERNATE HOMEPAGE</li></NavLink>
+                                <NavLink to="/TestPage"><li class="nav-link">Test Page</li></NavLink>
+
 
 
                             </ul>

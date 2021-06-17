@@ -58,6 +58,7 @@ import Opulence from './pages/GalleryCollection/Opulence'
 
 import HomePageAlternate from './pages/HomePage-Alternage/HomepageAlternate'
 
+import TestPage from './pages/TestPage'
 
 
 // import logo from './logo.svg';
@@ -136,6 +137,7 @@ function App(location) {
         <Route exact path='/WorldTravelPhotography' component={WTP} />
 
         <Route exact path='/HomePageAlternate' component={HomePageAlternate} />
+        <Route exact path='/TestPage' component={TestPage} />
 
 
 
