@@ -4,6 +4,7 @@ import { useStoreContext } from "../../utils/GlobalStore"
 import fetchJSON from '../../utils/API'
 import logo from '../../assets/logo/logo.png'
 import NavLogin from './NavLogin'
+import LogoSymbol from '../../components/Logo/Logo'
 
 
 let timeout
@@ -59,7 +60,7 @@ function NavBar(){
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
-                        <NavLink to="/" class="navbar-brand" className="nav-link" activeClassName="active"><img src={logo} alt=""  /> </NavLink>
+                        <NavLink to="/" class="navbar-brand" className="nav-link" activeClassName="active"><LogoSymbol  /> </NavLink>
                         <div class="collapse navbar-collapse me-1 ms-5" id="navbarTogglerDemo02">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item dropdown">

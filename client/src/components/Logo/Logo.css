@@ -1,0 +1,58 @@
+/* @font-face kit by Fonts2u (https://fonts2u.com) */ 
+@font-face {
+    font-family:"Bellerose Light:1.0";
+    src: url("Bellerose.woff") format("woff");
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+
+
+/* TKLogo */
+
+.tkLogocontainer{
+    position: relative;
+    display:flex;
+
+    box-sizing: border-box;
+
+  }
+
+  .tkLogoSymbolContainer{
+    position: relative;
+    height: 70px;
+    width: 75px;;
+  }
+
+  .tkLogoNameContainer{
+    position: relative;
+    height: 86px;
+    width: 200px;;
+  }
+
+  .tkLogoName{
+    position: absolute;
+    bottom:0;
+  }
+
+
+  
+
+  #logoNameL, #logoNameR{
+    font-family: "Bellerose Light:1.0";
+    font-size: 2.1875em
+  }
+
+#logoNameL{
+  color: #27ace1
+}
+
+#logoNameR{
+  color: #858689
+}
+
+
+.el{
+  display:inline-block;
+}
