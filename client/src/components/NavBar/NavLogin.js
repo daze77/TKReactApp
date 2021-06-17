@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { NavLink, useLocation  } from "react-router-dom"
 import { useStoreContext } from "../../utils/GlobalStore"
 import fetchJSON from '../../utils/API'
-import logo from '../../assets/logo/logo.png'
+import './NavBar.css'
 
 
 let timeout
@@ -50,7 +50,7 @@ function NavLogin(){
         <>
 
             
-            <div class="d-flex">
+            <div class="d-flex ">
                 <div class="mx-3">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                         {name && <li class="nav-item dropdown">

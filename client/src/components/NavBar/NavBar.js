@@ -4,6 +4,7 @@ import { useStoreContext } from "../../utils/GlobalStore"
 import fetchJSON from '../../utils/API'
 import NavLogin from './NavLogin'
 import LogoSymbol from '../../components/Logo/Logo'
+import './NavBar.css'
 
 
 let timeout
@@ -52,16 +53,16 @@ function NavBar(){
 
     return (
         <>
-            {location.pathname!=='/HomePageAlternate' &&
+            {(location.pathname!=='/HomePageAlternate' && location.pathname!=='/TestPage') &&
         
                 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
                     <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarHeadings" aria-controls="navBarHeadings" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
                         <NavLink to="/" class="navbar-brand" className="nav-link" activeClassName="active"><LogoSymbol  /> </NavLink>
-                        <div class="collapse navbar-collapse me-1 ms-5" id="navbarTogglerDemo02">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div class="collapse navbar-collapse me-1 ms-5 " id="navBarHeadings">
+                            <ul class="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         PRODUCTS
@@ -87,9 +88,6 @@ function NavBar(){
 
                                     </ul>
                                 </li>
-
-
-
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="/TheArtist" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         THE ARTIST
@@ -103,20 +101,19 @@ function NavBar(){
                                 </li>
                                 <NavLink to="/HomePageAlternate"><li class="nav-link">ALTERNATE HOMEPAGE</li></NavLink>
                                 <NavLink to="/TestPage"><li class="nav-link">Test Page</li></NavLink>
-
-
-
                             </ul>
-                            <NavLogin />
-                            <br/>
+                          
+                           
                         </div>
+                        <NavLogin />
                     </div>
                 
 
                 </nav>
+                
             }
 
-            {location.pathname!=='/HomePageAlternate' &&
+            {(location.pathname!=='/HomePageAlternate' && location.pathname!=='/TestPage') &&
                 <hr />
             }
 
