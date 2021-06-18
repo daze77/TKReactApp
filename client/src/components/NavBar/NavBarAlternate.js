@@ -1,33 +1,70 @@
-import React, { useState } from 'react' 
+import React, {  useState } from 'react' 
 import { NavLink } from 'react-router-dom'
 
 import NavBarLogo from '../../components/Logo/Logo'
 import NavLogin from './NavLogin'
+
+let count =0
 
 function NavBarAlt(){
 
     const [menuDropdown, setMenuDropdown] = useState("0px")
     const [subMenu1, setSubMenu1] = useState("")
     const [subMenu2, setSubMenu2] = useState("")
-
     const [subMenu3, setSubMenu3] = useState("")
+    const [menuSelect, setMenuSelect] = useState('')
 
-    
+    function handleMenuDropdown(e){ 
+        console.log(`clicked bitch`)
+
+        setMenuSelect(e.target.innerHTML)
+  
+        testMenuClick(e)
+        handleSubMenu(e)
+    }
+   
+    function testMenuClick(e){
+        if(menuSelect===e.target.innerHTML && count===0){
+            count=1
+            console.log("YESYESYES - outside function", menuSelect, e.target.innerHTML, count)
+        }else if(menuSelect===e.target.innerHTML && count===1){
+            count=0
+            console.log("mmm - outside function", menuSelect, e.target.innerHTML, count)
+        }else if(menuSelect!==e.target.innerHTML && count===1){
+            count=1
+            console.log("mmm - outside function", menuSelect, e.target.innerHTML, count)
+        }else if(menuSelect!==e.target.innerHTML && count===0){
+            count=1
+            console.log("mmm - outside function", menuSelect, e.target.innerHTML, count)  
+        }
 
 
-    function handleMenuDropdown(){ 
-        console.log(`menu button pushed`)     
-        menuDropdown==="500px"? setMenuDropdown('0px'): setMenuDropdown('500px')
+        triggerMenuDropdown()
+    }
+ 
+    function triggerMenuDropdown(){
+        if(count===1 ){
+            setMenuDropdown("500px")
+        } 
+        else setMenuDropdown('0px')
     }
 
     function handleSubMenu(e){
-        console.log(`submenu activated`, e)
-        subMenu1==="none"? setSubMenu1("block"):setSubMenu1("none")
-        subMenu2==="none"? setSubMenu2("block"):setSubMenu2("none")
-        subMenu3==="none"? setSubMenu3("block"):setSubMenu3("none")
+        if(e.target.innerHTML==="PRODUCTS"){
+            setSubMenu1("block")
+            setSubMenu2("none")
+            setSubMenu3("none")
+        }else if(e.target.innerHTML==="SERVICES"){
+            setSubMenu1("none")
+            setSubMenu2("block")
+            setSubMenu3("none")
+        }else{
+            setSubMenu1("none")
+            setSubMenu2("none")
+            setSubMenu3("block")
+        }
 
     }
-
 
     return(
         <>
@@ -38,13 +75,7 @@ function NavBarAlt(){
                     </div>
                     <div class="col menuItems">
                         <ul class="menuList ">
-                            <li onClick={() =>
-                                {
-                                    handleMenuDropdown();
-                                    handleSubMenu();
-                                
-                                }}
-                                >PRODUCTS</li>
+                            <li onClick={handleMenuDropdown}>PRODUCTS</li>
                             <li onClick={handleMenuDropdown}>SERVICES</li>
                             <li onClick={handleMenuDropdown}>THE ARTIST</li>
                         </ul>
@@ -78,17 +109,6 @@ function NavBarAlt(){
 
                 </div>
                 
-                
-
-
-                
-
-
-
-
-
-        
-            
             </nav>
             
             <hr />
