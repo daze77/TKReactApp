@@ -15,8 +15,6 @@ function NavBarAlt(){
     const [menuSelect, setMenuSelect] = useState('')
 
     function handleMenuDropdown(e){ 
-        console.log(`clicked bitch`)
-
         setMenuSelect(e.target.innerHTML)
   
         testMenuClick(e)
@@ -26,16 +24,12 @@ function NavBarAlt(){
     function testMenuClick(e){
         if(menuSelect===e.target.innerHTML && count===0){
             count=1
-            console.log("YESYESYES - outside function", menuSelect, e.target.innerHTML, count)
         }else if(menuSelect===e.target.innerHTML && count===1){
             count=0
-            console.log("mmm - outside function", menuSelect, e.target.innerHTML, count)
         }else if(menuSelect!==e.target.innerHTML && count===1){
             count=1
-            console.log("mmm - outside function", menuSelect, e.target.innerHTML, count)
         }else if(menuSelect!==e.target.innerHTML && count===0){
             count=1
-            console.log("mmm - outside function", menuSelect, e.target.innerHTML, count)  
         }
 
 
