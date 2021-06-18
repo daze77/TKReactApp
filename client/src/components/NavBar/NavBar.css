@@ -22,28 +22,20 @@ ul.menuList {
     position: absolute;
     bottom:0px;
     left: 25%;
-  
     list-style-type: none;
-    /* vertical-align: bottom;
-    text-align: center; */
     margin: 0;
     padding: 0;
-   
-
-    
 }
 
 
 
 .menuList li{
-
     display: inline-block;
     margin: 30px 30px 0px 30px;
     padding: 5px 5px 0px 5px;
     cursor: pointer;
     user-select: none;
 }
-
 
 
 .navDropDowns{
@@ -57,4 +49,24 @@ ul.menuList {
 }
   
 
+.sub-menu{
+    position: relative;
+    top:25%;
+    /* width: 100%; */
+}
 
+.sub-menu li {
+
+    text-align: center;
+    list-style-type: none;
+    padding: 10px;
+    font-size: 3em;
+}
+
+.sub-menu ul li{
+    color: white;  
+}
+
+.sub-menu li:hover{
+    color: #27ace1;
+}
