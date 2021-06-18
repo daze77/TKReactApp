@@ -38,6 +38,23 @@ ul.menuList {
 .menuList li{
 
     display: inline-block;
-    padding: 35px 35px 0px 35px;
+    margin: 30px 30px 0px 30px;
+    padding: 5px 5px 0px 5px;
+    cursor: pointer;
+    user-select: none;
 }
+
+
+
+.navDropDowns{
+    position: fixed;
+    height: 0px;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.3s
+ 
+}
+  
+
 
