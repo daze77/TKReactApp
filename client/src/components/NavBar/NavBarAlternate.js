@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import NavBarLogo from '../../components/Logo/Logo'
 import NavLogin from './NavLogin'
+import LogoSymbol from '../../assets/logo/logosymbol.png'
 
 let count =0
 
@@ -19,6 +20,13 @@ function NavBarAlt(){
   
         testMenuClick(e)
         handleSubMenu(e)
+    }
+
+    function handleCloseBtn(){
+        console.log('btn clicked')
+        count=0
+        triggerMenuDropdown()
+
     }
    
     function testMenuClick(e){
@@ -38,7 +46,7 @@ function NavBarAlt(){
  
     function triggerMenuDropdown(){
         if(count===1 ){
-            setMenuDropdown("500px")
+            setMenuDropdown("100%")
         } 
         else setMenuDropdown('0px')
     }
@@ -80,6 +88,9 @@ function NavBarAlt(){
                 </div>
                 <div class="row navDropDownRow">
                     <div class="col navDropDowns" style={{height: menuDropdown}}>
+                        <div id="closebtn" onClick={handleCloseBtn}>X</div>
+                        <img id="logoSubMenu" src={LogoSymbol} alt="Logo"/>
+
                         <ul class="sub-menu" style={{display: subMenu1}}>
                             <NavLink to="/GalleryCollection"><li class="">Gallery Collection</li></NavLink>
                             <NavLink to="/WallCoverings"><li class="">Wall Coverings</li></NavLink>
