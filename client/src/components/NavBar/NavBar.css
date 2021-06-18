@@ -45,7 +45,8 @@ ul.menuList {
     background-color: rgba(0,0,0,0.8);
     z-index: 1;
     overflow-x: hidden;
-    transition: 0.3s
+    transition: 0.3s;
+    left:0
  
 }
   
@@ -89,5 +90,8 @@ ul.menuList {
 
 #logoSubMenu{
     position: relative;
-    left: 50%
+    left: 25%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
