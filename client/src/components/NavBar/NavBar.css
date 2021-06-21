@@ -121,6 +121,8 @@ ul.menuList {
 
 
 
+
+
 /* New Menu CSS */
 
 
@@ -136,17 +138,22 @@ ul.menuList {
     transition: 0.5s;
 }
 
-.navOverlay ul{
-    list-style-type: none;
-}
-
-.navOverlay li {
+.navOverlayHeader li {
     position: absolute;
     cursor: pointer;
     display: block;
 }
 
-.navOverlay div {
+.navOverlay ul{
+    list-style-type: none;
+}
+
+.navOverlay li {
+    cursor: pointer;
+    display: block;
+}
+
+.navOverlay > div {
     margin-bottom: 15px;
     padding-bottom: 85px;
     
@@ -155,10 +162,7 @@ ul.menuList {
 .navOverlayContent{
     padding: 25px 0px;
 }
-.navOverlayContent ul{
-    /* margin-bottom: 15px;
-    padding-bottom: 85px; */
-}
+
 
 #closeButton{
     left: 45px;
@@ -178,12 +182,30 @@ ul.menuList {
 }
 
 
+.fullMenuList {
+    display: inline;
+}
 
 
-
-.fullMenuList li{
-    position: relative;
+.fullMenuList > div{
     padding: 10px 0px 10px 25px;
     font-size:1.5em;
+    color: #818181;
+    user-select: none;
+    cursor: pointer;
 
 }
+
+
+
+.fullMenuList div div {
+    font-size:1em;
+
+}
+
+.plusSign{
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
