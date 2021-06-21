@@ -39,23 +39,42 @@ ul.menuList {
 
 
 .navDropDowns{
-    position: fixed;
+    /* position: fixed;
     width: 100%;
     height: 0px;
     background-color: rgba(0,0,0,0.8);
     z-index: 1;
     overflow-x: hidden;
     transition: 0.3s;
-    left:0
+    left:0 */
  
+}
+
+.subMenuWrapper{
+    position: fixed;
+    width: 100%;
+    height: 0px;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+    overflow-x:auto;
+    transition: 0.3s;
+    left:0
+}
+
+.subMenuOverlay{
+    position: relative;
+    width: 100%;
+    padding: 10px 35px 10px 35px
+
 }
   
 
 .sub-menu{
-    position: relative;
-    top:25%;
+    position: absolute;
+    display: block;
+    /* top:50%; */
     padding-left: 2rem;
-    margin: 0px 150px 0px 150px;
+    margin: 150px 150px 0px 150px;
 }
 
 .sub-menu li {
@@ -66,21 +85,24 @@ ul.menuList {
     font-size: 3em;
 }
 
-.sub-menu ul li{
-    color: white; 
-     
-}
-
 .sub-menu li:hover{
     color: #27ace1;
 }
 
 #closebtn{
-    color: #818181;
-    font-size: 2.9em;
-    padding: 25px;
+    font-size: 3.9em;
     cursor: pointer;
-    display: inline-block;
+}
+
+.submenuHeader{
+    list-style-type: none;
+    padding: 0px;
+
+}
+
+.submenuHeader li{
+    position: absolute;
+
 }
 
 #closebtn:hover{
@@ -89,9 +111,79 @@ ul.menuList {
 }
 
 #logoSubMenu{
+    left: 50%;
+}
+
+
+
+
+
+
+
+
+/* New Menu CSS */
+
+
+.navOverlay{
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 1);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.navOverlay ul{
+    list-style-type: none;
+}
+
+.navOverlay li {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+}
+
+.navOverlay div {
+    margin-bottom: 15px;
+    padding-bottom: 85px;
+    
+}
+
+.navOverlayContent{
+    padding: 25px 0px;
+}
+.navOverlayContent ul{
+    /* margin-bottom: 15px;
+    padding-bottom: 85px; */
+}
+
+#closeButton{
+    left: 45px;
+    font-size: 46px;
+}
+
+#closeButton:hover{
+    color: #6cba1a;
+
+
+}
+
+#subMenuLogo{
+    left: 45%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+
+
+
+.fullMenuList li{
     position: relative;
-    left: 25%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 0px 10px 25px;
+    font-size:1.5em;
+
 }

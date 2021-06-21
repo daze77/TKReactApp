@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import NavBarLogo from '../../components/Logo/Logo'
 import NavLogin from './NavLogin'
 import LogoSymbol from '../../assets/logo/logosymbol.png'
-
+import NavBarLogoSymbol from '../../components/Logo/Logo2Symbol'
 let count =0
 
 function NavBarAlt(){
@@ -65,8 +65,8 @@ function NavBarAlt(){
             setSubMenu2("none")
             setSubMenu3("block")
         }
-
     }
+
 
     return(
         <>
@@ -87,35 +87,39 @@ function NavBarAlt(){
                     </div>
                 </div>
                 <div class="row navDropDownRow">
-                    <div class="col navDropDowns" style={{height: menuDropdown}}>
-                        <div id="closebtn" onClick={handleCloseBtn}>X</div>
-                        <img id="logoSubMenu" src={LogoSymbol} alt="Logo"/>
+                    <div class="col navDropDowns subMenuWrapper" style={{height: menuDropdown}}>
+                        <div class="subMenuOverlay">
+                            <ul class="submenuHeader">
+                                <li id="closebtn" onClick={handleCloseBtn}>&times;</li>
+                                <li id="logoSubMenu"><img  src={LogoSymbol} alt="Logo"/>   </li>
+                            </ul>
 
-                        <ul class="sub-menu" style={{display: subMenu1}}>
-                            <NavLink to="/GalleryCollection"><li class="">Gallery Collection</li></NavLink>
-                            <NavLink to="/WallCoverings"><li class="">Wall Coverings</li></NavLink>
-                            <NavLink to="/WorldTravelPhotography"><li class="">World Travel Photography</li></NavLink>
-                            <NavLink to="/ArtandDesign"><li class="">Art & Design</li></NavLink>
-                        </ul>
-                        <ul class="sub-menu"  style={{display: subMenu2}}>
-                            <NavLink to="/HospitalityandDesign"><li class="">Hospitality & Design</li></NavLink>
-                            <NavLink to="/Installations"><li class="m">Installations</li></NavLink>
-                            <NavLink to="/Lighting"><li class="">Lighting</li></NavLink>
-                            <NavLink to="/TheFrameShop"><li class="">The Frame Shop</li></NavLink>
-                            <NavLink to="/PrintingandServices"><li class="">Printing & Services</li></NavLink>
-                        </ul>
-                        <ul class="sub-menu" style={{display: subMenu3}}>
-                            <NavLink to="/TheArtist"><li class="">The Artist</li></NavLink>
-                            <NavLink to="/Testimonials"><li class="">Testimonials</li></NavLink>
-                            <NavLink to="/Contact"><li class="">Contact</li></NavLink>
-                        </ul>
+                            <ul class="sub-menu" style={{display: subMenu1}}>
+                                <NavLink to="/GalleryCollection"><li class="">Gallery Collection</li></NavLink>
+                                <NavLink to="/WallCoverings"><li class="">Wall Coverings</li></NavLink>
+                                <NavLink to="/WorldTravelPhotography"><li class="">World Travel Photography</li></NavLink>
+                                <NavLink to="/ArtandDesign"><li class="">Art & Design</li></NavLink>
+                            </ul>
+                            <ul class="sub-menu"  style={{display: subMenu2}}>
+                                <NavLink to="/HospitalityandDesign"><li class="">Hospitality & Design</li></NavLink>
+                                <NavLink to="/Installations"><li class="m">Installations</li></NavLink>
+                                <NavLink to="/Lighting"><li class="">Lighting</li></NavLink>
+                                <NavLink to="/TheFrameShop"><li class="">The Frame Shop</li></NavLink>
+                                <NavLink to="/PrintingandServices"><li class="">Printing & Services</li></NavLink>
+                            </ul>
+                            <ul class="sub-menu" style={{display: subMenu3}}>
+                                <NavLink to="/TheArtist"><li class="">The Artist</li></NavLink>
+                                <NavLink to="/Testimonials"><li class="">Testimonials</li></NavLink>
+                                <NavLink to="/Contact"><li class="">Contact</li></NavLink>
+                            </ul>
+                        </div>
 
                     </div>
 
                 </div>
                 
             </nav>
-            
+
             <hr />
         </>
     )

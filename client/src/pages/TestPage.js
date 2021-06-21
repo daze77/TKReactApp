@@ -1,6 +1,7 @@
 import React from 'react' 
 
-import NavBarAlt from '../components/NavBar/NavBarAlternate'
+// import NavBarAlt from '../components/NavBar/NavBarAlternate'
+import NavBarAlt2 from '../components/NavBar/NavBarAlternate2'
 
 function TestPage(){
 
@@ -8,7 +9,8 @@ function TestPage(){
 
     return(
         <>
-        <NavBarAlt />
+        {/* <NavBarAlt /> */}
+        <NavBarAlt2 />
         <div>This is a Test Page</div>
 
 
