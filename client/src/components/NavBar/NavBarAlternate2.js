@@ -59,11 +59,11 @@ function NavBarAlt(){
                         </div>
                     </div>
                     <div class="col menuItems">
-                        <ul class="menuList ">
+                        {/* <ul class="menuList ">
                             <li onClick={handleSubMenu}>PRODUCTS</li>
                             <li onClick={handleSubMenu}>SERVICES</li>
                             <li onClick={handleSubMenu}>THE ARTIST</li>
-                        </ul>
+                        </ul> */}
                     </div>
                     <div class="col-auto">
                         <NavLogin />
