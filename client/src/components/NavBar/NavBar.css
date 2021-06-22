@@ -134,8 +134,8 @@ ul.menuList {
     top: 0;
     left: 0;
     background-color: rgba(0,0,0, 1);
-    overflow-y: hidden;
-    padding-left: 2em;
+    overflow-y: scroll;
+    /* padding-left: .5em; */
     transition: 0.5s;
 }
 
@@ -183,26 +183,29 @@ ul.menuList {
     width: 50px;
 }
 
-
-
-
-
 .fullMenuList > div{
     padding: 10px 0px 10px 25px;
-    font-size:1.1em;
+    font-size:1.2em;
     color: #818181;
     user-select: none;
     cursor: pointer;
-;
-
+}
+.fullMenuList > div:hover{
+    color: #6cba1a;
+  
 }
 
 .fullMenuList ul{
     padding: 0.2rem 1rem;
 }
 .fullMenuList div li {
-    font-size:0.8em;
-    padding: 0em 0em;
+    font-size:0.9em;
+    padding: 0.03em 0em;
+
+}
+
+.fullMenuList div li:hover {
+    color: #27ace1;
 
 }
 
@@ -212,3 +215,14 @@ ul.menuList {
     margin-left: 10px;
 }
 
+
+@keyframes fadeMe {
+    from {
+      opacity: 0;
+      visibility: hidden;
+    }
+    to {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
