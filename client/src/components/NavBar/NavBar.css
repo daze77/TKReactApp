@@ -11,7 +11,7 @@
     white-space: nowrap;
 }
 .navRow{
-    margin: 0px 10px 0px 10px
+    margin: 10px 10px 0px 10px
 }
 
 .menuItems{
@@ -215,6 +215,25 @@ ul.menuList {
     margin-left: 10px;
 }
 
+.menuList{
+    position: relative;
+}
+
+.menuList ul{
+    margin-bottom: 0px;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 0px;
+
+
+}
+
+.menuList li{
+    padding: 10px 10px 0px 20px;
+ 
+    
+}
+
 
 @keyframes fadeMe {
     from {
@@ -225,4 +244,29 @@ ul.menuList {
       opacity: 1;
       visibility: visible;
     }
+  }
+
+  .navbarBranding #logoSymbolOnly{
+      display: none;
+  }
+  .navbarBranding #logoFull{
+      display: block;
+  }
+  #fullMenuList{
+    visibility: visible;
+}
+
+
+
+
+  @media only screen and (max-width: 745px) {
+      .navbarBranding #logoSymbolOnly{
+          display: block;
+      } 
+      .navbarBranding #logoFull{
+          display: none; 
+      }
+      #fullMenuList{
+          visibility: hidden;
+      }
   }

@@ -44,51 +44,35 @@ function NavBarAlt(){
     }
 
     function handleSubMenu(e){
-        console.log(`this is e`, e)
         switch(e.target.id){
             case "PRODUCTS":
-                subMenu1.display === "block" ? setSubMenu1({display:"none"})  : setSubMenu1({display:"block", animation: "fadeMe 2s" })
+                subMenu1.display === "block" ? setSubMenu1({display:"none"})  : setSubMenu1({display:"block", animation: "fadeMe 2s" });
                 subMenu1.display === "block" ? setsubMenuExpand1(plus) : setsubMenuExpand1(minus);
-
                 break;
             case "SERVICES":
                 subMenu2.display === "block" ? setSubMenu2({display:"none"}) : setSubMenu2({display:"block", animation: "fadeMe 2s" });
                 subMenu2.display === "block" ? setsubMenuExpand2(plus) : setsubMenuExpand2(minus);
-
                 break;
             default:
                 subMenu3.display === "block" ? setSubMenu3({display:"none"}) : setSubMenu3({display:"block", animation: "fadeMe 2s" });
                 subMenu3.display === "block" ? setsubMenuExpand3(plus) : setsubMenuExpand3(minus);
-
-
         }
-        // plusSignChange(e)
      }
 
-    //  function plusSignChange(e){
-    //     console.log(`this is e`, e)
-    //     switch(e.target.id){
-    //         case "PRODUCTS":
-    //             break;
-    //         case "SERVICES":
-    //             subMenu2.display === "block" ? setsubMenuExpand2(plus) : setsubMenuExpand2(minus);
-    //             break;
-    //         default:
-    //     }
-    //  }
-    
-    console.log(navOveraly)
 
     return(
         <>
             <nav>
                 <div class="row navRow">
                     <div class="col-auto navbarBranding">
-                        <div onClick={handleNavOverlay}>
+                        <div id="logoSymbolOnly" onClick={handleNavOverlay}>
                             <NavBarLogoSymbol />
                         </div>
+                        <div id="logoFull" onClick={handleNavOverlay}>
+                            <NavBarLogo />
+                        </div>
                     </div>
-                    <div class="col " style={{display: "none"}}>
+                    <div class="col menuList" >
                         <ul class=" ">
                             <li onClick={handleSubMenu}>PRODUCTS</li>
                             <li onClick={handleSubMenu}>SERVICES</li>
@@ -103,7 +87,7 @@ function NavBarAlt(){
                     <div class="navOverlayHeader" >
                         <ul class="navOverlaySubMenu">
                             <li id="closeButton" onClick={handleCloseButton}>&times;</li>
-                            <li id="subMenuLogo"><img  src={LogoSymbol} alt="Logo"/>   </li>
+                            <li id="subMenuLogo"><img src={LogoSymbol} alt="Logo"/>   </li>
                         </ul>
                     </div>
                     <div class="fullMenuList ">
