@@ -135,7 +135,7 @@ ul.menuList {
     left: 0;
     background-color: rgba(0,0,0, 1);
     overflow-y: hidden;
-    padding-left: 3em;
+    padding-left: 2em;
     transition: 0.5s;
 }
 
@@ -184,14 +184,12 @@ ul.menuList {
 }
 
 
-.fullMenuList {
-    /* display: inline; */
-}
+
 
 
 .fullMenuList > div{
     padding: 10px 0px 10px 25px;
-    font-size:1.5em;
+    font-size:1.1em;
     color: #818181;
     user-select: none;
     cursor: pointer;
@@ -200,11 +198,11 @@ ul.menuList {
 }
 
 .fullMenuList ul{
-    padding: 1rem 2rem;
+    padding: 0.2rem 1rem;
 }
 .fullMenuList div li {
-    font-size:1em;
-    padding: 1px 0px;
+    font-size:0.8em;
+    padding: 0em 0em;
 
 }
 
