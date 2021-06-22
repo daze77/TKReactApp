@@ -77,7 +77,6 @@ function NavBarAlt(){
                     <div class="col-auto navbarBranding">
                         <div onClick={handleNavOverlay}>
                             <NavBarLogoSymbol />
-
                         </div>
                     </div>
                     <div class="col menuItems">
@@ -125,16 +124,9 @@ function NavBarAlt(){
                     
                         </div>
                     </div>                
-
                 </div>
 
-
-
             </nav>
-
-
-      
-            
             <hr />
         </>
     )

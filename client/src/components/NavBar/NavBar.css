@@ -135,6 +135,7 @@ ul.menuList {
     left: 0;
     background-color: rgba(0,0,0, 1);
     overflow-y: hidden;
+    padding-left: 3em;
     transition: 0.5s;
 }
 
@@ -184,7 +185,7 @@ ul.menuList {
 
 
 .fullMenuList {
-    display: inline;
+    /* display: inline; */
 }
 
 
