@@ -48,34 +48,35 @@ function NavBarAlt(){
         switch(e.target.id){
             case "PRODUCTS":
                 subMenu1.display === "block" ? setSubMenu1({display:"none"})  : setSubMenu1({display:"block", animation: "fadeMe 2s" })
+                subMenu1.display === "block" ? setsubMenuExpand1(plus) : setsubMenuExpand1(minus);
+
                 break;
             case "SERVICES":
                 subMenu2.display === "block" ? setSubMenu2({display:"none"}) : setSubMenu2({display:"block", animation: "fadeMe 2s" });
+                subMenu2.display === "block" ? setsubMenuExpand2(plus) : setsubMenuExpand2(minus);
+
                 break;
             default:
                 subMenu3.display === "block" ? setSubMenu3({display:"none"}) : setSubMenu3({display:"block", animation: "fadeMe 2s" });
-
-        }
-        plusSignChange(e)
-     }
-
-     function plusSignChange(e){
-        console.log(`this is e`, e)
-        switch(e.target.id){
-            case "PRODUCTS":
-                subMenu1.display === "block" ? setsubMenuExpand1(plus) : setsubMenuExpand1(minus);
-                break;
-            case "SERVICES":
-                subMenu2.display === "block" ? setsubMenuExpand2(plus) : setsubMenuExpand2(minus);
-                break;
-            default:
                 subMenu3.display === "block" ? setsubMenuExpand3(plus) : setsubMenuExpand3(minus);
 
+
         }
+        // plusSignChange(e)
      }
+
+    //  function plusSignChange(e){
+    //     console.log(`this is e`, e)
+    //     switch(e.target.id){
+    //         case "PRODUCTS":
+    //             break;
+    //         case "SERVICES":
+    //             subMenu2.display === "block" ? setsubMenuExpand2(plus) : setsubMenuExpand2(minus);
+    //             break;
+    //         default:
+    //     }
+    //  }
     
-
-
     console.log(navOveraly)
 
     return(
