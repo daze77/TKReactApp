@@ -15,23 +15,13 @@ function NavBarAlt(){
 
     const mysubMenu1 = {
         display: "none",
-       
-  
-
     }
     const mysubMenu2 = {
         display: "none",
-
-
     }
     const mysubMenu3 = {
         display: "none",
-
-
     }
-
-
-
 
     const [menuDropdown, setMenuDropdown] = useState("0px")
     const [subMenu1, setSubMenu1] = useState(mysubMenu1)
@@ -43,11 +33,6 @@ function NavBarAlt(){
     const [subMenuExpand2, setsubMenuExpand2] = useState (plus)
 
     const [subMenuExpand3, setsubMenuExpand3] = useState (plus)
-
-    console.log(subMenu1)
-    console.log(subMenu1.display)
-
-
 
     function handleNavOverlay(){
         console.log(`symbol clicked`)
@@ -71,10 +56,10 @@ function NavBarAlt(){
                 subMenu3.display === "block" ? setSubMenu3({display:"none"}) : setSubMenu3({display:"block", animation: "fadeMe 2s" });
 
         }
-        test(e)
+        plusSignChange(e)
      }
 
-     function test(e){
+     function plusSignChange(e){
         console.log(`this is e`, e)
         switch(e.target.id){
             case "PRODUCTS":
