@@ -72,12 +72,17 @@ function NavBarAlt(){
                             <NavBarLogo />
                         </div>
                     </div>
+
                     <div class="col menuList" >
                         <ul class=" ">
                             <li onClick={handleSubMenu}>PRODUCTS</li>
                             <li onClick={handleSubMenu}>SERVICES</li>
                             <li onClick={handleSubMenu}>THE ARTIST</li>
                         </ul>
+                        <div id="diamond1"></div>
+                        <div id="diamond1"></div>
+                        <div id="diamond1"></div>
+
                     </div>
                     <div class="col-auto">
                         <NavLogin />

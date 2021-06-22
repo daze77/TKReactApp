@@ -270,3 +270,26 @@ ul.menuList {
           visibility: hidden;
       }
   }
+
+
+
+
+
+#diamond1 {
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom: 12px solid red;
+    position: relative;
+    top: -10px;
+  }
+  #diamond1:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: 12px solid red;
+  }
