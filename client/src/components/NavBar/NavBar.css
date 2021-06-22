@@ -141,17 +141,14 @@ ul.menuList {
 .navOverlayHeader li {
     position: absolute;
     cursor: pointer;
-    display: block;
+    display: inline-block;
 }
 
 .navOverlay ul{
     list-style-type: none;
 }
 
-.navOverlay li {
-    cursor: pointer;
-    display: block;
-}
+
 
 .navOverlay > div {
     margin-bottom: 15px;
@@ -165,8 +162,8 @@ ul.menuList {
 
 
 #closeButton{
-    left: 45px;
-    font-size: 46px;
+    left: 20px;
+    font-size: 30px;
 }
 
 #closeButton:hover{
@@ -176,9 +173,13 @@ ul.menuList {
 }
 
 #subMenuLogo{
-    left: 45%;
-    cursor: pointer;
-    display: inline-block;
+    left: 50%;
+    margin-left: -50px
+}
+
+#subMenuLogo img{
+    height: 50px;
+    width: 50px;
 }
 
 
@@ -193,13 +194,16 @@ ul.menuList {
     color: #818181;
     user-select: none;
     cursor: pointer;
+;
 
 }
 
-
-
-.fullMenuList div div {
+.fullMenuList ul{
+    padding: 1rem 2rem;
+}
+.fullMenuList div li {
     font-size:1em;
+    padding: 1px 0px;
 
 }
 
