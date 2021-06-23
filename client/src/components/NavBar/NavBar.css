@@ -29,13 +29,7 @@ ul.menuList {
 
 
 
-.menuList li{
-    display: inline-block;
-    margin: 30px 30px 0px 30px;
-    padding: 5px 5px 0px 5px;
-    cursor: pointer;
-    user-select: none;
-}
+
 
 
 .navDropDowns{
@@ -229,9 +223,12 @@ ul.menuList {
 }
 
 .menuList li{
+    display: inline-block;
+    margin: 30px 30px 0px 30px;
+    cursor: pointer;
+    user-select: none;
     padding: 10px 10px 0px 20px;
- 
-    
+    position: relative;    
 }
 
 
@@ -256,9 +253,6 @@ ul.menuList {
     visibility: visible;
 }
 
-
-
-
   @media only screen and (max-width: 745px) {
       .navbarBranding #logoSymbolOnly{
           display: block;
@@ -271,19 +265,16 @@ ul.menuList {
       }
   }
 
-
-
-
-
-#diamond1 {
+.diamond {
     width: 0;
     height: 0;
     border: 10px solid transparent;
-    border-bottom: 12px solid red;
+    border-bottom: 12px solid black;
     position: relative;
     top: -10px;
-  }
-  #diamond1:after {
+    display: block;
+}
+.diamond:after {
     content: '';
     position: absolute;
     left: -10px;
@@ -291,5 +282,40 @@ ul.menuList {
     width: 0;
     height: 0;
     border: 10px solid transparent;
-    border-top: 12px solid red;
-  }
+    border-top: 12px solid black;
+}
+
+
+.diamond-position{
+    position: relative;
+}
+.diamond-position1{
+    position: absolute;
+    top:30px;
+    right:10%
+    /* z-index: -5; */
+}
+
+.mainNavOverlay{
+    display: block;
+    height: 40%;
+    width: 25%;
+    position: fixed;
+    z-index: 1;
+    top: 124px;
+    left: 220px;
+    background-color: rgba(0,0,0, 1);
+    overflow-y: hidden;
+    /* padding-left: .5em; */
+    transition: 0.5s;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;;
+}
+
+.mainNavOverlay2{
+    left: 655px;
+}
+
+.mainNavOverlay3{
+    left: 755px;
+}

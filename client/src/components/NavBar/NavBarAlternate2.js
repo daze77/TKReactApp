@@ -75,19 +75,25 @@ function NavBarAlt(){
 
                     <div class="col menuList" >
                         <ul class=" ">
-                            <li onClick={handleSubMenu}>PRODUCTS</li>
-                            <li onClick={handleSubMenu}>SERVICES</li>
-                            <li onClick={handleSubMenu}>THE ARTIST</li>
-                        </ul>
-                        <div id="diamond1"></div>
-                        <div id="diamond1"></div>
-                        <div id="diamond1"></div>
+                            <li onClick={handleSubMenu}>PRODUCTS<span class="diamond diamond-position1"></span> </li>
+                            <li onClick={handleSubMenu}>SERVICES<span class="diamond diamond-position1"></span> </li>
+                            <li onClick={handleSubMenu}>THE ARTIST<span class="diamond diamond-position1"></span> </li>
 
+                        </ul>
                     </div>
                     <div class="col-auto">
                         <NavLogin />
                     </div>
                 </div>
+                <div class="mainNavOverlay mainNavOverlay3">
+
+
+
+
+
+
+                </div>
+
                 <div class="navOverlay" style={{height: navOveraly}}>
                     <div class="navOverlayHeader" >
                         <ul class="navOverlaySubMenu">
