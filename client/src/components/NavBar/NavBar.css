@@ -286,9 +286,9 @@ ul.menuList {
 }
 
 
-.diamond-position{
+/* .diamond-position{
     position: relative;
-}
+} */
 .diamond-position1{
     position: absolute;
     top:30px;
@@ -298,12 +298,12 @@ ul.menuList {
 
 .mainNavOverlay{
     display: block;
-    height: 40%;
-    width: 25%;
-    position: fixed;
+    height: 350px;
+    width: 450px;
+    position: absolute;
     z-index: 1;
-    top: 124px;
-    left: 220px;
+    top: 52px;
+    left: 80px;
     background-color: rgba(0,0,0, 1);
     overflow-y: hidden;
     /* padding-left: .5em; */
@@ -312,10 +312,10 @@ ul.menuList {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;;
 }
 
-.mainNavOverlay2{
+/* .mainNavOverlay2{
     left: 655px;
 }
 
 .mainNavOverlay3{
     left: 755px;
-}
+} */

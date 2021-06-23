@@ -75,7 +75,10 @@ function NavBarAlt(){
 
                     <div class="col menuList" >
                         <ul class=" ">
-                            <li onClick={handleSubMenu}>PRODUCTS<span class="diamond diamond-position1"></span> </li>
+                            <li onClick={handleSubMenu}>PRODUCTS
+                                <span class="diamond diamond-position1"></span>
+                                <span class="mainNavOverlay"></span>
+                            </li>
                             <li onClick={handleSubMenu}>SERVICES<span class="diamond diamond-position1"></span> </li>
                             <li onClick={handleSubMenu}>THE ARTIST<span class="diamond diamond-position1"></span> </li>
 
@@ -85,7 +88,7 @@ function NavBarAlt(){
                         <NavLogin />
                     </div>
                 </div>
-                <div class="mainNavOverlay mainNavOverlay3">
+                <div class="">
 
 
 
