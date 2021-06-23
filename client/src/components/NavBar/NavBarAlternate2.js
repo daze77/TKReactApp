@@ -102,7 +102,7 @@ function NavBarAlt(){
 
     return(
         <>
-            <nav>
+            <nav class="container">
                 <div class="row navRow">
                     <div class="col-auto navbarBranding">
                         <div id="logoSymbolOnly" onClick={handleNavOverlay}>

@@ -3,19 +3,20 @@
 }
 
 .navbarBranding{
-    padding-top: .3125rem;
+    /* padding-top: .3125rem;
     padding-bottom: .3125rem;
-    margin-right: 1rem;
+    margin-right: 1rem; */
     font-size: 1.25rem;
-    text-decoration: none;
-    white-space: nowrap;
+    /* text-decoration: none;*/
+     white-space: nowrap; 
 }
 .navRow{
-    margin: 10px 10px 0px 10px
+    /* margin: 10px 10px 0px 10px */
 }
 
 .menuItems{
     position: relative;
+
 }
 
 ul.menuList {
@@ -28,7 +29,9 @@ ul.menuList {
 }
 
 
-
+nav.container{
+    padding: 0px;
+}
 
 
 
@@ -211,13 +214,16 @@ ul.menuList {
 
 .menuList{
     position: relative;
+    /* margin: auto 10px 0px; */
 }
 
 .menuList > ul{
-    margin-bottom: 0px;
-    vertical-align: bottom;
+    margin: auto 10px 0px;
+    /* vertical-align: bottom; */
     position: absolute;
     bottom: 0px;
+    height: 63px;
+    overflow: hidden;
 
 
 }
