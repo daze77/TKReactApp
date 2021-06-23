@@ -6,7 +6,6 @@ import NavBarLogo from '../Logo/Logo'
 import NavLogin from './NavLogin'
 import LogoSymbol from '../../assets/logo/logosymbol.png'
 import NavBarLogoSymbol from '../Logo/Logo2Symbol'
-let count =0
 
 function NavBarAlt(){
 
@@ -41,7 +40,6 @@ function NavBarAlt(){
     const [subMenuExpand3, setsubMenuExpand3] = useState (plus)
 
     function handleNavOverlay(){
-        console.log(`symbol clicked`)
         setNavOverlay("100%")
     }
 
@@ -74,10 +72,6 @@ function NavBarAlt(){
     })
     
     function handleMainMenu(e){
-        console.log(`main menu button clicked`, e)
-        console.log(`this is diamond1 state`, diamond1)
-        console.log(`this is the mainNavDrop`, mainNavDrop)
-
         setDiamondeState(e)
     }
 

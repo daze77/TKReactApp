@@ -335,8 +335,16 @@ ul.menuList {
 
 .mainNavOverlay li{
     display: block; 
-    color: greenyellow;
-    margin: 0px;
+    color: white;
+    margin: 0px 15px;
     padding: 20px 10px 0px 20px;
+    font-size: 1.3em;
+    transition: transform .2s;
+}
+
+.mainNavOverlay li:hover{
+    color: #6cba1a;
+    transform: scale(1.05);
+
 
 }
