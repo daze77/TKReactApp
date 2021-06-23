@@ -289,7 +289,7 @@ ul.menuList {
 /* .diamond-position{
     position: relative;
 } */
-.diamond-position1{
+.diamond-position{
     position: absolute;
     top:30px;
     right:10%
@@ -299,7 +299,7 @@ ul.menuList {
 .mainNavOverlay{
     display: block;
     height: 350px;
-    width: 450px;
+    width: 422px;
     position: absolute;
     z-index: 1;
     top: 52px;
@@ -319,3 +319,12 @@ ul.menuList {
 .mainNavOverlay3{
     left: 755px;
 } */
+
+
+.displayBlockStyle{
+    display: block;
+}
+
+.displayNoneStyle{
+    display: none;
+}
