@@ -23,11 +23,11 @@ function NavBarAlt(){
         display: "none",
     }
 
-    const [menuDropdown, setMenuDropdown] = useState("0px")
+    // const [menuDropdown, setMenuDropdown] = useState("0px")
     const [subMenu1, setSubMenu1] = useState(mysubMenu1)
     const [subMenu2, setSubMenu2] = useState(mysubMenu2)
     const [subMenu3, setSubMenu3] = useState(mysubMenu3)
-    const [menuSelect, setMenuSelect] = useState('')
+    // const [menuSelect, setMenuSelect] = useState('')
     const [navOveraly, setNavOverlay] = useState("0px")
     const [subMenuExpand1, setsubMenuExpand1] = useState (plus)
     const [subMenuExpand2, setsubMenuExpand2] = useState (plus)
