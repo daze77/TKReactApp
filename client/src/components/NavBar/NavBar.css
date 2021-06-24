@@ -223,6 +223,7 @@ nav.container{
     position: absolute;
     bottom: 0px;
     height: 63px;
+    white-space: nowrap
 
 
 }
