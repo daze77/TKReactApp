@@ -1,5 +1,7 @@
 import React from 'react' 
 
+import './pages.css'
+
 // import NavBarAlt from '../components/NavBar/NavBarAlternate'
 import NavBarAlt2 from '../components/NavBar/NavBarAlternate2'
 

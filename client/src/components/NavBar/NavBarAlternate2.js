@@ -63,7 +63,7 @@ function NavBarAlt(){
         }
     }
 
-        let diamondClass = "diamond diamond-position"
+        let diamondClass = "ddiamond diamond-position"
 
 
 
@@ -115,37 +115,42 @@ function NavBarAlt(){
 
                     <div class="col menuList" >
                         <ul class=" ">
-                            <span class={`mainNavOverlay ${mainNavDrop ? "displayBlockStyle" : "displayNoneStyle"}`}>
-                                <ul class={`${!diamond1 ? "displayNoneStyle":"displayBlockStyle"}`} >
-                                    <NavLink to="/GalleryCollection"><li class="">Gallery Collection</li></NavLink>
-                                    <NavLink to="/WallCoverings"><li class="">Wall Coverings</li></NavLink>
-                                    <NavLink to="/WorldTravelPhotography"><li class="">World Travel Photography</li></NavLink>
-                                    <NavLink to="/ArtandDesign"><li class="">Art & Design</li></NavLink>
-                                </ul>
-                                <ul class={`${!diamond2 ? "displayNoneStyle":"displayBlockStyle"}`}>
-                                        <NavLink to="/HospitalityandDesign"><li class="">Hospitality & Design</li></NavLink>
-                                        <NavLink to="/Installations"><li class="m">Installations</li></NavLink>
-                                        <NavLink to="/Lighting"><li class="">Lighting</li></NavLink>
-                                        <NavLink to="/TheFrameShop"><li class="">The Frame Shop</li></NavLink>
-                                        <NavLink to="/PrintingandServices"><li class="">Printing & Services</li></NavLink>
-                                </ul>
-                                <ul class={`${!diamond3 ? "displayNoneStyle":"displayBlockStyle"}`} >
-                                    <NavLink to="/TheArtist"><li class="">The Artist</li></NavLink>
-                                    <NavLink to="/Testimonials"><li class="">Testimonials</li></NavLink>
-                                    <NavLink to="/Contact"><li class="">Contact</li></NavLink>
-                                </ul>
-                            </span>
                             <li  onClick={handleMainMenu}><span>PRODUCTS</span>
-                                <span class={`${diamondClass} ${!diamond1 ? "displayNoneStyle":"displayBlockStyle"}`}></span>
-
+                                <span class={`${diamondClass} ${!diamond1 ? "displayNoneStyle":"displayBlockStyle"}`}>
+                                    <span class={`mainNavOverlay `}>
+                                        <ul class={`${!diamond1 ? "displayNoneStyle":"displayBlockStyle"}`} >
+                                            <NavLink to="/GalleryCollection"><li class="">Gallery Collection</li></NavLink>
+                                            <NavLink to="/WallCoverings"><li class="">Wall Coverings</li></NavLink>
+                                            <NavLink to="/WorldTravelPhotography"><li class="">World Travel Photography</li></NavLink>
+                                            <NavLink to="/ArtandDesign"><li class="">Art & Design</li></NavLink>
+                                        </ul>
+                                    </span>
+                                </span>
                             </li>
                             <li onClick={handleMainMenu}><span>SERVICES</span>
-                                <span class={`${diamondClass} ${!diamond2? "displayNoneStyle":"displayBlockStyle"}` }></span> 
+                                <span class={`${diamondClass} ${!diamond2? "displayNoneStyle":"displayBlockStyle"}` }>
+                                    <span class={`mainNavOverlay `}>
+                                        <ul class={`${!diamond2 ? "displayNoneStyle":"displayBlockStyle"}`}>
+                                                <NavLink to="/HospitalityandDesign"><li class="">Hospitality & Design</li></NavLink>
+                                                <NavLink to="/Installations"><li class="m">Installations</li></NavLink>
+                                                <NavLink to="/Lighting"><li class="">Lighting</li></NavLink>
+                                                <NavLink to="/TheFrameShop"><li class="">The Frame Shop</li></NavLink>
+                                                <NavLink to="/PrintingandServices"><li class="">Printing & Services</li></NavLink>
+                                        </ul>
+                                    </span>
+                                </span> 
                             </li>
                             <li onClick={handleMainMenu}><span>THE ARTIST</span>
-                                <span class={`${diamondClass} ${!diamond3? "displayNoneStyle":"displayBlockStyle"}`}></span> 
+                                <span class={`${diamondClass} ${!diamond3? "displayNoneStyle":"displayBlockStyle"}`}>
+                                    <span class={`mainNavOverlay `}>
+                                    <ul class={`${!diamond3 ? "displayNoneStyle":"displayBlockStyle"}`} >
+                                        <NavLink to="/TheArtist"><li class="">The Artist</li></NavLink>
+                                        <NavLink to="/Testimonials"><li class="">Testimonials</li></NavLink>
+                                        <NavLink to="/Contact"><li class="">Contact</li></NavLink>
+                                    </ul>
+                                    </span>
+                                </span> 
                             </li>
-
                         </ul>
                     </div>
                     <div class="col-auto">
