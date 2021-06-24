@@ -223,7 +223,6 @@ nav.container{
     position: absolute;
     bottom: 0px;
     height: 63px;
-    overflow: hidden;
 
 
 }
@@ -308,7 +307,7 @@ nav.container{
     width: 445px;
     position: absolute;
     z-index: 1;
-    top: 82px;
+    top: 81px;
     left: 130px;
     background-color: rgba(0,0,0, 1);
     overflow-y: hidden;
@@ -327,9 +326,7 @@ nav.container{
     display: none;
 }
 
-/* .testBILL{
-    position: relative;
-} */
+
 
 .mainNavOverlay ul {
     padding: 0px;
