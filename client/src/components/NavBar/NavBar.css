@@ -223,18 +223,22 @@ nav.container{
     position: absolute;
     bottom: 0px;
     height: 63px;
-    white-space: nowrap
+    white-space: nowrap;
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
 
 
 }
 
 .menuList li{
     display: inline-block;
-    margin: 30px 30px 0px 30px;
+    margin: 30px auto 0px auto;
     cursor: pointer;
     user-select: none;
     padding: 10px 10px 0px 20px;
     position: relative;    
+    flex: auto;
 }
 
 
@@ -261,11 +265,11 @@ nav.container{
 
 
 .ddiamond{
-    left: 0;
+    left: 22px;
     /* overflow: hidden; */
     position: absolute;
     bottom: -5px;
-    width: 100%;
+    /* width: 100%; */
     height: 8px;
     z-index: 1;
 }
@@ -287,36 +291,12 @@ nav.container{
     background-color: black;
     border-color: black;
 }
-.diamond {
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-bottom: 12px solid black;
-    position: relative;
-    top: -10px;
-    display: block;
-}
-.diamond:after {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: 12px;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top: 12px solid black;
-}
-
 
 /* .diamond-position{
-    position: relative;
-} */
-.diamond-position{
     position: absolute;
     top:30px;
     right:10%
-    /* z-index: -5; */
-}
+} */
 
 .mainNavOverlay{
     display: block;
@@ -325,7 +305,7 @@ nav.container{
     position: absolute;
     z-index: 1;
     top: 8px;
-    left: 14px;
+    left: -40px;
     background-color: rgba(0,0,0, 1);
     overflow-y: hidden;
     /* padding-left: .5em; */
@@ -348,7 +328,7 @@ nav.container{
 .mainNavOverlay ul {
     padding: 0px;
     margin: 20px 0px;
-    height: 350px;
+    
 
 
    
