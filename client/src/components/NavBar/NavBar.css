@@ -292,11 +292,7 @@ nav.container{
     border-color: black;
 }
 
-/* .diamond-position{
-    position: absolute;
-    top:30px;
-    right:10%
-} */
+
 
 .mainNavOverlay{
     display: block;
@@ -315,7 +311,7 @@ nav.container{
 }
 
 
-.displayBlockStyle, .mainNavOverlay{
+.displayBlockStyle{
     display: block;
 }
 
@@ -363,7 +359,4 @@ nav.container{
         visibility: hidden;
     }
 
-    /* #fullMenuList{
-        visibility: hidden;
-    } */
 }
