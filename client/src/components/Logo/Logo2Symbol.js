@@ -7,19 +7,9 @@ import './Logo.css'
 import LogoSymbol from '../../assets/logo/logosymbol.png'
 
 
-
-
-
-
-
-function LogoSymbolOnly(){
-
+function LogoSymbolOnly(onCLick){
     
-
-    useEffect( function(){
-
-  
-  
+    useEffect( function(){  
   // animation for the symbol part of the logo
   anime({
     targets: '.tkLogoSymbolContainer1 .el1',
@@ -74,24 +64,19 @@ function LogoSymbolOnly(){
   
 return (
     <>
-
-        <div class="tkLogocontainer1">
-            <div class="tkLogoSymbolContainer1">
-                <div class="logoimg1 el1" data-x="300">
-                    <svg width="70" height="70"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <image href={LogoSymbol} height="70" width="70" />
-                    </svg>
-                </div>
-
+    <div class="tkLogocontainer1" {...onCLick}>
+        <div class="tkLogoSymbolContainer1">
+            <div class="logoimg1 el1" data-x="300">
+                <svg width="70" height="70"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <image href={LogoSymbol} height="70" width="70" />
+                </svg>
             </div>
+
         </div>
-
-
+    </div>
     </>
 )
-
-
 }
 
 

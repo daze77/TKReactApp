@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from 'react' 
+import React, { useState } from 'react' 
 import { NavLink } from 'react-router-dom'
 
 
@@ -6,6 +6,7 @@ import NavBarLogo from '../Logo/Logo'
 import NavLogin from './NavLogin'
 import LogoSymbol from '../../assets/logo/logosymbol.png'
 import NavBarLogoSymbol from '../Logo/Logo2Symbol'
+import MenuBurger from '../MenuHamburger/MenuHamburger'
 
 function NavBarAlt(){
 
@@ -35,20 +36,15 @@ function NavBarAlt(){
     const [diamond1, setDiamond1] = useState(false)
     const [diamond2, setDiamond2] = useState(false)
     const [diamond3, setDiamond3] = useState(false)
-    const [mainNavDrop, setMainNavDrop] = useState(false)
 
     const [subMenuExpand3, setsubMenuExpand3] = useState (plus)
 
-    function handleNavOverlay(){
-        setNavOverlay("100%")
-    }
 
-    function handleCloseButton(){
-        setNavOverlay("0%")
-    }
 
+
+    // function for handling the main nav drop downs
     function handleSubMenu(e){
-        switch(e.target.id){
+        switch(e){
             case "PRODUCTS":
                 subMenu1.display === "block" ? setSubMenu1({display:"none"})  : setSubMenu1({display:"block", animation: "fadeMe 2s" });
                 subMenu1.display === "block" ? setsubMenuExpand1(plus) : setsubMenuExpand1(minus);
@@ -62,14 +58,22 @@ function NavBarAlt(){
                 subMenu3.display === "block" ? setsubMenuExpand3(plus) : setsubMenuExpand3(minus);
         }
     }
-
-    let diamondClass = "ddiamond"
-
-
-    useEffect(function(){
-        setMainNavSubDrop()
-    })
     
+
+    // function for handling the small screen nav overlay
+
+
+    function handleNavOverlay(){
+        setNavOverlay("100%")
+    }
+
+    function handleCloseButton(){
+        setNavOverlay("0%")
+    }
+
+
+
+
     function handleMainMenu(e){
         if(e === "PRODUCTS"){
             diamond1? setDiamond1(false) : setDiamond1(true) 
@@ -87,29 +91,22 @@ function NavBarAlt(){
     }
 
 
-    function setMainNavSubDrop(){
-        if(diamond1 === true || diamond2 === true || diamond3 === true){
-            setMainNavDrop(true)
-        } else {setMainNavDrop(false)}
-    }
-
     return(
         <>
             <nav class="container">
                 <div class="row navRow">
                     <div class="col-auto navbarBranding">
-                        <div id="logoSymbolOnly" onClick={handleNavOverlay}>
-                            <NavBarLogoSymbol />
-                        </div>
-                        <div id="logoFull" onClick={handleNavOverlay}>
-                            <NavBarLogo />
+                        {/* <div id="logoSymbolOnly" >
+                            <NavBarLogoSymbol onClick={handleNavOverlay}/>
+                        </div> */}
+                        <div id="logoFull" >
+                            <NavBarLogo onClick={handleNavOverlay} />
                         </div>
                     </div>
-
                     <div class="col menuList" >
                         <ul class=" ">
-                            <li  onClick={() => handleMainMenu('PRODUCTS')}><span>PRODUCTS</span>
-                                <span class={`${diamondClass} ${!diamond1 ? "displayNoneStyle":"displayBlockStyle"}`}>
+                            <li  onClick={() => handleMainMenu('PRODUCTS')}>PRODUCTS
+                                <span class={`ddiamond ${!diamond1 ? "displayNoneStyle":"displayBlockStyle"}`}>
                                     <span class={`mainNavOverlay `}>
                                         <ul >
                                             <NavLink to="/GalleryCollection"><li class="">Gallery Collection</li></NavLink>
@@ -120,8 +117,8 @@ function NavBarAlt(){
                                     </span>
                                 </span>
                             </li>
-                            <li onClick={() => handleMainMenu('SERVICES')}><span>SERVICES</span>
-                                <span class={`${diamondClass} ${!diamond2? "displayNoneStyle":"displayBlockStyle"}` }>
+                            <li onClick={() => handleMainMenu('SERVICES')}>SERVICES
+                                <span class={`ddiamond ${!diamond2? "displayNoneStyle":"displayBlockStyle"}` }>
                                     <span class={`mainNavOverlay `}>
                                         <ul>
                                                 <NavLink to="/HospitalityandDesign"><li class="">Hospitality & Design</li></NavLink>
@@ -133,8 +130,8 @@ function NavBarAlt(){
                                     </span>
                                 </span> 
                             </li>
-                            <li onClick={() => handleMainMenu('THE ARTIST')}><span>THE ARTIST</span>
-                                <span class={`${diamondClass} ${!diamond3? "displayNoneStyle":"displayBlockStyle"}`}>
+                            <li onClick={() => handleMainMenu('THE ARTIST')}>THE ARTIST
+                                <span class={`ddiamond ${!diamond3? "displayNoneStyle":"displayBlockStyle"}`}>
                                     <span class={`mainNavOverlay `}>
                                     <ul >
                                         <NavLink to="/TheArtist"><li class="">The Artist</li></NavLink>
@@ -149,44 +146,47 @@ function NavBarAlt(){
                     <div class="col-auto">
                         <NavLogin />
                     </div>
+                    <MenuBurger onClick={handleNavOverlay}/>
+
+                    
                 </div>
                 <div class=" navOverlay" style={{height: navOveraly}}>
-                    <div class="navOverlayHeader" >
-                        <ul class="navOverlaySubMenu">
-                            <li id="closeButton" onClick={handleCloseButton}>&times;</li>
-                            <li id="subMenuLogo"><img src={LogoSymbol} alt="Logo"/>   </li>
-                        </ul>
-                    </div>
-                    <div class="fullMenuList ">
-                        <div  id="PRODUCTS" onClick={handleSubMenu}>PRODUCTS &#32; {subMenuExpand1} 
-                            <ul class="sub-menuList" style={subMenu1}>
-                                <NavLink to="/GalleryCollection"><li class="">Gallery Collection</li></NavLink>
-                                <NavLink to="/WallCoverings"><li class="">Wall Coverings</li></NavLink>
-                                <NavLink to="/WorldTravelPhotography"><li class="">World Travel Photography</li></NavLink>
-                                <NavLink to="/ArtandDesign"><li class="">Art & Design</li></NavLink>
+                    <div class="navOverlayWrapper container">
+                        {/* <div class="navOverlayHeader" > */}
+                            <ul class="navOverlaySubMenu">
+                                <li id="closeButton" onClick={handleCloseButton}>&times;</li>
+                                <li id="subMenuLogo"><img src={LogoSymbol} alt="Logo"/>   </li>
                             </ul>
-                        </div>
-                        <div  id="SERVICES" onClick={handleSubMenu}>SERVICES &#32; {subMenuExpand2}
-                            <ul class="sub-menuList"  style={subMenu2}>
-                                <NavLink to="/HospitalityandDesign"><li class="">Hospitality & Design</li></NavLink>
-                                <NavLink to="/Installations"><li class="m">Installations</li></NavLink>
-                                <NavLink to="/Lighting"><li class="">Lighting</li></NavLink>
-                                <NavLink to="/TheFrameShop"><li class="">The Frame Shop</li></NavLink>
-                                <NavLink to="/PrintingandServices"><li class="">Printing & Services</li></NavLink>
-                            </ul>
-                        </div>
-                        <div  id="THEARTIST" onClick={handleSubMenu}>THE ARTIST &#32; {subMenuExpand3}
-                            <ul class="sub-menuList" style={subMenu3}>
-                                <NavLink to="/TheArtist"><li class="">The Artist</li></NavLink>
-                                <NavLink to="/Testimonials"><li class="">Testimonials</li></NavLink>
-                                <NavLink to="/Contact"><li class="">Contact</li></NavLink>
-                            </ul>
-                    
-                        </div>
-                    </div>                
+                        {/* </div> */}
+                        <div class="fullMenuList ">
+                            <div  id="PRODUCTS" onClick={() => handleSubMenu('PRODUCTS')}>PRODUCTS &#32; {subMenuExpand1} 
+                                <ul class="sub-menuList" style={subMenu1}>
+                                    <NavLink to="/GalleryCollection"><li class="">Gallery Collection</li></NavLink>
+                                    <NavLink to="/WallCoverings"><li class="">Wall Coverings</li></NavLink>
+                                    <NavLink to="/WorldTravelPhotography"><li class="">World Travel Photography</li></NavLink>
+                                    <NavLink to="/ArtandDesign"><li class="">Art & Design</li></NavLink>
+                                </ul>
+                            </div>
+                            <div  id="SERVICES" onClick={() => handleSubMenu ('SERVICES')}>SERVICES &#32; {subMenuExpand2}
+                                <ul class="sub-menuList"  style={subMenu2}>
+                                    <NavLink to="/HospitalityandDesign"><li class="">Hospitality & Design</li></NavLink>
+                                    <NavLink to="/Installations"><li class="m">Installations</li></NavLink>
+                                    <NavLink to="/Lighting"><li class="">Lighting</li></NavLink>
+                                    <NavLink to="/TheFrameShop"><li class="">The Frame Shop</li></NavLink>
+                                    <NavLink to="/PrintingandServices"><li class="">Printing & Services</li></NavLink>
+                                </ul>
+                            </div>
+                            <div  id="THEARTIST" onClick={() => handleSubMenu('THE ARTIST')}>THE ARTIST &#32; {subMenuExpand3}
+                                <ul class="sub-menuList" style={subMenu3}>
+                                    <NavLink to="/TheArtist"><li class="">The Artist</li></NavLink>
+                                    <NavLink to="/Testimonials"><li class="">Testimonials</li></NavLink>
+                                    <NavLink to="/Contact"><li class="">Contact</li></NavLink>
+                                </ul>
+                        
+                            </div>
+                        </div> 
+                    </div>               
                 </div>
-            
-
             </nav>
             <hr />
         </>

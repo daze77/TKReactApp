@@ -1,0 +1,29 @@
+.menuBurgerWrapper{
+    height: 30px;
+    width: 30px;
+    cursor:pointer;
+    padding: 0px;
+    margin: 0px;
+    display: none;
+
+
+}
+
+
+
+.menuBurger{
+    
+    display: block;
+    width: 25px;
+    height: 1px;
+    margin: 5px;
+    color: black;
+    background-color: black;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .menuBurgerWrapper{
+        display: block;
+    }
+}

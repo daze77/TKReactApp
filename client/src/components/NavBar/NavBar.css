@@ -116,12 +116,21 @@ nav.container{
 
 
 
-
+.container{
+    /* position: relative; */
+}
 
 
 
 /* New Menu CSS */
 
+
+/* .navOverlayHeader{
+    display: inline-block;
+
+
+
+} */
 
 .navOverlay{
     height: 0%;
@@ -136,22 +145,44 @@ nav.container{
     transition: 0.5s;
 }
 
-.navOverlayHeader li {
+/* .navOverlayHeader li {
     position: absolute;
     cursor: pointer;
     display: inline-block;
-}
+} */
 
-.navOverlay ul{
+.navOverlaySubMenu{
     list-style-type: none;
+
+
+
 }
 
+.navOverlaySubMenu li{
+
+    position: absolute;
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+/* .navOverlayWrapper > ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;;
+} */
 
 
-.navOverlay > div {
+
+/* .navOverlayWrapper > div {
     margin-bottom: 15px;
     padding-bottom: 85px;
     
+} */
+
+.navOverlayWrapper {
+    position: relative
+
 }
 
 .navOverlayContent{
@@ -178,6 +209,10 @@ nav.container{
 #subMenuLogo img{
     height: 50px;
     width: 50px;
+}
+
+.fullMenuList{
+margin-top: 150px;
 }
 
 .fullMenuList > div{
@@ -310,7 +345,6 @@ nav.container{
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;;
 }
 
-
 .displayBlockStyle{
     display: block;
 }
@@ -319,15 +353,9 @@ nav.container{
     display: none;
 }
 
-
-
 .mainNavOverlay ul {
     padding: 0px;
     margin: 20px 0px;
-    
-
-
-   
 }
 
 .mainNavOverlay li{
@@ -348,15 +376,10 @@ nav.container{
 
 
 @media only screen and (max-width: 768px) {
-    .navbarBranding #logoSymbolOnly{
-        display: block;
-    } 
-    .navbarBranding #logoFull{
-        display: none; 
-    }
-
     .menuList{
         visibility: hidden;
     }
+
+
 
 }

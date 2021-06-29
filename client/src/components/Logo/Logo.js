@@ -12,7 +12,7 @@ import LogoSymbol from '../../assets/logo/logosymbol.png'
 
 
 
-function Logo(){
+function Logo(onClick){
 
     
 
@@ -118,7 +118,7 @@ function Logo(){
 return (
     <>
 
-        <div class="tkLogocontainer">
+        <div class="tkLogocontainer" {...onClick}>
             <div class="tkLogoSymbolContainer">
                 <div class="logoimg el" data-x="300">
                     <svg width="70" height="70"

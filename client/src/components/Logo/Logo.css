@@ -51,3 +51,14 @@
 .el{
   display:inline-block;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+  
+  .tkLogoNameContainer{
+  display: none;
+}
+
+
+}
