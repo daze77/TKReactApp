@@ -20,6 +20,7 @@
 
 #subcopyright{
     font-size: 12px;
+    
 }
 
 footer ul {
@@ -62,4 +63,13 @@ footer a, a:link, a:visited, a:hover, a:active{
 
 .fa-phone{
     transform: rotate(100deg);
+}
+
+
+.footerLists h5{
+    color: #057cd0
+}
+
+.addressCardFormat, .footerLists span{
+    font-size: 0.8rem;
 }

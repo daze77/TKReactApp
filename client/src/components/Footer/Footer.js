@@ -18,9 +18,7 @@ function Footer(){
 
     return(
         <>
-
         {location.pathname!=='/HomePageAlternate' &&
-
             <footer>
                 <hr />
                 <div class="container">
@@ -29,23 +27,10 @@ function Footer(){
 
                 <Subscriptions />
                 <SubFooter />
-
-                
-
-
             </footer>
         }
-
-
         </>
-
-
-
     )
-
-
-
-
 }
 
 
