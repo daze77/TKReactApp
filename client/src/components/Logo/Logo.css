@@ -17,9 +17,8 @@
   }
 
   .tkLogoSymbolContainer{
-    position: relative;
     height: 70px;
-    width: 75px;;
+    width: 75px;
   }
 
   .tkLogoNameContainer{
@@ -39,26 +38,33 @@
     font-size: 2.1875em
   }
 
-#logoNameL{
-  color: #27ace1
+  #logoNameL{
+    color: #27ace1
+  }
+
+  #logoNameR{
+    color: #858689
+  }
+
+
+  .el{
+    display:inline-block;
+  }
+
+  .logoimg{
+    position: absolute;
+    bottom:0;
 }
 
-#logoNameR{
-  color: #858689
-}
+
+  @media only screen and (max-width: 768px) {
+    
+    .tkLogoNameContainer{
+    display: none;
+  }
 
 
-.el{
-  display:inline-block;
-}
-
-
-
-@media only screen and (max-width: 768px) {
-  
-  .tkLogoNameContainer{
-  display: none;
-}
+ 
 
 
 }

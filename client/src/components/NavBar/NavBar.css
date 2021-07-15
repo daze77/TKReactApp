@@ -47,6 +47,10 @@ nav.container{
  
 }
 
+
+
+
+
 .subMenuWrapper{
     position: fixed;
     width: 100%;
@@ -203,7 +207,7 @@ nav.container{
 
 #subMenuLogo{
     left: 50%;
-    margin-left: -50px
+    margin-left: -25px
 }
 
 #subMenuLogo img{
@@ -233,6 +237,7 @@ margin-top: 150px;
 .fullMenuList div li {
     font-size:0.9em;
     padding: 0.03em 0em;
+    list-style-type: none;
 
 }
 
@@ -296,6 +301,10 @@ margin-top: 150px;
   }
   #fullMenuList{
     visibility: visible;
+}
+
+#logoFull{
+    position: relative;
 }
 
 

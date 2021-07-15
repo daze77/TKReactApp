@@ -13,12 +13,7 @@ import LogoSymbol from '../../assets/logo/logosymbol.png'
 
 
 function Logo(onClick){
-
-    
-
     useEffect( function(){
-
-  
     // Pull the name text from Logo and add span element around each letter for animation manipulation
     function logoAnimation(){
     const logoNameL = document.querySelector('#logoNameL').innerText.split("")
@@ -114,6 +109,9 @@ function Logo(onClick){
   }
 
 }, [] )
+
+
+
   
 return (
     <>

@@ -71,9 +71,6 @@ function NavBarAlt(){
         setNavOverlay("0%")
     }
 
-
-
-
     function handleMainMenu(e){
         if(e === "PRODUCTS"){
             diamond1? setDiamond1(false) : setDiamond1(true) 
