@@ -77,3 +77,9 @@ footer a, a:link, a:visited, a:hover, a:active{
 .subscriptionAlert{
     display: none;    
 }
+
+.form-floating > .form-control{
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
