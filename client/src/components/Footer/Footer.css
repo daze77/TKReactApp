@@ -73,3 +73,7 @@ footer a, a:link, a:visited, a:hover, a:active{
 .addressCardFormat, .footerLists span{
     font-size: 0.8rem;
 }
+
+.subscriptionAlert{
+    display: none;    
+}

@@ -1,12 +1,13 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import Social from '../Social/Social'
 
 import './Footer.css'
 
 
 function Subscriptions(){
-    const inputSubscriptemail = useRef()
 
+    const inputSubscriptemail = useRef()
+    const [subScriptionConfirm, setsubScriptionConfirm] = useState(false)
 
     function SubscriptionSubmit(e){
         e.preventDefault()
@@ -17,6 +18,10 @@ function Subscriptions(){
         }
 
         console.log('this is the email', subscriptData)
+
+        setsubScriptionConfirm(true)
+
+        setTimeout(function() {setsubScriptionConfirm(false)}, 5000)
     
     }
 
@@ -33,8 +38,8 @@ function Subscriptions(){
                 </div>
                 <div class="col-md-3 pt-2 d-grid d-md-block">
                     <button type="button" class="btn btn-primary btn-lg " onClick={SubscriptionSubmit}>Subscribe</button>
-                    <div id="subscriptionAlert"></div>
                 </div>
+                <div class={`alert-success ${!subScriptionConfirm ?  "subscriptionAlert" : ""}`}>Thank you for subscribing</div>
                 
                 <div class="col-md-3 pt-4">
                     <Social />
