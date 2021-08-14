@@ -59,6 +59,8 @@ function NavLogin(){
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                                 <li class="nav-item"> <NavLink to="/Logout" className="nav-link" activeClassName="active">Logout</NavLink></li>
+                                <li class="nav-item"> <NavLink to="/UserProfile" className="nav-link" activeClassName="active">User Profile</NavLink></li>
+
                             </ul>
                         </li>}
                         {!name && <li class="nav-item "> <NavLink to="/Login" className="nav-link" activeClassName="active">Login</NavLink></li>}
