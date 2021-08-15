@@ -1,3 +1,11 @@
+.gallerygrid .card-img-overlay h5{
+        top: 50%;
+        position: absolute;
+        text-align: center;
+    }
+
+
+
 .galleryCollection .card-img-overlay:hover{
         background-color: rgba(0,0,0,0.5);
         
@@ -15,6 +23,19 @@
         line-height: 31px;
 }
 
-.galleryCollection .card-img-overlay{
+.galleryCollection .card-img-overlay, .gallerySubMenus .card-img-overlay{
         padding: 0px;
-}
+    
+} 
+
+
+.gallerySubMenus .card-img-overlay h5{
+        top: auto;
+        bottom:0;
+        text-align: left;
+        padding: 0px 10px;
+} 
+
+.gallerySubMenus .card-img-overlay {
+        bottom:0;
+} 

@@ -10,7 +10,7 @@ function Opulence() {
 
     const URL = 'https://www.tonykoukos.com/media/catalog/product/cache/1/thumbnail/314x299/9df78eab33525d08d6e5fb8d27136e95/g/a/'
 
-
+    
 
 
 
@@ -23,9 +23,10 @@ return(
             <hr />
 
 
-            <div class="row row-cols-1 row-cols-md-3 g-3 wtpCollection">
+            <div class="row row-cols-1 row-cols-md-3 g-3 wtpCollection gallerySubMenus">
                 {GCJSON[2].SubLink.map( gcAS => (
-
+                    
+                    
                     <OpulenceCard 
 
                     Id = {gcAS.Id}

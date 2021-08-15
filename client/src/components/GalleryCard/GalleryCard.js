@@ -1,11 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-
+import './GalleryCard.css'
 
 
 
 
 function GalleryCard (props) {
+    let Title = props.Title.toUpperCase()
+
     return(
         <>
             <div class="col ">
@@ -13,7 +15,7 @@ function GalleryCard (props) {
                     <div class="card gallerygrid"> 
                         <img key={props.Id} class=" card-img"  src={props.ImageName} alt={props.ImageName}/>
                         <div class="card-img-overlay">
-                            <h5 class="card-title position-absolute top-50  w-100 text-center">{props.Title}</h5>
+                            <h5 class="card-title  w-100 ">{Title}</h5>
                         </div>
                     </div>
                 </Link>
