@@ -3,3 +3,14 @@
     font-size: 28px;
     line-height: 31px;
 }
+
+.wtpCollection .card-img-overlay:hover{
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+
+.wtpCollection .card-img-overlay{
+    padding:0;
+
+}

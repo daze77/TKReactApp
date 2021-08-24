@@ -16,11 +16,11 @@ function WallCoverings(){
         <>
         <div class="container">
             <section >
-                <h1>World Travel Photography</h1>
+                <h1>Wall Coverings</h1>
                 <hr />
                 <p>CUSTOM DIGITAL VINYL WALL COVERINGS…COMING SOON!!! OVER 330 DESIGNS TO CHOOSE FROM.</p>
 
-                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 wtpCollection">
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 wallCoveringCollection">
                     {WallCovJSON.map( wc =>(
 
                         <WallCovCard 

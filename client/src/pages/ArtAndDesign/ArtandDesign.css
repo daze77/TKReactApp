@@ -1,0 +1,32 @@
+.artDesignCollection .card-img-overlay{
+    padding: 0px;
+
+} 
+
+
+.artDesignCollection .card-img-overlay h5{
+    top: auto;
+    bottom:0;
+    margin: 0;
+    text-align: left;
+    padding: 0px 10px;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 0.8rem;
+    line-height: 31px;
+
+} 
+
+.artDesignCollection .card-title{
+    color: white;
+    
+}
+
+.artDesignCollection .card-img-overlay {
+    bottom:0;
+} 
+
+.gallerygrid .card-img-overlay:hover .card-title{
+    color: white;
+    
+    
+}

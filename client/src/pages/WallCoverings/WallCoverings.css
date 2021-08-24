@@ -1,0 +1,16 @@
+.wallCoveringCollection .card-title{
+    color: white;
+    font-size: 28px;
+    line-height: 31px;
+}
+
+.wallCoveringCollection .card-img-overlay:hover{
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+
+.wallCoveringCollection .card-img-overlay{
+    padding:0;
+
+}
