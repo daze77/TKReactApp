@@ -61,6 +61,24 @@ import Opulence from './pages/GalleryCollection/Opulence'
 
 import WCAbstract from './pages/WallCoverings/WCAbstract' 
 import WCArchitectural from './pages/WallCoverings/WCArchitectural' 
+import WCAsiatic from './pages/WallCoverings/WCAsiatic' 
+import WCDetails from './pages/WallCoverings/WCDetails' 
+import WCDezine from './pages/WallCoverings/WCDezine' 
+
+import WCEthnica from './pages/WallCoverings/WCEthnica' 
+import WCExotica from './pages/WallCoverings/WCExotica' 
+import WCFloral from './pages/WallCoverings/WCFloral' 
+import WCLaBibliotheque from './pages/WallCoverings/WCLaBibliotheque' 
+import WCLaParisienne from './pages/WallCoverings/WCLaParisienne' 
+import WCLuce from './pages/WallCoverings/WCLuce' 
+import WCMotif from './pages/WallCoverings/WCMotif' 
+import WCOrganica from './pages/WallCoverings/WCOrganica' 
+import WCSteel from './pages/WallCoverings/WCSteel' 
+import WCStripes from './pages/WallCoverings/WCStripes' 
+import WCSubway from './pages/WallCoverings/WCSubway' 
+import WCWood from './pages/WallCoverings/WCWood' 
+
+
 
 
 import HomePageAlternate from './pages/HomePage-Alternage/HomepageAlternate'
@@ -152,11 +170,26 @@ function App(location) {
         <Route exact path='/WallCoverings/WCAbstract' component={WCAbstract} />
 
         <Route exact path='/WallCoverings/WCArchitectural' component={WCArchitectural} />
+        <Route exact path='/WallCoverings/WCAsiatic' component={WCAsiatic} />
+        <Route exact path='/WallCoverings/WCDetails' component={WCDetails} />
+        <Route exact path='/WallCoverings/WCDezine' component={WCDezine} />
 
+        <Route exact path='/WallCoverings/WCEthnica' component={WCEthnica} />
+        <Route exact path='/WallCoverings/WCExotica' component={WCExotica} />
+        <Route exact path='/WallCoverings/WCFloral' component={WCFloral} />
+        <Route exact path='/WallCoverings/WCLaBibliotheque' component={WCLaBibliotheque} />
+        <Route exact path='/WallCoverings/WCLaParisienne' component={WCLaParisienne} />
 
+        <Route exact path='/WallCoverings/WCLuce' component={WCLuce} />
 
+        <Route exact path='/WallCoverings/WCMotif' component={WCMotif} />
 
+        <Route exact path='/WallCoverings/WCOrganica' component={WCOrganica} />
 
+        <Route exact path='/WallCoverings/WCSteel' component={WCSteel} />
+        <Route exact path='/WallCoverings/WCStripes' component={WCStripes} />
+        <Route exact path='/WallCoverings/WCSubway' component={WCSubway} />
+        <Route exact path='/WallCoverings/WCWood' component={WCWood} />
 
 
 
