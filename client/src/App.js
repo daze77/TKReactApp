@@ -58,6 +58,11 @@ import Urbano from './pages/GalleryCollection/Urbano'
 import Opulence from './pages/GalleryCollection/Opulence'
 
 
+
+import WCAbstract from './pages/WallCoverings/WCAbstract' 
+import WCArchitectural from './pages/WallCoverings/WCArchitectural' 
+
+
 import HomePageAlternate from './pages/HomePage-Alternage/HomepageAlternate'
 
 import TestPage from './pages/TestPage'
@@ -142,6 +147,18 @@ function App(location) {
 
         <Route exact path='/HomePageAlternate' component={HomePageAlternate} />
         <Route exact path='/TestPage' component={TestPage} />
+
+
+        <Route exact path='/WallCoverings/WCAbstract' component={WCAbstract} />
+
+        <Route exact path='/WallCoverings/WCArchitectural' component={WCArchitectural} />
+
+
+
+
+
+
+
 
 
 
