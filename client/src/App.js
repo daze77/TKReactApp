@@ -81,6 +81,10 @@ import WCWood from './pages/WallCoverings/WCWood'
 
 
 
+import WTPSubpage from './pages/WTP/WTPSubpage' 
+
+
+
 import HomePageAlternate from './pages/HomePage-Alternage/HomepageAlternate'
 
 import TestPage from './pages/TestPage'
@@ -192,6 +196,7 @@ function App(location) {
         <Route exact path='/WallCoverings/WCWood' component={WCWood} />
 
 
+        <Route exact path='/WTP/WTPSubpage' component={WTPSubpage} />
 
 
 

@@ -1,18 +1,22 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import './GalleryCard.css'
 
 
 
 
-function GalleryCard (props) {
+function WTPCard (props) {
     let Title = props.Title.toUpperCase()
+
+
 
     
     return(
         <>
-            <div class="col ">
-                <Link to={props.Link}>
+            <div class="col" onClick={props.cardClicked}>
+                <Link to={{
+                    pathname: props.Link,
+                    state: props.Title
+                }}>
                     <div class="card gallerygrid"> 
                         <img key={props.Id} class=" card-img"  src={props.ImageName} alt={props.ImageName}/>
                         <div class="card-img-overlay">
@@ -28,4 +32,4 @@ function GalleryCard (props) {
 
 
 
-export default GalleryCard
+export default WTPCard
