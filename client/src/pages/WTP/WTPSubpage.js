@@ -34,15 +34,15 @@ function WTPSubpage(props){
         let aaaaaa = []
 
         function createJSON(){
-            for (var i=1; i<51; i++){
+            for (var i=1; i<31; i++){
                 let str = "" + i
                 let pad = "000"
                 let ans = pad.substring(0, pad.length - str.length) + str
                 let b = {
                         "Id": Number(`1.${i}`),
-                        "Title": `hav${ans}b-a`,
-                        "Image": `h/a/hav${ans}b-a.jpg`,
-                        "ImageName": `hav${ans}b-a`,
+                        "Title": `vrn${ans}c-a`,
+                        "Image": `v/r/vrn${ans}c-a.jpg`,
+                        "ImageName": `vrn${ans}c-a`,
                         "Link": "",
                         
 
