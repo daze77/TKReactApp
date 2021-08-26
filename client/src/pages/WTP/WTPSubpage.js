@@ -26,6 +26,54 @@ function WTPSubpage(props){
     const clickedSubLink = itemJSON[0].SubLink
     console.log(clickedItemName)
     console.log(clickedSubLink)
+
+
+
+
+
+        let aaaaaa = []
+
+        function createJSON(){
+            for (var i=1; i<124; i++){
+                let str = "" + i
+                let pad = "000"
+                let ans = pad.substring(0, pad.length - str.length) + str
+                let b = {
+                        "Id": Number(`1.${i}`),
+                        "Title": `woo${ans}c-a`,
+                        "Image": `w/o/woo${ans}c-a.jpg`,
+                        "ImageName": `woo${ans}c-a`,
+                        "Link": "",
+                        
+
+                        }
+                        aaaaaa.push(b)
+
+                        
+                }
+                console.log(aaaaaa)
+        }
+
+        createJSON()
+
+
+
+        URL = 'https://www.tonykoukos.com/media/catalog/product/cache/1/thumbnail/314x299/9df78eab33525d08d6e5fb8d27136e95/'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
     return(
@@ -50,7 +98,7 @@ function WTPSubpage(props){
 
 
 
-                    {WTPJSON[0].SubLink.map( wtp =>(
+                    {itemJSON[0].SubLink.map( wtp =>(
 
                         <WTPCard 
 

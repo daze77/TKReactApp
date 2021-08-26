@@ -13,6 +13,8 @@ function WTP(){
 
    const URL = 'https://www.tonykoukos.com/media/catalog/cache/'
 
+  
+
     // function cardClicked(title){
     //      console.log("the image has been clicked")
     //      console.log(`${title}`)
@@ -44,7 +46,6 @@ function WTP(){
                     {WTPJSON.map( wtp =>(
 
                         <WTPCard useRef={wtp.Title}
-                        // cardClicked={()=>cardClicked(wtp.Title)}
 
                         Id = {wtp.Id}
                         Title = {wtp.Title}
