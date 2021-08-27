@@ -16,16 +16,16 @@ function WTPSubpage(props){
 
     function getClickedItemDetails(){
         itemJSON = WTPJSON.filter(item => item.Title===clickedItem)
-        console.log(itemJSON)
+        // console.log(itemJSON)
     }
 
     getClickedItemDetails()
 
 
-    const clickedItemName = itemJSON[0].Title
-    const clickedSubLink = itemJSON[0].SubLink
-    console.log(clickedItemName)
-    console.log(clickedSubLink)
+    // const clickedItemName = itemJSON[0].Title
+    // const clickedSubLink = itemJSON[0].SubLink
+    // console.log(clickedItemName)
+    // console.log(clickedSubLink)
 
 
 
@@ -55,7 +55,7 @@ function WTPSubpage(props){
         // createJSON()
 
 
-        URL = 'https://www.tonykoukos.com/media/catalog/product/cache/1/thumbnail/314x299/9df78eab33525d08d6e5fb8d27136e95/'
+        const URL = 'https://www.tonykoukos.com/media/catalog/product/cache/1/thumbnail/314x299/9df78eab33525d08d6e5fb8d27136e95/'
 
 
 

@@ -22,7 +22,6 @@ function WTPCard (props) {
                             <h5 class="card-title  w-100 ">{Title}</h5>
                         </div>
                     </div>
-                
             </div>
         </>
     )

@@ -3,9 +3,8 @@ import React from 'react'
 import ClassicsCard from '../../components/GalleryCard/GalleryCard'
 import GCJSON  from '../../utils/GalleryColGrid.json'
 
-console.log(GCJSON[0].SubLink)
+// console.log(GCJSON[0].SubLink)
 
-console.log()
 
 function Classics() {
 
