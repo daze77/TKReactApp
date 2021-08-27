@@ -11,8 +11,11 @@ function GalleryCard (props) {
     
     return(
         <>
-            <div class="col ">
-                <Link to={props.Link}>
+            <div class="col gallerycard">
+            <Link to={{
+                    pathname: props.Link,
+                    state: props.Title
+                }}>
                     <div class="card gallerygrid"> 
                         <img key={props.Id} class=" card-img"  src={props.ImageName} alt={props.ImageName}/>
                         <div class="card-img-overlay">

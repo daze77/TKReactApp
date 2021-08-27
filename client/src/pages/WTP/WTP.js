@@ -1,6 +1,6 @@
 import React from 'react'
 
-import WTPCard from '../../components/WTPCard/WTPCard'
+import GalleryCard from '../../components/GalleryCard/GalleryCard'
 import WTPJSON  from '../../utils/wtp.json'
 
 import './WTP.css'
@@ -45,7 +45,7 @@ function WTP(){
                 <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 wtpCollection">
                     {WTPJSON.map( wtp =>(
 
-                        <WTPCard useRef={wtp.Title}
+                        <GalleryCard useRef={wtp.Title}
 
                         Id = {wtp.Id}
                         Title = {wtp.Title}

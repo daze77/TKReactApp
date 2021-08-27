@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import WTPCard from '../../components/WTPCard/WTPCard'
 import WTPJSON  from '../../utils/wtp.json'
@@ -30,32 +30,29 @@ function WTPSubpage(props){
 
 
 
+        // let aaaaaa = []
 
-        let aaaaaa = []
-
-        function createJSON(){
-            for (var i=1; i<31; i++){
-                let str = "" + i
-                let pad = "000"
-                let ans = pad.substring(0, pad.length - str.length) + str
-                let b = {
-                        "Id": Number(`1.${i}`),
-                        "Title": `vrn${ans}c-a`,
-                        "Image": `v/r/vrn${ans}c-a.jpg`,
-                        "ImageName": `vrn${ans}c-a`,
-                        "Link": "",
+        // function createJSON(){
+        //     for (var i=1; i<31; i++){
+        //         let str = "" + i
+        //         let pad = "000"
+        //         let ans = pad.substring(0, pad.length - str.length) + str
+        //         let b = {
+        //                 "Id": Number(`1.${i}`),
+        //                 "Title": `vrn${ans}c-a`,
+        //                 "Image": `v/r/vrn${ans}c-a.jpg`,
+        //                 "ImageName": `vrn${ans}c-a`,
+        //                 "Link": "",
                         
 
-                        }
-                        aaaaaa.push(b)
+        //                 }
+        //                 aaaaaa.push(b)
+   
+        //         }
+        //         console.log(aaaaaa)
+        // }
 
-                        
-                }
-                console.log(aaaaaa)
-        }
-
-        createJSON()
-
+        // createJSON()
 
 
         URL = 'https://www.tonykoukos.com/media/catalog/product/cache/1/thumbnail/314x299/9df78eab33525d08d6e5fb8d27136e95/'
@@ -63,59 +60,26 @@ function WTPSubpage(props){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
     return(
         <>
         <div class="container">
             <section >
                 <h1>{props.location.state}</h1>
 
-
-                                
-
-
                 <hr />
 
                 <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 wtpCollection">
-
-
-
-
-
-
-
 
 
                     {itemJSON[0].SubLink.map( wtp =>(
 
                         <WTPCard 
 
-
-
                         Id = {wtp.Id}
                         Title = {wtp.Title}
                         ImageName = {URL + wtp.Image}
-                        
-
-
-
-                        />
-
                     
-
-
+                        />
 
                     ))}
 
