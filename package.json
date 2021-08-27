@@ -23,6 +23,7 @@
     "mongojs": "^3.1.0",
     "mongoose": "^5.12.3",
     "react-transition-group": "^1.2.1",
+    "rfs": "^9.0.5",
     "uuid": "^3.4.0"
   },
   "devDependencies": {

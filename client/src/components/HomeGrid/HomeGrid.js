@@ -3,6 +3,8 @@ import React from 'react'
 import HomeGridImgs from './HomeGridImgs'
 import HomeGridJSON from '../../utils/HomeGrid.json'
 
+
+
 import './HomeGrid.css'
 
 

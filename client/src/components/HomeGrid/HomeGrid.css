@@ -21,9 +21,9 @@
     margin-bottom: 0px;
     padding: 10px 15px 10px 10px;
     color: ivory;
-    font-weight: bolder;
 
 }
+
 
 
 div.col:last-child .homegrid .card-title{
@@ -33,4 +33,14 @@ div.col:last-child .homegrid .card-title{
     color: ivory;
     font-weight: bolder;
 
+}
+
+.homegrid h5{
+    font-size: 1.5vw;
+}
+
+@media (max-width: 768px){
+    .homegrid h5{
+        font-size: 2.3vw;
+    }
 }

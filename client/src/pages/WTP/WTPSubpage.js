@@ -68,7 +68,7 @@ function WTPSubpage(props){
 
                 <hr />
 
-                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 wtpCollection">
+                <div class="row row-cols-1 row-cols-md-3  g-3 wtpCollection">
 
 
                     {itemJSON[0].SubLink.map( wtp =>(
