@@ -1,4 +1,4 @@
-.wtpCollection .card-title{
+.wtpCollection h5{
     color: white;
     font-size: 28px;
     line-height: 31px;
@@ -10,7 +10,19 @@
 }
 
 
-.wtpCollection .card-img-overlay{
+.wtpCollection .wtp .card-img-overlay{
     padding:0;
+    bottom: 0;
 
+}
+
+.wtpCollection .wtp .card-img-overlay h5{
+    top: auto;
+    bottom: 0;
+    margin: 0;
+    text-align: left;
+    padding: 0px 10px;
+    background-color: rgba(0,0,0,0.3);
+   
+    font-size: 0.8rem;
 }
