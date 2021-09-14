@@ -1,7 +1,8 @@
 import React from 'react'
 
+import Row from '../../components/Row/Row'
 import Pub from "../../utils/Published.json"
-import PubCard from '../../components/PublishedCard/PublishedCard'
+import Card from '../../components/Card/Card'
 
 
 import Tonykphoto12_1 from '../../assets/images/published/tonykphoto12_1.jpg'
@@ -39,9 +40,11 @@ function Published(){
                 <hr/>  
 
                 <div>
-                    <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+                    <Row rowclass = 'row-cols-1 row-cols-md-2 g-4 mb-5'>
                     {Pub.map(pub => (
-                        <PubCard
+                        <Card
+                                className = 'card h-100 mb-1'
+                                idName = 'pubcardformat'
                                 Id={pub.Id}
                                 Title={pub.Title}
                                 Image={pub.Image}
@@ -50,7 +53,7 @@ function Published(){
                         />
 
                         ))}
-                    </div>
+                    </Row>
                     <ul>
                         <li>Notable mention in The Goddess of the Hunt, June 12, 2011</li>
                         <li>Listed in Seductively French</li>

@@ -1,15 +1,28 @@
 import React from 'react'
 
+import Row from '../../components/Row/Row'
 import Card from '../../components/Card/Card'
 import Media from "../../utils/ShowsTVFilm.json"
 
 
-
+import Tonykphoto07 from '../../assets/images/media/tonykphoto07.jpg'
+import Tonykphoto08 from '../../assets/images/media/tonykphoto08.jpg'
+import Tonykphoto09 from '../../assets/images/media/tonykphoto09.jpg'
+import Tonykphoto11 from '../../assets/images/media/tonykphoto11.jpg'
+import Tonykphoto12 from '../../assets/images/media/tonykphoto12.jpg'
+import Tonykphoto13 from '../../assets/images/media/shows-television-film1.jpg'
 
 
 function ShowsTVFilm(){
   
-    
+    let mediaObj = {
+        "Tonykphoto07": Tonykphoto07,
+        "Tonykphoto08": Tonykphoto08,
+        "Tonykphoto09": Tonykphoto09,
+        "Tonykphoto11": Tonykphoto11,
+        "Tonykphoto12": Tonykphoto12,
+        "Tonykphoto13": Tonykphoto13
+    }
 
 
 
@@ -23,20 +36,23 @@ function ShowsTVFilm(){
                 <h1>Shows, Television and Film</h1> 
                 <hr/>  
 
-                <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+                <Row rowclass = 'row-cols-1 row-cols-md-2 g-4 mb-5'>
                    {Media.map(media => (
                        <Card
+                            className = 'card h-100 mb-1'
+                            idName = 'cardformat'
                             Id={media.Id}
                             Show={media.Show}
                             Title={media.Title}
                             Image={media.Image}
-                            ImageName={media.ImageName}
+                            ImageName={mediaObj[media.ImageName]}
                     
                        />
 
                    ))}
-  
-                </div>
+                </Row>
+
+
                 <div>
                     <ul>
                         <li>Designer Guys</li>

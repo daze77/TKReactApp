@@ -1,5 +1,9 @@
 import React from 'react'
 
+import HorizontalCard from '../../components/HorizontalCard/HorizontalCard'
+
+import TestimonialsJSon from '../../utils/Testimonials.json'
+
 
 
 function Testimonials(){
@@ -15,6 +19,25 @@ function Testimonials(){
                         
                     <h1>Testimonials</h1>
                     <hr />
+
+
+
+
+
+
+
+                    {TestimonialsJSon.map(test => (
+
+                        <HorizontalCard 
+                            Id = {test.Id}
+                            Name = {test.Name}
+                            Quote = {test.Quote}
+                            LocationCity = {test.LocationCity}
+                            LocationCountry = {test.LocationCountry}
+                            ImageURL = {test.ImageURL}
+                            ImageName = {test.ImageName}
+                        />
+                    ))}                 
 
                     <h8>BRIAN GLUCKSTEIN</h8>
                     <p>Tony Koukos has collaborated with Brian Gluckstein since 2004 on multiple commercial and residential projects including the Four Seasons in Toronto and Palm Beach.
