@@ -7,10 +7,10 @@ import './MenuHamburger.css'
 function MenuBurger(onClick){
    return(
     <>
-    <div class="menuBurgerWrapper" {...onClick}>
-        <div class="menuBurger"></div>
-        <div class="menuBurger"></div>
-        <div class="menuBurger"></div>
+    <div className="menuBurgerWrapper" {...onClick}>
+        <div className="menuBurger"></div>
+        <div className="menuBurger"></div>
+        <div className="menuBurger"></div>
     </div>
     </>
     )

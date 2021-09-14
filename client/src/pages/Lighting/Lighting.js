@@ -10,7 +10,7 @@ function Lighting(){
     return(
     <>
 
-    <div class="container">
+    <div className="container">
         <section>
             <h1>Lighting</h1>
             <hr />

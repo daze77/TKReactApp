@@ -21,7 +21,7 @@ function Footer(){
         {location.pathname!=='/HomePageAlternate' &&
             <footer>
                 <hr />
-                <div class="container">
+                <div className="container">
                     <FooterLinks />
                 </div>
 

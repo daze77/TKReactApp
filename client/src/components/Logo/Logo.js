@@ -116,9 +116,9 @@ function Logo(onClick){
 return (
     <>
 
-        <div class="tkLogocontainer" {...onClick}>
-            <div class="tkLogoSymbolContainer">
-                <div class="logoimg el" data-x="300">
+        <div className="tkLogocontainer" {...onClick}>
+            <div className="tkLogoSymbolContainer">
+                <div className="logoimg el" data-x="300">
                     <svg width="70" height="70"
                         xmlns="http://www.w3.org/2000/svg">
                         <image href={LogoSymbol} height="70" width="70" />
@@ -127,8 +127,8 @@ return (
 
             </div>
 
-            <div class="tkLogoNameContainer" style={{}}>
-                <div class="tkLogoName" >
+            <div className="tkLogoNameContainer" style={{}}>
+                <div className="tkLogoName" >
                     <span id="logoNameL">TONY</span>
                     &nbsp;
                     <span id="logoNameR">KOUKOS</span>

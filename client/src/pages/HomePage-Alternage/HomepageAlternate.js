@@ -22,45 +22,45 @@ function HomePageAlt(){
         <div id="coverpage" onClick = {showMenu}>
 
             
-            <section class="coverheader">
-                <div class="sitelogo">
+            <section className="coverheader">
+                <div className="sitelogo">
 
                     
                     <a href="index.html">
                         <img src={logo}/>
                     </a>
                 </div>
-                <div class="social">
+                <div className="social">
                     <ul>
                         <li>
                             <a href="https://www.instagram.com/tony_koukos_photography/" target="_blank">
-                                <i class="fab fa-instagram"></i>
+                                <i className="fab fa-instagram"></i>
                             </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/Tony-Koukos-World-Travel-Photography-124767567540376/" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
+                                <i className="fab fa-facebook-f"></i>
                             </a>
                         </li>
                         <li>
                             <a href="https://twitter.com/tonykoukos?lang=en" target="_blank">
-                                <i class="fab fa-twitter"></i>
+                                <i className="fab fa-twitter"></i>
                             </a>
                         </li>
                         <li>
                             <a href="https://www.youtube.com/channel/UCv7TQcF44zhITM02Lldao9A" target="_blank">
-                                <i class="fab fa-youtube"></i>
+                                <i className="fab fa-youtube"></i>
                             </a>    
                         </li>
                         <li>
-                            <i class="fab fa-linkedin-in"></i>
+                            <i className="fab fa-linkedin-in"></i>
                         </li>
                     </ul>
                 </div>
             </section>
 
-            <section class="covercontentbody">
-                <div class ="covermainnav" >
+            <section className="covercontentbody">
+                <div className ="covermainnav" >
                 <p>Products</p>
                 <ul>
                     <li> <a href="gallery-collection.html">Gallery Collection</a>

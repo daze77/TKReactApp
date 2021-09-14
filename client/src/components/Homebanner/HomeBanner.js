@@ -20,8 +20,8 @@ function HomeBanner(){
         <>
             
             <Link to="travelogue">
-                <div class="card ">
-                    <img src={travel} class="card-img" alt="travel"/>
+                <div className="card ">
+                    <img src={travel} className="card-img" alt="travel"/>
 
                 </div>
             </Link>

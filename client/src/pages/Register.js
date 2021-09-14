@@ -55,37 +55,37 @@ function Register(){
         <>
             { authOk ? <Redirect to='/' /> : '' }
             <form ref={refForm}>
-            <div class="card mt-5">
-                <div class="card-header">
+            <div className="card mt-5">
+                <div className="card-header">
                     <h1>User Registration</h1>
                 </div>
-                <div class="card-body">
-                    <div class="mb-3">
+                <div className="card-body">
+                    <div className="mb-3">
                         <label for="name">First Name</label>
-                        <input ref={inputName} type="text" id="name" class="form-control" required />
-                        <div class="invalid-feedback">
+                        <input ref={inputName} type="text" id="name" className="form-control" required />
+                        <div className="invalid-feedback">
                             Please enter a name
                         </div>
                     </div>
-                    <div class="mb-3">
+                    <div className="mb-3">
                         <label for="email">Email Address</label>
-                        <input ref={inputEmail} id="email" type="email" class="form-control" required />
-                        <div class="invalid-feedback">
+                        <input ref={inputEmail} id="email" type="email" className="form-control" required />
+                        <div className="invalid-feedback">
                             Please enter an email
                         </div>
 
                     </div>
-                    <div class="mb-3">
+                    <div className="mb-3">
                         <label for="userPassword">Password</label>
-                        <input ref={inputPassword} id="userPassword" type="password" class="form-control"  pattern=".{8,}" required />
-                        <div class="invalid-feedback">
+                        <input ref={inputPassword} id="userPassword" type="password" className="form-control"  pattern=".{8,}" required />
+                        <div className="invalid-feedback">
                             Please enter a password (8 chars min)
                         </div>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <button onClick={registerUser} class="btn btn-primary mx-1" >Register</button>
-                    <Link to="/login" class="font-weight-light text-muted mx-3">Already Registered?</Link>
+                <div className="card-footer">
+                    <button onClick={registerUser} className="btn btn-primary mx-1" >Register</button>
+                    <Link to="/login" className="font-weight-light text-muted mx-3">Already Registered?</Link>
                 </div>
             </div>
             </form>

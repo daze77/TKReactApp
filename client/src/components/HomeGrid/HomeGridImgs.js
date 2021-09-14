@@ -40,10 +40,10 @@ function HomeGridImgs(props){
         <>
             <Col >
                 <Link to={props.Link} >
-                    <div class="card homegrid" key={props.Id}>
-                        <img  src={homeObj[props.ImageName]} class="card-img" alt={props.ImageName}/>
-                        <div class="card-img-overlay">
-                            <h5 class="card-title position-absolute bottom-0 end-0 w-100 text-end">{props.Title}</h5>
+                    <div className="card homegrid" key={props.Id}>
+                        <img  src={homeObj[props.ImageName]} className="card-img" alt={props.ImageName}/>
+                        <div className="card-img-overlay">
+                            <h5 className="card-title position-absolute bottom-0 end-0 w-100 text-end">{props.Title}</h5>
                         </div>
                     </div>
                 </Link>

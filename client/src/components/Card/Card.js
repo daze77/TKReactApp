@@ -14,10 +14,10 @@ function Card(props){
         <>
             <Col>
                 <div className={props.className} id={props.idName}>
-                    <img key={props.Id} src={props.ImageName} class="card-img-top" alt={props.ImageName}/>
-                    <div class="card-body">
-                        <h5 class="card-title">{props.Show}</h5>
-                        <p class="card-text">{props.Title}</p>
+                    <img key={props.Id} src={props.ImageName} className="card-img-top" alt={props.ImageName}/>
+                    <div className="card-body">
+                        <h5 className="card-title">{props.Show}</h5>
+                        <p className="card-text">{props.Title}</p>
                     </div>
                 </div>
             </Col>

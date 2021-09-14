@@ -10,7 +10,7 @@ function Travelogue(){
 
     return(
     <>
-        <div class="container">
+        <div className="container">
             <h1>Travelogue</h1>
             <hr />
             <TravelLogueCard />

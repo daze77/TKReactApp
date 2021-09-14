@@ -10,7 +10,7 @@ function PrivacyPolicy(){
     return(
     <>
 
-    <div class="container">
+    <div className="container">
         <section>
             <h1>Privacy Policy</h1>
             <hr />

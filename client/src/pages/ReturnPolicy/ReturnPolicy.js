@@ -12,7 +12,7 @@ function ReturnPolicy(){
 
     return(
     <>
-        <div class="container returnpolicy">
+        <div className="container returnpolicy">
             <h1>Return Policy</h1>
             <hr />
 

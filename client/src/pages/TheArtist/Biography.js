@@ -12,12 +12,12 @@ function Biography(){
     <>
 
 
-        <div class="container">
+        <div className="container">
             <section>
                 <h1>Biography</h1> 
                 <hr/>  
-                <div class="clearfix">
-                    <img src={tonykphoto} class="col-sm-12 col-md-4 float-md-end mb-3 ms-md-5" alt="..."/>
+                <div className="clearfix">
+                    <img src={tonykphoto} className="col-sm-12 col-md-4 float-md-end mb-3 ms-md-5" alt="..."/>
 
                     <p>
                         Tony Koukos, photographer, has found inspiration throughout the world. Currently residing Canada, it is not uncommon for 
@@ -41,7 +41,7 @@ function Biography(){
                 <br />
                 <div>
                     <h3>ARTIST STATEMENT</h3>
-                    <blockquote class="statementbody">
+                    <blockquote className="statementbody">
                         As a photographer, I love to capture the details of our beautiful planet…. the little things that everyday people walk by and don’t take the time to appreciate.   
                         Beauty can be found everywhere, from crackled wood textures in the Cycladic Islands of Greece, to the shimmering ocean in Miami and ornate architectural details 
                         of Paris. Just stop and scan your surroundings to find it. Each time I board a plane to embark on a new journey, I am always excited to see what the world is 

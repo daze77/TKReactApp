@@ -5,7 +5,7 @@ function DefaultGridCol(){
     return(
         <>
 
-            <div class="col">
+            <div className="col">
 
 
             </div>

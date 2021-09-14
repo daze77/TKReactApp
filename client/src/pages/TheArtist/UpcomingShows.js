@@ -13,12 +13,12 @@ function UpcomingShows(){
     <>
 
 
-        <div class="container">
+        <div className="container">
             <section>
                 <h3>SHOWS</h3>
                 <br />
-                <div class="clearfix">
-                    <img src={Tonykphoto02} class="col-sm-12 col-md-4 float-md-end mb-3 ms-md-5" alt="..."/>
+                <div className="clearfix">
+                    <img src={Tonykphoto02} className="col-sm-12 col-md-4 float-md-end mb-3 ms-md-5" alt="..."/>
                     <p><strong>UPCOMING</strong></p>
                     <ul>
                         <li>IDS Toronto Interior Design Show, January 23-26, 2014</li>

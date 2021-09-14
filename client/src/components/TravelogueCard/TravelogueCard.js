@@ -22,8 +22,8 @@ function TravelogueCard(){
     return(
     <>
         
-        <div class="clearfix">
-            <img src={Passport} class="col-sm-12 col-md-8 float-md-start mb-3 me-3" alt="..."/>
+        <div className="clearfix">
+            <img src={Passport} className="col-sm-12 col-md-8 float-md-start mb-3 me-3" alt="..."/>
             <div>
                 <h3>TONY KOUKOS' PASSPORT</h3>
                 <p>Over 40 countries and counting!</p>
@@ -31,36 +31,36 @@ function TravelogueCard(){
         </div>
         <br />
 
-        <div class="row row-cols-1 row-cols-md-4  pt-2"  >
-            <div class="col">
+        <div className="row row-cols-1 row-cols-md-4  pt-2"  >
+            <div className="col">
                 {Col1.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
-                        Cities={places.Cities.map((cities)=> <li class="visitedcities"><i class="fas fa-caret-right"></i> {cities}</li>)}
+                        Cities={places.Cities.map((cities)=> <li className="visitedcities"><i className="fas fa-caret-right"></i> {cities}</li>)}
                     />
                 ))}    
             </div>
-            <div class="col">
+            <div className="col">
                 {Col2.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
-                        Cities={places.Cities.map((cities)=> <li class="visitedcities"><i class="fas fa-caret-right"></i> {cities}</li>)}
+                        Cities={places.Cities.map((cities)=> <li className="visitedcities"><i className="fas fa-caret-right"></i> {cities}</li>)}
                     />
                 ))}    
             </div>
-            <div class="col">
+            <div className="col">
                 {Col3.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
-                        Cities={places.Cities.map((cities)=> <li class="visitedcities"><i class="fas fa-caret-right"></i> {cities}</li>)}
+                        Cities={places.Cities.map((cities)=> <li className="visitedcities"><i className="fas fa-caret-right"></i> {cities}</li>)}
                     />
                 ))}    
             </div>
-            <div class="col">
+            <div className="col">
                 {Col4.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
-                        Cities={places.Cities.map((cities)=> <li class="visitedcities"><i class="fas fa-caret-right"></i> {cities}</li>)}
+                        Cities={places.Cities.map((cities)=> <li className="visitedcities"><i className="fas fa-caret-right"></i> {cities}</li>)}
                     />
                 ))}    
             </div>

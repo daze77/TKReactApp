@@ -10,7 +10,7 @@ function Installations(){
     return(
     <>
 
-    <div class="container">
+    <div className="container">
         <section>
             <h1>Design Installations</h1>
             <hr />

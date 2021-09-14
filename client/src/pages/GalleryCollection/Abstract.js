@@ -16,13 +16,13 @@ return(
    
 
     <>
-    <div class="container">
+    <div className="container">
         <section >
             <h1>Abstract</h1>
             <hr />
 
 
-            <div class="row row-cols-1 row-cols-md-3 g-3 wtpCollection gallerySubMenus">
+            <div className="row row-cols-1 row-cols-md-3 g-3 wtpCollection gallerySubMenus">
                 {GCJSON.map( gcA =>( gcA.SubLink.map(gcAS => (
 
                     <AbstractCard 

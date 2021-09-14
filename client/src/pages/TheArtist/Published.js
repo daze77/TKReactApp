@@ -34,7 +34,7 @@ function Published(){
     <>
 
 
-        <div class="container">
+        <div className="container">
             <section>
                 <h1>Published</h1> 
                 <hr/>  

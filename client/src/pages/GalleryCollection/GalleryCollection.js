@@ -31,7 +31,7 @@ function GalleryCollection(){
 
     return(
     <>
-	    <div class="container">
+	    <div className="container">
             <section >
                 <h1>Gallery Collection</h1>
                 <hr />
@@ -40,7 +40,7 @@ function GalleryCollection(){
                 </p>
 
      
-                <div class="row row-cols-1 row-cols-md-3 g-3 galleryCollection">
+                <div className="row row-cols-1 row-cols-md-3 g-3 galleryCollection">
                     {GalleryJSON.map(gallery => (
 
                         <GalleryCard

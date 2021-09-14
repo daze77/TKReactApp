@@ -14,8 +14,8 @@ function Testimonials(){
     return(
     <>
 
-            <div class="container">
-                <section class="test">
+            <div className="container">
+                <section className="test">
                         
                     <h1>Testimonials</h1>
                     <hr />

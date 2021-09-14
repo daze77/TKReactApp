@@ -10,7 +10,7 @@ function TheFrameShop(){
     return(
     <>
 
-        <div class="container">
+        <div className="container">
             <section>
                 <h1>The Frame Shop</h1>
                 <hr />

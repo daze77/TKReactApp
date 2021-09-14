@@ -11,7 +11,7 @@ function CustomerService(){
 
     return(
     <>
-        <div class="container">
+        <div className="container">
             <h1>Customer Service</h1>
             <hr />
 

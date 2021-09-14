@@ -10,8 +10,8 @@ function PrintingandServices(){
 
     return(
     <>
-        <div class="container">
-            <section class="print">
+        <div className="container">
+            <section className="print">
                 <h1>Printing Services</h1>
                 <hr />
                 

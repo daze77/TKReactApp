@@ -5,7 +5,7 @@ function AddressCard(){
     return (
 
         <>  
-            <div class="addressCardFormat">
+            <div className="addressCardFormat">
                 <span>70 Distillery Lane (Distillery District)</span><br/>
                 <span>Toronto, ON M5A 0E3</span><br/>
                 <span>Canada</span><br/>

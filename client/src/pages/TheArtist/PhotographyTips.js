@@ -12,7 +12,7 @@ function PhotographyTips(){
     <>
 
 
-        <div class="container" id="phototips">
+        <div className="container" id="phototips">
             <section>
                 <h1>Photography Tips</h1> 
                 <hr/>  

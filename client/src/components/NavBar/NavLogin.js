@@ -50,20 +50,20 @@ function NavLogin(){
         <>
 
             
-            <div class="d-flex ">
-                <div class="mx-3">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                        {name && <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <div className="d-flex ">
+                <div className="mx-3">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        {name && <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" id="navbarScrollingDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Welcome back <u>{name}</u>
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li class="nav-item"> <NavLink to="/Logout" className="nav-link" activeClassName="active">Logout</NavLink></li>
-                                <li class="nav-item"> <NavLink to="/UserProfile" className="nav-link" activeClassName="active">User Profile</NavLink></li>
+                            <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li className="nav-item"> <NavLink to="/Logout" className="nav-link" activeClassName="active">Logout</NavLink></li>
+                                <li className="nav-item"> <NavLink to="/UserProfile" className="nav-link" activeClassName="active">User Profile</NavLink></li>
 
                             </ul>
                         </li>}
-                        {!name && <li class="nav-item "> <NavLink to="/Login" className="nav-link" activeClassName="active">Login</NavLink></li>}
+                        {!name && <li className="nav-item "> <NavLink to="/Login" className="nav-link" activeClassName="active">Login</NavLink></li>}
                     </ul>
                 </div>
             </div>

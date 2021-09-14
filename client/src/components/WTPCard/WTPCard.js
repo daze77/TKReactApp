@@ -13,12 +13,12 @@ function WTPCard (props) {
     
     return(
         <>
-            <div class="col wtp" >
+            <div className="col wtp" >
 
-                    <div class="card gallerygrid"> 
-                        <img key={props.Id} class=" card-img"  src={props.ImageName} alt={props.ImageName}/>
-                        <div class="card-img-overlay">
-                            <h5 class="card-title  w-100 ">{Title}</h5>
+                    <div className="card gallerygrid"> 
+                        <img key={props.Id} className=" card-img"  src={props.ImageName} alt={props.ImageName}/>
+                        <div className="card-img-overlay">
+                            <h5 className="card-title  w-100 ">{Title}</h5>
                         </div>
                     </div>
             </div>

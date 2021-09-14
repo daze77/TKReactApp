@@ -11,7 +11,7 @@ function PhotoGallery(){
     <>
 
 
-        <div class="container">
+        <div className="container">
             <section>
                 <h1>Photo Gallery</h1>
                 <hr />

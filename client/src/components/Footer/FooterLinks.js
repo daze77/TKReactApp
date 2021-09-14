@@ -10,17 +10,17 @@ function FooterLinks(){
 
     return(
         <>
-            <div class="row footerLists">
-                <div class="col-lg-4 col-md-12 mb-4 mb-md-5">
+            <div className="row footerLists">
+                <div className="col-lg-4 col-md-12 mb-4 mb-md-5">
                     <h5>Contact Us</h5>
                     <AddressCard />
                     <br />
-                    <span><a href="tel:+1-416-305-5430"><i class="fas fa-phone"></i> 416.305.5430</a></span><br />
-                    <span><a href="mailto:tony@tonykoukos.com"><i class="far fa-envelope"></i> tony@tonykoukos.com</a></span>
+                    <span><a href="tel:+1-416-305-5430"><i className="fas fa-phone"></i> 416.305.5430</a></span><br />
+                    <span><a href="mailto:tony@tonykoukos.com"><i className="far fa-envelope"></i> tony@tonykoukos.com</a></span>
                 </div>
-                <div class="col-lg-8 col-md-12 mb-4 mb-md-0">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                <div className="col-lg-8 col-md-12 mb-4 mb-md-0">
+                    <div className="row">
+                        <div className="col-lg-4 col-md-4 mb-4 mb-md-0">
                             <ul >
                                 <Link to="/GalleryCollection"><li>Gallery Collection</li></Link>
                                 <Link to="/WallCoverings"><li>Wall Coverings</li></Link>
@@ -28,7 +28,7 @@ function FooterLinks(){
                                 <Link to="ArtandDestination"><li>Art & Destination</li></Link>
                             </ul>
                         </div>
-                        <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                        <div className="col-lg-4 col-md-4 mb-4 mb-md-0">
                             <ul>
                                 <Link to="/TheArtist"><li>The Artist</li></Link>
                                 <Link to="/Travelogue"><li>Travelogue</li></Link>
@@ -37,7 +37,7 @@ function FooterLinks(){
                             </ul>
 
                         </div>
-                        <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                        <div className="col-lg-4 col-md-4 mb-4 mb-md-0">
                             <ul>
                                 <Link to="/Contact"><li>Contact Us</li></Link>
                                 <Link to="/PrivacyPolicy"><li>Privacy Policy</li></Link>

@@ -18,16 +18,16 @@ function HorzCard(props){
     return(
         <>
 
-            <div class="card mb-3" style={{cardStyle}}>
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src={[props.ImageURL]+[props.ImageName]} class="img-fluid rounded-start" alt="..."/>
+            <div className="card mb-3" style={{cardStyle}}>
+                <div className="row g-0">
+                    <div className="col-md-4">
+                        <img src={[props.ImageURL]+[props.ImageName]} className="img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            {/* <h5 class="card-title">Card title</h5> */}
-                            <p class="card-text">{props.Quote}</p>
-                            <p class="card-text"><small class="text-muted">{props.Name}
+                    <div className="col-md-8">
+                        <div className="card-body">
+                            {/* <h5 className="card-title">Card title</h5> */}
+                            <p className="card-text">{props.Quote}</p>
+                            <p className="card-text"><small className="text-muted">{props.Name}
                             <br/>
                             {props.LocationCity}, {props.LocationCountry}
                             </small></p>

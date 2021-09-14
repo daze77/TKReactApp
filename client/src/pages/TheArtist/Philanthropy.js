@@ -16,17 +16,17 @@ function Philanthropy(){
 
     return(
     <>
-        <div class="container">
+        <div className="container">
             <section>
                 <h1>Philanthropy</h1> 
                 <hr/>  
-                <div class="clearfix">
-                    <div class="col-sm-12 col-md-4 float-md-end ">
-                    <img src={TonyPhoto04} class="col-sm-12 mb-3 ms-md-5" alt="..."/>
-                    <img src={TonyPhoto05} class="col-sm-12 mb-3 ms-md-5" alt="..."/>
-                    <img src={TonyPhoto06} class="col-sm-12 mb-3 ms-md-5" alt="..."/>
+                <div className="clearfix">
+                    <div className="col-sm-12 col-md-4 float-md-end ">
+                    <img src={TonyPhoto04} className="col-sm-12 mb-3 ms-md-5" alt="..."/>
+                    <img src={TonyPhoto05} className="col-sm-12 mb-3 ms-md-5" alt="..."/>
+                    <img src={TonyPhoto06} className="col-sm-12 mb-3 ms-md-5" alt="..."/>
                     </div>
-                    <div class="col-sm-12 col-md-8">
+                    <div className="col-sm-12 col-md-8">
                         <ul>
                             <li>Design for Hope, Partnered with Dusk to Dawn Interiors, Thunder Bay, August 4, 2011</li>
                             <li>Raised over $7000 for cancer research, donated to the Thunder Bay Regional Health Sciences Centre</li>
@@ -40,7 +40,7 @@ function Philanthropy(){
                                     <li>Thunder Bay Community Auditorium</li>
                                     <li>Thunder Bay District Memorial Hospital</li>
                                     <li>Bachelor for Hope Auction</li>
-                                    <li>Greek America Foundation 40 Under 40, Class 2012 recognition</li>
+                                    <li>Greek America Foundation 40 Under 40, className 2012 recognition</li>
                                     <li>Photography appeared on a not-for-profit fundraising calendar distributed to over 300 corporations</li>
                                 </ul>
                         </ul>

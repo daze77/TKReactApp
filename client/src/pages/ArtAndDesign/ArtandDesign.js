@@ -40,13 +40,13 @@ function ArtandDesign(){
     return(
 
         <>
-        <div class="container">
+        <div className="container">
             <section >
                 <h1>Art and Design</h1>
                 <hr />
 
 
-                <div class="row row-cols-1 row-cols-md-3 g-3  artDesignCollection">
+                <div className="row row-cols-1 row-cols-md-3 g-3  artDesignCollection">
                     {ArtandDesignJSON.map( ad =>(
 
                         <ArtamdDesignCard 

@@ -23,7 +23,7 @@ function TheArtist(){
     <>
 
 
-        <div class="container">
+        <div className="container">
 
             <Biography />
             <UpcomingShows />

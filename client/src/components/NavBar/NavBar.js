@@ -55,52 +55,52 @@ function NavBar(){
         <>
             {(location.pathname!=='/HomePageAlternate' && location.pathname!=='/TestPage') &&
         
-                <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarHeadings" aria-controls="navBarHeadings" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                    <div className="container-fluid">
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarHeadings" aria-controls="navBarHeadings" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                         </button>
-                        <NavLink to="/" class="navbar-brand" className="nav-link" activeClassName="active"><LogoSymbol  /> </NavLink>
-                        <div class="collapse navbar-collapse me-1 ms-5 " id="navBarHeadings">
-                            <ul class="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <NavLink to="/" className="navbar-brand" className="nav-link" activeClassName="active"><LogoSymbol  /> </NavLink>
+                        <div className="collapse navbar-collapse me-1 ms-5 " id="navBarHeadings">
+                            <ul className="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
+                                <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         PRODUCTS
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <NavLink to="/GalleryCollection"><li class="dropdown-item">Gallery Collection</li></NavLink>
-                                        <NavLink to="/WallCoverings"><li class="dropdown-item">Wall Coverings</li></NavLink>
-                                        <NavLink to="/WorldTravelPhotography"><li class="dropdown-item">World Travel Photography</li></NavLink>
-                                        <NavLink to="/ArtandDesign"><li class="dropdown-item">Art & Design</li></NavLink>
+                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <NavLink to="/GalleryCollection"><li className="dropdown-item">Gallery Collection</li></NavLink>
+                                        <NavLink to="/WallCoverings"><li className="dropdown-item">Wall Coverings</li></NavLink>
+                                        <NavLink to="/WorldTravelPhotography"><li className="dropdown-item">World Travel Photography</li></NavLink>
+                                        <NavLink to="/ArtandDesign"><li className="dropdown-item">Art & Design</li></NavLink>
                                     </ul>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         SERVICES
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <NavLink to="/HospitalityandDesign"><li class="dropdown-item">Hospitality & Design</li></NavLink>
-                                        <NavLink to="/Installations"><li class="dropdown-item">Installations</li></NavLink>
-                                        <NavLink to="/Lighting"><li class="dropdown-item">Lighting</li></NavLink>
-                                        <NavLink to="/TheFrameShop"><li class="dropdown-item">The Frame Shop</li></NavLink>
-                                        <NavLink to="/PrintingandServices"><li class="dropdown-item">Printing & Services</li></NavLink>
+                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <NavLink to="/HospitalityandDesign"><li className="dropdown-item">Hospitality & Design</li></NavLink>
+                                        <NavLink to="/Installations"><li className="dropdown-item">Installations</li></NavLink>
+                                        <NavLink to="/Lighting"><li className="dropdown-item">Lighting</li></NavLink>
+                                        <NavLink to="/TheFrameShop"><li className="dropdown-item">The Frame Shop</li></NavLink>
+                                        <NavLink to="/PrintingandServices"><li className="dropdown-item">Printing & Services</li></NavLink>
 
 
                                     </ul>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="/TheArtist" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" href="/TheArtist" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         THE ARTIST
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <NavLink to="/TheArtist"><li class="dropdown-item">TheArtist</li></NavLink>
-                                        <NavLink to="/Testimonials"><li class="dropdown-item">Testimonials</li></NavLink>
-                                        <NavLink to="/Contact"><li class="dropdown-item">Contact</li></NavLink>
+                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <NavLink to="/TheArtist"><li className="dropdown-item">TheArtist</li></NavLink>
+                                        <NavLink to="/Testimonials"><li className="dropdown-item">Testimonials</li></NavLink>
+                                        <NavLink to="/Contact"><li className="dropdown-item">Contact</li></NavLink>
 
                                     </ul>
                                 </li>
-                                <NavLink to="/HomePageAlternate"><li class="nav-link">ALTERNATE HOMEPAGE</li></NavLink>
-                                <NavLink to="/TestPage"><li class="nav-link">Test Page</li></NavLink>
+                                <NavLink to="/HomePageAlternate"><li className="nav-link">ALTERNATE HOMEPAGE</li></NavLink>
+                                <NavLink to="/TestPage"><li className="nav-link">Test Page</li></NavLink>
                             </ul>
                           
                            

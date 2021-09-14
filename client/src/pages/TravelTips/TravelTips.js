@@ -20,7 +20,7 @@ function TravelTips() {
     
 
     <>
-        <div class="container traveltips">
+        <div className="container traveltips">
             <h1>Travel Tips</h1>
             <hr />
 

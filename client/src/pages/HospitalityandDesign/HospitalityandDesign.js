@@ -10,7 +10,7 @@ function HospitalityandDesign(){
     return(
     <>
 
-    <div class="container">
+    <div className="container">
             <section>
                 <h1>Hospitality & Design</h1>
                 <hr />

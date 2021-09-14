@@ -64,9 +64,9 @@ function LogoSymbolOnly(onCLick){
   
 return (
     <>
-    <div class="tkLogocontainer1" {...onCLick}>
-        <div class="tkLogoSymbolContainer1">
-            <div class="logoimg1 el1" data-x="300">
+    <div className="tkLogocontainer1" {...onCLick}>
+        <div className="tkLogoSymbolContainer1">
+            <div className="logoimg1 el1" data-x="300">
                 <svg width="70" height="70"
                     xmlns="http://www.w3.org/2000/svg">
                     <image href={LogoSymbol} height="70" width="70" />
