@@ -27,28 +27,28 @@ function HomePageAlt(){
 
                     
                     <a href="index.html">
-                        <img src={logo}/>
+                        <img src={logo} alt="imgage"/>
                     </a>
                 </div>
                 <div className="social">
                     <ul>
                         <li>
-                            <a href="https://www.instagram.com/tony_koukos_photography/" target="_blank">
+                            <a href="https://www.instagram.com/tony_koukos_photography/" target="_blank" rel="noreferrer">
                                 <i className="fab fa-instagram"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/Tony-Koukos-World-Travel-Photography-124767567540376/" target="_blank">
+                            <a href="https://www.facebook.com/Tony-Koukos-World-Travel-Photography-124767567540376/" target="_blank" rel="noreferrer">
                                 <i className="fab fa-facebook-f"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/tonykoukos?lang=en" target="_blank">
+                            <a href="https://twitter.com/tonykoukos?lang=en" target="_blank" rel="noreferrer">
                                 <i className="fab fa-twitter"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/channel/UCv7TQcF44zhITM02Lldao9A" target="_blank">
+                            <a href="https://www.youtube.com/channel/UCv7TQcF44zhITM02Lldao9A" target="_blank" rel="noreferrer">
                                 <i className="fab fa-youtube"></i>
                             </a>    
                         </li>

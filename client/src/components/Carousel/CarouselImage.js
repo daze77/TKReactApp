@@ -26,11 +26,11 @@ function CarouselImage(props){
     return(
         <>  
            
-            <div className="carousel-item" key={props.Id}>
-                <img src={CarouselImg[props.Id]} className="d-block w-100" alt={props.Id}/>
+            <div className="carousel-item" >
+                <img key={props.Key} src={CarouselImg[props.Id]} className="d-block w-100" alt={props.Id}/>
                 <div className="carousel-caption d-none d-md-block">
-                    <h5>Auto slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5 >Auto slide label</h5>
+                    <p >Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
 

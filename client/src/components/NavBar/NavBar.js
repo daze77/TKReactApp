@@ -11,7 +11,7 @@ let timeout
 
 function NavBar(){
 
-    const [{ authOk, name }, dispatch ]= useStoreContext()
+    const [{ authOk }, dispatch ]= useStoreContext()
     const [ showMenu, setShowMenu ] = useState( true )
     // adding const for menu toggle
    
@@ -60,11 +60,11 @@ function NavBar(){
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarHeadings" aria-controls="navBarHeadings" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                         </button>
-                        <NavLink to="/" className="navbar-brand" className="nav-link" activeClassName="active"><LogoSymbol  /> </NavLink>
+                        <NavLink to="/" className="navbar-brand nav-link" activeClassName="active"><LogoSymbol  /> </NavLink>
                         <div className="collapse navbar-collapse me-1 ms-5 " id="navBarHeadings">
                             <ul className="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a className="nav-link dropdown-toggle" href="/index" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         PRODUCTS
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -75,7 +75,7 @@ function NavBar(){
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a className="nav-link dropdown-toggle" href="/index" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         SERVICES
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">

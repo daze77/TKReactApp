@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 import NavBarLogo from '../Logo/Logo'
 import NavLogin from './NavLogin'
 import LogoSymbol from '../../assets/logo/logosymbol.png'
-import NavBarLogoSymbol from '../Logo/Logo2Symbol'
+// import NavBarLogoSymbol from '../Logo/Logo2Symbol'
 import MenuBurger from '../MenuHamburger/MenuHamburger'
 
 function NavBarAlt(){

@@ -2,7 +2,7 @@ import React from 'react'
 
 import Row from '../../components/Row/Row'
 import Card from '../../components/Card/Card'
-import Media from "../../utils/ShowsTVFilm.json"
+import Media from '../../utils/ShowsTVFilm.json'
 
 
 import Tonykphoto07 from '../../assets/images/media/tonykphoto07.jpg'
@@ -42,8 +42,8 @@ function ShowsTVFilm(){
                             className = 'card h-100 mb-1'
                             idName = 'cardformat'
                             Id={media.Id}
-                            Show={media.Show}
                             Title={media.Title}
+                            Text={media.Text}
                             Image={media.Image}
                             ImageName={mediaObj[media.ImageName]}
                     

@@ -46,7 +46,7 @@ function Published(){
                                 className = 'card h-100 mb-1'
                                 idName = 'pubcardformat'
                                 Id={pub.Id}
-                                Title={pub.Title}
+                                Text={pub.Text}
                                 Image={pub.Image}
                                 ImageName={pubObj[pub.ImageName]}
                         

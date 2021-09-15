@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 
 import './HorizontalCard.css'
 
@@ -7,18 +7,10 @@ function HorzCard(props){
 
 
 
-
-    const [cardStyle, setCardStyle] = useState(`maxWidth: "50px"`)
-
-
- 
-
-
-
     return(
         <>
 
-            <div className="card mb-3" style={{cardStyle}}>
+            <div className="card mb-3" style={{maxWidth: "50px"}}>
                 <div className="row g-0">
                     <div className="col-md-4">
                         <img src={[props.ImageURL]+[props.ImageName]} className="img-fluid rounded-start" alt="..."/>

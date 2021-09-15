@@ -1,7 +1,8 @@
 import React from 'react'
 
-import WTPCard from '../../components/WTPCard/WTPCard'
+import Row from '../../components/Row/Row'
 import WTPJSON  from '../../utils/wtp.json'
+import Card from '../../components/Card/Card'
 
 import './WTP.css'
 
@@ -68,22 +69,29 @@ function WTPSubpage(props){
 
                 <hr />
 
-                <div className="row row-cols-1 row-cols-md-3  g-3 wtpCollection">
+                <Row rowclass='row-cols-1 row-cols-md-3'
+                    classstyle='g-3 wtpCollection'>
 
 
                     {itemJSON[0].SubLink.map( wtp =>(
 
-                        <WTPCard 
+                        <Card 
+                        classstyle="wtp"
+
+                        className='card gallerygrid'
+                        h5className='w-100'
+                        cardbodyStyle='card-img-overlay'
+                        Key={wtp.Id}
 
                         Id = {wtp.Id}
-                        Title = {wtp.Title}
+                        Title = {wtp.Title.toUpperCase()}
                         ImageName = {URL + wtp.Image}
                     
                         />
 
                     ))}
 
-                </div>
+                </Row>
 
             </section>   
         </div>

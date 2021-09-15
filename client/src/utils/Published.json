@@ -1,56 +1,56 @@
 [
     {
         "Id": 1,
-        "Title": "Featured in House & Home, Michelle Hanna’s home, Sept, 2010 issue",
+        "Text": "Featured in House & Home, Michelle Hanna’s home, Sept, 2010 issue",
         "Image": "tonykphoto12_1.jpg",
         "ImageName": "Tonykphoto12_1"
 
     },
     {
         "Id": 2,
-        "Title": "Featured in New Condo Guide with designer Yanic Simard of www.tidg.com, April 2012",
+        "Text": "Featured in New Condo Guide with designer Yanic Simard of www.tidg.com, April 2012",
         "Image": "tonykphoto13.jpg",
         "ImageName": "Tonykphoto13"
 
     },
     {
         "Id": 3,
-        "Title": "Chateaux de Chantilly image published in the \"One Life\" coffee table book, 2012",
+        "Text": "Chateaux de Chantilly image published in the \"One Life\" coffee table book, 2012",
         "Image": "tonykphoto14.jpg",
         "ImageName": "Tonykphoto14"
 
     },
     {
         "Id": 4,
-        "Title": "Published in three issues of Greek America magazine April 2012, 6-page Istanbul travel spread , June 2005, 15-page Greece travel spread, June 2006,15-page Turkey travel spread",
+        "Text": "Published in three issues of Greek America magazine April 2012, 6-page Istanbul travel spread , June 2005, 15-page Greece travel spread, June 2006,15-page Turkey travel spread",
         "Image": "tonykphoto15.jpg",
         "ImageName": "Tonykphoto15"
 
     },
     {
         "Id": 5,
-        "Title": "Featured in Bayview Magazine, \"No Fear\" by Lisa Sandham, Thunder Bay, December 2011 –crop sections of article… and perhaps have a dropdown bar where e people can read online",
+        "Text": "Featured in Bayview Magazine, \"No Fear\" by Lisa Sandham, Thunder Bay, December 2011 –crop sections of article… and perhaps have a dropdown bar where e people can read online",
         "Image": "tonykphoto16.jpg",
         "ImageName": "Tonykphoto16"
 
     },
     {
         "Id": 6,
-        "Title": "Awarded Design Lines Magazine \"LOVE TAG\" at the launch of the Koukos Wall Coverings, Toronto Interior Design Show 2012",
+        "Text": "Awarded Design Lines Magazine \"LOVE TAG\" at the launch of the Koukos Wall Coverings, Toronto Interior Design Show 2012",
         "Image": "tonykphoto17.jpg",
         "ImageName": "Tonykphoto17"
 
     },
     {
         "Id": 7,
-        "Title": "OMNI Television interview, May 2012",
+        "Text": "OMNI Television interview, May 2012",
         "Image": "tonykphoto18.jpg",
         "ImageName": "Tonykphoto18"
 
     },
     {
         "Id": 8,
-        "Title": "Global markets achived with IKEA partnership.",
+        "Text": "Global markets achived with IKEA partnership.",
         "Image": "tonykphoto19.jpg",
         "ImageName": "Tonykphoto19"
 

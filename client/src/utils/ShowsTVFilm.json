@@ -3,16 +3,16 @@
 [
     {
         "Id": 1,
-        "Show": "Cityline",
-        "Title": "Regularly featured on Cityline with design Brian Gluckstein",
+        "Title": "Cityline",
+        "Text": "Regularly featured on Cityline with design Brian Gluckstein",
         "Image": "tonykphoto07.jpg",
         "ImageName": "Tonykphoto07"
 
     },
     {
         "Id": 2,
-        "Show": "Sarah's House & Sarah 101",
-        "Title": "Numerous episodes of Sarah Richardson shows; Sarah's House & Sarah 101",
+        "Title": "Sarah's House & Sarah 101",
+        "Text": "Numerous episodes of Sarah Richardson shows; Sarah's House & Sarah 101",
         "Image": "tonykphoto07.jpg",
         "ImageName": "Tonykphoto08"
         
@@ -20,32 +20,32 @@
     },
     {
         "Id": 3,
-        "Show": "Candace Tells All",
-        "Title": "Candace Olsen's “Candace Tells All”, filmed April 2012",
+        "Title": "Candace Tells All",
+        "Text": "Candace Olsen's “Candace Tells All”, filmed April 2012",
         "Image": "tonykphoto09.jpg",
         "ImageName": "Tonykphoto09"		
 
     },
     {
         "Id": 4,
-        "Show": "The Mix",
-        "Title": "The Iconic Blue Grotto print photographed in Croatia, was featured on HGTV’s The Mix: Sam Pynn Special featuring designer, Yanic Simard",
+        "Title": "The Mix",
+        "Text": "The Iconic Blue Grotto print photographed in Croatia, was featured on HGTV’s The Mix: Sam Pynn Special featuring designer, Yanic Simard",
         "Image": "tonykphoto11.jpg",
         "ImageName": "Tonykphoto11"	
 
     },
     {
         "Id": 5,
-        "Show": "Cityline",
-        "Title": "Wall coverings collection shown by Samantha Pynn on Feb 21, 2012 Cityline episode",
+        "Title": "Cityline",
+        "Text": "Wall coverings collection shown by Samantha Pynn on Feb 21, 2012 Cityline episode",
         "Image": "tonykphoto12.jpg",
         "ImageName": "Tonykphoto12"	
 
     },
     {
         "Id": 6,
-        "Show": "The Marilyn Dennis Show",
-        "Title": "Tommy Smythe features Wallcoverings Collection on the Marilyn Dennis show",
+        "Title": "The Marilyn Dennis Title",
+        "Text": "Tommy Smythe features Wallcoverings Collection on the Marilyn Dennis Title",
         "Image": "shows-television-film1.jpg",
         "ImageName": "Tonykphoto13"	
 

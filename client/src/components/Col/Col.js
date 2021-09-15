@@ -5,7 +5,7 @@ function Col(props){
   
     return(
    
-        <div className = {`col`} >
+        <div className = {`col ${props.classstyle ? props.classstyle : ""}`} >
             {props.children}
         </div>
     )

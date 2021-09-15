@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Row from '../../components/Row/Row'
+import Col from '../../components/Col/Col'
+
 import TravelLocations from './TravelLocations'
 import TravelLogueJSON from '../../utils/Travelogue.json'
 
@@ -31,40 +34,42 @@ function TravelogueCard(){
         </div>
         <br />
 
-        <div className="row row-cols-1 row-cols-md-4  pt-2"  >
-            <div className="col">
+        <Row rowclass = 'row-cols-1 row-cols-md-4'
+                classstyle = 'pt-2'> 
+            <Col>
                 {Col1.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
                         Cities={places.Cities.map((cities)=> <li className="visitedcities"><i className="fas fa-caret-right"></i> {cities}</li>)}
                     />
                 ))}    
-            </div>
-            <div className="col">
+            </Col>
+
+            <Col>
                 {Col2.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
                         Cities={places.Cities.map((cities)=> <li className="visitedcities"><i className="fas fa-caret-right"></i> {cities}</li>)}
                     />
                 ))}    
-            </div>
-            <div className="col">
+            </Col>
+            <Col>
                 {Col3.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
                         Cities={places.Cities.map((cities)=> <li className="visitedcities"><i className="fas fa-caret-right"></i> {cities}</li>)}
                     />
                 ))}    
-            </div>
-            <div className="col">
+            </Col>
+            <Col>
                 {Col4.map((places) =>(
                     <TravelLocations
                         Country={places.Country}
                         Cities={places.Cities.map((cities)=> <li className="visitedcities"><i className="fas fa-caret-right"></i> {cities}</li>)}
                     />
                 ))}    
-            </div>
-        </div>
+            </Col>
+        </Row>
 
     </>
     )

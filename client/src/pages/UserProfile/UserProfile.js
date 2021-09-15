@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
-import {useStoreContext} from '../../utils/GlobalStore'
-import fetchJSON from '../../utils/API'
+// import {useStoreContext} from '../../utils/GlobalStore'
+// import fetchJSON from '../../utils/API'
 
 
 
@@ -8,7 +8,7 @@ function UserProfile(){
 
     const inputEmail = useRef()
     const inputPassword = useRef()
-    const inputRememberMe = useRef()
+    // const inputRememberMe = useRef()
     const refForm = useRef()
 
     // const saveData = {

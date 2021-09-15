@@ -9,7 +9,7 @@ import C1 from '../../assets/images/sliderImages/1.jpg'
 
 
 
-function Carousel(props){
+function Carousel(){
 
 
 
@@ -39,20 +39,15 @@ function Carousel(props){
                     </div>  
                     
                     {CarouselJSON.map(CJSON=> (
-
-
-
+                       
                         <CarouselImage
+                            Key={CJSON.Id}
                             Id={CJSON.Id}
                             ImageName={CJSON.ImageName}
                         />
-
-            
                     ))}
                 </div>
 
-
-    
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Previous</span>
