@@ -3,7 +3,7 @@ import React from 'react'
 import HomeGridImgs from './HomeGridImgs'
 import HomeGridJSON from '../../utils/HomeGrid.json'
 
-import Row from '../../components/Row/Row'
+import Row from '../Row/Row'
 
 
 import './HomeGrid.css'

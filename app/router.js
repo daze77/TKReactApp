@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces */
 const orm = require( './db/orm.mongoose' )
 const sessionManager = require( './session-manager' )
 
@@ -73,6 +74,14 @@ function router( app ){
       console.log( ` .. updated with '${newTask}' for ownerId(${req.sessionData.userId})` )
       res.send({ status, tasks, message })
    })
+
+
+   app.get('/api/companyinfo', async function(req, res){
+      const {status, companyData, message} = await orm.companyDetails()
+      console.log('..received the following details', status, companyData, message)
+      res.send({status, companyData, message})
+   })
+  
 }
 
 module.exports = router

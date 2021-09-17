@@ -1,5 +1,5 @@
 import React from 'react'
-import Col from '../../components/Col/Col'
+import Col from '../Col/Col'
 import {Link} from 'react-router-dom'
 
 

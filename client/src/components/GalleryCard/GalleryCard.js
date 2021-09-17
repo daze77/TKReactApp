@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Col from '../../components/Col/Col'
+import Col from '../Col/Col'
 import './GalleryCard.css'
 
 

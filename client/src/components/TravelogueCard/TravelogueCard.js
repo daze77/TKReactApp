@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Row from '../../components/Row/Row'
-import Col from '../../components/Col/Col'
+import Row from '../Row/Row'
+import Col from '../Col/Col'
 
 import TravelLocations from './TravelLocations'
 import TravelLogueJSON from '../../utils/Travelogue.json'

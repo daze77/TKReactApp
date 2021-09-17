@@ -1,12 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import AddressCard from '../../components/Address/Address'
+import AddressCard from '../Address/Address'
 
 
 
 
 
 function FooterLinks(){
+
+
+
 
     return(
         <>

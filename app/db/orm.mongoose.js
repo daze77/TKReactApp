@@ -1,3 +1,6 @@
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable indent */
+/* eslint-disable quotes */
 const mongoose = require( 'mongoose' )
 const bcrypt = require( 'bcrypt' )
 
@@ -6,6 +9,7 @@ mongoose.connect(process.env.MONGODB_URI,
 
 // include mongoose models (it will include each file in the models directory)
 const db = require( './models' )
+
 
 async function userRegister( userData ){
    if( !userData.name || !userData.email || !userData.password ){
@@ -111,10 +115,26 @@ async function taskSaveAndList( newTask, ownerId ){
    return taskList( ownerId, 'Task saved' )
 }
 
+async function companyDetails(){
+   const companyData = await db.companyinfos.find({})
+
+   console.log('this is companyInfo from orm', companyData)
+   return{
+      status: true,
+      message: 'Yo, we found some data',
+      companyData
+      
+   }
+}
+
+
+
+
 module.exports = {
    userRegister,
    userLogin,
    userSession,
    taskList,
-   taskSaveAndList
+   taskSaveAndList,
+   companyDetails
 };
