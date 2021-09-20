@@ -1,15 +1,14 @@
 import React, {useEffect, useState} from "react"
-// import { useStoreContext } from "../../utils/GlobalStore"
 import fetchJSON from "../../utils/API"
 
 
 function AddressCard(){
 
-    // const [{ authOk }, dispatch ]= useStoreContext()
 
 
     const [compData, setCompData] = useState({})
-    
+    const [compAddress, setCompAddress] = useState([{}])
+
 
   
 
@@ -20,54 +19,37 @@ function AddressCard(){
         const companyAddress = allCompData.companyData[0].addressInformation
         
         
-        console.log(`this is the allCompData data: `, allCompData)
-
-        console.log(allCompData.status)
-        console.log(allCompData.message)
-        console.log(companyAddress)
-
-
         setCompData(
             {status: allCompData.status,
             message: allCompData.message,
-            companyData: companyAddress}
+        }
         )
+
+        setCompAddress({
+            addressName: companyAddress.addressName,
+            address: companyAddress.address,
+            address2: companyAddress.address2,
+            city:companyAddress.city,
+            country: companyAddress.country,
+            postalCode: companyAddress.postalCode
+
+        })
         
     }
-        console.log(`address component`,compData)
 
-        console.log(compData.status)
-        console.log(compData.message)
-        console.log(compData.companyData.addressName)
-
-
-
-        const addressName = compData.companyData.addressName
-        const address = compData.companyData
-
-        console.log(addressName)
-        console.log(address)
-
-
-        
-
-    useEffect(function(){
-        loadCompanyData()
-
-
-        
+        useEffect(function(){
+        loadCompanyData()        
     },[])
 
 
-
-    return (
+   return (
 
         <>  
             <div className="addressCardFormat">
-                <span>({addressName})</span><br/>
-                <span>{address.address}</span><br/>
-                <span>{address.city}, {address.province} {address.postalCode}</span><br/>
-                <span>Canada</span><br/>
+                <span>({compAddress.addressName})</span><br/>
+                <span>{compAddress.address}</span><br/>
+                <span>{compAddress.city}, {compAddress.province} {compAddress.postalCode}</span><br/>
+                <span>{compAddress.country}</span><br/>
             </div>
         </>
     )
