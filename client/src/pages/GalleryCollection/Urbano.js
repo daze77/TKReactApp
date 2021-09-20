@@ -27,7 +27,7 @@ return(
                 {GCJSON[5].SubLink.map(gcAS => (
 
                     <UrbanoCard 
-
+                    key = {gcAS.ImageName}
                     Id = {gcAS.Id}
                     Title = {gcAS.Title}
                     ImageName = {URL + gcAS.Image}

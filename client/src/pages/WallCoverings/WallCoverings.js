@@ -24,7 +24,7 @@ function WallCoverings(){
                     {WallCovJSON.map( wc =>(
 
                         <WallCovCard 
-
+                        key={wc.Image}
                         Id = {wc.Id}
                         Title = {wc.Title}
                         ImageName = {URL + wc.Image}

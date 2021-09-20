@@ -24,7 +24,7 @@ return(
                 {GCJSON[4].SubLink.map(gcAS => (
 
                     <TheModernCard 
-
+                    key = {gcAS.ImageName}
                     Id = {gcAS.Id}
                     Title = {gcAS.Title}
                     ImageName = {URL + gcAS.Image}

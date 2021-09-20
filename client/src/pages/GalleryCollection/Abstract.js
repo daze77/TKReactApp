@@ -26,11 +26,11 @@ return(
             <Row rowclass="row-cols-1 row-cols-md-3 g-3 wtpCollection "
                 classstyle = "wtpCollection gallerySubMenus">
          
-                {GCJSON.map( gcA =>( gcA.SubLink.map(gcAS => (
+                {GCJSON[0].SubLink.map( gcAS => (
 
                     <AbstractCard 
 
-                    Key = {gcAS.Id}
+                    key = {gcAS.ImageName}
                     Id = {gcAS.Id}
                     Title = {gcAS.Title}
                     ImageName = {URL + gcAS.Image}
@@ -40,7 +40,6 @@ return(
                     />
 
                 
-                    ))
 
 
                 ))}

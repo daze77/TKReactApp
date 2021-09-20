@@ -46,7 +46,7 @@ function WTP(){
                     {WTPJSON.map( wtp =>(
 
                         <GalleryCard useRef={wtp.Title}
-
+                        key={wtp.ImageName}
                         Id = {wtp.Id}
                         Title = {wtp.Title}
                         ImageName = {URL + wtp.Image}

@@ -26,7 +26,7 @@ return(
                 {GCJSON[3].SubLink.map(gcAS => (
 
                     <PeopleCard 
-
+                    key = {gcAS.ImageName}
                     Id = {gcAS.Id}
                     Title = {gcAS.Title}
                     ImageName = {URL + gcAS.Image}

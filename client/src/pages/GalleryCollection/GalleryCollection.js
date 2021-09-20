@@ -44,8 +44,8 @@ function GalleryCollection(){
                     {GalleryJSON.map(gallery => (
 
                         <GalleryCard
-
-                        Id = {gallery.imgae}
+                        key = {gallery.ImageName}
+                        Id = {gallery.Id}
                         Title ={gallery.Title}
                         ImageName = {ImgObj[gallery.ImageName]}
                         Link = {gallery.Link}

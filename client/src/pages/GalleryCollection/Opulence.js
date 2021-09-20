@@ -28,7 +28,8 @@ return(
                     
                     
                     <OpulenceCard 
-
+                    
+                    key = {gcAS.ImageName}
                     Id = {gcAS.Id}
                     Title = {gcAS.Title}
                     ImageName = {URL + gcAS.Image}

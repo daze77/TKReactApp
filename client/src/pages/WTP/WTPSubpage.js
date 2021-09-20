@@ -81,7 +81,7 @@ function WTPSubpage(props){
                         className='card gallerygrid'
                         h5className='w-100'
                         cardbodyStyle='card-img-overlay'
-                        Key={wtp.Id}
+                        Key={wtp.ImageName}
 
                         Id = {wtp.Id}
                         Title = {wtp.Title.toUpperCase()}
