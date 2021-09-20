@@ -19,7 +19,7 @@ function NavBar(){
 
     async function loadUserSession(){
       const { status, userData, message }= await fetchJSON( `/api/users/session` )
-      console.log( `[NavBar] attempted to reload session, result(${status}) message(${message})` )
+    //   console.log( `[NavBar] attempted to reload session, result(${status}) message(${message})` )
       if( !status ){
         // clear any session
         dispatch({ type: 'USER_LOGOUT', message })
@@ -41,7 +41,7 @@ function NavBar(){
       setShowMenu( false )
     }, [ location ])
 
-    console.log(location)
+    // console.log(location)
     
     useEffect( function(){
       // on load let's  try to get the  session (if one exists)

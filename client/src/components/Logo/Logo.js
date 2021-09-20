@@ -46,7 +46,7 @@ function Logo(onClick){
             logoNames.rightLogoName.push(spanEl)
         })    
         
-        console.log(logoNames)
+        // console.log(logoNames)
         return logoNames
     }
   

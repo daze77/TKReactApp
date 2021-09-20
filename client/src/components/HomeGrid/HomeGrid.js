@@ -17,7 +17,7 @@ function HomeGrid(){
             {HomeGridJSON.map(hgrid => (
 
                 <HomeGridImgs
-                        Key={hgrid.Id}
+                        key={hgrid.Id}
                         Id={hgrid.Id}
                         Title={hgrid.Title}
                         Image={hgrid.Image}

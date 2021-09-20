@@ -70,14 +70,14 @@ function Login(){
                     </div>
                     <div className="card-body">
                         <div className="mb-3">
-                            <label for="email" className="form-label">Email address</label>
+                            <label htmlFor="email" className="form-label">Email address</label>
                             <input ref={inputEmail} id="email" type="email" className="form-control" required />
                             <div className="invalid-feedback">
                                 Please enter your login email
                             </div>
                         </div>
                         <div className="mb-3">
-                            <label for="userPassword">Password</label>
+                            <label htmlFor="userPassword">Password</label>
                             <input ref={inputPassword} id="userPassword" type="password" className="form-control"  pattern=".{8,}" required />
                             <div className="invalid-feedback">
                                 Please enter your password (8 chars min)
@@ -88,7 +88,7 @@ function Login(){
                         <button onClick={userLogin} type="button" className="btn btn-primary mx-1">Login</button>
                         &nbsp; 
                         <input ref={inputRememberMe} id='rememberMe' type="checkbox" />                        
-                        <label className='text-secondary' for='rememberMe'>Remember Me</label> &nbsp;
+                        <label className='text-secondary' htmlFor='rememberMe'>Remember Me</label> &nbsp;
                         <Link to="/register" className="mx-3">Need to Register?</Link>
                     </div>
                 </div>

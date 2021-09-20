@@ -9,7 +9,6 @@ function SubFooter(){
     function getFullYear(){
         let date = new Date();
         let year = date.getFullYear();
-        console.log((year));
         return year
 
     }

@@ -6,8 +6,8 @@ function AddressCard(){
 
 
 
-    const [compData, setCompData] = useState({})
-    const [compAddress, setCompAddress] = useState([{}])
+    // const [compData, setCompData] = useState({})
+    const [compAddress, setCompAddress] = useState({})
 
 
   
@@ -19,11 +19,11 @@ function AddressCard(){
         const companyAddress = allCompData.companyData[0].addressInformation
         
         
-        setCompData(
-            {status: allCompData.status,
-            message: allCompData.message,
-        }
-        )
+        // setCompData(
+        //     {status: allCompData.status,
+        //     message: allCompData.message,
+        // }
+        // )
 
         setCompAddress({
             addressName: companyAddress.addressName,

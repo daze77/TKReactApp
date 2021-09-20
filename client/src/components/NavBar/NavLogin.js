@@ -17,7 +17,7 @@ function NavLogin(){
 
     async function loadUserSession(){
       const { status, userData, message }= await fetchJSON( `/api/users/session` )
-      console.log( `[NavBar] attempted to reload session, result(${status}) message(${message})` )
+      // console.log( `[NavBar] attempted to reload session, result(${status}) message(${message})` )
       if( !status ){
         // clear any session
         dispatch({ type: 'USER_LOGOUT', message })

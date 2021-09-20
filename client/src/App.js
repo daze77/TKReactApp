@@ -113,7 +113,7 @@ import './pages/pages.css'
 
 function App(location) {
 
-  console.log(location.location)
+  // console.log(location.location)
 
   return (
     <>
