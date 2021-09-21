@@ -10,7 +10,7 @@ function HorzCard(props){
     return(
         <>
 
-            <div className="card mb-3" style={{maxWidth: "50px"}}>
+            <div className="card mb-3" style={{maxWidth: "500px"}}>
                 <div className="row g-0">
                     <div className="col-md-4">
                         <img src={[props.ImageURL]+[props.ImageName]} className="img-fluid rounded-start" alt="..."/>

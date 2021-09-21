@@ -43,6 +43,7 @@ function Published(){
                     <Row rowclass = 'row-cols-1 row-cols-md-2 g-4 mb-5'>
                     {Pub.map(pub => (
                         <Card
+                                key={pub.Id}
                                 className = 'card h-100 mb-1'
                                 idName = 'pubcardformat'
                                 Id={pub.Id}

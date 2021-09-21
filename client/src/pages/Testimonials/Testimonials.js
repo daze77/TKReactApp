@@ -28,7 +28,8 @@ function Testimonials(){
 
                     {TestimonialsJSon.map(test => (
 
-                        <HorizontalCard 
+                        <HorizontalCard
+                            key={test.ImageName} 
                             Id = {test.Id}
                             Name = {test.Name}
                             Quote = {test.Quote}
@@ -39,7 +40,7 @@ function Testimonials(){
                         />
                     ))}                 
 
-                    <h8>BRIAN GLUCKSTEIN</h8>
+                    <h4>BRIAN GLUCKSTEIN</h4>
                     <p>Tony Koukos has collaborated with Brian Gluckstein since 2004 on multiple commercial and residential projects including the Four Seasons in Toronto and Palm Beach.
                     </p>
                     <p>"Tony has a very sophisticated eye particularly in his selection of architecture and landscape," says Gluckstein. Koukos currently curates an assortment of his photographs for the Gluckstein Home artwork collection distributed throughout Canada at Home Outfitters and in the United States at Lord & Taylor Home.
@@ -47,12 +48,12 @@ function Testimonials(){
 
                     <p>www.glucksteindesign.com</p>
 
-                    <h9>ABOUT BRIAN</h9>
+                    <h5>ABOUT BRIAN</h5>
                     <p>Brian Gluckstein is internationally known for his sophisticated interiors and award-winning commercial and residential design projects. Since launching his interior design career over two decades ago, Gluckstein has been celebrated for his effortless style and talent for mixing timeless pieces with contemporary design.
                     </p>
                     <p>As principal of GlucksteinDesign, Gluckstein has led such high-profile projects as One St. Thomas Condominiums, 100 Yorkville, The Four Seasons Hotel/Condominiums in Toronto and The Four Seasons Spa in Palm Beach. lucksteinDesign is widely recognized for its upscale interior design projects for many prominent families, corporations and hotels throughout Canada and abroad. In 1999, Gluckstein created GlucksteinHome, a high-style line of affordable home furnishings that reflects the luxurious, yet functional appeal of his work.
                     </p>
-                    <h9>BRIAN’S ART TIPS</h9>
+                    <h5>BRIAN’S ART TIPS</h5>
                     <p>Go Big. Don’t be timid when it comes to art. Use large format pieces and strive to fill the wall. An easy and frequent mistake that homeowners make is choosing and hanging art that is too small for the space.
                     </p>
                     <p>Multiply. If you have a number of smaller pieces you love, group them together gallery style. The key to a successful gallery wall is selecting art pieces that evoke a consistent mood. Hang the pieces in either a grid or an organic, free flowing formation.
@@ -66,7 +67,7 @@ function Testimonials(){
 
 
 
-                    <h9>COLIN COWIE</h9>
+                    <h5>COLIN COWIE</h5>
 
                     <p>I met Tony many years ago in 2002, in Mykonos, Greece – he was just starting to take photography seriously, but hadn’t yet made it his career. I could tell immediately he had the gift. I had a chance to see an extensive portfolio of his works and it’s truly magnificent. His passion for travel fuels his art with a unique and special spirit.
                     </p>
@@ -74,7 +75,7 @@ function Testimonials(){
                     </p>
 
                     
-                    <h9>SARAH RICHARDSON</h9>
+                    <h5>SARAH RICHARDSON</h5>
 
                     <p>"We love working with Tony Koukos! His collection of travel photography from around the world is truly comprehensive-there are thousands of images to choose from and his range of substrates – including plexi-glass, metal, wood and canvas-makes the collection all the more versatile. Tony’s understanding of the design process and his ability to meet tight deadlines, have made him an invaluable supplier of fine art photography used in both our television and our private client work. We would highly recommend giving Tony Koukos’ portfolio a look. You won’t be sorry you did!"
                     </p>
@@ -87,7 +88,7 @@ function Testimonials(){
                     <p>www.sarahrichardsondesign.com</p>
 
 
-                    <h9>TOMAS PEARCE</h9>
+                    <h5>TOMAS PEARCE</h5>
 
                     <p>We have had the pleasure of working with Tony for a number of years now on countless residential and commercial projects. We continue to be pleased with his creativity, vision and professionalism. Tony constantly stays aheadof the trends by offering fresh and innovative pieces, and by forever exploring new artistic mediums. Most recently Tony worked with us on an installment at Toronto's Interior Design Show 2012, creating a custom illuminated backsplash of one of his stunning black and white photographs that received acclaimed praise from the design industry. No matter where the world traveler is,Tony always accommodates his clientsand ensures that his beautiful pieces arrive on time, and to a standard of excellence that defines his work.
                     </p>
@@ -96,18 +97,18 @@ function Testimonials(){
                     Tomas Pearce Interior Design Consulting Inc. www.tomaspearce.com</p>
                     
 
-                    <h9>DESIGN LINES MAGAZING</h9>
+                    <h5>DESIGN LINES MAGAZING</h5>
                     <p>Design Lines Magazine, Toronto
                     "Nowthis is different!"
                     Koukos Wall Coverings collection was awarded the “Love Tag” at Interior Design Show 2012
                     www.designlinesmagazine.com</p>
                     
-                    <h9>SAMANTHAN PYNN</h9>
+                    <h5>SAMANTHAN PYNN</h5>
 
                     <p>"I absolutely love the versatility of Tony’s work; such a diverse collection of travel imagery from around the world and digital designs. Even better, everything is fully customizable, very affordable and available on different applications. I especially love the “Parisian Library Books” wall coverings, which I featured on Cityline Television"
                     </p>
 
-                    <h9>GREGORY C. PAPPAS</h9>
+                    <h5>GREGORY C. PAPPAS</h5>
                     <p>Tony Koukos has been a proud supporter of the Greek America Foundation and has shared his passion with our members through numerous donations to our auctions and special events. His selection as one of our "Forty Under 40” in 2012 is a testament to his excellence in his craft, as well as dedication to making the world around him a better place. The world needs more people like Tony Koukos who strive for excellence in everything they do. I am proud to have his art hanging in both my residences, in America andin Greece. Keep up the great work Tony!
                     Gregory C. Pappas</p>
 

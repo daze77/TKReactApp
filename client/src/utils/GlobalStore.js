@@ -7,6 +7,7 @@ const initialData = {
 
 /*! IMPORTANT all your reducer functionality goes here */
 const dataReducer = (state, action) => {
+  console.log({...state})
   switch (action.type) {
     case "USER_LOGIN":
      return { ...state, ...action.data, alert: action.message || '', authOk: true }
@@ -23,9 +24,9 @@ const dataReducer = (state, action) => {
       return { ...state, alert: '' }
     case "UPDATE_TASKS":
       return { ...state, tasks: action.tasks, alert: action.message || '' }
-    case "GET_COMPANY_DATA":
-      return { ...state, companyData: action.companyData, 
-        alert: action.message }
+    // case "GET_COMPANY_DATA":
+    //   return { ...state, companyData: action.companyData, 
+    //     alert: action.message }
     default:
       console.log(`Invalid action type: ${action.type}`)
       return state
