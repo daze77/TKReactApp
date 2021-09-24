@@ -4,46 +4,35 @@ import fetchJSON from "../../utils/API"
 
 function AddressCard(){
 
-
-
-    // const [compData, setCompData] = useState({})
     const [compAddress, setCompAddress] = useState({})
 
-
-  
-
-
-
     async function loadCompanyData(){
-        const allCompData = await fetchJSON('/api/companyinfo')
-        const companyAddress = allCompData.companyData[0].addressInformation
+        const {allAddresses}  = await fetchJSON('/api/compaddresses')
+        // console.log('this is address get from front end', allAddresses)
+        const companyAddress = allAddresses.filter(addr => addr.addressflag === true)
+        // console.log(companyAddress)
         
+        // console.log(`this is the address information from the db`, addressData)
+        // console.log(`this is the address information from the db`, companyAddress)
+
         
-        // setCompData(
-        //     {status: allCompData.status,
-        //     message: allCompData.message,
-        // }
-        // )
-
-        setCompAddress({
-            addressName: companyAddress.addressName,
-            address: companyAddress.address,
-            address2: companyAddress.address2,
-            city:companyAddress.city,
-            country: companyAddress.country,
-            postalCode: companyAddress.postalCode
-
+         setCompAddress({
+            addressName: companyAddress[0].addressName,
+            address: companyAddress[0].address,
+            address2: companyAddress[0].address2,
+            city:companyAddress[0].city,
+            country: companyAddress[0].country,
+            postalCode: companyAddress[0].postalCode
         })
         
     }
 
-        useEffect(function(){
-        loadCompanyData()        
+    useEffect(function(){
+    loadCompanyData()        
     },[])
 
 
    return (
-
         <>  
             <div className="addressCardFormat">
                 <span>({compAddress.addressName})</span><br/>

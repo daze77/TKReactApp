@@ -75,11 +75,23 @@ function router( app ){
       res.send({ status, tasks, message })
    })
 
+   app.get('/api/compaddresses', async function(req, res){
+      const {status, allAddresses, message} = await orm.addressList()
+      // console.log('..received the following details', status, allAddresses, message)
+      res.send({status, allAddresses, message})
+   })
 
-   app.get('/api/companyinfo', async function(req, res){
-      const {status, companyData, message} = await orm.companyDetails()
-      console.log('..received the following details', status, companyData, message)
-      res.send({status, companyData, message})
+   app.post('/api/compaddresses', authRequired, async function(req, res){
+      const newAddress = req.body
+
+      // console.log('this is new router newAddress', newAddress)
+
+      const {status, allAddresses, message} = await orm.addAddress(newAddress, req.sessionData.userId)
+
+      // console.log('here is some router status', status, allAddresses, message)
+      // console.log('...updated with', newAddress, `for ownerId '${req.sessionData.userId}'` )
+
+      res.send({status, allAddresses, message})
    })
   
 }

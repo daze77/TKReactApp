@@ -7,10 +7,10 @@ const Schema = mongoose.Schema
 
 
 let companyInfos = new Schema({
-    addressInformation:{
-        type: Object,
-        required: true,
-        trim: true,
+    addressInformation:[{
+        // type: Object,
+        // required: true,
+        // trim: true,
         addressName: {
             type: String,
             required: true,
@@ -40,9 +40,23 @@ let companyInfos = new Schema({
            type: String,
            required: true,
            trim: true
+       },
+       email: {
+        type: String,
+        required: true,
+        trim: true
+       },
+       phone: {
+        type: String,
+        required: true,
+        trim: true
        }
 
+
     },
+    {
+        timestamps: true
+    }],
     ownerId: Schema.Types.ObjectId
 
 },

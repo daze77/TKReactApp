@@ -115,19 +115,32 @@ async function taskSaveAndList( newTask, ownerId ){
    return taskList( ownerId, 'Task saved' )
 }
 
-async function companyDetails(){
-   const companyData = await db.companyinfos.find({})
+async function addressList(){
+   const allAddresses = await db.compaddresses.find({})
+   // console.log('this is address from orm', allAddresses)
 
-   console.log('this is companyInfo from orm', companyData)
    return{
       status: true,
       message: 'Yo, we found some data',
-      companyData
-      
+      allAddresses
    }
 }
 
+async function addAddress(newAddress, ownerId){
+   // console.log('[this is the address pulled into orm]', newAddress)
 
+   const result = await db.compaddresses.create( {ownerId:ownerId, ...newAddress} )
+  
+   // console.log('this is result', result)
+  
+   if(!result._id){
+      return{
+         status: false,
+         message: 'Sorry could not save the new address'
+      }
+   }
+   return addressList(ownerId, 'Address saved')
+}
 
 
 module.exports = {
@@ -136,5 +149,6 @@ module.exports = {
    userSession,
    taskList,
    taskSaveAndList,
-   companyDetails
+   addressList,
+   addAddress
 };

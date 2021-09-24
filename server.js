@@ -12,7 +12,7 @@ const app = express()
 
 
 
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8081
 const API_URL = process.env.NODE_ENV === 'production' ?
    'https://bthtkapp.herokuapp.com' : `https://localhost:${PORT}`
 // production uses REACT production-build content
