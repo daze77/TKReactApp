@@ -93,6 +93,20 @@ function router( app ){
 
       res.send({status, allAddresses, message})
    })
+
+
+   app.post('/api/updatedaddress', authRequired, async function(req, res){
+      const updatedAdress = req.body
+
+      console.log('this is new router newAddress', updatedAdress)
+
+      const {status, allAddresses, message} = await orm.updateAddress(updatedAdress, req.sessionData.userId)
+
+      // console.log('here is some router status', status, allAddresses, message)
+      // console.log('...updated with', newAddress, `for ownerId '${req.sessionData.userId}'` )
+
+      res.send({status, allAddresses, message})
+   })
   
 }
 

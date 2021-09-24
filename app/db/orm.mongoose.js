@@ -143,6 +143,21 @@ async function addAddress(newAddress, ownerId){
 }
 
 
+
+async function updateAddress(updatedAddress){
+   const {_id, ownerId, createdAt, updatedAt, ...addressChanges} = updatedAddress
+
+   const savedAddress = await db.compaddresses.findOneAndUpdate({_id},{...addressChanges})
+
+   console.log('did this address get pulled right', savedAddress)
+
+
+   console.log('this is address from orm', addressChanges)
+
+   return addressList(ownerId, 'Address saved')
+}
+
+
 module.exports = {
    userRegister,
    userLogin,
@@ -150,5 +165,6 @@ module.exports = {
    taskList,
    taskSaveAndList,
    addressList,
-   addAddress
+   addAddress,
+   updateAddress
 };
