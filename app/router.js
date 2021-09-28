@@ -77,7 +77,6 @@ function router( app ){
 
    app.get('/api/compaddresses', async function(req, res){
       const {status, allAddresses, currentAddress, message} = await orm.addressList()
-      console.log('router get get get', currentAddress)
       res.send({status, allAddresses, currentAddress, message})
    })
 
@@ -92,6 +91,14 @@ function router( app ){
       const {status, allAddresses, currentAddress, message} = await orm.updateAddress(updatedAdress, req.sessionData.userId)
       res.send({status, allAddresses, currentAddress, message})
    })
+
+   app.post('/api/deleteAddress', authRequired, async function(req, res){
+      console.log('router address delete', req.body)
+      const deleteAddress = req.body
+      const {status, allAddresses, currentAddress, message} = await orm.deleteAddress(deleteAddress, req.sessionData.userId)
+      res.send({status, allAddresses, currentAddress, message})
+   })
+
 
    app.post('/api/defaultAddress', authRequired, async function(req, res){
       const currentAddressChanges = req.body

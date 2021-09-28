@@ -80,8 +80,43 @@ function CorpAddress(){
         dispatch({type: "UPDATE_ADDRESS", addresses: allAddresses, currentAddress: currentAddress, message})
     }
 
-  
+    function calcTime(date){
+        let dateInMil = new Date(date)
+        let today = new Date()
+        let diff = (today - dateInMil)/1000
+        switch(true){
+            case (diff < 60):
+                return `${Math.round(diff)} seconds ago`;
+                break;
+            case (diff < 3600):
+                return `${Math.round(diff/60)} mininutes ago`;
+                break;
+            case (diff < 86400):
+                return `${Math.round(diff/3600)} hours ago`;
+                break;
+            case (diff < 604800):
+                return `${Math.round(diff/86400)} days ago`;
+                break;
+            case (diff < 31449600):
+                return `${Math.round(diff/604800)} weeks ago`;
+                break;
+            default:
+                return `a while ago`;
+        }
+    }
 
+    async function handleDelete(id){
+        const newList = addresses.filter(addr => addr._id === id)
+        const {status, allAddresses, currentAddress, message} = await fetchJSON('/api/deleteAddress', 'post', newList)
+
+        if(!status){
+            dispatch({type: "ALERT_MESSAGE", message})
+            return
+        }
+
+        dispatch({type: "UPDATE_COMPINFO", addresses: allAddresses, currentAddress, message})   
+    }
+  
     return(
         <>
         <form>
@@ -144,17 +179,21 @@ function CorpAddress(){
                 <div  className="list-group-item list-group-item-action addressList" aria-current="false">
                     <div  className="d-flex w-100 justify-content-between">
                         <h5 className="mb-">
-                            <input class="form-check-input me-2" type="radio" name="flexRadioDefault" id={addr._id} checked={addr.addressflag} onChange={defaultAddressChange} />{addr.addressName}
+                            <input className="form-check-input me-2" type="radio" name="flexRadioDefault" id={addr._id} checked={addr.addressflag} onChange={defaultAddressChange} />{addr.addressName}
                         </h5>
-                        <small>3 days ago</small>
+                        <small>{calcTime(addr.updatedAt)}</small>
                     </div>
                     <div>
                         <p className="m-1">
                             {addr.address} <br/>
                             {(addr.address2) && <> {addr.address2} <br/> </>}
-                            <small>{addr.city} {addr.province}, {addr.postalCode} - {addr.country}</small>
-                            <small className="d-flex w-100 justify-content-end"><i onClick={() => grabAddressDetails(addr._id)} className="fa fa-i-cursor" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></small>
+                            <small>{addr.city} {addr.province}, {addr.postalCode} - {addr.country}</small> 
                         </p>
+                        <div className="d-flex w-100 justify-content-end">
+                            <small onClick={() => grabAddressDetails(addr._id)} className="me-2"><i className="fa fa-i-cursor" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></small>                        
+                            <small onClick={() => handleDelete(addr._id)} className="ms-2"><i className="far fa-trash-alt"></i></small>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -232,6 +271,5 @@ function CorpAddress(){
         </>
     )
 }
-
 
 export default CorpAddress

@@ -10,12 +10,8 @@ function AddressCard(){
 
     async function loadCompanyData(){
         const {allAddresses, currentAddress}  = await fetchJSON('/api/compaddresses')
-         
-        console.log('[we just got the information', currentAddress)
-
-        
+                
         dispatch({type: "UPDATE_ADDRESS", addresses: allAddresses, currentAddress: currentAddress})
-        
     }
 
 
