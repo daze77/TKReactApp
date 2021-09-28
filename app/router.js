@@ -76,36 +76,27 @@ function router( app ){
    })
 
    app.get('/api/compaddresses', async function(req, res){
-      const {status, allAddresses, message} = await orm.addressList()
-      // console.log('..received the following details', status, allAddresses, message)
-      res.send({status, allAddresses, message})
+      const {status, allAddresses, currentAddress, message} = await orm.addressList()
+      console.log('router get get get', currentAddress)
+      res.send({status, allAddresses, currentAddress, message})
    })
 
    app.post('/api/compaddresses', authRequired, async function(req, res){
       const newAddress = req.body
-
-      // console.log('this is new router newAddress', newAddress)
-
-      const {status, allAddresses, message} = await orm.addAddress(newAddress, req.sessionData.userId)
-
-      // console.log('here is some router status', status, allAddresses, message)
-      // console.log('...updated with', newAddress, `for ownerId '${req.sessionData.userId}'` )
-
-      res.send({status, allAddresses, message})
+      const {status, allAddresses, currentAddress, message} = await orm.addAddress(newAddress, req.sessionData.userId)
+      res.send({status, allAddresses, currentAddress, message})
    })
-
 
    app.post('/api/updatedaddress', authRequired, async function(req, res){
       const updatedAdress = req.body
+      const {status, allAddresses, currentAddress, message} = await orm.updateAddress(updatedAdress, req.sessionData.userId)
+      res.send({status, allAddresses, currentAddress, message})
+   })
 
-      console.log('this is new router newAddress', updatedAdress)
-
-      const {status, allAddresses, message} = await orm.updateAddress(updatedAdress, req.sessionData.userId)
-
-      // console.log('here is some router status', status, allAddresses, message)
-      // console.log('...updated with', newAddress, `for ownerId '${req.sessionData.userId}'` )
-
-      res.send({status, allAddresses, message})
+   app.post('/api/defaultAddress', authRequired, async function(req, res){
+      const currentAddressChanges = req.body
+      const {status, allAddresses, currentAddress, message} = await orm.selectedAddress(currentAddressChanges, req.sessionData.userId)
+      res.send({status, allAddresses, currentAddress, message})
    })
   
 }

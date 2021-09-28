@@ -28,12 +28,17 @@ let compaddresses = new Schema({
         required: false,
         trim: true
     },
-    country: {
+    province: {
         type: String,
         required: false,
         trim: true
     },
     postalCode: {
+        type: String,
+        required: false,
+        trim: true
+    },
+    country: {
         type: String,
         required: false,
         trim: true

@@ -117,12 +117,16 @@ async function taskSaveAndList( newTask, ownerId ){
 
 async function addressList(){
    const allAddresses = await db.compaddresses.find({})
-   // console.log('this is address from orm', allAddresses)
+   const [currentAddress] = allAddresses.filter(addr => addr.addressflag === true)
+   console.log('this is address from orm', allAddresses)
+   console.log('this is current from orm', currentAddress)
+
 
    return{
       status: true,
       message: 'Yo, we found some data',
-      allAddresses
+      allAddresses,
+      currentAddress
    }
 }
 
@@ -142,19 +146,24 @@ async function addAddress(newAddress, ownerId){
    return addressList(ownerId, 'Address saved')
 }
 
-
-
 async function updateAddress(updatedAddress){
    const {_id, ownerId, createdAt, updatedAt, ...addressChanges} = updatedAddress
+   console.log('testing the id', _id)
 
    const savedAddress = await db.compaddresses.findOneAndUpdate({_id},{...addressChanges})
 
-   console.log('did this address get pulled right', savedAddress)
-
-
-   console.log('this is address from orm', addressChanges)
+   // console.log('did this address get pulled right', savedAddress)
+   // console.log('this is address from orm', addressChanges)
 
    return addressList(ownerId, 'Address saved')
+}
+
+async function selectedAddress(currentAddressChanges){
+   const {oldAddress: {id: oldID}, newAddress: {id: newID}} = currentAddressChanges
+
+   const savedAddress = await db.compaddresses.findOneAndUpdate({_id: oldID},{addressflag: false}).then(doc => db.compaddresses.findOneAndUpdate({_id: newID},{addressflag: true}))
+
+   return addressList('Current Address updated')
 }
 
 
@@ -166,5 +175,6 @@ module.exports = {
    taskSaveAndList,
    addressList,
    addAddress,
-   updateAddress
+   updateAddress,
+   selectedAddress
 };

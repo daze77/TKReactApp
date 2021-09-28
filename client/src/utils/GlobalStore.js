@@ -2,12 +2,12 @@ import React, { createContext, useReducer, useContext } from "react"
 
 // any variables we depend on for UI/flow we must pre-set
 const initialData = {
-  authOk: false, name: "", tasks: [], addresses:[], alert: ""
+  authOk: false, name: "", tasks: [], addresses:[], currentAddress:{}, alert: ""
 }
 
 /*! IMPORTANT all your reducer functionality goes here */
 const dataReducer = (state, action) => {
-  console.log({...state})
+  console.log(`[this is global state]`, {...state})
   switch (action.type) {
     case "USER_LOGIN":
      return { ...state, ...action.data, alert: action.message || '', authOk: true }
@@ -24,8 +24,10 @@ const dataReducer = (state, action) => {
       return { ...state, alert: '' }
     case "UPDATE_TASKS":
       return { ...state, tasks: action.tasks, alert: action.message || '' }
-    case "UDPATE_COMPINFO":
-      return { ...state, addresses: action.addresses, alert: action.message || '' }
+    case "UPDATE_COMPINFO":
+      return { ...state, addresses: action.addresses, currentAddress: action.currentAddress, alert: action.message || '' }
+    case "UPDATE_ADDRESS":
+      return { ...state, addresses: action.addresses, currentAddress: action.currentAddress, alert: action.message || '' }
     default:
       console.log(`Invalid action type: ${action.type}`)
       return state

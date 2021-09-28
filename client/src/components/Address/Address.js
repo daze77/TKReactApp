@@ -1,31 +1,24 @@
-import React, {useEffect, useState} from "react"
+import React, {useEffect} from "react"
+import {useStoreContext} from '../../utils/GlobalStore'
+
 import fetchJSON from "../../utils/API"
 
 
 function AddressCard(){
-
-    const [compAddress, setCompAddress] = useState({})
+    const [{ currentAddress }, dispatch ]= useStoreContext()
+    // const [compAddress, setCompAddress] = useState({})
 
     async function loadCompanyData(){
-        const {allAddresses}  = await fetchJSON('/api/compaddresses')
-        // console.log('this is address get from front end', allAddresses)
-        const companyAddress = allAddresses.filter(addr => addr.addressflag === true)
-        // console.log(companyAddress)
-        
-        // console.log(`this is the address information from the db`, addressData)
-        // console.log(`this is the address information from the db`, companyAddress)
+        const {allAddresses, currentAddress}  = await fetchJSON('/api/compaddresses')
+         
+        console.log('[we just got the information', currentAddress)
 
         
-         setCompAddress({
-            addressName: companyAddress[0].addressName,
-            address: companyAddress[0].address,
-            address2: companyAddress[0].address2,
-            city:companyAddress[0].city,
-            country: companyAddress[0].country,
-            postalCode: companyAddress[0].postalCode
-        })
+        dispatch({type: "UPDATE_ADDRESS", addresses: allAddresses, currentAddress: currentAddress})
         
     }
+
+
 
     useEffect(function(){
     loadCompanyData()        
@@ -35,10 +28,15 @@ function AddressCard(){
    return (
         <>  
             <div className="addressCardFormat">
-                <span>({compAddress.addressName})</span><br/>
-                <span>{compAddress.address}</span><br/>
-                <span>{compAddress.city}, {compAddress.province} {compAddress.postalCode}</span><br/>
-                <span>{compAddress.country}</span><br/>
+                <span>({currentAddress.addressName})</span><br/>
+                <span>{currentAddress.address}</span><br/>
+                {(currentAddress.address2) && 
+                    <>
+                    <span>{currentAddress.address2}</span> <br></br>
+                    </>                 
+                }
+                <span>{currentAddress.city}, {currentAddress.province} {currentAddress.postalCode}</span><br/>
+                <span>{currentAddress.country}</span><br/>
             </div>
         </>
     )
