@@ -120,7 +120,6 @@ function CorpAddress(){
     return(
         <>
         <form>
-
             <div className="mb-3">
                 <label htmlFor="addressName"  className="form-label">Address Name</label>
                 <input onChange={handleInput} name="addressName"  type="text" className="form-control" id="addressName" placeholder="Address Name" value={myInput.addressName}/>
@@ -172,7 +171,8 @@ function CorpAddress(){
             <button onClick={handleFormSubit} type="submit" className="btn btn-primary">Submit</button>
         </form>
         <br/>
-        <h2>List of addressess saved to database</h2>
+        <h2 class="my-5">List of addressess saved to database</h2>
+        
 
         {addresses.map(addr =>  
             <div key={addr._id} className="list-group"> 

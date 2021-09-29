@@ -2,7 +2,7 @@ import React, { createContext, useReducer, useContext } from "react"
 
 // any variables we depend on for UI/flow we must pre-set
 const initialData = {
-  authOk: false, name: "", tasks: [], addresses:[], currentAddress:{}, alert: ""
+  authOk: false, name: "", tasks: [], addresses:[], currentAddress:{}, alert: "", wtp:[]
 }
 
 /*! IMPORTANT all your reducer functionality goes here */

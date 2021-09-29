@@ -2,6 +2,7 @@
 const orm = require( './db/orm.mongoose' )
 const sessionManager = require( './session-manager' )
 
+
 // session checking middleware
 async function authRequired(req, res, next){
    // check session set, and it's valid
@@ -104,6 +105,24 @@ function router( app ){
       const currentAddressChanges = req.body
       const {status, allAddresses, currentAddress, message} = await orm.selectedAddress(currentAddressChanges, req.sessionData.userId)
       res.send({status, allAddresses, currentAddress, message})
+   })
+
+
+   app.get('/api/wtpJSONpull', async function (req, res){
+      
+      const JSONLIST = await orm.getWTPImages()
+      // console.log('[[ROUTER]]', JSONLIST)
+      res.send(JSONLIST)
+   })
+
+   // To seed db unblock this code and refresh on the test page
+
+   app.post('/api/wtpJSON', async function(req, res){
+      const WTP = req.body
+      // console.log('[[router]]', WTPS)
+      const results = await orm.seedWTP(WTP)
+
+      res.send(results)
    })
   
 }

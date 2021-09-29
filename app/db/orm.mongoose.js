@@ -161,6 +161,21 @@ async function deleteAddress(removeAddress){
    return addressList()
 }
 
+async function getWTPImages(){
+   // console.log('[[ORM ORM ORM]]')
+   const results = await db.wtps.find({})
+   // console.log('this working?', results)
+   return (
+      results
+   )
+}
+
+
+async function seedWTP(wtp){
+   const newWTPList = await db.wtps.insertMany(wtp) 
+   return({results: newWTPList})
+}
+
 
 module.exports = {
    userRegister,
@@ -172,5 +187,7 @@ module.exports = {
    addAddress,
    updateAddress,
    selectedAddress,
-   deleteAddress
+   deleteAddress,
+   seedWTP,
+   getWTPImages
 };

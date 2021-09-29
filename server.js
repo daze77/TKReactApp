@@ -32,8 +32,8 @@ if( !process.env.MONGODB_URI ){
 
 
 // for parsing incoming POST data
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
+app.use(express.urlencoded({ extended: true, limit:'25mb' }))
+app.use(express.json({limit: '25mb'}))
 
 // static paths (ex. assets, js, images, etc) served automatically from:
 app.use(express.static( STATIC_PATH ))
