@@ -201,75 +201,74 @@ function CorpAddress(){
 
         {/* Address Change Modal */}
         <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div className="modal-dialog">
-            <div className="modal-content">
-            <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLabel">Address Update</h5>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal-dialog">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <h5 className="modal-title" id="exampleModalLabel">Address Update</h5>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                        <form>
+                            <div className="mb-3">
+                                <label  htmlFor="addressName" className="form-label">Address Name</label>
+                                <input onChange={handleInput} name="addressName" type="text" className="form-control" id="addressName" placeholder="Address Name" value={myInput.addressName} />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="address" className="form-label">Address</label>
+                                <input onChange={handleInput} name="address" type="text" className="form-control" id="address" placeholder="Address" value={myInput.address} />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="address2" className="form-label">Address 2</label>
+                                <input onChange={handleInput} name="address2" type="text" className="form-control" id="address2" placeholder="Address 2" value={myInput.address2} />
+                            </div>
+                            <div className="mb-3">
+                                <div className="row">
+                                    <div className="col">
+                                        <label htmlFor="city" className="form-label">City</label>
+                                        <input onChange={handleInput} name="city" type="text" className="form-control" id="city" placeholder="City" value={myInput.city}/>
+                                    </div>
+                                    <div className="col">
+                                        <label htmlFor="province" className="form-label">Provice</label>
+                                        <input onChange={handleInput} name="province" type="text" className="form-control" id="province" placeholder="Province" value={myInput.province}/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mb-3">
+                                <div className="row">
+                                    <div className="col">
+                                        <label htmlFor="postalCode" className="form-label">Postal Code</label>
+                                        <input onChange={handleInput} name="postalCode" type="text" className="form-control" id="postalCode" placeholder="Postal Code" value={myInput.postalCode}/>
+                                    </div>
+                                    <div className="col">
+                                        <label htmlFor="country" className="form-label">Country</label>
+                                        <input onChange={handleInput} name="country" type="text" className="form-control" id="country" placeholder="Country" value={myInput.country}/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mb-3">
+                                <div className="row">
+                                    <div className="col">
+                                        <label htmlFor="emailInput" className="form-label">Email address</label>
+                                        <input onChange={handleInput} name="email" type="email" className="form-control" id="emailAddress" placeholder="name@example.com" value={myInput.email}/>
+                                    </div>
+                                    <div className="col">
+                                        <label htmlFor="phone" className="form-label">Phone Number</label>
+                                        <input onChange={handleInput} name="phone" type="text" className="form-control" id="phone" placeholder="Phone Number" value={myInput.phone}/>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* <button onClick={handleFormSubit} type="submit" className="btn btn-primary">Submit</button> */}
+                        </form>
+                    </div>
+                    <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" className="btn btn-primary" onClick={updateAddress}>Save changes</button>
+                    </div>
+                </div>
             </div>
-            <div className="modal-body">
-                <form>
-                    <div className="mb-3">
-                        <label  htmlFor="addressName" className="form-label">Address Name</label>
-                        <input onChange={handleInput} name="addressName" type="text" className="form-control" id="addressName" placeholder="Address Name" value={myInput.addressName} />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="address" className="form-label">Address</label>
-                        <input onChange={handleInput} name="address" type="text" className="form-control" id="address" placeholder="Address" value={myInput.address} />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="address2" className="form-label">Address 2</label>
-                        <input onChange={handleInput} name="address2" type="text" className="form-control" id="address2" placeholder="Address 2" value={myInput.address2} />
-                    </div>
-                    <div className="mb-3">
-                        <div className="row">
-                            <div className="col">
-                                <label htmlFor="city" className="form-label">City</label>
-                                <input onChange={handleInput} name="city" type="text" className="form-control" id="city" placeholder="City" value={myInput.city}/>
-                            </div>
-                            <div className="col">
-                                <label htmlFor="province" className="form-label">Provice</label>
-                                <input onChange={handleInput} name="province" type="text" className="form-control" id="province" placeholder="Province" value={myInput.province}/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="mb-3">
-                        <div className="row">
-                            <div className="col">
-                                <label htmlFor="postalCode" className="form-label">Postal Code</label>
-                                <input onChange={handleInput} name="postalCode" type="text" className="form-control" id="postalCode" placeholder="Postal Code" value={myInput.postalCode}/>
-                            </div>
-                            <div className="col">
-                                <label htmlFor="country" className="form-label">Country</label>
-                                <input onChange={handleInput} name="country" type="text" className="form-control" id="country" placeholder="Country" value={myInput.country}/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="mb-3">
-                        <div className="row">
-                            <div className="col">
-                                <label htmlFor="emailInput" className="form-label">Email address</label>
-                                <input onChange={handleInput} name="email" type="email" className="form-control" id="emailAddress" placeholder="name@example.com" value={myInput.email}/>
-                            </div>
-                            <div className="col">
-                                <label htmlFor="phone" className="form-label">Phone Number</label>
-                                <input onChange={handleInput} name="phone" type="text" className="form-control" id="phone" placeholder="Phone Number" value={myInput.phone}/>
-                            </div>
-                        </div>
-                    </div>
-                    {/* <button onClick={handleFormSubit} type="submit" className="btn btn-primary">Submit</button> */}
-                </form>
-            </div>
-            <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary" onClick={updateAddress}>Save changes</button>
-            </div>
-            </div>
-        </div>
         </div>
 
-        </>
-    )
-}
+    </>
+)}
 
 export default CorpAddress
