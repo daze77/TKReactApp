@@ -18,6 +18,7 @@ function WTP(){
 
     function setWTPImages(WTPResults){
         setMyWTPImages(WTPResults)
+        console.log(WTPResults)
     }
 
     useEffect(function(){
@@ -34,7 +35,8 @@ function WTP(){
                 <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 wtpCollection">
                     {WTPImages.map( wtp =>(
 
-                        <GalleryCard useRef={wtp.Title}
+                        <GalleryCard 
+                        useRef={wtp.Title}
                         key={wtp.ImageName}
                         Id = {wtp.Id}
                         Title = {wtp.Title}

@@ -109,9 +109,18 @@ function router( app ){
 
 
    app.get('/api/wtpJSONpull', async function (req, res){
+      console.log('[[[this is router calling]]]')
       
       const JSONLIST = await orm.getWTPImages()
       // console.log('[[ROUTER]]', JSONLIST)
+      res.send(JSONLIST)
+   })
+
+   app.post('/api/wtpJSONpull', async function (req, res){
+      console.log('[[[this is router calling POST POST POST]]]', req.body)
+      
+      const JSONLIST = await orm.getWTPImages(req.body)
+      console.log('[[ROUTER]]', JSONLIST)
       res.send(JSONLIST)
    })
 
