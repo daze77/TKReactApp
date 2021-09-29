@@ -7,12 +7,9 @@ import './Card.css'
 
 function Card(props){
 
-
-
-
     return(
         <>
-            <Col classstyle={props.classstyle}>
+            <Col key={props._id} classstyle={props.classstyle}>
                 <div className={props.className} id={props.idName}>
                     <img key={props.Id} src={props.ImageName} className="card-img-top" alt={props.ImageName}/>
                     <div className={`${props.cardbodyStyle ? props.cardbodyStyle : "card-body"}`} >
@@ -23,9 +20,6 @@ function Card(props){
             </Col>
 
         </>
-
-
-
     )
 }
 

@@ -15,18 +15,6 @@ function WTPSubpage(props){
 
     const URL = 'https://www.tonykoukos.com/media/catalog/product/cache/1/thumbnail/314x299/9df78eab33525d08d6e5fb8d27136e95/'
     const clickedItem = props.location.state
-    let itemJSON
-
-    // function getClickedItemDetails(){
-    //     [itemJSON] = WTPJSON.filter(item => item.Title===clickedItem)
-    //     console.log(itemJSON)
-    // }
-
-    // getClickedItemDetails()
-
-
-
-
 
     const [WTPImages, setMyWTPImages] = useState([])
 
@@ -37,22 +25,11 @@ function WTPSubpage(props){
 
     function setWTPImages(WTPResults){
         setMyWTPImages(WTPResults)
-        console.log('hhhh', WTPResults)
     }
 
     useEffect(function(){
         loadWTPImages()
     }, [])
-
-    
-
-
-
-
-
-
-
-
 
     //
         // const clickedItemName = itemJSON[0].Title
@@ -86,47 +63,33 @@ function WTPSubpage(props){
 
 
 
-    console.log('[[sub]]', props.WTPImages)
-
 
     return(
         <>
         <div className="container">
             <section >
                 <h1>{clickedItem}</h1>
-
                 <hr />
-
                 <Row rowclass='row-cols-1 row-cols-md-3'
                     classstyle='g-3 wtpCollection'>
-
-
                     {WTPImages.map( wtp =>(
-
                         <Card 
                             classstyle="wtp"
                             className='card gallerygrid'
                             h5className='w-100'
                             cardbodyStyle='card-img-overlay'
                             
-                            Key={wtp.Id}
+                            key={wtp._id}
                             Id = {wtp.Id}
                             Title = {wtp.Title.toUpperCase()}
                             ImageName = {URL + wtp.Image}
-                    
                         />
-
                     ))}
-
                 </Row>
-
             </section>   
         </div>
         </>
     )
-
-
 }
-
 
 export default WTPSubpage

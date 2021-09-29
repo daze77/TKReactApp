@@ -36,9 +36,8 @@ function WTP(){
                     {WTPImages.map( wtp =>(
 
                         <GalleryCard 
-                        useRef={wtp.Title}
-                        key={wtp.ImageName}
-                        Id = {wtp.Id}
+                        key={wtp._id}
+                        _id = {wtp._id}
                         Title = {wtp.Title}
                         ImageName = {URL + wtp.Image}
                         Link = {wtp.Link}

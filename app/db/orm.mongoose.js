@@ -163,31 +163,22 @@ async function deleteAddress(removeAddress){
 }
 
 async function getWTPImages(title){
-   console.log('[did we get a title]', title)
-
    let results
    let WTPDetails =[]
 
    if(title){
       const {Title} = title
-      console.log('mmm',{Title})
       results = await db.wtps.find({Title})
       for (const {SubLink} of results){
          [WTPDetails] = [...WTPDetails, {SubLink}]
       }
-      
-
    }else {
-      // console.log('we got here')
       results = await db.wtps.find({})
-
       for (const {_id, Title, Image, Link} of results){
          WTPDetails = [...WTPDetails, {_id, Title, Image, Link}]
       }
    }
-   
-   // console.log(WTPDetails)
-   return ( WTPDetails )
+      return ( WTPDetails )
 }
 
 
