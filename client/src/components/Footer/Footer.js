@@ -22,11 +22,11 @@ function Footer(){
             <footer>
                 <hr />
                 <div className="container">
-                    {/* <FooterLinks /> */}
+                    <FooterLinks />
                 </div>
 
                 <Subscriptions />
-                {/* <SubFooter /> */}
+                <SubFooter />
             </footer>
         }
         </>
