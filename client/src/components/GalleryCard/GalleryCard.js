@@ -25,7 +25,7 @@ function GalleryCard (props) {
                     }}>
                     <div  ref={imgRef}  className="card gallerygrid"  > 
                         
-                         <img className="card-img test" src={isInView ? props.ImageName : ""} alt={props.ImageName}/>
+                         <img className="card-img" src={isInView ? props.ImageName : ""} alt={props.ImageName}/>
         
                         <div className="card-img-overlay">
                             <h5 className="card-title w-100 ">{Title}</h5>
