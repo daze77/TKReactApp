@@ -3,3 +3,8 @@
     transition: 1s;
 
 }
+
+#testimonial{
+    width: 75%;
+    object-fit: cover;
+}

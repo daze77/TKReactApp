@@ -1,3 +1,12 @@
-.gallerycard .card{
+.gallerygrid{
     border: none;
+    /* border-color: blue; */
+    display:inline-block;
+    width:100%;
+    overflow:hidden;
+}
+
+
+img .test{
+    height: 1000px
 }

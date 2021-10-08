@@ -20,12 +20,6 @@ function Testimonials(){
                     <h1>Testimonials</h1>
                     <hr />
 
-
-
-
-
-
-
                     {TestimonialsJSon.map(test => (
 
                         <HorizontalCard
@@ -118,30 +112,7 @@ function Testimonials(){
                     www.greekamerica.org</p>
                     
 
-                    <p>"Tony, thank you for bringing my project to life with your unique imagery. The quality of your service and custom products are outstanding. 
-                        Your collections are inspiring. Looking forward to working with you in the future!"
-                    Francesca Fregapane
-                    Façade Interior Design</p>
                     
-
-                    <p>"Oh Tony - I received your magnificent prints yesterday. I have attachedphotos so you can see how they enhance my living room. I don't know how toexpress how much we love them. How lucky you are that you can move peoplewith your talent - and your kindness. I will remember this experiencealways." ~Cindy California, USA
-                    </p>
-
-                    <p>“Tony's ability to strip beauty to its simplest form is absolutely breathtaking. His collections are stunning. He is truly talented!” - Dianne Z. Toronto, Canada
-                    </p>
-
-                    <p>"I am amazed over your talented eye for beauty. You have a special gift and I feel privileged to have your work is in my home. I'll definitely keep checking out your web site for future art purchases. Thank you for the great quality and personalized service." -My best, Jennifer, Facebook Fan Pennsylvania, USA
-                    </p>
-                    
-
-                    <p>I met Tony in his hometown of Thunder Bay prior to launching his career in the art business. Being of European descent, I instantly fell in love with his 
-                        classic black & white images of Italy and abroad. To date, over twenty pieces of his art grace the walls of my home. -Alma P. Thunder Bay, Canada
-                    </p>
-                    
-
-                    <p>Tony, thank-you for the wonderful black and white images of Europe, they grace the walls of my Parisian loft. Your attention to details and beauty is 
-                        appreciated by art-lovers around the world.- Yours Truly, Charles Bennet, Paris, France
-                    </p>
                 </section>
             </div>
 

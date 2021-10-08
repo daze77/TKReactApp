@@ -18,7 +18,7 @@ function WTP(){
 
     function setWTPImages(WTPResults){
         setMyWTPImages(WTPResults)
-        console.log(WTPResults)
+        // console.log(WTPResults)
     }
 
     useEffect(function(){
