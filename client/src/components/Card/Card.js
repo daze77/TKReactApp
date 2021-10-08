@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react'
 import Col from '../Col/Col'
 import './Card.css'
-import {useCreateObserver}  from '../../components/LazyLoadImages/IntersectionObserver2'
+import {useCreateObserver}  from '../LazyLoadImages/IntersectionObserver'
 
 function Card(props){
     const [isInView, setIsInView] = useState(false);  

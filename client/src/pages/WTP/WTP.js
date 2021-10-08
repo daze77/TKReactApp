@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react'
 
 import GalleryCard from '../../components/GalleryCard/GalleryCard'
 import fetchJSON from '../../utils/API'
-// import WTPJSON  from '../../utils/wtp.json'
 
 import './WTP.css'
 

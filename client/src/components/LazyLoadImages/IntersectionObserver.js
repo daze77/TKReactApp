@@ -1,50 +1,31 @@
 import {useEffect} from 'react'
 
-  let listenerCallbacks = new WeakMap();
+// passFunction herer just represents the setIsInView that is being passed when we useCreateObserver in the Gallery Card
+export function useCreateObserver(imgRef, passFunction ){
 
-  let observer;
+  useEffect(() => {
+    let observer
   
-  function handleIntersections(entries) {
-    entries.forEach(entry => {
-      if (listenerCallbacks.has(entry.target)) {
-        let cb = listenerCallbacks.get(entry.target);
-  
-        if (entry.isIntersecting || entry.intersectionRatio > 0.75) {
-          observer.unobserve(entry.target);
-          listenerCallbacks.delete(entry.target);
-          cb();
-        }
-      }
-    });
-  }
-  
-  function getIntersectionObserver() {
-    if (observer === undefined) {
-      observer = new IntersectionObserver(handleIntersections, {
-        root: null,
-        rootMargin: '0px',
-        threshold: '1.0',
-      });
+    let options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1.0
     }
-    return observer;
+
+    observer = new IntersectionObserver(callback, options); 
+    observer.observe(imgRef.current);
+
+  },[])
+
+  function callback(entries, observer){
+    entries.forEach((entry) => {
+      if(entry.intersectionRatio === 1){
+        console.log('[we see it]', entries[0].target.outerText )
+        // wer run the function here so that the picture setIsInView is changed to true each time the imgRef we used comes into view
+        passFunction()
+      
+      }
+
+    })
   }
-
-  export function useIntersection(elem, callback) {
-    useEffect(() => {
-      let target = elem.current;
-      console.log('[[this is target]]', target)
-      let observer = getIntersectionObserver();
-      listenerCallbacks.set(target, callback);
-      observer.observe(target);
-  
-      // return () => {
-      //   listenerCallbacks.delete(target);
-      //   observer.unobserve(target);
-      // };
-    }, []);
-  }
-
-
-
-
-
+}

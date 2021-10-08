@@ -2,7 +2,7 @@ import React, {useState, useRef} from 'react'
 import {Link} from 'react-router-dom'
 import Col from '../Col/Col'
 import './GalleryCard.css'
-import {useCreateObserver}  from '../../components/LazyLoadImages/IntersectionObserver2'
+import {useCreateObserver}  from '../LazyLoadImages/IntersectionObserver'
 
 
 
