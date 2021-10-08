@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
 import Row from '../../components/Row/Row'
-import WTPJSON  from '../../utils/wtp.json'
+// import WTPJSON  from '../../utils/wtp.json'
 import Card from '../../components/Card/Card'
 import fetchJSON from '../../utils/API'
 
