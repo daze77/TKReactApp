@@ -1,5 +1,7 @@
 import React  from 'react' 
 import fetchJSON from '../utils/API'
+
+
 import WTPJSON from '../utils/wtp.json'
 import AandD from '../utils/ArtAndDesign.json'
 

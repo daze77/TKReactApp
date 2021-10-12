@@ -18,8 +18,14 @@ function WTPSubpage(props){
     const [WTPImages, setMyWTPImages] = useState([])
 
     async function loadWTPImages(){
-        const {SubLink} = await fetchJSON('/api/wtpJSONpull', 'post', {Title: clickedItem})
-        setWTPImages(SubLink)
+        if(clickedItem){
+            const {SubLink} = await fetchJSON('/api/wtpJSONpull', 'post', {Title: clickedItem})
+            setWTPImages(SubLink)
+        }else{
+            const hrefLINK = window.location.pathname.split(`/`)[2]
+            const {SubLink} = await fetchJSON('/api/wtpJSONpull', 'post', {Title: hrefLINK})
+            setWTPImages(SubLink)
+        }            
     }
 
     function setWTPImages(WTPResults){

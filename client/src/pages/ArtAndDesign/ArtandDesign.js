@@ -25,9 +25,9 @@ import fetchJSON from '../../utils/API'
     // createJSON()
 
 function ArtandDesign(){
+
     const [ANDResults, setANDResults] = useState([])
-    
-    const URL = 'https://www.tonykoukos.com/media/catalog/product/cache/1/thumbnail/314x299/9df78eab33525d08d6e5fb8d27136e95/a/d/'
+        const URL = 'https://www.tonykoukos.com/media/catalog/product/cache/1/thumbnail/314x299/9df78eab33525d08d6e5fb8d27136e95/a/d/'
 
     async function loadANDImages(){
         const DBANDResults = await fetchJSON('/api/andJSONpull')
@@ -49,6 +49,7 @@ function ArtandDesign(){
                     {ANDResults.map( ad =>(
 
                         <ArtandDesignCard 
+                        key={ad._id}
 
                         Id = {ad.Id}
                         Title = {ad.Title}

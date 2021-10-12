@@ -28,7 +28,7 @@ function FooterLinks(){
                                 <Link to="/GalleryCollection"><li>Gallery Collection</li></Link>
                                 <Link to="/WallCoverings"><li>Wall Coverings</li></Link>
                                 <Link to="/WorldTravelPhotography"><li>World Travel Photography</li></Link>
-                                <Link to="ArtandDestination"><li>Art & Destination</li></Link>
+                                <Link to="ArtandDesign"><li>Art & Design</li></Link>
                             </ul>
                         </div>
                         <div className="col-lg-4 col-md-4 mb-4 mb-md-0">

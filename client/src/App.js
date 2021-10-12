@@ -199,6 +199,7 @@ function App(location) {
 
 
         <Route exact path='/WTP/WTPSubpage' component={WTPSubpage} />
+        <Route exact path='/WorldTravelPhotography/COPENHAGEN' component={WTPSubpage} />
 
 
 
