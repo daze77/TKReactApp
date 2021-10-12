@@ -118,12 +118,27 @@ function router( app ){
       res.send(JSONLIST)
    })
 
+   app.get('/api/andJSONpull', async function (req, res){      
+      const JSONLIST = await orm.getANDImages()
+      res.send(JSONLIST)
+   })
+
+
+
    // To seed db unblock this code and refresh on the test page
 
    app.post('/api/wtpJSON', async function(req, res){
       const WTP = req.body
       // console.log('[[router]]', WTPS)
       const results = await orm.seedWTP(WTP)
+
+      res.send(results)
+   })
+
+   app.post('/api/wtpJSONAD', async function(req, res){
+      const AND = req.body
+      // console.log('[[router]]', WTPS)
+      const results = await orm.seedAND(AND)
 
       res.send(results)
    })

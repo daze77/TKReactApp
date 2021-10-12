@@ -182,11 +182,27 @@ async function getWTPImages(title){
 }
 
 
+async function getANDImages(){
+   const newANDList = await db.aandds.find({})
+   return newANDList
+  
+}
+
+
+
+
+
+
+// these function are related to loading the db with the JSON data from file
 async function seedWTP(wtp){
    const newWTPList = await db.wtps.insertMany(wtp) 
    return({results: newWTPList})
 }
 
+async function seedAND(aandd){
+   const newANDList = await db.aandds.insertMany(aandd) 
+   return({results: newANDList})
+}
 
 module.exports = {
    userRegister,
@@ -200,5 +216,7 @@ module.exports = {
    selectedAddress,
    deleteAddress,
    seedWTP,
-   getWTPImages
+   getWTPImages,
+   seedAND,
+   getANDImages
 };

@@ -1,7 +1,9 @@
 import React  from 'react' 
 import fetchJSON from '../utils/API'
 import WTPJSON from '../utils/wtp.json'
+import AandD from '../utils/ArtAndDesign.json'
 
+import './TestPage.css'
 
 import MenuBurger from "../components/MenuHamburger/MenuHamburger"
 
@@ -25,7 +27,12 @@ function TestPage(){
     }
 
     
-
+    async function seedARTandDesign(){
+        console.log('btn clicked')
+        const {results} = await fetchJSON('/api/wtpJSONAD', 'post', AandD)
+        console.log('[AAND RESULTS]', {results})
+        return
+    }
 
 
 
@@ -38,7 +45,12 @@ function TestPage(){
        
         <div>This is a Test Page  </div>
         <div>Here is some data: </div>
-        <button type="button" class="btn btn-dark m-5" onClick={seedWTPDB}>Load JSON</button>
+        <ul>
+            <li>        <button type="button" class="btn btn-dark m-5" onClick={seedWTPDB}>Load JSON to DB - WTP</button>
+</li>
+            <li>        <button type="button" class="btn btn-dark m-5" onClick={seedARTandDesign}>Load JSON to DB - AandD</button>
+</li>
+        </ul>
 
 
         <MenuBurger />
