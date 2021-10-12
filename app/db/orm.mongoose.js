@@ -170,7 +170,7 @@ async function getWTPImages(title){
       const {Title} = title
       results = await db.wtps.find({Title})
       for (const {SubLink} of results){
-         [WTPDetails] = [...WTPDetails, {SubLink}]
+         [WTPDetails] = [ {SubLink}]
       }
    }else {
       results = await db.wtps.find({})

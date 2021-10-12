@@ -12,17 +12,19 @@ function WTP(){
 
     async function loadWTPImages(){
         const WTPResults = await fetchJSON('/api/wtpJSONpull')
-        setWTPImages(WTPResults)
+        // setWTPImages(WTPResults)
+        setMyWTPImages(WTPResults)
+
     }
 
     function setWTPImages(WTPResults){
-        setMyWTPImages(WTPResults)
+        // setMyWTPImages(WTPResults)
         // console.log(WTPResults)
     }
 
-    useEffect(function(){
+    useEffect(() =>{
         loadWTPImages()
-    }, [])
+    },[])
   
     return(
         <>
