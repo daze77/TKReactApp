@@ -12,8 +12,12 @@ import MenuBurger from "../components/MenuHamburger/MenuHamburger"
 import './pages.css'
 
 
+import {WTRoutes} from '../utils/BrowserRoutes'
+import Bill from '../utils/Testtttt'
+
 // import NavBarAlt from '../components/NavBar/NavBarAlternate'
 import NavBarAlt2 from '../components/NavBar/NavBarAlternate2'
+import WTP from './WTP/WTP'
 
 
 
@@ -38,6 +42,13 @@ function TestPage(){
 
 
 
+    
+    console.log("TESTING", <Bill/>)
+ 
+
+    // console.log("TESTING", WTPRoutes().props.children)
+    // const bbb = WTPRoutes().props.children
+    // console.log('hahahahahahahha', bbb)
     return(
         <>
         {/* <NavBarAlt /> */}
@@ -54,9 +65,10 @@ function TestPage(){
 </li>
         </ul>
 
+        <Bill/>
+
 
         <MenuBurger />
-
 
         </>
     )

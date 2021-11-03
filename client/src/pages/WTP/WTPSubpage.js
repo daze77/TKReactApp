@@ -14,6 +14,7 @@ function WTPSubpage(props){
 
     const URL = 'https://www.tonykoukos.com/media/catalog/product/cache/1/thumbnail/314x299/9df78eab33525d08d6e5fb8d27136e95/'
     const clickedItem = props.location.state
+    console.log(clickedItem)
 
     const [WTPImages, setMyWTPImages] = useState([])
 
@@ -23,6 +24,7 @@ function WTPSubpage(props){
             setWTPImages(SubLink)
         }else{
             const hrefLINK = window.location.pathname.split(`/`)[2]
+            console.log(hrefLINK)
             const {SubLink} = await fetchJSON('/api/wtpJSONpull', 'post', {Title: hrefLINK})
             setWTPImages(SubLink)
         }            
@@ -32,9 +34,9 @@ function WTPSubpage(props){
         setMyWTPImages(WTPResults)
     }
 
-    useEffect(function(){
+    useEffect(() => {
         loadWTPImages()
-    }, [])
+    },[])
 
     //
         // const clickedItemName = itemJSON[0].Title

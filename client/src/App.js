@@ -3,6 +3,8 @@ import {BrowserRouter, Route} from "react-router-dom"
 import {StoreProvider} from "./utils/GlobalStore"
 
 
+import WTRoutes from './utils/BrowserRoutes'
+import Test from './utils/wtp'
 
 
 
@@ -80,10 +82,13 @@ import WCSubway from './pages/WallCoverings/WCSubway'
 import WCWood from './pages/WallCoverings/WCWood' 
 
 
+import WTPRoutes from './utils/BrowserRoutes'
 
 
 import WTPSubpage from './pages/WTP/WTPSubpage' 
+// import Testttt from '../utils/Testtttt'
 
+import Bill from './utils/Testtttt'
 
 
 import HomePageAlternate from './pages/HomePage-Alternage/HomepageAlternate'
@@ -113,7 +118,6 @@ import './pages/pages.css'
 
 
 function App(location) {
-
   // console.log(location.location)
 
   return (
@@ -199,9 +203,22 @@ function App(location) {
 
 
         <Route exact path='/WTP/WTPSubpage' component={WTPSubpage} />
-        <Route exact path='/WorldTravelPhotography/COPENHAGEN' component={WTPSubpage} />
+        <Route exact path={[
+            '/WorldTravelPhotography/COPENHAGEN',
+
+            ]} component={WTPSubpage} />
 
 
+         {Test.map(a => (
+           
+            
+          <WTRoutes 
+               Link={a.Link}
+           />
+
+        
+       ))}
+         
 
       <Footer />
       </BrowserRouter>
