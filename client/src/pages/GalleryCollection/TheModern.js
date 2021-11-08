@@ -1,6 +1,6 @@
 import React from 'react'
 
-import TheModernCard from '../../components/GalleryCard/GalleryCard'
+import GalleryCard from '../../components/GalleryCard/GalleryCard'
 import GCJSON  from '../../utils/GalleryColGrid.json'
 
 
@@ -23,7 +23,7 @@ return(
             <div className="row row-cols-1 row-cols-md-3 g-3 wtpCollection gallerySubMenus">
                 {GCJSON[4].SubLink.map(gcAS => (
 
-                    <TheModernCard 
+                    <GalleryCard 
                     key = {gcAS.ImageName}
                     Id = {gcAS.Id}
                     Title = {gcAS.Title}

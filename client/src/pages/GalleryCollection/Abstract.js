@@ -2,7 +2,7 @@ import React from 'react'
 
 import Row from '../../components/Row/Row'
 // import Card from '../../components/Card/Card'
-import AbstractCard from '../../components/GalleryCard/GalleryCard'
+import GalleryCard from '../../components/GalleryCard/GalleryCard'
 import GCJSON  from '../../utils/GalleryColGrid.json'
 
 
@@ -28,7 +28,7 @@ return(
          
                 {GCJSON[0].SubLink.map( gcAS => (
 
-                    <AbstractCard 
+                    <GalleryCard 
 
                     key = {gcAS.ImageName}
                     Id = {gcAS.Id}

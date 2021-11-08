@@ -12,10 +12,10 @@ function HorzCard(props){
 
             <div className="card mb-3" style={{maxWidth: "100%"}}>
                 <div className="row g-0">
-                    <div className="col-md-4">
-                        {props.ImageName && <img id="testimonial" className="img-fluid rounded-start" src={[props.ImageURL]+[props.ImageName]} alt="..."/>}
+                    <div className="col-md-3">
+                        {props.ImageName && <img id="testimonial" className="img-fluid rounded-start" src={[props.ImageURL]+[props.ImageName]} alt={props.ImageName}/>}
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-9">
                         <div className="card-body">
                             <p className="card-text">{props.Quote}</p>
                             <p className="card-text"><small className="text-muted">{props.Name}

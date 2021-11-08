@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ClassicsCard from '../../components/GalleryCard/GalleryCard'
+import GalleryCard from '../../components/GalleryCard/GalleryCard'
 import GCJSON  from '../../utils/GalleryColGrid.json'
 
 // console.log(GCJSON[0].SubLink)
@@ -28,7 +28,7 @@ return(
 
                    
 
-                    <ClassicsCard 
+                    <GalleryCard 
                     key = {gcAS.ImageName}
                     Id = {gcAS.Id}
                     Title = {gcAS.Title}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import OpulenceCard from '../../components/GalleryCard/GalleryCard'
+import GalleryCard from '../../components/GalleryCard/GalleryCard'
 import GCJSON  from '../../utils/GalleryColGrid.json'
 
 
@@ -27,7 +27,7 @@ return(
                 {GCJSON[2].SubLink.map( gcAS => (
                     
                     
-                    <OpulenceCard 
+                    <GalleryCard 
                     
                     key = {gcAS.ImageName}
                     Id = {gcAS.Id}
