@@ -39,3 +39,10 @@ li, p{
 p a {
   color: #818181;
 }
+
+/* .theArtist li{
+  list-style-type:initial;
+}
+.theArtist >ul >li >ul li {
+  list-style-type:circle;
+} */

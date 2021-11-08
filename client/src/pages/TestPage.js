@@ -56,7 +56,7 @@ function TestPage(){
        
         <div>This is a Test Page  </div>
         <div>Here is some data: </div>
-        <ul>
+        <ul class="test">
             <li>        <button type="button" class="btn btn-dark m-5" onClick={seedWTPDB}>Load JSON to DB - WTP</button>
 </li>
             <li>        <button type="button" class="btn btn-dark m-5" onClick={seedARTandDesign}>Load JSON to DB - AandD</button>
