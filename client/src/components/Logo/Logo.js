@@ -67,9 +67,6 @@ function Logo(onClick){
     translateY: function(el, i) {
       return 150 + (-50 * i);
     },
-    translateX: function(el, i) {
-      return 200 + (-50 * i);
-    },
     scale: function(el, i, l) {
       return (l - i) + 1;
     },

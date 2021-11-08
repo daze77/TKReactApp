@@ -13,6 +13,7 @@ function WTP(){
     async function loadWTPImages(){
         const WTPResults = await fetchJSON('/api/wtpJSONpull')
         setMyWTPImages(WTPResults)
+        console.log(WTPResults)
 
     }
 

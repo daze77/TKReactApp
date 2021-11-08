@@ -18,11 +18,13 @@ function WTPSubpage(props){
         if(clickedItem){
             const {SubLink} = await fetchJSON('/api/wtpJSONpull', 'post', {Title: clickedItem})
             setWTPImages(SubLink)
+            console.log(SubLink)
         }else{
             const hrefLINK = window.location.pathname.split(`/`)[2]
             console.log(hrefLINK)
             const {SubLink} = await fetchJSON('/api/wtpJSONpull', 'post', {Title: hrefLINK})
             setWTPImages(SubLink)
+            console.log(SubLink)
         }            
     }
 
@@ -78,7 +80,7 @@ function WTPSubpage(props){
                     {WTPImages.map( wtp =>(
                         <Card 
                             classstyle="wtp"
-                            className='card gallerygrid'
+                            className='card h-100 gallerygrid'
                             h5className='w-100'
                             cardbodyStyle='card-img-overlay'
                             

@@ -127,7 +127,7 @@ function Animation(){
                 targets: '.dot',
                 scale: 1,
                 rotate: '1turn',
-                scaleY: {value: .5, delay: 0, duration: 150, delay: 230},
+                scaleY: {value: .5, duration: 150, delay: 230},
                 translateX: 430,
                 translateY: [
                   {value: 244, duration: 100},

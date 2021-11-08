@@ -8,17 +8,19 @@ function AddressCard(){
     const [{ currentAddress }, dispatch ]= useStoreContext()
     // const [compAddress, setCompAddress] = useState({})
 
-    async function loadCompanyData(){
-        const {allAddresses, currentAddress}  = await fetchJSON('/api/compaddresses')
-                
-        dispatch({type: "UPDATE_ADDRESS", addresses: allAddresses, currentAddress: currentAddress})
-    }
 
 
 
-    useEffect(function(){
-    loadCompanyData()        
-    },[])
+
+    useEffect(() => {
+
+        async function loadCompanyData(){
+            const {allAddresses, currentAddress}  = await fetchJSON('/api/compaddresses')
+                    
+            dispatch({type: "UPDATE_ADDRESS", addresses: allAddresses, currentAddress: currentAddress})
+        }
+        loadCompanyData()        
+    },[dispatch])
 
 
    return (

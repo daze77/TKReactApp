@@ -87,19 +87,14 @@ function CorpAddress(){
         switch(true){
             case (diff < 60):
                 return `${Math.round(diff)} seconds ago`;
-                break;
             case (diff < 3600):
                 return `${Math.round(diff/60)} mininutes ago`;
-                break;
             case (diff < 86400):
                 return `${Math.round(diff/3600)} hours ago`;
-                break;
             case (diff < 604800):
                 return `${Math.round(diff/86400)} days ago`;
-                break;
             case (diff < 31449600):
                 return `${Math.round(diff/604800)} weeks ago`;
-                break;
             default:
                 return `a while ago`;
         }

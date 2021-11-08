@@ -15,16 +15,7 @@ function NavLogin(){
    
     const location = useLocation()
 
-    async function loadUserSession(){
-      const { status, userData, message }= await fetchJSON( `/api/users/session` )
-      // console.log( `[NavBar] attempted to reload session, result(${status}) message(${message})` )
-      if( !status ){
-        // clear any session
-        dispatch({ type: 'USER_LOGOUT', message })
-        return
-      }
-      dispatch({ type: 'USER_LOGIN', data: userData })
-    }
+
   
     useEffect( function(){
       if( showMenu ){
@@ -40,11 +31,22 @@ function NavLogin(){
     }, [ location ])
     
     useEffect( function(){
+
+      async function loadUserSession(){
+        const { status, userData, message }= await fetchJSON( `/api/users/session` )
+        // console.log( `[NavBar] attempted to reload session, result(${status}) message(${message})` )
+        if( !status ){
+          // clear any session
+          dispatch({ type: 'USER_LOGOUT', message })
+          return
+        }
+        dispatch({ type: 'USER_LOGIN', data: userData })
+      }
       // on load let's get try to get the  session (if one exists)
       if( localStorage.session && !authOk ){
         loadUserSession()
       }
-    }, [] )
+    }, [authOk, dispatch] )
 
     return (
         <>
@@ -54,9 +56,9 @@ function NavLogin(){
                 <div className="mx-3">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
                         {name && <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" id="navbarScrollingDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div className="nav-link dropdown-toggle" id="navbarScrollingDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Welcome back <u>{name}</u>
-                            </a>
+                            </div>
                             <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                                 <li className="nav-item"> <NavLink to="/Logout" className="nav-link" activeClassName="active">Logout</NavLink></li>
                                 <li className="nav-item"> <NavLink to="/DatabaseUpdates" className="nav-link" activeClassName="active">Database Updates</NavLink></li>

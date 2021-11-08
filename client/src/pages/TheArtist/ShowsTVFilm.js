@@ -46,7 +46,7 @@ function ShowsTVFilm(){
                             Text={media.Text}
                             Image={media.Image}
                             ImageName={mediaObj[media.ImageName]}
-                            Height="auto"
+                           
                     
                        />
 

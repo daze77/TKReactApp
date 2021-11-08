@@ -1,7 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
 import Test from '../utils/wtp'
-import WTPSubpage from '../pages/WTP/WTPSubpage' 
 import Frank from './BrowserRoutes'
 
 

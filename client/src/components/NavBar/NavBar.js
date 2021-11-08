@@ -17,16 +17,7 @@ function NavBar(){
    
     const location = useLocation()
 
-    async function loadUserSession(){
-      const { status, userData, message }= await fetchJSON( `/api/users/session` )
-    //   console.log( `[NavBar] attempted to reload session, result(${status}) message(${message})` )
-      if( !status ){
-        // clear any session
-        dispatch({ type: 'USER_LOGOUT', message })
-        return
-      }
-      dispatch({ type: 'USER_LOGIN', data: userData })
-    }
+
   
     useEffect( function(){
       if( showMenu ){
@@ -44,11 +35,21 @@ function NavBar(){
     // console.log(location)
     
     useEffect( function(){
+        async function loadUserSession(){
+            const { status, userData, message }= await fetchJSON( `/api/users/session` )
+          //   console.log( `[NavBar] attempted to reload session, result(${status}) message(${message})` )
+            if( !status ){
+              // clear any session
+              dispatch({ type: 'USER_LOGOUT', message })
+              return
+            }
+            dispatch({ type: 'USER_LOGIN', data: userData })
+          }
       // on load let's  try to get the  session (if one exists)
       if( localStorage.session && !authOk ){
         loadUserSession()
       }
-    }, [] )
+    }, [authOk, dispatch] )
 
 
     return (
