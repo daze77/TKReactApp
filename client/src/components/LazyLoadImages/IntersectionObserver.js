@@ -20,7 +20,7 @@ export function useCreateObserver(imgRef, passFunction ){
   function callback(entries, observer){
     entries.forEach((entry) => {
       if(entry.intersectionRatio === 1){
-        console.log('[we see it]', entries[0].target.outerText )
+        // console.log('[we see it]', entries[0].target.outerText )
         // wer run the function here so that the picture setIsInView is changed to true each time the imgRef we used comes into view
         passFunction()
       

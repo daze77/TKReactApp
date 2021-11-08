@@ -2,8 +2,9 @@ import React from 'react'
 import {BrowserRouter, Route} from "react-router-dom"
 import {StoreProvider} from "./utils/GlobalStore"
 
+import WTPSubpage from './pages/WTP/WTPSubpage' 
 
-import WTRoutes from './utils/BrowserRoutes'
+import WTPSubPages from './utils/BrowserRoutes'
 import Test from './utils/wtp'
 
 
@@ -82,13 +83,7 @@ import WCSubway from './pages/WallCoverings/WCSubway'
 import WCWood from './pages/WallCoverings/WCWood' 
 
 
-import WTPRoutes from './utils/BrowserRoutes'
 
-
-import WTPSubpage from './pages/WTP/WTPSubpage' 
-// import Testttt from '../utils/Testtttt'
-
-import Bill from './utils/Testtttt'
 
 
 import HomePageAlternate from './pages/HomePage-Alternage/HomepageAlternate'
@@ -96,7 +91,6 @@ import HomePageAlternate from './pages/HomePage-Alternage/HomepageAlternate'
 import TestPage from './pages/TestPage'
 
 
-// import logo from './logo.svg';
 import './App.css';
 
 
@@ -143,7 +137,6 @@ function App(location) {
         <Route exact path='/About' component={About} />
 
         <Route exact path='/TheArtist' component={TheArtist} />
-        <Route exact path='/GalleryCollection' component={GalleryCollection} />
         <Route exact path='/HospitalityandDesign' component={HospitalityandDesign} />
         <Route exact path='/Lighting' component={Lighting} />
         <Route exact path='/TheFrameShop' component={TheFrameShop} />
@@ -162,54 +155,51 @@ function App(location) {
 
 
 
+
+
+
+
+      {/* The following are all the routes for the GalleryCollection and SubPages */}
+
+        <Route exact path='/GalleryCollection' component={GalleryCollection} />
         <Route exact path='/GalleryCollection/Abstract' component={Abstract} />
         <Route exact path='/GalleryCollection/Classics' component={Classics} />
         <Route exact path='/GalleryCollection/Opulence' component={Opulence} />
         <Route exact path='/GalleryCollection/People' component={People} />
         <Route exact path='/GalleryCollection/TheModern' component={TheModern} />
         <Route exact path='/GalleryCollection/Urbano' component={Urbano} />
-
-
-        <Route exact path='/WallCoverings' component={WallCoverings} />
         <Route exact path='/WorldTravelPhotography' component={WTP} />
-
         <Route exact path='/HomePageAlternate' component={HomePageAlternate} />
         <Route exact path='/TestPage' component={TestPage} />
 
 
+      {/* The following are all the routes for the WallCoverings and SubPages */}
+        <Route exact path='/WallCoverings' component={WallCoverings} />
         <Route exact path='/WallCoverings/WCAbstract' component={WCAbstract} />
-
         <Route exact path='/WallCoverings/WCArchitectural' component={WCArchitectural} />
         <Route exact path='/WallCoverings/WCAsiatic' component={WCAsiatic} />
         <Route exact path='/WallCoverings/WCDetails' component={WCDetails} />
         <Route exact path='/WallCoverings/WCDezine' component={WCDezine} />
-
         <Route exact path='/WallCoverings/WCEthnica' component={WCEthnica} />
         <Route exact path='/WallCoverings/WCExotica' component={WCExotica} />
         <Route exact path='/WallCoverings/WCFloral' component={WCFloral} />
         <Route exact path='/WallCoverings/WCLaBibliotheque' component={WCLaBibliotheque} />
         <Route exact path='/WallCoverings/WCLaParisienne' component={WCLaParisienne} />
-
         <Route exact path='/WallCoverings/WCLuce' component={WCLuce} />
-
         <Route exact path='/WallCoverings/WCMotif' component={WCMotif} />
-
         <Route exact path='/WallCoverings/WCOrganica' component={WCOrganica} />
-
         <Route exact path='/WallCoverings/WCSteel' component={WCSteel} />
         <Route exact path='/WallCoverings/WCStripes' component={WCStripes} />
         <Route exact path='/WallCoverings/WCSubway' component={WCSubway} />
         <Route exact path='/WallCoverings/WCWood' component={WCWood} />
 
 
-        <Route exact path='/WTP/WTPSubpage' component={WTPSubpage} />
-
+      {/* The following are the routes for all the WTP Subpages */}
          {Test.map(a => (
-           
-            
-          <WTRoutes 
-               Link={a.Link}
-           />
+            <WTPSubPages 
+                Link={a.Link}
+                SubPage={WTPSubpage}
+            />
 
        ))}
          

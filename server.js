@@ -20,6 +20,7 @@ const STATIC_PATH = process.env.NODE_ENV === 'production' ?
    path.join('client','build') : path.join('client','public')
 
 
+   
 
 
 if( !process.env.MONGODB_URI ){
