@@ -29,15 +29,7 @@ function WallCoverings(){
                         Title = {wc.Title}
                         ImageName = {URL + wc.Image}
                         Link = {wc.Link}
-
-
-
                         />
-
-                    
-
-
-
                     ))}
 
                 </div>

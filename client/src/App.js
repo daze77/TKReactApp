@@ -4,8 +4,8 @@ import {StoreProvider} from "./utils/GlobalStore"
 
 import WTPSubpage from './pages/WTP/WTPSubpage' 
 
-import WTPSubPages from './utils/BrowserRoutes'
-import Test from './utils/wtp'
+import WTPRouterPages from './utils/BrowserRoutes'
+import WTPSubpages from './utils/wtp'
 
 
 
@@ -175,28 +175,29 @@ function App(location) {
 
       {/* The following are all the routes for the WallCoverings and SubPages */}
         <Route exact path='/WallCoverings' component={WallCoverings} />
-        <Route exact path='/WallCoverings/WCAbstract' component={WCAbstract} />
-        <Route exact path='/WallCoverings/WCArchitectural' component={WCArchitectural} />
-        <Route exact path='/WallCoverings/WCAsiatic' component={WCAsiatic} />
-        <Route exact path='/WallCoverings/WCDetails' component={WCDetails} />
-        <Route exact path='/WallCoverings/WCDezine' component={WCDezine} />
-        <Route exact path='/WallCoverings/WCEthnica' component={WCEthnica} />
-        <Route exact path='/WallCoverings/WCExotica' component={WCExotica} />
-        <Route exact path='/WallCoverings/WCFloral' component={WCFloral} />
-        <Route exact path='/WallCoverings/WCLaBibliotheque' component={WCLaBibliotheque} />
-        <Route exact path='/WallCoverings/WCLaParisienne' component={WCLaParisienne} />
-        <Route exact path='/WallCoverings/WCLuce' component={WCLuce} />
-        <Route exact path='/WallCoverings/WCMotif' component={WCMotif} />
-        <Route exact path='/WallCoverings/WCOrganica' component={WCOrganica} />
-        <Route exact path='/WallCoverings/WCSteel' component={WCSteel} />
-        <Route exact path='/WallCoverings/WCStripes' component={WCStripes} />
-        <Route exact path='/WallCoverings/WCSubway' component={WCSubway} />
-        <Route exact path='/WallCoverings/WCWood' component={WCWood} />
+        <Route exact path='/WallCoverings/Abstract' component={WCAbstract} />
+        <Route exact path='/WallCoverings/Architectural' component={WCArchitectural} />
+        <Route exact path='/WallCoverings/Asiatic' component={WCAsiatic} />
+        <Route exact path='/WallCoverings/Details' component={WCDetails} />
+        <Route exact path='/WallCoverings/Dezine' component={WCDezine} />
+        <Route exact path='/WallCoverings/Ethnica' component={WCEthnica} />
+        <Route exact path='/WallCoverings/Exotica' component={WCExotica} />
+        <Route exact path='/WallCoverings/Floral' component={WCFloral} />
+        <Route exact path='/WallCoverings/LaBibliotheque' component={WCLaBibliotheque} />
+        <Route exact path='/WallCoverings/LaParisienne' component={WCLaParisienne} />
+        <Route exact path='/WallCoverings/Luce' component={WCLuce} />
+        <Route exact path='/WallCoverings/Motif' component={WCMotif} />
+        <Route exact path='/WallCoverings/Organica' component={WCOrganica} />
+        <Route exact path='/WallCoverings/Steel' component={WCSteel} />
+        <Route exact path='/WallCoverings/Stripes' component={WCStripes} />
+        <Route exact path='/WallCoverings/Subway' component={WCSubway} />
+        <Route exact path='/WallCoverings/Wood' component={WCWood} />
+
 
 
       {/* The following are the routes for all the WTP Subpages */}
-         {Test.map(a => (
-            <WTPSubPages 
+         {WTPSubpages.map(a => (
+            <WTPRouterPages 
                 Link={a.Link}
                 SubPage={WTPSubpage}
             />
