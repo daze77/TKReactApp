@@ -8,12 +8,12 @@ import WTPSubpage from '../pages/WTP/WTPSubpage'
 function WTRoutes(props){
 
     // console.log('[[PROPS]]', `/WTP/${props.Link}`)
+            console.log('this is a', props.Link)
 
     return ( 
         <>
 
-  
-            <Route exact path={`/WTP/${props.Link}`} component={WTPSubpage} /> 
+            <Route exact path={`/${props.Link}`} component={WTPSubpage} /> 
 
         
         </>
