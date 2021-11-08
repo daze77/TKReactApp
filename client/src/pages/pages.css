@@ -1,25 +1,15 @@
-
-
-
-
-
-
-
-
 h1{
 	color: #64b60d;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.05em;
-    padding: 0px 0px 4px 0px;
+    /* padding: 0px 0px 4px 0px; */
     font-weight: normal;
+    font-size: calc(1rem + 1.5vw);;
 }
 
 
 
 
-h3{
-    color:#057cd0;
-}
 
 h4{
     font-weight: bold;
@@ -27,17 +17,6 @@ h4{
     line-height: 20px;
 }
 
-/* li, p{
-    color: #818181;
-    font-family: Arial, Helvetica, sans-serif; 
-    font-size:1.2em; 
-    text-align:justify; 
-    line-height:1.25em; 
-}
-
-p a {
-    color: #818181;
-} */
 
 
 .container {

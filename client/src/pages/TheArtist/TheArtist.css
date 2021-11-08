@@ -14,8 +14,7 @@ blockquote {
   }
 
   .statementbody{
-    width:932x; 
-    /* font-size:16px;  */
+    width:100%; 
     font-style:italic; 
     color:#525252; 
     font-family:Georgia, "Times New Roman", Times, serif; 
@@ -40,9 +39,12 @@ p a {
   color: #818181;
 }
 
-/* .theArtist li{
-  list-style-type:initial;
+h3{
+  color:#057cd0;
+  font-size: 1.4rem;
+
 }
-.theArtist >ul >li >ul li {
-  list-style-type:circle;
-} */
+
+.card-text{
+  text-align: left;
+}

@@ -17,7 +17,7 @@ function Biography(){
                 <h1>Biography</h1> 
                 <hr/>  
                 <div className="clearfix">
-                    <img src={tonykphoto} className="col-sm-12 col-md-4 float-md-end mb-3 ms-md-5" alt="..."/>
+                    <img src={tonykphoto} className="col-sm-12 col-md-4 float-md-end mb-3 ms-md-3" alt="Artist with camera up to his face"/>
 
                     <p>
                         Tony Koukos, photographer, has found inspiration throughout the world. Currently residing Canada, it is not uncommon for 
