@@ -17,7 +17,7 @@ import ScrollToTop from './components/ScrollToTop'
 
 
 // pages
-import Payments from './pages/Payments'
+// import Payments from './pages/Payments/Payments'
 
 import Login from './pages/Login'
 import Logout from './pages/Logout'
@@ -129,7 +129,7 @@ function App(location) {
 
       <NavBar />
       <ScrollToTop />
-        <Route exact path='/Payments' component={Payments} />
+        {/* <Route exact path='/Payments' component={Payments} /> */}
 
 
 

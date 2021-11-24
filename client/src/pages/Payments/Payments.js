@@ -10,12 +10,12 @@ import "./Payments.css";
 // loadStripe is initialized with a fake API key.
 const stripePromise = loadStripe("pk_test_51JzCTiJvID62zcJ6KOIASxQEYMpSBjGfIBaF8gXHD2fVH7x8n1Vixitz36QOckvmhRMhiXovgK2DCYSJNv5qlNZt00MYBevMO7");
 
-export default function Payments() {
+export default async function Payments() {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("/create-payment-intent", {
+    fetch("/api/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items: [{ id: "xl-tshirt" }] }),
