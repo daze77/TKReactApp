@@ -17,6 +17,8 @@ import ScrollToTop from './components/ScrollToTop'
 
 
 // pages
+import Payments from './pages/Payments'
+
 import Login from './pages/Login'
 import Logout from './pages/Logout'
 import UserProfile from './pages/UserProfile/UserProfile'
@@ -127,6 +129,10 @@ function App(location) {
 
       <NavBar />
       <ScrollToTop />
+        <Route exact path='/Payments' component={Payments} />
+
+
+
         <Route exact path='/Login' component={Login} />
         <Route exact path='/UserProfile' component={UserProfile} />
         <Route exact path='/DatabaseUpdates' component={DatabaseUpdates} />

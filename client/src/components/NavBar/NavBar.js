@@ -3,6 +3,7 @@ import { NavLink, useLocation  } from "react-router-dom"
 import { useStoreContext } from "../../utils/GlobalStore"
 import fetchJSON from '../../utils/API'
 import NavLogin from './NavLogin'
+import Payments from '../../pages/Payments/Payments'
 import LogoSymbol from '../../components/Logo/Logo'
 import './NavBar.css'
 
@@ -106,6 +107,7 @@ function NavBar(){
                           
                            
                         </div>
+                        <Payments />
                         <NavLogin />
                     </div>
                 

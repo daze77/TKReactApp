@@ -25,6 +25,7 @@
     "nodemon": "^2.0.14",
     "react-transition-group": "^1.2.1",
     "rfs": "^9.0.5",
+    "stripe": "^8.191.0",
     "uuid": "^3.4.0"
   },
   "devDependencies": {
