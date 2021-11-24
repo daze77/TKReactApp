@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import {
   PaymentElement,
   useStripe,
@@ -58,7 +59,7 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "http://localhost:3000",
+        return_url: 'http://localhost:3000' ,
       },
     });
 

@@ -3,9 +3,12 @@ import { NavLink, useLocation  } from "react-router-dom"
 import { useStoreContext } from "../../utils/GlobalStore"
 import fetchJSON from '../../utils/API'
 import NavLogin from './NavLogin'
-// import Payments from '../../pages/Payments/Payments'
+
+import CheckoutBtn  from '../CheckOut/CheckoutButton'
 import LogoSymbol from '../../components/Logo/Logo'
 import './NavBar.css'
+import CheckoutButtonModal from '../CheckOut/CheckoutButtonModal'
+import BasktBtn from '../BasketBtn/BasketBtn'
 
 
 let timeout
@@ -108,11 +111,16 @@ function NavBar(){
                            
                         </div>
                         {/* <Payments /> */}
+                        {/* <CheckoutBtn /> */}
+                        <BasktBtn />
                         <NavLogin />
                     </div>
                 
 
                 </nav>
+
+
+
                 
             }
 
@@ -120,10 +128,8 @@ function NavBar(){
                 <hr />
             }
 
-            
+            {/* <CheckoutButtonModal /> */}
 
-
-            
         </>
 
     )

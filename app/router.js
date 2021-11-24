@@ -168,7 +168,7 @@ function router( app ){
       // Create a PaymentIntent with the order amount and currency
       const paymentIntent = await stripe.paymentIntents.create({
         amount: calculateOrderAmount(items),
-        currency: "eur",
+        currency: "cad",
         automatic_payment_methods: {
           enabled: true,
         },

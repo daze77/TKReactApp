@@ -92,11 +92,12 @@ import HomePageAlternate from './pages/HomePage-Alternage/HomepageAlternate'
 
 import TestPage from './pages/TestPage'
 
+import CheckoutPage from './pages/CheckoutPage/CheckoutPage'
 
-import './App.css';
 
 
 // css
+import './App.css';
 import './pages/pages.css'
 
 
@@ -158,6 +159,8 @@ function App(location) {
         <Route exact path='/ReturnPolicy' component={ReturnPolicy} />
         <Route exact path='/CustomerService' component={CustomerService} />
         <Route exact path='/ArtandDesign' component={ArtandDesign} />
+
+        <Route exact path='/CheckoutPage' component={CheckoutPage} />
 
 
 
