@@ -3,7 +3,6 @@ const orm = require( './db/orm.mongoose' )
 const sessionManager = require( './session-manager' )
 
 
-
 // This is a sample test API key.
 const stripe = require("stripe")('sk_test_51JzCTiJvID62zcJ68B18msCM9E17M9OSzxyNF5746507gKM8peVUt4tUMd2HWQeC9pAbdAFJBDTgViW9c8tL6l3p00tDzWeqvC');
 
@@ -159,11 +158,41 @@ function router( app ){
    })
 
 
-
+   app.get('/api/basketList',async function(req, res) {
+      const testBasket=[
+         {
+             "id": 1,
+             "itemName":"Test1",
+             "price": 2399,
+             "quantity": 2,
+         },
+         {
+             "id": 2,
+             "itemName":"Test2",
+             "price": 2599,
+             "quantity": 1,
+         },
+         {
+             "id": 3,
+             "itemName":"Test3",
+             "price": 23699,
+             "quantity": 1,
+         },
+         {
+             "id": 4,
+             "itemName":"Test4",
+             "price": 238899,
+             "quantity": 1,
+         }
+     ]
+      res.send(testBasket)
+   })
 
 
    app.post("/api/create-payment-intent", async (req, res) => {
       const { items } = req.body;
+
+      console.log('these are items in router', items)
     
       // Create a PaymentIntent with the order amount and currency
       const paymentIntent = await stripe.paymentIntents.create({
@@ -176,6 +205,7 @@ function router( app ){
     
       res.send({
         clientSecret: paymentIntent.client_secret,
+        items
       });
     });
     

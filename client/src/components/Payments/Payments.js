@@ -20,7 +20,7 @@ const stripePromise = loadStripe("pk_test_51JzCTiJvID62zcJ6KOIASxQEYMpSBjGfIBaF8
       
     async function getPayment(){
       const results = await fetchJSON("/api/create-payment-intent", 'post', pay)
-      // console.log('these are payment results', results)
+      console.log('these are payment results', results)
       setClientSecret(results.clientSecret);
 
     }
