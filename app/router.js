@@ -184,8 +184,16 @@ function router( app ){
              "price": 238899,
              "quantity": 1,
          }
-     ]
-      res.send(testBasket)
+     ]         
+      let total = 0
+         
+      for (let i=0; i<testBasket.length; i++){
+         total = ( total + (testBasket[i].quantity * testBasket[i].price))
+      }  
+         console.log(total)
+
+      res.send({testBasket, total})
+
    })
 
 

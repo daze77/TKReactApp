@@ -7,17 +7,13 @@ function CheckoutPage(){
     const [totalCost, setTotalCost] = useState(1)
 
     async function getBasketList(){
-        const basketResults = await fetchJSON('/api/basketList', 'get')
-        setPurchItems(basketResults)
-        calculateTotalCost(basketResults)
+        const {testBasket, total}  = await fetchJSON('/api/basketList', 'get')
+        setPurchItems(testBasket)
+        setTotalCost(total)
     }
+        console.log(totalCost)
 
 
-    function calculateTotalCost(basketItems){
-        for (let i=0; i<basketItems.length; i++){
-            setTotalCost( totalCost + (basketItems[i].quantity * basketItems[i].price))
-        }
-    }   
 
     useEffect(() => {
         getBasketList()
