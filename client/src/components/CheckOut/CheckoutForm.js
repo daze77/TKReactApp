@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// import { useStoreContext } from "../../utils/GlobalStore";
 
 import {
   PaymentElement,
@@ -12,6 +13,10 @@ export default function CheckoutForm() {
 
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
+
+  // const [{totalCost} ]= useStoreContext()
+
 
   useEffect(() => {
     if (!stripe) {
@@ -82,7 +87,7 @@ export default function CheckoutForm() {
       <PaymentElement id="payment-element" />
       <button disabled={isLoading || !stripe || !elements} id="submit">
         <span id="button-text">
-          {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
+          {isLoading ? <div className="spinner" id="spinner"></div> : `Pay now ` }
         </span>
       </button>
       {/* Show any error or success messages */}

@@ -8,10 +8,21 @@ const stripe = require("stripe")('sk_test_51JzCTiJvID62zcJ68B18msCM9E17M9OSzxyNF
 
 
 const calculateOrderAmount = (items) => {
+   console.log('this is items in router', items)
    // Replace this constant with a calculation of the order's amount
    // Calculate the order total on the server to prevent
    // people from directly manipulating the amount on the client
-   return 1400;
+
+   // let amountToCharge = 0
+   // for(let i=0; i<items.length; i++){
+   //    amountToCharge = amountToCharge + (items[i].quantity * items[i].price)
+   // }
+
+   // console.log('router costs', amountToCharge)
+
+
+
+   return 100;
  };
 
 
@@ -159,7 +170,7 @@ function router( app ){
 
 
    app.get('/api/basketList',async function(req, res) {
-      const testBasket=[
+      const basketListItems=[
          {
              "id": 1,
              "itemName":"Test1",
@@ -186,21 +197,19 @@ function router( app ){
          }
      ]         
       let total = 0
-         
-      for (let i=0; i<testBasket.length; i++){
-         total = ( total + (testBasket[i].quantity * testBasket[i].price))
+      for (let i=0; i<basketListItems.length; i++){
+         total = ( total + (basketListItems[i].quantity * basketListItems[i].price))
       }  
-         console.log(total)
 
-      res.send({testBasket, total})
-
+      
+      res.send({basketListItems, total})
    })
 
 
    app.post("/api/create-payment-intent", async (req, res) => {
       const { items } = req.body;
 
-      console.log('these are items in router', items)
+      console.log('these are items in router app.get', items)
     
       // Create a PaymentIntent with the order amount and currency
       const paymentIntent = await stripe.paymentIntents.create({
@@ -216,10 +225,7 @@ function router( app ){
         items
       });
     });
-    
-
-
-  
+      
 }
 
 module.exports = router

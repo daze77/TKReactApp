@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useStoreContext } from "../../utils/GlobalStore";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
@@ -13,8 +14,12 @@ const stripePromise = loadStripe("pk_test_51JzCTiJvID62zcJ6KOIASxQEYMpSBjGfIBaF8
 
 
  function Payments(){
+  const [{totalCost, basketList}, dispatch ]= useStoreContext()
+
+  console.log('this is total cost', totalCost)
+
   const [clientSecret, setClientSecret] = useState("");
-  const pay = { items: [{ id: "xl-tshirt" }] }
+  const pay = { basketList}
 
     // Create PaymentIntent as soon as the page loads
       

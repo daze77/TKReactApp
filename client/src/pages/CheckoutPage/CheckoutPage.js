@@ -1,17 +1,30 @@
 import React, {useEffect, useState} from 'react'
 import CheckoutButtonModal from '../../components/CheckOut/CheckoutButtonModal'
 import fetchJSON from '../../utils/API'
+import { useStoreContext } from "../../utils/GlobalStore"
 
 function CheckoutPage(){
+    const [,dispatch ]= useStoreContext()
+
     const [purchitems, setPurchItems] = useState([])
-    const [totalCost, setTotalCost] = useState(1)
+    const [totalCost, setTotalCost] = useState(0)
+    const [showCktBttn, setCktBttn] = useState(false)
 
     async function getBasketList(){
-        const {testBasket, total}  = await fetchJSON('/api/basketList', 'get')
-        setPurchItems(testBasket)
+        const {basketListItems, total}  = await fetchJSON('/api/basketList', 'get')
+        setPurchItems(basketListItems)
         setTotalCost(total)
+        console.log(`basket items ${basketListItems} and total cost ${total}`)
+
+        if(total > 100){
+            setCktBttn(true)
+        }
+
+        dispatch({ type: 'SHOPPING_BASKET', basketList:basketListItems, totalCost:total} )
+
     }
-        console.log(totalCost)
+
+
 
 
 
@@ -50,7 +63,7 @@ function CheckoutPage(){
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><button type="button" class="btn btn-success btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal">Check Out: $ {totalCost/100}</button></td>
+                        {showCktBttn && <td><button type="button" class="btn btn-success btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal">Check Out: $ {totalCost/100}</button></td>}
                     </tr>
                 </tbody>
             </table>

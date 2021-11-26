@@ -2,7 +2,15 @@ import React, { createContext, useReducer, useContext } from "react"
 
 // any variables we depend on for UI/flow we must pre-set
 const initialData = {
-  authOk: false, name: "", tasks: [], addresses:[], currentAddress:{}, alert: "", wtp:[]
+  authOk: false, 
+  name: "", 
+  tasks: [], 
+  addresses:[], 
+  currentAddress:{}, 
+  alert: "", 
+  wtp:[],
+  totalCost:0,
+  basketList:[]
 }
 
 /*! IMPORTANT all your reducer functionality goes here */
@@ -28,9 +36,11 @@ const dataReducer = (state, action) => {
       return { ...state, addresses: action.addresses, currentAddress: action.currentAddress, alert: action.message || '' }
     case "UPDATE_ADDRESS":
       return { ...state, addresses: action.addresses, currentAddress: action.currentAddress, alert: action.message || '' }
+    case "SHOPPING_BASKET":
+      return { ...state, basketList: action.basketList, totalCost: action.totalCost }
     default:
       console.log(`Invalid action type: ${action.type}`)
-      return state
+      return state 
   }
 }
 
