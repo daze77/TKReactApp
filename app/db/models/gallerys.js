@@ -6,7 +6,7 @@ const Schema = mongoose.Schema
 
 
 
-const gallery = new Schema({
+const gallerys = new Schema({
     Id: {
         type: Number,
         require: false
@@ -70,4 +70,4 @@ const gallery = new Schema({
 
 
 
-module.exports = mongoose.model('gallery', gallery)
+module.exports = mongoose.model('gallerys', gallerys)

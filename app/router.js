@@ -152,21 +152,39 @@ function router( app ){
 
    // To seed db unblock this code and refresh on the test page
 
-   app.post('/api/wtpJSON', async function(req, res){
-      const WTP = req.body
-      // console.log('[[router]]', WTPS)
-      const results = await orm.seedWTP(WTP)
+      app.post('/api/wtpJSON', async function(req, res){
+         const WTP = req.body
+         // console.log('[[router]]', WTPS)
+         const results = await orm.seedWTP(WTP)
 
-      res.send(results)
-   })
+         res.send(results)
+      })
 
-   app.post('/api/wtpJSONAD', async function(req, res){
-      const AND = req.body
-      // console.log('[[router]]', WTPS)
-      const results = await orm.seedAND(AND)
+      app.post('/api/wtpJSONAD', async function(req, res){
+         const AND = req.body
+         // console.log('[[router]]', WTPS)
+         const results = await orm.seedAND(AND)
 
-      res.send(results)
-   })
+         res.send(results)
+      })
+
+      app.post('/api/wtpJSONGAL', async function(req, res){
+         const GAL = req.body
+         // console.log('[[router]]', WTPS)
+         const results = await orm.seedAND(GAL)
+
+         res.send(results)
+      })
+
+
+
+
+
+
+
+
+
+
 
 
    app.get('/api/basketList',async function(req, res) {
@@ -205,7 +223,7 @@ function router( app ){
       res.send({basketListItems, total})
    })
 
-
+   //stripe end point
    app.post("/api/create-payment-intent", async (req, res) => {
       const { items } = req.body;
 

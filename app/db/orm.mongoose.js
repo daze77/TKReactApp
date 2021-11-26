@@ -204,6 +204,11 @@ async function seedAND(aandd){
    return({results: newANDList})
 }
 
+async function seedGAL(gallery){
+   const newGALList = await db.gallerys.insertMany(gallery) 
+   return({results: newGALList})
+}
+
 module.exports = {
    userRegister,
    userLogin,
@@ -218,5 +223,6 @@ module.exports = {
    seedWTP,
    getWTPImages,
    seedAND,
-   getANDImages
+   getANDImages,
+   seedGAL
 };
