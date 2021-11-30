@@ -61,8 +61,14 @@ const gallerys = new Schema({
                 type:Number,
                 require: false
             }
+
         
-    } ] 
+    } ],
+    URL: {
+        type: String,
+        required: false,
+        trim: true
+    }, 
 
 })
 

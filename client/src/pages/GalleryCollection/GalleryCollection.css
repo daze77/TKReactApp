@@ -37,15 +37,24 @@
         text-align: left;
         padding: 0px 10px;
         background-color: rgba(0,0,0,0.5);
-        font-size: 0.8rem;
+        font-size: inherit;
 } 
 
 .gallerySubMenus .card-img-overlay {
         bottom:0;
+        font-size: 0.8rem;
 } 
 
 .gallerySubMenus .card-img-overlay:hover .card-title{
         color: white;
         
         
+}
+
+.gallerySubMenus button{
+        position: absolute;
+        right:0;
+        bottom: 0;
+        font-size: inherit;
+        padding: 0.3rem 0.75rem;
 }

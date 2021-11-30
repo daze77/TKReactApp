@@ -148,7 +148,15 @@ function router( app ){
       res.send(JSONLIST)
    })
 
+   app.post('/api/GALpull', async function (req, res){
+      const JSONLIST = await orm.getGALImages(req.body)
+      res.send(JSONLIST)
+   })
 
+   app.get('/api/GALpull', async function (req, res){      
+      const JSONLIST = await orm.getGALImages()
+      res.send(JSONLIST)
+   })
 
    // To seed db unblock this code and refresh on the test page
 
@@ -171,7 +179,7 @@ function router( app ){
       app.post('/api/wtpJSONGAL', async function(req, res){
          const GAL = req.body
          // console.log('[[router]]', WTPS)
-         const results = await orm.seedAND(GAL)
+         const results = await orm.seedGAL(GAL)
 
          res.send(results)
       })

@@ -181,14 +181,33 @@ async function getWTPImages(title){
       return ( WTPDetails )
 }
 
-
 async function getANDImages(){
    const newANDList = await db.aandds.find({})
    return newANDList
   
 }
 
+async function getGALImages(title){
+   let results
+   let GALDetails =[]
 
+   if(title){
+      const {Title} = title
+      results = await db.gallerys.find({Title})
+
+      for (const {SubLink} of results){
+         [GALDetails] = [{SubLink}] 
+      }
+      GALDetails.URL = results[0].URL
+   } else {
+      results = await db.gallerys.find({})
+      for(const {_id, Title, Image, ImageName, Link, Price} of results){
+         GALDetails = [...GALDetails, {_id, Title, Image, ImageName, Link, Price}]
+        
+      }
+   }
+   return ( GALDetails)
+}
 
 
 
@@ -224,5 +243,6 @@ module.exports = {
    getWTPImages,
    seedAND,
    getANDImages,
-   seedGAL
+   seedGAL,
+   getGALImages
 };

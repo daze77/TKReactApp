@@ -7,6 +7,7 @@ import fetchJSON from '../../utils/API'
 import './WTP.css'
 
 function WTPSubpage(props){
+    console.log(props)
 
     const URL = 'https://www.tonykoukos.com/media/catalog/product/cache/1/thumbnail/314x299/9df78eab33525d08d6e5fb8d27136e95/'
     const clickedItem = props.location.state
@@ -30,7 +31,9 @@ function WTPSubpage(props){
 
     function setWTPImages(WTPResults){
         setMyWTPImages(WTPResults)
+        console.log('what is this', WTPResults)
     }
+    console.log('will this work', WTPImages)
 
     useEffect(() => {
         loadWTPImages()
