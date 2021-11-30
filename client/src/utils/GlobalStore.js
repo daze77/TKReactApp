@@ -15,8 +15,8 @@ const initialData = {
 
 /*! IMPORTANT all your reducer functionality goes here */
 const dataReducer = (state, action) => {
-  console.log(`[this is global state]`, {...state})
-  console.log(`[this is global action]`, {...action})
+  // console.log(`[this is global state]`, {...state})
+  // console.log(`[this is global action]`, {...action})
 
   switch (action.type) {
     case "USER_LOGIN":
@@ -27,7 +27,7 @@ const dataReducer = (state, action) => {
       // needed to force this reload (else it just refreshed with invalid content)
       delete localStorage.session
       window.location.href = '/login'
-      return { ...initialData, alert: action.message || '' }
+      return { ...action.data, alert: action.message || '' }
     case "ALERT_MESSAGE":
       return { ...state, alert: action.message }
     case "ALERT_CLEAR":
