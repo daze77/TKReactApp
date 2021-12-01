@@ -210,10 +210,10 @@ async function getGALImages(title){
 }
 
 async function getGALPrice(id){
-   console.log('do we got id', id)
+   // console.log('do we got id', id)
   
    const [results] = await db.gallerys.find({'Title': "ABSTRACT", 'SubLink._id':id},{'SubLink.$':1})
-   console.log('orm results', results)
+   // console.log('orm results', results)
    return(results.SubLink)
 }
 

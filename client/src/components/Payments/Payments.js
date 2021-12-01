@@ -14,7 +14,7 @@ const stripePromise = loadStripe("pk_test_51JzCTiJvID62zcJ6KOIASxQEYMpSBjGfIBaF8
 
 
  function Payments(){
-  const [{totalCost, basketList} ]= useStoreContext()
+  const [{totalCost, basketList, ...data} ]= useStoreContext()
   const [clientSecret, setClientSecret] = useState("");
 
   console.log('this is total cost', totalCost)
@@ -23,8 +23,11 @@ const stripePromise = loadStripe("pk_test_51JzCTiJvID62zcJ6KOIASxQEYMpSBjGfIBaF8
     // Create PaymentIntent as soon as the page loads
       
     async function getPayment(){
-      const results = await fetchJSON("/api/create-payment-intent", 'post', basketList[1].basket)
-      console.log('these are payment results', results)
+
+        const localStorageLS = (localStorage.TKBasket) ? JSON.parse(localStorage.TKBasket) : [{emai:data.email}, {basket:[]}]
+
+
+      const results = await fetchJSON("/api/create-payment-intent", 'post', localStorageLS)
       setClientSecret(results.clientSecret);
 
     }

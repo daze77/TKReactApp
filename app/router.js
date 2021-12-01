@@ -2,27 +2,6 @@
 const orm = require( './db/orm.mongoose' )
 const sessionManager = require( './session-manager' )
 
-
-// This is a sample test API key.
-const stripe = require("stripe")('sk_test_51JzCTiJvID62zcJ68B18msCM9E17M9OSzxyNF5746507gKM8peVUt4tUMd2HWQeC9pAbdAFJBDTgViW9c8tL6l3p00tDzWeqvC');
-
-
-const calculateOrderAmount = (cost) => {
-   console.log('router cost for payment', cost)
-   // Replace this constant with a calculation of the order's amount
-   // Calculate the order total on the server to prevent
-   // people from directly manipulating the amount on the client
-
-   if(cost>100){
-      return cost
-   }else {
-      return 100;
-   }
- };
-
-
-
-
 // session checking middleware
 async function authRequired(req, res, next){
    // check session set, and it's valid
@@ -39,6 +18,86 @@ async function authRequired(req, res, next){
 }
 
 function router( app ){
+   // This is a sample test API key.
+   const stripe = require("stripe")('sk_test_51JzCTiJvID62zcJ68B18msCM9E17M9OSzxyNF5746507gKM8peVUt4tUMd2HWQeC9pAbdAFJBDTgViW9c8tL6l3p00tDzWeqvC');
+
+   async function calCosts(b){
+      let totalBasketCost = 0
+      let priceList =[]
+
+      for (let i=0; i<b.length; i++){
+
+         if(b[i].page === "GalleryCollection"){
+            let [results] = await orm.getGALPrice(b[i].id)
+            
+            priceList.push({
+               id: results._id, 
+               imageName: b[i].imageName,
+               page: b[i].page,
+               title: b[i].title,
+               url: b[i].url,
+               price: results.Price, 
+               quantity: b[i].quantity,
+               total: results.Price * b[i].quantity
+            })
+            totalBasketCost += results.Price * b[i].quantity
+         }
+      }
+
+      console.log("calculated router costs final", totalBasketCost)
+      if(totalBasketCost>100){
+         return {priceList, totalBasketCost}
+      }else {
+         return {priceList, totalBasketCost: 100};
+      }
+      
+   }
+
+
+
+
+   const calculateOrderAmount = async (baskItems) => {
+   console.log('router cost for payment', baskItems)
+      // Replace this constant with a calculation of the order's amount
+      // Calculate the order total on the server to prevent
+      // people from directly manipulating the amount on the client
+
+      // let totalBasketCost = 0
+      // let priceList =[]
+
+      // for (let i=0; i<baskItems.length; i++){
+
+      //    if(baskItems[i].page === "GalleryCollection"){
+      //       let [results] = await orm.getGALPrice(baskItems[i].id)
+            
+      //       priceList.push({
+      //          id: results._id, 
+      //          imageName: baskItems[i].imageName,
+      //          page: baskItems[i].page,
+      //          title: baskItems[i].title,
+      //          url: baskItems[i].url,
+      //          price: results.Price, 
+      //          quantity: baskItems[i].quantity,
+      //          total: results.Price * baskItems[i].quantity
+      //       })
+      //       totalBasketCost += results.Price * baskItems[i].quantity
+
+      //    }
+
+      // }
+
+
+      // if(totalBasketCost>100){
+      //    return totalBasketCost
+      // }else {
+      //    return 100;
+      // }
+   };
+
+
+
+
+
    app.post('/api/users/register', async function(req, res) {
       console.log( '[POST /api/users/register] request body:', req.body )
       const { status, userData, message }= await orm.userRegister( req.body )
@@ -156,29 +215,8 @@ function router( app ){
 
    app.post('/api/basketListPrice',async function(req, res) {
       const x = req.body[1].basket
-
-      let totalBasketCost = 0
-      let priceList =[]
-
-      for (let i=0; i<x.length; i++){
-
-         if(x[i].page === "GalleryCollection"){
-            let [results] = await orm.getGALPrice(x[i].id)
-            
-            priceList.push({
-               id: results._id, 
-               imageName: x[i].imageName,
-               page: x[i].page,
-               title: x[i].title,
-               url: x[i].url,
-               price: results.Price, 
-               quantity: x[i].quantity,
-               total: results.Price * x[i].quantity
-            })
-            totalBasketCost += results.Price * x[i].quantity
-         }
-
-      }
+      const {priceList, totalBasketCost} = await calCosts(x)
+      
       res.send({reply: priceList, totalCost:totalBasketCost})
    })
 
@@ -209,24 +247,15 @@ function router( app ){
 
 
 
-
-
-
-
-
-
-
-
-
    //stripe end point
    app.post("/api/create-payment-intent", async (req, res) => {
-      const { items } = req.body;
 
-      console.log('these are items in router app.get', items)
+      const x = req.body[1].basket
+      const {totalBasketCost} = await calCosts(x)
     
       // Create a PaymentIntent with the order amount and currency
       const paymentIntent = await stripe.paymentIntents.create({
-        amount: calculateOrderAmount(items),
+        amount: totalBasketCost,
         currency: "cad",
         automatic_payment_methods: {
           enabled: true,
@@ -234,8 +263,7 @@ function router( app ){
       });
     
       res.send({
-        clientSecret: paymentIntent.client_secret,
-        items
+        clientSecret: paymentIntent.client_secret,x
       });
     });
       
