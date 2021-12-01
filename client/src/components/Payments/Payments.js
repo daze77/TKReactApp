@@ -14,17 +14,16 @@ const stripePromise = loadStripe("pk_test_51JzCTiJvID62zcJ6KOIASxQEYMpSBjGfIBaF8
 
 
  function Payments(){
-  const [{totalCost, basketList}, dispatch ]= useStoreContext()
+  const [{totalCost, basketList} ]= useStoreContext()
+  const [clientSecret, setClientSecret] = useState("");
 
   console.log('this is total cost', totalCost)
-
-  const [clientSecret, setClientSecret] = useState("");
-  const pay = { basketList}
+  console.log('this is total items', basketList[1].basket)
 
     // Create PaymentIntent as soon as the page loads
       
     async function getPayment(){
-      const results = await fetchJSON("/api/create-payment-intent", 'post', pay)
+      const results = await fetchJSON("/api/create-payment-intent", 'post', basketList[1].basket)
       console.log('these are payment results', results)
       setClientSecret(results.clientSecret);
 

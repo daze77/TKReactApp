@@ -209,6 +209,14 @@ async function getGALImages(title){
    return ( GALDetails)
 }
 
+async function getGALPrice(id){
+   console.log('do we got id', id)
+  
+   const [results] = await db.gallerys.find({'Title': "ABSTRACT", 'SubLink._id':id},{'SubLink.$':1})
+   console.log('orm results', results)
+   return(results.SubLink)
+}
+
 
 
 
@@ -244,5 +252,6 @@ module.exports = {
    seedAND,
    getANDImages,
    seedGAL,
-   getGALImages
+   getGALImages,
+   getGALPrice
 };

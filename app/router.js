@@ -7,22 +7,17 @@ const sessionManager = require( './session-manager' )
 const stripe = require("stripe")('sk_test_51JzCTiJvID62zcJ68B18msCM9E17M9OSzxyNF5746507gKM8peVUt4tUMd2HWQeC9pAbdAFJBDTgViW9c8tL6l3p00tDzWeqvC');
 
 
-const calculateOrderAmount = (items) => {
-   console.log('this is items in router', items)
+const calculateOrderAmount = (cost) => {
+   console.log('router cost for payment', cost)
    // Replace this constant with a calculation of the order's amount
    // Calculate the order total on the server to prevent
    // people from directly manipulating the amount on the client
 
-   // let amountToCharge = 0
-   // for(let i=0; i<items.length; i++){
-   //    amountToCharge = amountToCharge + (items[i].quantity * items[i].price)
-   // }
-
-   // console.log('router costs', amountToCharge)
-
-
-
-   return 100;
+   if(cost>100){
+      return cost
+   }else {
+      return 100;
+   }
  };
 
 
@@ -158,11 +153,39 @@ function router( app ){
       res.send(JSONLIST)
    })
 
+
+   app.post('/api/basketListPrice',async function(req, res) {
+      const x = req.body[1].basket
+
+      let totalBasketCost = 0
+      let priceList =[]
+
+      for (let i=0; i<x.length; i++){
+
+         if(x[i].page === "GalleryCollection"){
+            let [results] = await orm.getGALPrice(x[i].id)
+            
+            priceList.push({
+               id: results._id, 
+               imageName: x[i].imageName,
+               page: x[i].page,
+               title: x[i].title,
+               url: x[i].url,
+               price: results.Price, 
+               quantity: x[i].quantity,
+               total: results.Price * x[i].quantity
+            })
+            totalBasketCost += results.Price * x[i].quantity
+         }
+
+      }
+      res.send({reply: priceList, totalCost:totalBasketCost})
+   })
+
    // To seed db unblock this code and refresh on the test page
 
       app.post('/api/wtpJSON', async function(req, res){
          const WTP = req.body
-         // console.log('[[router]]', WTPS)
          const results = await orm.seedWTP(WTP)
 
          res.send(results)
@@ -170,7 +193,6 @@ function router( app ){
 
       app.post('/api/wtpJSONAD', async function(req, res){
          const AND = req.body
-         // console.log('[[router]]', WTPS)
          const results = await orm.seedAND(AND)
 
          res.send(results)
@@ -178,7 +200,6 @@ function router( app ){
 
       app.post('/api/wtpJSONGAL', async function(req, res){
          const GAL = req.body
-         // console.log('[[router]]', WTPS)
          const results = await orm.seedGAL(GAL)
 
          res.send(results)
@@ -195,41 +216,7 @@ function router( app ){
 
 
 
-   app.get('/api/basketList',async function(req, res) {
-      const basketListItems=[
-         {
-             "id": 1,
-             "itemName":"Test1",
-             "price": 2399,
-             "quantity": 2,
-         },
-         {
-             "id": 2,
-             "itemName":"Test2",
-             "price": 2599,
-             "quantity": 1,
-         },
-         {
-             "id": 3,
-             "itemName":"Test3",
-             "price": 23699,
-             "quantity": 1,
-         },
-         {
-             "id": 4,
-             "itemName":"Test4",
-             "price": 238899,
-             "quantity": 1,
-         }
-     ]         
-      let total = 0
-      for (let i=0; i<basketListItems.length; i++){
-         total = ( total + (basketListItems[i].quantity * basketListItems[i].price))
-      }  
 
-      
-      res.send({basketListItems, total})
-   })
 
    //stripe end point
    app.post("/api/create-payment-intent", async (req, res) => {

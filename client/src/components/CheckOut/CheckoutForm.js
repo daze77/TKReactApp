@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { useStoreContext } from "../../utils/GlobalStore";
+import { useStoreContext } from "../../utils/GlobalStore";
 
 import {
   PaymentElement,
@@ -15,7 +15,7 @@ export default function CheckoutForm() {
   const [isLoading, setIsLoading] = useState(false);
 
 
-  // const [{totalCost} ]= useStoreContext()
+  const [{totalCost} ]= useStoreContext()
 
 
   useEffect(() => {
@@ -87,7 +87,7 @@ export default function CheckoutForm() {
       <PaymentElement id="payment-element" />
       <button disabled={isLoading || !stripe || !elements} id="submit">
         <span id="button-text">
-          {isLoading ? <div className="spinner" id="spinner"></div> : `Pay now ` }
+          {isLoading ? <div className="spinner" id="spinner"></div> : `Pay now $ ${totalCost/100}` }
         </span>
       </button>
       {/* Show any error or success messages */}
