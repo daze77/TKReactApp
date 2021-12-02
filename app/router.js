@@ -55,50 +55,6 @@ function router( app ){
    }
 
 
-
-
-   // const calculateOrderAmount = async (baskItems) => {
-   // console.log('router cost for payment', baskItems)
-   //    // Replace this constant with a calculation of the order's amount
-   //    // Calculate the order total on the server to prevent
-   //    // people from directly manipulating the amount on the client
-
-   //    // let totalBasketCost = 0
-   //    // let priceList =[]
-
-   //    // for (let i=0; i<baskItems.length; i++){
-
-   //    //    if(baskItems[i].page === "GalleryCollection"){
-   //    //       let [results] = await orm.getGALPrice(baskItems[i].id)
-            
-   //    //       priceList.push({
-   //    //          id: results._id, 
-   //    //          imageName: baskItems[i].imageName,
-   //    //          page: baskItems[i].page,
-   //    //          title: baskItems[i].title,
-   //    //          url: baskItems[i].url,
-   //    //          price: results.Price, 
-   //    //          quantity: baskItems[i].quantity,
-   //    //          total: results.Price * baskItems[i].quantity
-   //    //       })
-   //    //       totalBasketCost += results.Price * baskItems[i].quantity
-
-   //    //    }
-
-   //    // }
-
-
-   //    // if(totalBasketCost>100){
-   //    //    return totalBasketCost
-   //    // }else {
-   //    //    return 100;
-   //    // }
-   // };
-
-
-
-
-
    app.post('/api/users/register', async function(req, res) {
       console.log( '[POST /api/users/register] request body:', req.body )
       const { status, userData, message }= await orm.userRegister( req.body )

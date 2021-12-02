@@ -13,7 +13,6 @@ function Abstract(props) {
  const [URL, setURL] = useState({})
 
 
-
  async function loadGALItems(){
     if(clickedItem){
         const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: clickedItem})

@@ -17,9 +17,6 @@ const stripePromise = loadStripe("pk_test_51JzCTiJvID62zcJ6KOIASxQEYMpSBjGfIBaF8
   const [{totalCost, basketList, ...data} ]= useStoreContext()
   const [clientSecret, setClientSecret] = useState("");
 
-  console.log('this is total cost', totalCost)
-  console.log('this is total items', basketList[1].basket)
-
     // Create PaymentIntent as soon as the page loads
       
     async function getPayment(){

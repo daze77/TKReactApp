@@ -10,6 +10,7 @@ import {
 export default function CheckoutForm() {
   const stripe = useStripe();
   const elements = useElements();
+  const [href, setHref] = useState("http://localhost:3000")
 
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -18,9 +19,11 @@ export default function CheckoutForm() {
   const [{totalCost} ]= useStoreContext()
 
 
+
+
   useEffect(() => {
 
-
+    (window.location.href.split('/')[2] === "localhost:3000") ? setHref('http://localhost:3000') : setHref('https://bthtkapp.herokuapp.com')
 
 
 
@@ -71,7 +74,7 @@ export default function CheckoutForm() {
       confirmParams: {
         // Make sure to change this to your payment completion page
         
-        return_url: 'http://localhost:3000' ,
+        return_url: href ,
       },
       
     });

@@ -6,12 +6,10 @@ import { useStoreContext } from "../../utils/GlobalStore"
 function CheckoutPage(){
     const [{basketList, ...data},dispatch ]= useStoreContext()
     
-    const [purchitems, setPurchItems] = useState([])
     const [totalCost, setTotalCost] = useState(0)
     const [showCktBttn, setCktBttn] = useState(false)
 
     async function getBasketList(){
-        console.log("BBBBTTTNNN CHECK", showCktBttn)
         const localStorageLS = (localStorage.TKBasket) ? JSON.parse(localStorage.TKBasket) : [{emai:data.email}, {basket:[]}]
 
         const {reply, totalCost} = await fetchJSON('/api/basketListPrice', 'post', localStorageLS)
@@ -29,7 +27,6 @@ function CheckoutPage(){
         getBasketList()
 
     },[])
-    console.log("BBBBTTTNNN CHECK", showCktBttn)
 
     return(
         <>
