@@ -11,11 +11,12 @@ function CheckoutPage(){
     const [showCktBttn, setCktBttn] = useState(false)
 
     async function getBasketList(){
+        console.log("BBBBTTTNNN CHECK", showCktBttn)
         const localStorageLS = (localStorage.TKBasket) ? JSON.parse(localStorage.TKBasket) : [{emai:data.email}, {basket:[]}]
 
         const {reply, totalCost} = await fetchJSON('/api/basketListPrice', 'post', localStorageLS)
 
-        if(localStorageLS){
+        if(localStorage.TKBasket){
             setCktBttn(true)
             setTotalCost(totalCost)
         }
@@ -28,6 +29,7 @@ function CheckoutPage(){
         getBasketList()
 
     },[])
+    console.log("BBBBTTTNNN CHECK", showCktBttn)
 
     return(
         <>
@@ -102,7 +104,7 @@ function CheckoutPage(){
             </table> */}
         </div>
 
-        <CheckoutButtonModal />
+        {showCktBttn && <CheckoutButtonModal />}
 
         </>
     )

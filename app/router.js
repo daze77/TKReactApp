@@ -45,54 +45,55 @@ function router( app ){
       }
 
       console.log("calculated router costs final", totalBasketCost)
-      if(totalBasketCost>100){
-         return {priceList, totalBasketCost}
-      }else {
-         return {priceList, totalBasketCost: 100};
-      }
-      
+      // if(totalBasketCost>100){
+      //    return {priceList, totalBasketCost}
+      // }else {
+      //    return {priceList, totalBasketCost: 100};
+      // }
+      return {priceList, totalBasketCost}
+
    }
 
 
 
 
-   const calculateOrderAmount = async (baskItems) => {
-   console.log('router cost for payment', baskItems)
-      // Replace this constant with a calculation of the order's amount
-      // Calculate the order total on the server to prevent
-      // people from directly manipulating the amount on the client
+   // const calculateOrderAmount = async (baskItems) => {
+   // console.log('router cost for payment', baskItems)
+   //    // Replace this constant with a calculation of the order's amount
+   //    // Calculate the order total on the server to prevent
+   //    // people from directly manipulating the amount on the client
 
-      // let totalBasketCost = 0
-      // let priceList =[]
+   //    // let totalBasketCost = 0
+   //    // let priceList =[]
 
-      // for (let i=0; i<baskItems.length; i++){
+   //    // for (let i=0; i<baskItems.length; i++){
 
-      //    if(baskItems[i].page === "GalleryCollection"){
-      //       let [results] = await orm.getGALPrice(baskItems[i].id)
+   //    //    if(baskItems[i].page === "GalleryCollection"){
+   //    //       let [results] = await orm.getGALPrice(baskItems[i].id)
             
-      //       priceList.push({
-      //          id: results._id, 
-      //          imageName: baskItems[i].imageName,
-      //          page: baskItems[i].page,
-      //          title: baskItems[i].title,
-      //          url: baskItems[i].url,
-      //          price: results.Price, 
-      //          quantity: baskItems[i].quantity,
-      //          total: results.Price * baskItems[i].quantity
-      //       })
-      //       totalBasketCost += results.Price * baskItems[i].quantity
+   //    //       priceList.push({
+   //    //          id: results._id, 
+   //    //          imageName: baskItems[i].imageName,
+   //    //          page: baskItems[i].page,
+   //    //          title: baskItems[i].title,
+   //    //          url: baskItems[i].url,
+   //    //          price: results.Price, 
+   //    //          quantity: baskItems[i].quantity,
+   //    //          total: results.Price * baskItems[i].quantity
+   //    //       })
+   //    //       totalBasketCost += results.Price * baskItems[i].quantity
 
-      //    }
+   //    //    }
 
-      // }
+   //    // }
 
 
-      // if(totalBasketCost>100){
-      //    return totalBasketCost
-      // }else {
-      //    return 100;
-      // }
-   };
+   //    // if(totalBasketCost>100){
+   //    //    return totalBasketCost
+   //    // }else {
+   //    //    return 100;
+   //    // }
+   // };
 
 
 
@@ -254,17 +255,22 @@ function router( app ){
       const {totalBasketCost} = await calCosts(x)
     
       // Create a PaymentIntent with the order amount and currency
-      const paymentIntent = await stripe.paymentIntents.create({
-        amount: totalBasketCost,
-        currency: "cad",
-        automatic_payment_methods: {
-          enabled: true,
-        },
-      });
-    
-      res.send({
-        clientSecret: paymentIntent.client_secret,x
-      });
+      if(totalBasketCost > 0){
+         const paymentIntent = await stripe.paymentIntents.create({
+         amount: totalBasketCost,
+         currency: "cad",
+         automatic_payment_methods: {
+            enabled: true,
+         },
+         });
+      
+         res.send({
+         clientSecret: paymentIntent.client_secret,x
+         });
+
+      }
+
+
     });
       
 }
