@@ -14,6 +14,7 @@ function Abstract(props) {
 
 
  async function loadGALItems(){
+
     if(clickedItem){
         const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: clickedItem})
         SubLink.forEach(item => item.showPrice=false)

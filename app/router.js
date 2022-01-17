@@ -23,7 +23,6 @@ function router( app ){
 
    async function calCosts(b){
 
-      console.log('this is b', b)
       let totalBasketCost = 0
       let priceList =[]
 
@@ -32,7 +31,6 @@ function router( app ){
          if(b[i].page === "GalleryCollection"){
             let [results] = await orm.getGALPrice(b[i].id)
 
-            console.log('[[[results]]]', results)
             
             priceList.push({
                id: results._id, 
@@ -48,7 +46,6 @@ function router( app ){
          }
       }
 
-      console.log("calculated router costs final", totalBasketCost)
       if(totalBasketCost>100){
          return {priceList, totalBasketCost}
       }else {
@@ -176,7 +173,6 @@ function router( app ){
 
    app.post('/api/basketListPrice',async function(req, res) {
 
-      console.log('reqbody...', req.body[1].basket)
       const x = req.body[1].basket
       const {priceList, totalBasketCost} = await calCosts(x)
       
