@@ -95,7 +95,7 @@ return(
                         ShowBuyBtn = {showBuyBtn}
                         ShowPriceBtn = {showPriceBtn}
 
-                        ShowPrice = {gcAS.showPrice}
+                        // ShowPrice = {gcAS.showPrice}
                     />
                 ))}
 

@@ -3,3 +3,14 @@
     transition: 1s;
 
 }
+
+.purchBtn{
+    border-color: none;
+    width: 6rem;
+    height: auto;
+    border-radius: 50px;
+
+    
+
+    ;
+}
