@@ -107,7 +107,7 @@ function NavBar(){
                                     </ul>
                                 </li>
                                 <NavLink to="/HomePageAlternate"><li className="nav-link">ALTERNATE HOMEPAGE</li></NavLink>
-                                {(authOk && state.id==='61821d35ef09d5674a4116bb') && <NavLink to="/TestPage"><li className="nav-link">Test Page</li></NavLink>
+                                {(authOk && state.email==='daze77@gmail.com') && <NavLink to="/TestPage"><li className="nav-link">Test Page</li></NavLink>
                                 }
                             </ul>
                           
