@@ -1,0 +1,17 @@
+.fa-shopping-bag{
+    position: relative;
+    /* color: #27ace1; */
+}
+
+.shopingBagwItems{
+    color: #27ace1;
+}
+
+.basktItems{
+    position: absolute;
+    right: -0.4rem;
+    top: -0.4rem;
+    font-size: 0.7rem;
+    color: #27ace1;
+
+}
