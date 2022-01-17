@@ -13,11 +13,14 @@ function CheckoutPage(){
         const localStorageLS = (localStorage.TKBasket) ? JSON.parse(localStorage.TKBasket) : [{emai:data.email}, {basket:[]}]
 
         const {reply, totalCost} = await fetchJSON('/api/basketListPrice', 'post', localStorageLS)
+        console.log('this is the reply checkout page', reply)
 
         if(localStorage.TKBasket){
             setCktBttn(true)
             setTotalCost(totalCost)
         }
+
+        console.log('basketList total cost', totalCost)
 
         dispatch({type: "SHOPPING_BASKET", basketList: [{emai:data.email}, {basket:reply}], totalCost: totalCost})
 
@@ -27,6 +30,8 @@ function CheckoutPage(){
         getBasketList()
 
     },[])
+
+    console.log('this is the basketList', basketList[1].basket)
 
     return(
         <>
