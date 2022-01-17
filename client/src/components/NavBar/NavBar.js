@@ -8,7 +8,6 @@ import CheckoutBtn  from '../CheckOut/CheckoutButton'
 import LogoSymbol from '../../components/Logo/Logo'
 import './NavBar.css'
 import CheckoutButtonModal from '../CheckOut/CheckoutButtonModal'
-import BasktBtn from '../BasketBtn/BasketBtn'
 
 
 let timeout
@@ -115,8 +114,10 @@ function NavBar(){
                         </div>
                         {/* <Payments /> */}
                         {/* <CheckoutBtn /> */}
-                        <BasktBtn />
-                        <NavLogin />
+                        <div class="navRight">
+                            <NavLogin />
+                        </div>
+
                     </div>
                 
 

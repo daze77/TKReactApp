@@ -9,7 +9,7 @@ function BasktBtn(){
     return(
         <>
 
-            <Link to='/CheckoutPage'>Basket</Link>
+            <Link to='/CheckoutPage'><i class="fas fa-shopping-bag"></i></Link>
 
         </>
     )

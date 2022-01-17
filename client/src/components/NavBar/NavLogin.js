@@ -4,6 +4,9 @@ import { useStoreContext } from "../../utils/GlobalStore"
 import fetchJSON from '../../utils/API'
 import './NavBar.css'
 
+import BasktBtn from '../BasketBtn/BasketBtn'
+
+
 
 let timeout
 
@@ -55,6 +58,7 @@ function NavLogin(){
             <div className="d-flex ">
                 <div className="mx-3">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+                      <li className="nav-link"><BasktBtn/></li>
                         {name && <li className="nav-item dropdown">
                             <div className="nav-link dropdown-toggle" id="navbarScrollingDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Welcome back <u>{name}</u>
