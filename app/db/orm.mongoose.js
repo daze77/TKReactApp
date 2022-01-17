@@ -209,6 +209,7 @@ async function getGALImages(title){
    return ( GALDetails)
 }
 
+// need to pass title here so that I can get the right information
 async function getGALPrice(id){
    // console.log('do we got id', id)
   
