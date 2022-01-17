@@ -22,6 +22,8 @@ function router( app ){
    const stripe = require("stripe")('sk_test_51JzCTiJvID62zcJ68B18msCM9E17M9OSzxyNF5746507gKM8peVUt4tUMd2HWQeC9pAbdAFJBDTgViW9c8tL6l3p00tDzWeqvC');
 
    async function calCosts(b){
+
+      console.log('this is b', b)
       let totalBasketCost = 0
       let priceList =[]
 
@@ -29,6 +31,8 @@ function router( app ){
 
          if(b[i].page === "GalleryCollection"){
             let [results] = await orm.getGALPrice(b[i].id)
+
+            console.log('[[[results]]]', results)
             
             priceList.push({
                id: results._id, 
@@ -45,11 +49,11 @@ function router( app ){
       }
 
       console.log("calculated router costs final", totalBasketCost)
-      // if(totalBasketCost>100){
-      //    return {priceList, totalBasketCost}
-      // }else {
-      //    return {priceList, totalBasketCost: 100};
-      // }
+      if(totalBasketCost>100){
+         return {priceList, totalBasketCost}
+      }else {
+         return {priceList, totalBasketCost: 100};
+      }
       return {priceList, totalBasketCost}
 
    }
@@ -171,12 +175,23 @@ function router( app ){
 
 
    app.post('/api/basketListPrice',async function(req, res) {
+
+      console.log('reqbody...', req.body[1].basket)
       const x = req.body[1].basket
       const {priceList, totalBasketCost} = await calCosts(x)
       
       res.send({reply: priceList, totalCost:totalBasketCost})
    })
 
+
+
+
+
+
+
+
+
+   
    // To seed db unblock this code and refresh on the test page
 
       app.post('/api/wtpJSON', async function(req, res){

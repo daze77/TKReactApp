@@ -30,7 +30,7 @@ function Abstract(props) {
  }
 
  function addToBasket(e){
-     console.log(e)
+     console.log('this is e', e)
     let basketLocalStorage = localStorage.TKBasket ? JSON.parse(localStorage.TKBasket) : [{"email": `${data.email}`}, {basket: []}]
     basketLocalStorage[1].basket.push(
         {

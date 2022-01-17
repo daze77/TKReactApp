@@ -214,6 +214,7 @@ async function getGALPrice(id){
   
    const [results] = await db.gallerys.find({'Title': "ABSTRACT", 'SubLink._id':id},{'SubLink.$':1})
    // console.log('orm results', results)
+   console.log('from ORM', results.SubLink)
    return(results.SubLink)
 }
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import CheckoutPage from '../../pages/CheckoutPage/CheckoutPage'
 
 
 function BasktBtn(){
