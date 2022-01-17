@@ -15,12 +15,14 @@ let timeout
 
 function NavBar(){
 
-    const [{ authOk }, dispatch ]= useStoreContext()
+    const [{ authOk, ...state }, dispatch ]= useStoreContext()
     const [ showMenu, setShowMenu ] = useState( true )
     // adding const for menu toggle
    
     const location = useLocation()
 
+
+    console.log('authok details', authOk, state)
 
   
     useEffect( function(){
@@ -105,7 +107,8 @@ function NavBar(){
                                     </ul>
                                 </li>
                                 <NavLink to="/HomePageAlternate"><li className="nav-link">ALTERNATE HOMEPAGE</li></NavLink>
-                                <NavLink to="/TestPage"><li className="nav-link">Test Page</li></NavLink>
+                                {(authOk && state.id==='61821d35ef09d5674a4116bb') && <NavLink to="/TestPage"><li className="nav-link">Test Page</li></NavLink>
+                                }
                             </ul>
                           
                            
