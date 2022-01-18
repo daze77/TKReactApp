@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+
 import CheckoutButtonModal from '../../components/CheckOut/CheckoutButtonModal'
 import fetchJSON from '../../utils/API'
 import { useStoreContext } from "../../utils/GlobalStore"
@@ -11,6 +12,7 @@ function CheckoutPage(){
 
     async function getBasketList(){
         const localStorageLS = (localStorage.TKBasket) ? JSON.parse(localStorage.TKBasket) : [{emai:data.email}, {basket:[]}]
+        console.log('hahahhaa', localStorageLS)
 
         const {reply, totalCost} = await fetchJSON('/api/basketListPrice', 'post', localStorageLS)
 
@@ -19,21 +21,20 @@ function CheckoutPage(){
             setTotalCost(totalCost)
         }
         dispatch({type: "SHOPPING_BASKET", basketList: [{emai:data.email}, {basket:reply}], totalCost: totalCost})
+        dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: localStorageLS[1].basket.length})
     }
 
     async function handleDel(item){
-        const localStorageLS = (localStorage.TKBasket) ? JSON.parse(localStorage.TKBasket) : [{emai:data.email}, {basket:[]}]
+        console.log('button clicked')
+        let localStorageLS = (localStorage.TKBasket) ? JSON.parse(localStorage.TKBasket) : [{emai:data.email}, {basket:[]}]
 
-        localStorageLS[1].basket = localStorageLS[1].basket.filter((i, index)=> item !== index )
+        let updatedBasketLst = localStorageLS[1].basket.filter((i, index)=> item !== index )
 
-        const {reply, totalCost} = await fetchJSON('/api/basketListPrice', 'post', localStorageLS)
+        localStorageLS[1].basket=updatedBasketLst
 
         localStorage.TKBasket = JSON.stringify(localStorageLS)
-        
-        dispatch({type: "SHOPPING_BASKET", basketList: [{emai:data.email}, {basket:reply}], totalCost: totalCost})
-        
-        dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: localStorageLS[1].basket.length})
 
+        getBasketList()
         
     }
 
