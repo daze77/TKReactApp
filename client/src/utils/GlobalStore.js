@@ -10,12 +10,13 @@ const initialData = {
   alert: "", 
   wtp:[],
   totalCost:0,
-  basketList:[{email:""}, {basket:[]}]
+  basketList:[{email:""}, {basket:[]}],
+  basketCount:0
 }
 
 /*! IMPORTANT all your reducer functionality goes here */
 const dataReducer = (state, action) => {
-  // console.log(`[this is global state]`, {...state})
+  console.log(`[this is global state]`, {...state})
   // console.log(`[this is global action]`, {...action})
 
   switch (action.type) {
@@ -40,6 +41,8 @@ const dataReducer = (state, action) => {
       return { ...state, addresses: action.addresses, currentAddress: action.currentAddress, alert: action.message || '' }
     case "SHOPPING_BASKET":
       return { ...state, basketList: action.basketList, totalCost: action.totalCost }
+      case "SHOPPING_BASKET_COUNT":
+        return { ...state, basketCount: action.basketCount}
     default:
       console.log(`Invalid action type: ${action.type}`)
       return state 

@@ -21,7 +21,8 @@ function NavBar(){
     const location = useLocation()
 
 
-    console.log('authok details', authOk, state)
+    console.log('authok details', authOk)
+    console.log('this is state', state)
 
   
     useEffect( function(){
@@ -114,9 +115,9 @@ function NavBar(){
                         </div>
                         {/* <Payments /> */}
                         {/* <CheckoutBtn /> */}
-                        <div class="navRight">
-                            <NavLogin />
-                        </div>
+                        
+                        <NavLogin />
+                        
 
                     </div>
                 

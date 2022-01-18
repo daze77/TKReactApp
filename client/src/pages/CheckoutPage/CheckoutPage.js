@@ -4,7 +4,8 @@ import fetchJSON from '../../utils/API'
 import { useStoreContext } from "../../utils/GlobalStore"
 
 function CheckoutPage(){
-    const [{basketList, ...data},dispatch ]= useStoreContext()
+    const [{basketList,  ...data},dispatch ]= useStoreContext()
+    console.log('[[[[this is checkout first run basketList]]]]', basketList)
     
     const [totalCost, setTotalCost] = useState(0)
     const [showCktBttn, setCktBttn] = useState(false)
@@ -14,6 +15,8 @@ function CheckoutPage(){
 
         const {reply, totalCost} = await fetchJSON('/api/basketListPrice', 'post', localStorageLS)
 
+        console.log('this is checkout reply', reply)
+
         if(localStorage.TKBasket){
             setCktBttn(true)
             setTotalCost(totalCost)
@@ -21,6 +24,7 @@ function CheckoutPage(){
 
 
         dispatch({type: "SHOPPING_BASKET", basketList: [{emai:data.email}, {basket:reply}], totalCost: totalCost})
+ 
 
     }
 

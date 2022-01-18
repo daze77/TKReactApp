@@ -179,7 +179,14 @@ function router( app ){
       res.send({reply: priceList, totalCost:totalBasketCost})
    })
 
+   // app.get('/api/basketListPrice',async function(req, res) {
+   //    console.log(req)
 
+   //    const {priceList} = await calCosts(x)
+
+      
+   //    res.send({reply: priceList.length})
+   // })
 
 
 
