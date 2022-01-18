@@ -31,9 +31,10 @@ function Abstract(props) {
  }
 
  function addToBasket(e){
-     console.log('this is e', e)
     let basketLocalStorage = localStorage.TKBasket ? JSON.parse(localStorage.TKBasket) : [{"email": `${data.email}`}, {basket: []}]
-    basketLocalStorage[1].basket.push(
+    const [,{basket}] = basketLocalStorage
+    
+    basket.push(
         {
             "id": e.ID,
             "title": e.Title,
@@ -47,7 +48,7 @@ function Abstract(props) {
     localStorage.TKBasket = JSON.stringify(basketLocalStorage)
     
     dispatch({type: "SHOPPING_BASKET", basketList: JSON.parse(localStorage.TKBasket)})
-    dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: basketLocalStorage[1].basket.length})
+    dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: basket.length})
   
  }
 
@@ -81,11 +82,9 @@ return(
                     
                     <Card 
 
-                        // classstyle="wtp"
                         className='card h-100 gallerygrid'
                         h5className='w-100'
                         cardbodyStyle='card-img-overlay'
-                        // ShowPrice = {showPrice}
 
 
                         key = {gcAS._id}
@@ -98,7 +97,6 @@ return(
                         ShowBuyBtn = {showBuyBtn}
                         ShowPriceBtn = {showPriceBtn}
 
-                        // ShowPrice = {gcAS.showPrice}
                     />
                 ))}
 

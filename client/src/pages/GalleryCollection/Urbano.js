@@ -33,7 +33,9 @@ function Urbano(props) {
     function addToBasket(e){
            console.log(e)
        let basketLocalStorage = localStorage.TKBasket ? JSON.parse(localStorage.TKBasket) : [{"email": `${data.email}`}, {basket: []}]
-       basketLocalStorage[1].basket.push(
+       const [,{basket}] = basketLocalStorage
+
+       basket.push(
            {
                "id": e.ID,
                "title": e.Title,
@@ -49,7 +51,7 @@ function Urbano(props) {
    
        dispatch({type: "SHOPPING_BASKET", basketList: JSON.parse(localStorage.TKBasket)})
    
-       dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: basketLocalStorage[1].basket.length})
+       dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: basket.length})
        }
    
        function showBuyBtn(e){
@@ -98,7 +100,6 @@ function Urbano(props) {
                            ShowBuyBtn = {showBuyBtn}
                            ShowPriceBtn = {showPriceBtn}
    
-                           // ShowPrice = {gcAS.showPrice}
    
    
    
