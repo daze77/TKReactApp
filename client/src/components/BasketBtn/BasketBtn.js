@@ -8,7 +8,6 @@ import fetchJSON from '../../utils/API'
 
 function BasktBtn(){
     const [{ basketList, basketCount, ...data } , dispatch]= useStoreContext()
-    const items = basketList[1].basket.length
     console.log('these are the items', basketList)
     console.log('these are the items', data)
     console.log('these are the items', data)

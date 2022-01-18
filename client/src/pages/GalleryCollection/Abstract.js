@@ -7,7 +7,7 @@ import fetchJSON from '../../utils/API'
 
 
 function Abstract(props) {
- const [{ ...data } , dispatch]= useStoreContext()
+ const [{  basketCount, ...data } , dispatch]= useStoreContext()
  const clickedItem = props.location.state
  const [GALImages, setGALImages] = useState([])
  const [URL, setURL] = useState({})
@@ -44,8 +44,11 @@ function Abstract(props) {
         }
     )
     localStorage.TKBasket = JSON.stringify(basketLocalStorage)
-
+    
+    console.log('are we ehre', basketLocalStorage[1].basket.length)
     dispatch({type: "SHOPPING_BASKET", basketList: JSON.parse(localStorage.TKBasket)})
+    dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: basketLocalStorage[1].basket.length})
+  
  }
 
  function showBuyBtn(e){
