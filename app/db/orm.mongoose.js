@@ -210,10 +210,10 @@ async function getGALImages(title){
 }
 
 // need to pass title here so that I can get the right information
-async function getGALPrice(id){
-   // console.log('do we got id', id)
+async function getGALPrice(id, clickedItem){
+   console.log('ORM do we got id', id, clickedItem)
   
-   const [results] = await db.gallerys.find({'Title': "ABSTRACT", 'SubLink._id':id},{'SubLink.$':1})
+   const [results] = await db.gallerys.find({'Title': clickedItem, 'SubLink._id':id},{'SubLink.$':1})
    // console.log('orm results', results)
    // console.log('from ORM', results.SubLink)
    return(results.SubLink)

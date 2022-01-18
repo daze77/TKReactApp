@@ -9,7 +9,7 @@ import fetchJSON from '../../utils/API'
 
 function Classics(props) {
 
-const [{ ...data } , dispatch]= useStoreContext()
+ const [{basketCount, ...data } , dispatch]= useStoreContext()
  const clickedItem = props.location.state
  const [GALImages, setGALImages] = useState([])
  const [URL, setURL] = useState({})
@@ -41,12 +41,16 @@ const [{ ...data } , dispatch]= useStoreContext()
             "imageName": e.ImageName,
             "url": URL.URL,
             "page": URL.Page,
-            'quantity': 1
+            'quantity': 1,
+            'clickedItem':clickedItem
+
         }
     )
     localStorage.TKBasket = JSON.stringify(basketLocalStorage)
 
     dispatch({type: "SHOPPING_BASKET", basketList: JSON.parse(localStorage.TKBasket)})
+
+    dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: basketLocalStorage[1].basket.length})
     }
 
     function showBuyBtn(e){
@@ -95,7 +99,7 @@ const [{ ...data } , dispatch]= useStoreContext()
                         ShowBuyBtn = {showBuyBtn}
                         ShowPriceBtn = {showPriceBtn}
 
-                        ShowPrice = {gcAS.showPrice}
+                        // ShowPrice = {gcAS.showPrice}
 
 
 

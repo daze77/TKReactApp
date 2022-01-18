@@ -40,12 +40,12 @@ function Abstract(props) {
             "imageName": e.ImageName,
             "url": URL.URL,
             "page": URL.Page,
-            'quantity': 1
+            'quantity': 1,
+            'clickedItem':clickedItem
         }
     )
     localStorage.TKBasket = JSON.stringify(basketLocalStorage)
     
-    console.log('are we ehre', basketLocalStorage[1].basket.length)
     dispatch({type: "SHOPPING_BASKET", basketList: JSON.parse(localStorage.TKBasket)})
     dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: basketLocalStorage[1].basket.length})
   
