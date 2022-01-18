@@ -29,9 +29,7 @@ function router( app ){
       for (let i=0; i<b.length; i++){
 
          if(b[i].page === "GalleryCollection"){
-            console.log('this is b', b)
             let [results] = await orm.getGALPrice(b[i].id, b[i].clickedItem)
-            console.log('[router results]', results)
             
             priceList.push({
                id: results._id, 
@@ -227,9 +225,6 @@ function router( app ){
    app.post("/api/create-payment-intent", async (req, res) => {
 
       const x = req.body[1].basket
-      console.log('this is xxxxxxxxxxxx', x)
-      console.log('this is xxxxxxxxxxxx - req body', req.body)
-
       const {totalBasketCost} = await calCosts(x)
     
       // Create a PaymentIntent with the order amount and currency

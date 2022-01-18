@@ -16,8 +16,7 @@ const initialData = {
 
 /*! IMPORTANT all your reducer functionality goes here */
 const dataReducer = (state, action) => {
-  console.log(`[this is global state]`, {...state})
-  // console.log(`[this is global action]`, {...action})
+
 
   switch (action.type) {
     case "USER_LOGIN":

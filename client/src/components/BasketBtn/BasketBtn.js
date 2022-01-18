@@ -2,21 +2,17 @@ import React, {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import './BasketBtn.css'
 import { useStoreContext } from '../../utils/GlobalStore'
-import fetchJSON from '../../utils/API'
 
 
 
 function BasktBtn(){
-    const [{ basketList, basketCount, ...data } , dispatch]= useStoreContext()
-    console.log('these are the items', basketList)
-    console.log('these are the items', data)
-    console.log('these are the items', data)
+    const [{ basketCount } , dispatch]= useStoreContext()
+
 
     useEffect(()=>{
         function basketLength(){
 
            const itemLength = (localStorage.TKBasket) ? JSON.parse(localStorage.TKBasket) : 0
-            console.log(itemLength[1].basket.length)
 
            dispatch({type:'SHOPPING_BASKET_COUNT', basketCount:itemLength[1].basket.length})
 

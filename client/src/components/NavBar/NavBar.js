@@ -20,11 +20,6 @@ function NavBar(){
    
     const location = useLocation()
 
-
-    console.log('authok details', authOk)
-    console.log('this is state', state)
-
-  
     useEffect( function(){
       if( showMenu ){
         if( timeout ) clearTimeout( timeout )

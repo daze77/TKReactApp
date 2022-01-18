@@ -60,7 +60,7 @@ function Abstract(props) {
 function showPriceBtn(e){
     const hoveredItem = GALImages.find((item) => item._id === e.ID)
     setGALImages([...GALImages], hoveredItem.showPrice=false)
-    console.log('this is GAL', GALImages)
+    // console.log('this is GAL', GALImages)
 }
 
 
