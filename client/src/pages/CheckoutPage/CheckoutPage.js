@@ -2,11 +2,10 @@ import React, {useEffect, useState} from 'react'
 import CheckoutButtonModal from '../../components/CheckOut/CheckoutButtonModal'
 import fetchJSON from '../../utils/API'
 import { useStoreContext } from "../../utils/GlobalStore"
+import './CheckoutPage.css'
 
 function CheckoutPage(){
     const [{basketList,  ...data},dispatch ]= useStoreContext()
-    console.log('[[[[this is checkout first run basketList]]]]', basketList)
-    
     const [totalCost, setTotalCost] = useState(0)
     const [showCktBttn, setCktBttn] = useState(false)
 
@@ -15,17 +14,27 @@ function CheckoutPage(){
 
         const {reply, totalCost} = await fetchJSON('/api/basketListPrice', 'post', localStorageLS)
 
-        console.log('this is checkout reply', reply)
-
         if(localStorage.TKBasket){
             setCktBttn(true)
             setTotalCost(totalCost)
         }
-
-
         dispatch({type: "SHOPPING_BASKET", basketList: [{emai:data.email}, {basket:reply}], totalCost: totalCost})
- 
+    }
 
+    async function handleDel(item){
+        const localStorageLS = (localStorage.TKBasket) ? JSON.parse(localStorage.TKBasket) : [{emai:data.email}, {basket:[]}]
+
+        localStorageLS[1].basket = localStorageLS[1].basket.filter((i, index)=> item !== index )
+
+        const {reply, totalCost} = await fetchJSON('/api/basketListPrice', 'post', localStorageLS)
+
+        localStorage.TKBasket = JSON.stringify(localStorageLS)
+        
+        dispatch({type: "SHOPPING_BASKET", basketList: [{emai:data.email}, {basket:reply}], totalCost: totalCost})
+        
+        dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: localStorageLS[1].basket.length})
+
+        
     }
 
     useEffect(() => {
@@ -51,11 +60,12 @@ function CheckoutPage(){
                     {basketList[1].basket.map((item, index) => (
                         
                         <tr>
-                            <th scope="row">{index}</th>
+                            
+                            <th scope="row"  >{index+1}</th>
                             <td>{item.title}</td>
                             <td>{item.quantity}</td>
                             <td>$ {item.price/100}</td>
-                            <td>$ {item.total/100}</td>
+                            <td>$ {item.total/100} <i class="fas fa-minus" onClick={()=>handleDel(index)}></i></td>
                         </tr>
                     ))}
                 </tbody>
