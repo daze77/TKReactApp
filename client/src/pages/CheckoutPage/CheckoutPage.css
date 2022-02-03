@@ -1,3 +1,7 @@
 .fa-minus{
-    padding-left: 0.8rem
+    padding-left: 0.8rem;
+    cursor: pointer;
+    color: crimson;
+
 }
+

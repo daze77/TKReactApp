@@ -43,13 +43,15 @@ function router( app ){
             })
             totalBasketCost += results.Price * b[i].quantity
          }
-      }
 
-      if(totalBasketCost>100){
-         return {priceList, totalBasketCost}
-      }else {
-         return {priceList, totalBasketCost: 100};
       }
+      totalBasketCost = (totalBasketCost/100).toFixed(2)
+
+      // if(totalBasketCost>100){
+      //    return {priceList, totalBasketCost}
+      // }else {
+      //    return {priceList, totalBasketCost: 100};
+      // }
       return {priceList, totalBasketCost}
 
    }
@@ -226,11 +228,13 @@ function router( app ){
 
       const x = req.body[1].basket
       const {totalBasketCost} = await calCosts(x)
+      let totalBasketCostUpdate = (totalBasketCost*100).toFixed()
+
     
       // Create a PaymentIntent with the order amount and currency
       if(totalBasketCost > 0){
          const paymentIntent = await stripe.paymentIntents.create({
-         amount: totalBasketCost,
+         amount: totalBasketCostUpdate,
          currency: "cad",
          automatic_payment_methods: {
             enabled: true,
