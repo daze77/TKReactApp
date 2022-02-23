@@ -32,25 +32,43 @@ function People(props) {
      function addToBasket(e){
         let basketLocalStorage = localStorage.TKBasket ? JSON.parse(localStorage.TKBasket) : [{"email": `${data.email}`}, {basket: []}]
         const [,{basket}] = basketLocalStorage
-
-        basket.push(
-            {
-                "id": e.ID,
-                "title": e.Title,
-                "imageName": e.ImageName,
-                "url": URL.URL,
-                "page": URL.Page,
-                'quantity': 1,
-                'clickedItem':clickedItem
     
-            }
-        )
-        localStorage.TKBasket = JSON.stringify(basketLocalStorage)
+        if(basket.find(id => id.id === e.ID)){
+            const existingItem = basket.find(id => id.id === e.ID)
+            existingItem.quantity ++
+            refreshCount()
+        }else{
+            basket.push(
+                    {
+                        "id": e.ID,
+                        "title": e.Title,
+                        "imageName": e.ImageName,
+                        "url": URL.URL,
+                        "page": URL.Page,
+                        'quantity': 1,
+                        'clickedItem':clickedItem
+                    }
+                )
+            refreshCount()
     
-        dispatch({type: "SHOPPING_BASKET", basketList: JSON.parse(localStorage.TKBasket)})
-    
-        dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: basket.length})
         }
+    
+        function refreshCount(){
+            let count = 0
+            basket.forEach(item => {
+                count = count + item.quantity
+            })
+            dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: count})
+    
+        }
+    
+    
+    
+        localStorage.TKBasket = JSON.stringify(basketLocalStorage)
+        
+        dispatch({type: "SHOPPING_BASKET", basketList: JSON.parse(localStorage.TKBasket)})
+      
+     }
     
         function showBuyBtn(e){
             const hoveredItem = GALImages.find((item) => item._id === e.ID)

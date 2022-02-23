@@ -15,44 +15,62 @@ function Classics(props) {
  const [URL, setURL] = useState({})
 
 
- async function loadGALItems(){
-    if(clickedItem){
-        const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: clickedItem})
-        SubLink.forEach(item => item.showPrice=false)
-        setGALImages(SubLink)
-        setURL({URL: URL, Page: "GalleryCollection"})
+    async function loadGALItems(){
+        if(clickedItem){
+            const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: clickedItem})
+            SubLink.forEach(item => item.showPrice=false)
+            setGALImages(SubLink)
+            setURL({URL: URL, Page: "GalleryCollection"})
 
-    }else{
-        const hrefLINK = window.location.pathname.split(`/`)[2].toUpperCase()
-        const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: hrefLINK})
-        SubLink.forEach(item => item.showPrice=false)
-        setGALImages(SubLink)
-        setURL({URL: URL, Page: "GalleryCollection"})
-    } 
- }
-
- function addToBasket(e){
-    let basketLocalStorage = localStorage.TKBasket ? JSON.parse(localStorage.TKBasket) : [{"email": `${data.email}`}, {basket: []}]
-    const [,{basket}] = basketLocalStorage
-
-    basket.push(
-        {
-            "id": e.ID,
-            "title": e.Title,
-            "imageName": e.ImageName,
-            "url": URL.URL,
-            "page": URL.Page,
-            'quantity': 1,
-            'clickedItem':clickedItem
-
-        }
-    )
-    localStorage.TKBasket = JSON.stringify(basketLocalStorage)
-
-    dispatch({type: "SHOPPING_BASKET", basketList: JSON.parse(localStorage.TKBasket)})
-
-    dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: basket.length})
+        }else{
+            const hrefLINK = window.location.pathname.split(`/`)[2].toUpperCase()
+            const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: hrefLINK})
+            SubLink.forEach(item => item.showPrice=false)
+            setGALImages(SubLink)
+            setURL({URL: URL, Page: "GalleryCollection"})
+        } 
     }
+
+    function addToBasket(e){
+        let basketLocalStorage = localStorage.TKBasket ? JSON.parse(localStorage.TKBasket) : [{"email": `${data.email}`}, {basket: []}]
+        const [,{basket}] = basketLocalStorage
+    
+        if(basket.find(id => id.id === e.ID)){
+            const existingItem = basket.find(id => id.id === e.ID)
+            existingItem.quantity ++
+            refreshCount()
+        }else{
+            basket.push(
+                    {
+                        "id": e.ID,
+                        "title": e.Title,
+                        "imageName": e.ImageName,
+                        "url": URL.URL,
+                        "page": URL.Page,
+                        'quantity': 1,
+                        'clickedItem':clickedItem
+                    }
+                )
+            refreshCount()
+    
+        }
+    
+        function refreshCount(){
+            let count = 0
+            basket.forEach(item => {
+                count = count + item.quantity
+            })
+            dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: count})
+    
+        }
+    
+    
+    
+        localStorage.TKBasket = JSON.stringify(basketLocalStorage)
+        
+        dispatch({type: "SHOPPING_BASKET", basketList: JSON.parse(localStorage.TKBasket)})
+      
+     }
 
     function showBuyBtn(e){
         const hoveredItem = GALImages.find((item) => item._id === e.ID)
