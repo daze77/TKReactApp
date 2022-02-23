@@ -12,7 +12,6 @@ function Abstract(props) {
  const [GALImages, setGALImages] = useState([])
  const [URL, setURL] = useState({})
 
-
  async function loadGALItems(){
 
     if(clickedItem){
@@ -34,11 +33,10 @@ function Abstract(props) {
     let basketLocalStorage = localStorage.TKBasket ? JSON.parse(localStorage.TKBasket) : [{"email": `${data.email}`}, {basket: []}]
     const [,{basket}] = basketLocalStorage
 
-    console.log(e.ID)
-
     if(basket.find(id => id.id === e.ID)){
-        let x = basket.find(id => id.id === e.ID)
-        x.quantity ++
+        const existingItem = basket.find(id => id.id === e.ID)
+        existingItem.quantity ++
+        refreshCount()
     }else{
         basket.push(
                 {
@@ -51,19 +49,24 @@ function Abstract(props) {
                     'clickedItem':clickedItem
                 }
             )
+        refreshCount()
 
     }
 
+    function refreshCount(){
+        let count = 0
+        basket.forEach(item => {
+            count = count + item.quantity
+        })
+        dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: count})
 
-   
-
+    }
 
 
 
     localStorage.TKBasket = JSON.stringify(basketLocalStorage)
     
     dispatch({type: "SHOPPING_BASKET", basketList: JSON.parse(localStorage.TKBasket)})
-    dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: basket.length})
   
  }
 

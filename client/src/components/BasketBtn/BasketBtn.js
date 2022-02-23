@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import './BasketBtn.css'
 import { useStoreContext } from '../../utils/GlobalStore'
@@ -8,18 +8,24 @@ import { useStoreContext } from '../../utils/GlobalStore'
 function BasktBtn(){
     const [{ basketCount } , dispatch]= useStoreContext()
 
-
-    useEffect(()=>{
         function basketLength(){
+            const localStorageItems = (localStorage.TKBasket) ? JSON.parse(localStorage.TKBasket) : 0
 
-           const itemLength = (localStorage.TKBasket) ? JSON.parse(localStorage.TKBasket) : 0
+            let count = 0
+            localStorageItems[1].basket.forEach(item => {
+                count = count + item.quantity
+            })
+            console.log(count)
 
-           dispatch({type:'SHOPPING_BASKET_COUNT', basketCount:itemLength[1].basket.length})
+          dispatch({type:'SHOPPING_BASKET_COUNT', basketCount:count})
 
         }
-        if(localStorage.TKBasket){
-                basketLength()
-            }
+    useEffect(()=>{
+        basketLength()
+
+        // if(localStorage.TKBasket){
+        //         basketLength()
+        //     }
     },[])
 
     return(
