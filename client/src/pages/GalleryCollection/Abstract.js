@@ -33,24 +33,41 @@ function Abstract(props) {
  function addToBasket(e){
     let basketLocalStorage = localStorage.TKBasket ? JSON.parse(localStorage.TKBasket) : [{"email": `${data.email}`}, {basket: []}]
     const [,{basket}] = basketLocalStorage
-    
-    basket.push(
-        {
-            "id": e.ID,
-            "title": e.Title,
-            "imageName": e.ImageName,
-            "url": URL.URL,
-            "page": URL.Page,
-            'quantity': 1,
-            'clickedItem':clickedItem
-        }
-    )
+
+    console.log(e.ID)
+
+    if(basket.find(id => id.id === e.ID)){
+        let x = basket.find(id => id.id === e.ID)
+        x.quantity ++
+    }else{
+        basket.push(
+                {
+                    "id": e.ID,
+                    "title": e.Title,
+                    "imageName": e.ImageName,
+                    "url": URL.URL,
+                    "page": URL.Page,
+                    'quantity': 1,
+                    'clickedItem':clickedItem
+                }
+            )
+
+    }
+
+
+   
+
+
+
+
     localStorage.TKBasket = JSON.stringify(basketLocalStorage)
     
     dispatch({type: "SHOPPING_BASKET", basketList: JSON.parse(localStorage.TKBasket)})
     dispatch({type: "SHOPPING_BASKET_COUNT", basketCount: basket.length})
   
  }
+
+
 
  function showBuyBtn(e){
     const hoveredItem = GALImages.find((item) => item._id === e.ID)
