@@ -218,7 +218,16 @@ async function getGALPrice(id, clickedItem){
    return(results.SubLink)
 }
 
+async function subscritpions(newSubscription){
+   const [resultFound] = await db.subscriptions.find(newSubscription)
 
+   if(resultFound !== undefined){
+      return {resultFound, message: `${resultFound.email} is already on file`, status: false}
+   }else{
+      const result = await db.subscriptions.create( newSubscription )
+      return {result, message: "thank you for registering", status: true }
+   }
+}
 
 
 // these function are related to loading the db with the JSON data from file
@@ -254,5 +263,6 @@ module.exports = {
    getANDImages,
    seedGAL,
    getGALImages,
-   getGALPrice
+   getGALPrice,
+   subscritpions
 };

@@ -180,6 +180,17 @@ function router( app ){
       res.send({reply: priceList, totalCost:totalBasketCost})
    })
 
+
+   app.post('/api/subscription', async function(req, res) {
+      const newSubscription = req.body
+
+      const  {resultFound, message, status} = await orm.subscritpions( newSubscription )
+
+      res.send( {resultFound, message, status})
+   })
+
+
+
    // app.get('/api/basketListPrice',async function(req, res) {
    //    console.log(req)
 
