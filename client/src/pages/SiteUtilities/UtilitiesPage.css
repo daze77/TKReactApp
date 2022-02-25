@@ -1,0 +1,8 @@
+.utilitiesPage{
+    position: relative;
+    min-height: 50vh;
+}
+
+.offcanvas{
+    position: absolute;
+}

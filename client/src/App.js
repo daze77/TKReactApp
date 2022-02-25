@@ -23,6 +23,7 @@ import Login from './pages/Login'
 import Logout from './pages/Logout'
 import UserProfile from './pages/UserProfile/UserProfile'
 import DatabaseUpdates from './pages/DataBaseUpdates/DataBaseUPdates'
+import UtilitiesPage from './pages/SiteUtilities/UtitlitesPage'
 
 
 import Register from './pages/Register'
@@ -137,6 +138,7 @@ function App(location) {
         <Route exact path='/Login' component={Login} />
         <Route exact path='/UserProfile' component={UserProfile} />
         <Route exact path='/DatabaseUpdates' component={DatabaseUpdates} />
+        <Route exact path='/UtilitiesPage' component={UtilitiesPage} />
 
         <Route exact path='/Logout' component={Logout} />
         <Route exact path='/Register' component={Register} />

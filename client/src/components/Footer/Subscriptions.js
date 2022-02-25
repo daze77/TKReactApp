@@ -1,8 +1,9 @@
 import React, {useRef, useState} from 'react'
 import Social from '../Social/Social'
 import fetchJSON from '../../utils/API'
-
 import './Footer.css'
+
+
 
 
 function Subscriptions(){

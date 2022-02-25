@@ -2,6 +2,8 @@
 const orm = require( './db/orm.mongoose' )
 const sessionManager = require( './session-manager' )
 
+const registrationConfirmationEmail = require('../app/EmailComponent/EmailComponentFile')
+
 // session checking middleware
 async function authRequired(req, res, next){
    // check session set, and it's valid
@@ -184,24 +186,31 @@ function router( app ){
    app.post('/api/subscription', async function(req, res) {
       const newSubscription = req.body
 
-      const  {resultFound, message, status} = await orm.subscritpions( newSubscription )
+      const  {results, message, status} = await orm.subscritpions( newSubscription )
+      console.log('ROUTER RESULTS FULL SUBLIST', results)
 
-      res.send( {resultFound, message, status})
+      // registrationConfirmationEmail(results.email)
+
+      res.send( {results, message, status})
    })
 
+   app.post('/api/subscriptList', async function(req, res) {
+      const {id} = req.body
+      console.log('DEL BUTTON PUSHED THIS IS ROUTER INFO', id)
 
+      const  {results, message, status} = await orm.delsubscritpion( id )
+      console.log('DEL BUTTON PUSHED THIS IS ROUTER INFO --->', results)
 
-   // app.get('/api/basketListPrice',async function(req, res) {
-   //    console.log(req)
+      // registrationConfirmationEmail(resultFound.email)
 
-   //    const {priceList} = await calCosts(x)
+      res.send( {results, message, status})
+   })
 
-      
-   //    res.send({reply: priceList.length})
-   // })
-
-
-
+   app.get('/api/subscriptList', async function(req, res){
+         const {results, status, message} = await orm.getSubscriptions()
+         console.log('this is the router sub list', results.length)
+         res.send(results, status, message)
+   }   )
 
 
 

@@ -219,14 +219,33 @@ async function getGALPrice(id, clickedItem){
 }
 
 async function subscritpions(newSubscription){
-   const [resultFound] = await db.subscriptions.find(newSubscription)
+   const results = await db.subscriptions.find(newSubscription)
+   console.log('here we go agaain', results)
+   console.log('here we go agaain', results[0])
+   // console.log('here we go agaain', results[0].email)
 
-   if(resultFound !== undefined){
-      return {resultFound, message: `${resultFound.email} is already on file`, status: false}
+
+
+   if(results[0] !== undefined){
+      return {results, message: `${results[0].email} is already on file`, status: false}
    }else{
-      const result = await db.subscriptions.create( newSubscription )
-      return {result, message: "thank you for registering", status: true }
+      const results = await db.subscriptions.create( newSubscription )
+      return {results, message: "thank you for registering", status: true }
    }
+}
+
+async function getSubscriptions(message='here is the full list'){
+   const results = await db.subscriptions.find({})
+   console.log('these are the ORM results ------->> ', results)
+   
+   return {results, message, status: true}
+}
+
+async function delsubscritpion(id){
+   console.log('DEL BUTTON HIT THIS IS ORM', {id, message: 'email deleted', status: true})
+   const results = await db.subscriptions.deleteOne({_id: id})
+    
+   return getSubscriptions('email has been deleted')
 }
 
 
@@ -264,5 +283,7 @@ module.exports = {
    seedGAL,
    getGALImages,
    getGALPrice,
-   subscritpions
+   subscritpions,
+   getSubscriptions,
+   delsubscritpion
 };
