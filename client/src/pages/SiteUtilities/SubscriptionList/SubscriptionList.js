@@ -60,7 +60,8 @@ function SubscriptionList(){
     return(
         <>
             <div className="container">
-                <h1 class="mb-5"> Please find below the list of emails subscribed</h1>
+                <h1 >Subscribers</h1>
+                <p>Please find below the list of emails subscribed</p>
                 {subList.map(item => 
                     < div className = "subList list-group p-1" >
                         <div className="list-group-item list-group-item-action addressList" aria-current="false">

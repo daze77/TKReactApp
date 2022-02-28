@@ -1,17 +1,19 @@
 .utilitiesPage{
-    position: relative;
     min-height: 50vh;
 }
 
 .hambMenu{
-    padding-left: 5px;
+    position: fixed;
+    left: 2px;
+    padding-top: 30px;
 }
 
 .hambmenuitem {
     width: 3.5px;
     height: 22px;
     background-color: black;
-    margin: 5px 0;
+    margin: 1px ;
+
   }
 
 .fa-chevron-right{
@@ -19,7 +21,7 @@
 }
 
 .fa-chevron-right:first-child{
-padding-left:5px;
+    padding-left:5px;
 }
 
 .offcanvas{
@@ -30,7 +32,7 @@ padding-left:5px;
     list-style-type: none;
     padding: 0px 0px 10px 0px;
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.2em;
     cursor: pointer;
     
 }
@@ -43,5 +45,12 @@ padding-left:5px;
 .sideMenu ul{
     padding: 0px 0px 0px 10px;
     margin: 0;
+}
+
+.sideMenuOffcanvas{
+    bottom: unset;
+    height: 50vh;
+    top: unset;
+
 }
 
