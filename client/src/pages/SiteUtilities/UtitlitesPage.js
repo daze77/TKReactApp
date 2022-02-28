@@ -28,8 +28,8 @@ return(
             </div>
             <div class="offcanvas-body sideMenu">
                 <ul>
-                    <li onClick={() => setPageDetails(<SubscriptionList/>)}>Subscription Page</li>
-                    <li onClick={() => setPageDetails 
+                    <li data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setPageDetails(<SubscriptionList/>)}>Subscription Page</li>
+                    <li data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setPageDetails 
                     (<AddressUpdates/>)}>Address Updates</li>
 
 
@@ -40,7 +40,7 @@ return(
             
         <div className="hambMenu">
             <div className="hambmenuitem" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >
-                <i class="fas fa-chevron-right fa-lg"></i>
+                <i class="fas fa-chevron-right fa-lg "></i>
                 <i class="fas fa-chevron-right fa-lg"></i>
             </div>
         </div>
