@@ -187,22 +187,13 @@ function router( app ){
       const newSubscription = req.body
 
       const  {results, message, status} = await orm.subscritpions( newSubscription )
-      console.log('ROUTER RESULTS FULL SUBLIST', results)
-
-      // registrationConfirmationEmail(results.email)
-
+      registrationConfirmationEmail(results.email)
       res.send( {results, message, status})
    })
 
    app.post('/api/subscriptList', async function(req, res) {
       const {id} = req.body
-      console.log('DEL BUTTON PUSHED THIS IS ROUTER INFO', id)
-
       const  {results, message, status} = await orm.delsubscritpion( id )
-      console.log('DEL BUTTON PUSHED THIS IS ROUTER INFO --->', results)
-
-      // registrationConfirmationEmail(resultFound.email)
-
       res.send( {results, message, status})
    })
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import fetchJSON from '../../utils/API'
-import {useStoreContext} from '../../utils/GlobalStore'
+import fetchJSON from '../../../utils/API'
+import {useStoreContext} from '../../../utils/GlobalStore'
 
 function CorpAddress(){
     const [{ addresses, currentAddress}, dispatch ]= useStoreContext()
@@ -114,7 +114,7 @@ function CorpAddress(){
   
     return(
         <>
-        <form>
+        <form className="addressContainer ">
             <div className="mb-3">
                 <label htmlFor="addressName"  className="form-label">Address Name</label>
                 <input onChange={handleInput} name="addressName"  type="text" className="form-control" id="addressName" placeholder="Address Name" value={myInput.addressName}/>
@@ -170,7 +170,7 @@ function CorpAddress(){
         
 
         {addresses.map(addr =>  
-            <div key={addr._id} className="list-group"> 
+            <div key={addr._id} className=" addressListGroup list-group p-1"> 
                 <div  className="list-group-item list-group-item-action addressList" aria-current="false">
                     <div  className="d-flex w-100 justify-content-between">
                         <h5 className="mb-">

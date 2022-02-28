@@ -3,6 +3,45 @@
     min-height: 50vh;
 }
 
+.hambMenu{
+    padding-left: 5px;
+}
+
+.hambmenuitem {
+    width: 3.5px;
+    height: 22px;
+    background-color: black;
+    margin: 5px 0;
+  }
+
+.fa-chevron-right{
+    display: inline;
+}
+
+.fa-chevron-right:first-child{
+padding-left:5px;
+}
+
 .offcanvas{
     position: absolute;
 }
+
+.sideMenu li{
+    list-style-type: none;
+    padding: 0px 0px 10px 0px;
+    margin: 0;
+    font-size: 1.5em;
+    cursor: pointer;
+    
+}
+
+.sideMenu li:hover{
+    color: #27ace1;
+    
+}
+
+.sideMenu ul{
+    padding: 0px 0px 0px 10px;
+    margin: 0;
+}
+

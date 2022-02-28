@@ -39,17 +39,14 @@ function SubscriptionList(){
 
 
     async function handleDelete(id){
-        console.log("hello", id)
         const results = await fetchJSON('/api/subscriptList', "post", {id})
         
-        console.log(results)
         setSubList(results.results)
     }
 
 
     async function getSubscriptLink(){
         const results = await fetchJSON('/api/subscriptList')
-        console.log(results)
         setSubList(results)
     }
 
@@ -65,7 +62,7 @@ function SubscriptionList(){
             <div className="container">
                 <h1 class="mb-5"> Please find below the list of emails subscribed</h1>
                 {subList.map(item => 
-                    < div className = "list-group p-1" >
+                    < div className = "subList list-group p-1" >
                         <div className="list-group-item list-group-item-action addressList" aria-current="false">
 
                             <div className="d-flex w-100 justify-content-between">

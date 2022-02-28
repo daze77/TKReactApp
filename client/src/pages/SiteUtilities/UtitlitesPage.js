@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 
 import './UtilitiesPage.css'
 import SubscriptionList from './SubscriptionList/SubscriptionList'
+import AddressUpdates from './AddressUpdates/AddressUpdates'
 
 
 function UtilitiesPage(){
@@ -25,24 +26,25 @@ return(
                 <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Utilities</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
+            <div class="offcanvas-body sideMenu">
                 <ul>
                     <li onClick={() => setPageDetails(<SubscriptionList/>)}>Subscription Page</li>
-                    <li>Subscription Page</li>
-                    <li>Subscription Page</li>
-                    <li>Subscription Page</li>
-                    <li>Subscription Page</li>
-                    <li>Subscription Page</li>
-                    <li>Subscription Page</li>
-                    <li>Subscription Page</li>
-                    <li>Subscription Page</li>
-                    <li>Subscription Page</li>
+                    <li onClick={() => setPageDetails 
+                    (<AddressUpdates/>)}>Address Updates</li>
+
 
                 </ul>
             </div>
         </div>
 
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button> 
+            
+        <div className="hambMenu">
+            <div className="hambmenuitem" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >
+                <i class="fas fa-chevron-right fa-lg"></i>
+                <i class="fas fa-chevron-right fa-lg"></i>
+            </div>
+        </div>
+   
 
             <div>
                 {pageDetails}

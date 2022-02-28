@@ -1,10 +1,10 @@
-.addressList .form-check-input{
-    vertical-align: middle;
-    margin-top: -4px;
-
-}
 
 .dateTime{
-    font-size: 2vw;
+    font-size: 1.4vw;
     padding-right: 5px;
+}
+
+.subList{
+    border-radius: 25px;
+
 }

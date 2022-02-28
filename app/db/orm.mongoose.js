@@ -220,11 +220,6 @@ async function getGALPrice(id, clickedItem){
 
 async function subscritpions(newSubscription){
    const results = await db.subscriptions.find(newSubscription)
-   console.log('here we go agaain', results)
-   console.log('here we go agaain', results[0])
-   // console.log('here we go agaain', results[0].email)
-
-
 
    if(results[0] !== undefined){
       return {results, message: `${results[0].email} is already on file`, status: false}
@@ -236,15 +231,11 @@ async function subscritpions(newSubscription){
 
 async function getSubscriptions(message='here is the full list'){
    const results = await db.subscriptions.find({})
-   console.log('these are the ORM results ------->> ', results)
-   
    return {results, message, status: true}
 }
 
 async function delsubscritpion(id){
-   console.log('DEL BUTTON HIT THIS IS ORM', {id, message: 'email deleted', status: true})
    const results = await db.subscriptions.deleteOne({_id: id})
-    
    return getSubscriptions('email has been deleted')
 }
 
