@@ -14,9 +14,7 @@ const [pageDetails, setPageDetails] = useState("")
 return(
     <>
 
-    <div className=" container utilitiesPage">
-
-
+    <div className=" container">
         <div className="hambMenu">
             <div className="hambmenuitem" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >
                 <i class="fas fa-chevron-right fa-md "></i>
@@ -24,7 +22,6 @@ return(
             </div>
         </div>
    
-
         <div class="offcanvas offcanvas-start sideMenuOffcanvas" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Utilities</h5>
@@ -38,13 +35,13 @@ return(
                      <li data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setPageDetails 
                     (<UserProfiles/>)}>User Profile Updates</li>
 
-
                 </ul>
             </div>
         </div>
 
         <h1>Utilities Page</h1>
-        <div>
+        <hr/>
+        <div className="py-2">
             {pageDetails}
         </div>
 

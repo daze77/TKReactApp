@@ -6,7 +6,6 @@ import fetchJSON from "../../utils/API"
 
 function AddressCard(){
     const [{ currentAddress }, dispatch ]= useStoreContext()
-    // const [compAddress, setCompAddress] = useState({})
 
 
 

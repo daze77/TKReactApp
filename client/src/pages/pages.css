@@ -2,13 +2,20 @@ h1{
 	color: #64b60d;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.05em;
-    /* padding: 0px 0px 4px 0px; */
+    padding: 0px 0px 4px 0px;
     font-weight: normal;
     font-size: calc(1rem + 1.5vw);;
 }
 
 
-
+h2{
+	color: #27ace1;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.05em;
+    /* padding: 0px 0px 4px 0px; */
+    font-weight: normal;
+    font-size: calc(0.8rem + 1.3vw);;
+}
 
 
 h4{
@@ -20,6 +27,6 @@ h4{
 
 
 .container {
-    padding: 20px 0px 20px 0px
+    /* padding: 20px 0px 20px 0px */
 }
 

@@ -59,11 +59,11 @@ function SubscriptionList(){
 
     return(
         <>
-            <div className="container">
-                <h1 >Subscribers</h1>
+            <div className="container utilitiesCard">
+                <h2 >Subscribers</h2>
                 <p>Please find below the list of emails subscribed</p>
                 {subList.map(item => 
-                    < div className = "subList list-group p-1" >
+                    < div className = "addressListGroup subList list-group p-1" >
                         <div className="list-group-item list-group-item-action addressList" aria-current="false">
 
                             <div className="d-flex w-100 justify-content-between">
