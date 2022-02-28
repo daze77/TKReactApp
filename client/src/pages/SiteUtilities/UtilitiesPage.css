@@ -51,8 +51,12 @@
     bottom: unset;
     height: 50vh;
     top: unset;
+    position: fixed;
+    z-index: 1045;
 
 }
+
+
 
 
 .utilitiesCard{
