@@ -27,6 +27,8 @@ function DatabaseUpdates(){
     })
 
     const [showItem, setShowItem] = useState('block')
+    const [showCheckModal, setShowCheckModal] = useState('block')
+
 
 
     function handleInput(event){
@@ -80,6 +82,8 @@ function DatabaseUpdates(){
             dispatch({type: "ALERT_MESSAGE", message})
             return
         }
+        setShowCheckModal('none')
+        setTimeout(()=> {setShowCheckModal('block')}, 4000)
 
         dispatch({type: "UPDATE_COMPINFO", addresses: allAddresses, currentAddress, message})
     }
@@ -140,6 +144,8 @@ function DatabaseUpdates(){
                             myInput = {myInput}
                             setmyInput = {setmyInput}
                             updateAddress = {updateAddress}
+                            showCheckModal = {showCheckModal}
+
                         
                         />
                     </div>
