@@ -21,3 +21,19 @@
   border: none
 
 }
+
+.checkMark{
+  height:612.170px;
+  width:452.014px;
+}
+
+.fa-check{
+  color:green
+}
+
+.bh{
+  margin: auto;
+  width: 30%;
+  display: block;
+  padding: 210px 0px
+}

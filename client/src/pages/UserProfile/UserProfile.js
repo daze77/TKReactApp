@@ -22,40 +22,47 @@ function UserProfile(){
 
 
 return(
-<>
+    <>
 
-            <div className="container">
-      
-                <form ref={refForm}>
-                <div className="card mt-5">
-                    <div className="card-header">
+        <div className="container ">
+
+            <form ref={refForm}>
+                <div className="utilitiesCard mt-5">
+                    <div >
                         <h1>User Profile</h1>
                     </div>
                     <div className="card-body">
-                        <div className="mb-3">
-                            <label for="email" className="form-label">Email address</label>
-                            <input ref={inputEmail} id="email" type="email" className="form-control" required />
+                    <div className="form-floating mb-3">
+                            <input id="firstName floatingInput" type="text" className="form-control" placeholder="First Name" required />
+                            <label for="email" className="form-label">First Name</label>
+
                             <div className="invalid-feedback">
                                 Please enter your login email
                             </div>
                         </div>
-                        <div className="mb-3">
-                            <label for="userPassword">Password</label>
-                            <input ref={inputPassword} id="userPassword" type="password" className="form-control"  pattern=".{8,}" required />
+                        <div className="form-floating mb-3">
+                            <input ref={inputEmail} id="email floatingInput" type="email" className="form-control" placeholder="Email Address" required />
+                            <label for="email" className="form-label">Email Address</label>
+
+                            <div className="invalid-feedback">
+                                Please enter your login email
+                            </div>
+                        </div>
+                        <div className="form-floating mb-3">
+                            <input ref={inputPassword} id="userPassword floatingInput" type="password" className="form-control" placeholder="Existing Password" pattern=".{8,}" required />
+                            <label for="userPassword">Existing Password</label>
+
                             <div className="invalid-feedback">
                                 Please enter your password (8 chars min)
                             </div>
                         </div>
                     </div>                    
-                    <div className="card-footer">
-    
-                    </div>
                 </div>
-                </form>
-            </div>
+            </form>
+        </div>
 
 
-</>
+    </>
 
 )
 }

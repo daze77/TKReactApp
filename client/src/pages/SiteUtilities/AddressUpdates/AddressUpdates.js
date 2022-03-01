@@ -26,6 +26,9 @@ function DatabaseUpdates(){
         phone: ""
     })
 
+    const [showItem, setShowItem] = useState('block')
+
+
     function handleInput(event){
         let nam = event.target.name
         let val = event.target.value
@@ -37,7 +40,25 @@ function DatabaseUpdates(){
         event.preventDefault()
 
         saveNewAddress(myInput)
+        setShowItem('none')
+        
+        setTimeout(()=> {setShowItem('block')}, 4000)
+        setmyInput({
+            addressName: "",
+            address: "",
+            address2: "",
+            city: "",
+            province: "",
+            postalCode: "",
+            country: "",
+            email: "",
+            phone: ""
+        })
+
+
     }
+   
+    
 
     async function saveNewAddress(myInput){
         const newAddress = myInput
@@ -109,19 +130,24 @@ function DatabaseUpdates(){
         <>
             <div className="container">
 
-                <div className="utilitiesCard">
-                    <h2> New Address</h2>
-                    <p>This is the page that all changes to Datbase can be entered by the owner of the site</p>
-                    <AddressForm 
-                        handleInput = {handleInput}
-                        handleFormSubit = {handleFormSubit}
-                        myInput = {myInput}
-                        setmyInput = {setmyInput}
-                        updateAddress = {updateAddress}
-                    
-                    />
-                
+                <div className= 'utilitiesCard'>
+                    <div style={showItem === "none" ? {display:'none'} : {display:'block'}}>
+                        <h2 > New Address</h2>
+                        <p>This is the page that all changes to Datbase can be entered by the owner of the site</p>
+                        <AddressForm 
+                            handleInput = {handleInput}
+                            handleFormSubit = {handleFormSubit}
+                            myInput = {myInput}
+                            setmyInput = {setmyInput}
+                            updateAddress = {updateAddress}
+                        
+                        />
+                    </div>
+                    <div className='checkMark' style={showItem === "none" ? {display:'block'} : {display:'none'}}>
+                        <i className="bh fas fa-check fa-10x"></i>
+                    </div>
                 </div >
+
                 <div className="utilitiesCard">
                     <Addressesss 
                         myInput = {myInput}
