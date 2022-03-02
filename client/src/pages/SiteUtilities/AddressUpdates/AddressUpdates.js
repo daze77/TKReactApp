@@ -75,6 +75,8 @@ function DatabaseUpdates(){
 
 
     async function updateAddress(){
+ 
+
         const updatedAddress = myInput
         const {status, allAddresses, message} = await fetchJSON('/api/updatedaddress', 'post',  updatedAddress)
 
@@ -83,7 +85,7 @@ function DatabaseUpdates(){
             return
         }
         setShowCheckModal('none')
-        setTimeout(()=> {setShowCheckModal('block')}, 4000)
+        
 
         dispatch({type: "UPDATE_COMPINFO", addresses: allAddresses, currentAddress, message})
     }
@@ -130,7 +132,22 @@ function DatabaseUpdates(){
         setmyInput(...editAddress)
     }
 
-    return(
+    function clearModal(){
+        console.log('close button clicked')
+        setmyInput({        
+            addressName: "",
+        address: "",
+        address2: "",
+        city: "",
+        province: "",
+        postalCode: "",
+        country: "",
+        email: "",
+        phone: ""})
+        setShowCheckModal('block')
+    }
+
+     return(
         <>
             <div className="container">
 
@@ -145,6 +162,7 @@ function DatabaseUpdates(){
                             setmyInput = {setmyInput}
                             updateAddress = {updateAddress}
                             showCheckModal = {showCheckModal}
+                            clearModal = {clearModal}
 
                         
                         />

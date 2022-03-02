@@ -27,13 +27,19 @@
   width:452.014px;
 }
 
-.fa-check{
+.fa-check, .checkMark p{
   color:green
 }
 
-.bh{
+.checkFormat{
   margin: auto;
   width: 30%;
   display: block;
-  padding: 210px 0px
+  padding: 110px 0px 50px
+}
+
+.checkMark p{
+  margin: auto;
+  width: 70%;
+  font-size: 2em;
 }

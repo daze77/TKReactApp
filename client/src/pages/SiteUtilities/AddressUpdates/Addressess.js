@@ -47,7 +47,7 @@ function CorpAddress(props){
                                 <small>{addr.city} {addr.province}, {addr.postalCode} - {addr.country}</small> 
                             </p>
                             <div className="d-flex w-100 justify-content-end">
-                                <small onClick={() => props.grabAddressDetails(addr._id)} className="me-2"><i className="fa fa-i-cursor" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></small>                        
+                                <small onClick={() => props.grabAddressDetails(addr._id)} className="me-2"><i className="fa fa-i-cursor" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ></i></small>                        
                                 <small onClick={() => props.handleDelete(addr._id)} className="ms-2"><i className="far fa-trash-alt"></i></small>
                             </div>
 

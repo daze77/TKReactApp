@@ -3,6 +3,9 @@ import React from 'react'
 
 function AddressForm(props){
 
+    // var myModal = document.getElementById('modal')
+    // console.log(myModal)
+
 
 
     return(
@@ -70,12 +73,12 @@ function AddressForm(props){
             <br/>
 
         {/* Address Change Modal */}
-            <div className="modal fade " id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade " id="staticBackdrop" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" data-bs-backdrop="static">
                 <div className="modal-dialog ">
                     <div className="modal-content utilitiesCard">
                         <div className="modal-header">
                             <h1 className="modal-title" id="exampleModalLabel">Address Update</h1>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button onClick={props.clearModal}type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className='checkMark' style={props.showCheckModal === "none" ? {display:'none'} : {display:'block'}}>
                             <div className="modal-body">
@@ -145,7 +148,8 @@ function AddressForm(props){
                             </div>
                         </div>
                         <div className='checkMark' style={props.showCheckModal === "none" ? {display:'block'} : {display:'none'}}>
-                        <i className="bh fas fa-check fa-10x"></i>
+                        <i className="checkFormat fas fa-check fa-10x"></i>
+                        <p>Updated Successfully</p>
                     </div>
                     </div>
                 </div>
