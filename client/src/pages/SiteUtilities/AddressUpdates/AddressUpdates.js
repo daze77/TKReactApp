@@ -2,12 +2,9 @@ import React, {useState} from 'react'
 import { useStoreContext } from '../../../utils/GlobalStore'
 import Addressesss from '../AddressUpdates/Addressess'
 import AddressForm from '../../../components/Address/AddressForm'
+import ChangeAddressModal from '../../../components/Address/ChangeAddressModal'
 import fetchJSON from '../../../utils/API'
 import './AddressUpdates.css'
-
-
-
-
 
 
 function DatabaseUpdates(){
@@ -37,7 +34,6 @@ function DatabaseUpdates(){
         setmyInput({...myInput, [nam]: val})
     }
 
-
     function handleFormSubit(event){
         event.preventDefault()
 
@@ -60,8 +56,6 @@ function DatabaseUpdates(){
 
     }
    
-    
-
     async function saveNewAddress(myInput){
         const newAddress = myInput
         const {status, allAddresses, currentAddress, message} = await fetchJSON('/api/compaddresses', 'post',  newAddress)
@@ -73,10 +67,7 @@ function DatabaseUpdates(){
         dispatch({type: "UPDATE_COMPINFO", addresses: allAddresses, currentAddress, message})
     }
 
-
     async function updateAddress(){
- 
-
         const updatedAddress = myInput
         const {status, allAddresses, message} = await fetchJSON('/api/updatedaddress', 'post',  updatedAddress)
 
@@ -152,6 +143,7 @@ function DatabaseUpdates(){
             <div className="container">
 
                 <div className= 'utilitiesCard'>
+                    
                     <div style={showItem === "none" ? {display:'none'} : {display:'block'}}>
                         <h2 > New Address</h2>
                         <p>This is the page that all changes to Datbase can be entered by the owner of the site</p>
@@ -163,12 +155,20 @@ function DatabaseUpdates(){
                             updateAddress = {updateAddress}
                             showCheckModal = {showCheckModal}
                             clearModal = {clearModal}
-
-                        
                         />
                     </div>
+
+                        <ChangeAddressModal 
+                          handleInput = {handleInput}
+                          myInput = {myInput}
+                          updateAddress = {updateAddress}
+                          showCheckModal = {showCheckModal}
+                          clearModal = {clearModal}
+
+                        />
                     <div className='checkMark' style={showItem === "none" ? {display:'block'} : {display:'none'}}>
-                        <i className="bh fas fa-check fa-10x"></i>
+                        <i className="checkFormat fas fa-check fa-10x"></i>
+                        <p>Submitted Successfully</p>
                     </div>
                 </div >
 

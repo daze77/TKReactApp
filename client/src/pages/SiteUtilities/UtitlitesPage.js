@@ -12,7 +12,7 @@ const [pageDetails, setPageDetails] = useState("")
 
 return(
     <>
-        <div className=" container">
+        <div className="container ">
             <div className="hambMenu">
                 <div className="hambmenuitem" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >
                     <i class="fas fa-chevron-right fa-md "></i>

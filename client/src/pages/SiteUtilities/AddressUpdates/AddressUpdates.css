@@ -23,6 +23,7 @@
 }
 
 .checkMark{
+  margin: auto;
   height:612.170px;
   width:452.014px;
 }
@@ -40,6 +41,6 @@
 
 .checkMark p{
   margin: auto;
-  width: 70%;
+  width: 73%;
   font-size: 2em;
 }
