@@ -26,17 +26,18 @@ function DatabaseUpdates(){
     const [showItem, setShowItem] = useState('block')
     const [showCheckModal, setShowCheckModal] = useState('block')
 
-
+  
 
     function handleInput(event){
         let nam = event.target.name
         let val = event.target.value
+              
         setmyInput({...myInput, [nam]: val})
     }
 
     function handleFormSubit(event){
         event.preventDefault()
-
+        
         saveNewAddress(myInput)
         setShowItem('none')
         

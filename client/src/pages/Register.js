@@ -11,11 +11,12 @@ function Register(){
     const inputName = useRef()
     const refForm = useRef()
 
+
     async function registerUser( e ){
         e.preventDefault()
         
         // leverage browser built in + bootstrap features for form validation
-        if( !refForm.current.checkValidity() ){            
+        if( !refForm.current.checkValidity() ){ 
             refForm.current.classList.add('was-validated')
             return
         }
