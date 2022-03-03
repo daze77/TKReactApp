@@ -13,6 +13,11 @@ let compaddresses = new Schema({
         required: false,
         trim: true        
     },
+    addressNickName: {
+        type: String,
+        required: false,
+        trim: true        
+    },
     address: {
         type: String,
         required: false,

@@ -3,7 +3,8 @@ import {useStoreContext} from '../../../utils/GlobalStore'
 
 function CorpAddress(props){
     const [{ addresses} ]= useStoreContext()
-  
+
+ 
     function calcTime(date){
         let dateInMil = new Date(date)
         let today = new Date()
@@ -36,21 +37,28 @@ function CorpAddress(props){
                     <div  className="list-group-item list-group-item-action addressList" aria-current="false">
                         <div  className="d-flex w-100 justify-content-between">
                             <h5 className="mb-">
-                                <input className="form-check-input me-2" type="radio" name="flexRadioDefault" id={addr._id} checked={addr.addressflag} onChange={props.defaultAddressChange} />{addr.addressName}
+                                <input className="form-check-input me-2" type="radio" name="flexRadioDefault" id={addr._id} checked={addr.addressflag} onChange={props.defaultAddressChange} />
+                                    {addr.addressNickName ? addr.addressNickName : addr.address }
                             </h5>
                             <small>{calcTime(addr.updatedAt)}</small>
                         </div>
                         <div>
-                            <p className="m-1">
-                                {addr.address} <br/>
-                                {(addr.address2) && <> {addr.address2} <br/> </>}
-                                <small>{addr.city} {addr.province}, {addr.postalCode} - {addr.country}</small> 
-                            </p>
-                            <div className="d-flex w-100 justify-content-end">
-                                <small onClick={() => props.grabAddressDetails(addr._id)} className="me-2"><i className="fa fa-i-cursor" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ></i></small>                        
-                                <small onClick={() => props.handleDelete(addr._id)} className="ms-2"><i className="far fa-trash-alt"></i></small>
+                            <div>
+                                <p className="m-1">
+                                    {addr.address}<br/>
+                                    {(addr.address2) && addr.address2} {addr.address2 && <br/>}
+                                    {(addr.addressName) && `(${addr.addressName})`}  {(addr.addressName) && <br/>}
+                                    <div className="d-flex w-100 justify-content-between">
+                                    <small>{addr.city} {addr.province} {addr.postalCode} {addr.country}</small>
+                                    
+                                        <small></small>
+                                        <div>
+                                            <small onClick={() => props.grabAddressDetails(addr._id)} className="me-2"><i className="fa fa-i-cursor" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ></i></small>                        
+                                            <small onClick={() => props.handleDelete(addr._id)} className="ms-2"><i className="far fa-trash-alt"></i></small>
+                                        </div>
+                                    </div>
+                                </p>
                             </div>
-
                         </div>
                     </div>
                 </div>

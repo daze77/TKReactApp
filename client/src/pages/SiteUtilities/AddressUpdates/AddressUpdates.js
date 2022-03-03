@@ -12,6 +12,7 @@ function DatabaseUpdates(){
     const [{ addresses, currentAddress},dispatch ]= useStoreContext()
 
     const [myInput, setmyInput] =useState({
+        addressNickName: "",
         addressName: "",
         address: "",
         address2: "",
@@ -30,11 +31,24 @@ function DatabaseUpdates(){
 
     function handleInput(event){
         let nam = event.target.name
-        let val = event.target.value
-              
-        setmyInput({...myInput, [nam]: val})
+        let val
 
-        console.log(myInput)
+        if(nam === 'phone'){
+            let value = event.target.value.replace(/[.-\s]/g,".").trim()
+            val = value
+        }else if(nam === 'postalCode'){ 
+            let value = event.target.value.toUpperCase().trim().replace(/[\s]/g,"")
+            value.length>3 ? value = value.slice(0,3) + " " + value.slice(3,6): value +=""
+            val = value
+        }else if(nam === 'country'){
+            let value = event.target.value.toUpperCase().trim()
+            val = value
+        }else{val = event.target.value}
+
+             
+        setmyInput({...myInput, [nam]: val})
+        
+
 
     }
 
@@ -51,6 +65,7 @@ function DatabaseUpdates(){
         }
         
         saveNewAddress(myInput)
+        console.log('this is what we just pushed enter to', myInput)
         setShowItem('none')
         
         setTimeout(()=> {
@@ -58,6 +73,7 @@ function DatabaseUpdates(){
             document.querySelector('form').classList.remove('was-validated')
         }, 4000)
         setmyInput({
+            addressNickName: "",
             addressName: "",
             address: "",
             address2: "",
@@ -74,6 +90,7 @@ function DatabaseUpdates(){
    
     async function saveNewAddress(myInput){
         const newAddress = myInput
+        console.log('this is the new address', myInput)
         const {status, allAddresses, currentAddress, message} = await fetchJSON('/api/compaddresses', 'post',  newAddress)
 
         if(!status){
@@ -142,7 +159,7 @@ function DatabaseUpdates(){
     function clearModal(){
         console.log('close button clicked')
         setmyInput({        
-            addressName: "",
+        addressName: "",
         address: "",
         address2: "",
         city: "",
