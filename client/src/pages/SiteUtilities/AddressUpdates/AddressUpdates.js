@@ -33,15 +33,30 @@ function DatabaseUpdates(){
         let val = event.target.value
               
         setmyInput({...myInput, [nam]: val})
+
+        console.log(myInput)
+
     }
 
-    function handleFormSubit(event){
+    function handleFormSubmit(event){
         event.preventDefault()
+
+        const [form] = document.querySelectorAll('.needs-validation')
+
+      
+
+        if(!form.checkValidity()){
+            form.classList.add('was-validated')
+            return
+        }
         
         saveNewAddress(myInput)
         setShowItem('none')
         
-        setTimeout(()=> {setShowItem('block')}, 4000)
+        setTimeout(()=> {
+            setShowItem('block')
+            document.querySelector('form').classList.remove('was-validated')
+        }, 4000)
         setmyInput({
             addressName: "",
             address: "",
@@ -150,7 +165,7 @@ function DatabaseUpdates(){
                         <p>This is the page that all changes to Datbase can be entered by the owner of the site</p>
                         <AddressForm 
                             handleInput = {handleInput}
-                            handleFormSubit = {handleFormSubit}
+                            handleFormSubmit = {handleFormSubmit}
                             myInput = {myInput}
                             setmyInput = {setmyInput}
                             updateAddress = {updateAddress}

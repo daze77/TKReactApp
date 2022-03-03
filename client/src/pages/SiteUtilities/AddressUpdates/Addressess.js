@@ -24,8 +24,7 @@ function CorpAddress(props){
         }
     }
 
-    console.log(addresses)
-      
+     
     return(
         <>
  
