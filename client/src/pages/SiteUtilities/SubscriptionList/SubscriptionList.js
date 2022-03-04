@@ -72,14 +72,11 @@ function SubscriptionList(){
                                 </h4>
                                 <small>{calcTime(item.createdAt)}</small>
                             </div>
-                            <div>
+                            <div className="d-flex w-100 justify-content-between">
                                 <p className="m-1">
                                     <span className="dateTime">Added:</span> {(dateTime(item.createdAt).text)} at {(dateTime(item.createdAt).time)}
                                 </p>
-                                <div className="d-flex w-100 justify-content-end">
-                                    <small  className="ms-2"><i className="far fa-trash-alt" onClick={(e) => handleDelete(item._id)}></i></small>
-                                </div>
-
+                                <small  className="ms-2"><i className="far fa-trash-alt" onClick={(e) => handleDelete(item._id)}></i></small>
                             </div>
                         </div>  
                     </div>
