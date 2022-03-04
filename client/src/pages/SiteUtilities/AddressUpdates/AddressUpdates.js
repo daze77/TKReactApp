@@ -34,7 +34,6 @@ function DatabaseUpdates(){
 
     function handleInput(event){
 
-        console.log(event.target.form.id)
 
         let nam = event.target.name
         let val
