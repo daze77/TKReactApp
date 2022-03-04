@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "animejs": "^3.2.1",
+    "ansi-regex": "^6.0.1",
     "bcrypt": "^5.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -24,6 +25,7 @@
     "mongoose": "^5.13.13",
     "nodemailer": "^6.7.2",
     "nodemon": "^2.0.14",
+    "nth-check": "^2.0.1",
     "react-transition-group": "^1.2.1",
     "rfs": "^9.0.5",
     "stripe": "^8.191.0",
