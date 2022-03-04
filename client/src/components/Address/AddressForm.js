@@ -4,14 +4,12 @@ import React from 'react'
 function AddressForm(props){
        
 
-
-
     return(
         <>
             <form className="needs-validation" novalidate>
                 <div className="form-floating mb-3">
                     <input onChange={props.handleInput} name="addressName" type="text" className="form-control" id="addressName" placeholder="Address Name" value={props.myInput.addressName} />
-                    <label htmlFor="addressName"  >Address Name               
+                    <label htmlFor="addressName">Address Name               
                     </label>
                 </div>
                 <div className="form-floating mb-3">
@@ -77,8 +75,8 @@ function AddressForm(props){
                 <div className="mb-3">
                     <div className="row">
                         <div className="form-floating col">
-                            <input onChange={props.handleInput} name="email" type="email" className="form-control" id="emailAddress" placeholder="name@example.com" value={props.myInput.email} pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" required />
-                            <label htmlFor="emailInput" >Email address</label>
+                            <input onChange={props.handleInput} name="email" type="email" className="form-control" id="email" placeholder="name@example.com" value={props.myInput.email} pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" required />
+                            <label htmlFor="email" >Email address</label>
                             <div className="invalid-feedback">
                             Please enter a valid email address
                             </div>

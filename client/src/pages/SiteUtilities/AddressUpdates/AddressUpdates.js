@@ -55,7 +55,7 @@ function DatabaseUpdates(){
     function handleFormSubmit(event){
         event.preventDefault()
 
-        const [form] = document.querySelectorAll('.needs-validation')
+        const form = event.target.form
 
       
 
@@ -65,7 +65,6 @@ function DatabaseUpdates(){
         }
         
         saveNewAddress(myInput)
-        console.log('this is what we just pushed enter to', myInput)
         setShowItem('none')
         
         setTimeout(()=> {
@@ -100,7 +99,15 @@ function DatabaseUpdates(){
         dispatch({type: "UPDATE_COMPINFO", addresses: allAddresses, currentAddress, message})
     }
 
-    async function updateAddress(){
+    async function updateAddress(event){
+        event.preventDefault()
+
+        const form = event.target.form
+
+        if(!form.checkValidity()){
+            form.classList.add('was-validated')
+            return
+        }
         const updatedAddress = myInput
         const {status, allAddresses, message} = await fetchJSON('/api/updatedaddress', 'post',  updatedAddress)
 
@@ -157,8 +164,8 @@ function DatabaseUpdates(){
     }
 
     function clearModal(){
-        console.log('close button clicked')
-        setmyInput({        
+        setmyInput({  
+        addressNickName:"",      
         addressName: "",
         address: "",
         address2: "",

@@ -38,7 +38,7 @@ function CorpAddress(props){
                         <div  className="d-flex w-100 justify-content-between">
                             <h5 className="mb-">
                                 <input className="form-check-input me-2" type="radio" name="flexRadioDefault" id={addr._id} checked={addr.addressflag} onChange={props.defaultAddressChange} />
-                                    {addr.addressNickName ? addr.addressNickName : addr.address }
+                                    {addr.addressName ? addr.addressName : addr.address }
                             </h5>
                             <small>{calcTime(addr.updatedAt)}</small>
                         </div>
@@ -47,7 +47,7 @@ function CorpAddress(props){
                                 <p className="m-1">
                                     {addr.address}<br/>
                                     {(addr.address2) && addr.address2} {addr.address2 && <br/>}
-                                    {(addr.addressName) && `(${addr.addressName})`}  {(addr.addressName) && <br/>}
+                                    {(addr.addressNickName) && `(${addr.addressNickName})`}  {(addr.addressNickName) && <br/>}
                                     <div className="d-flex w-100 justify-content-between">
                                     <small>{addr.city} {addr.province} {addr.postalCode} {addr.country}</small>
                                     
