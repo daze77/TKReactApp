@@ -83,3 +83,28 @@ footer a, a:link, a:visited, a:hover, a:active{
   border-left: 0px;
   border-right: 0px;
 }
+
+
+
+/* Testing Section */
+
+.test{
+    /* position: relative; */
+}
+
+.test1{
+    /* position: absolute; */
+    /* margin: auto;
+    left:50% */
+    display: inline-block;
+}
+
+.testbtn{
+    margin-left: 100px;
+    
+}
+
+.input-group .link--arrowed{
+    margin-right: 15px;
+    font-size: 1.1rem;
+}

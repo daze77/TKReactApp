@@ -4,6 +4,8 @@ import Animation from '../../components/AnimeTest/AnimeTest'
 
 import Logo from '../../components/Logo/Logo'
 
+import NewSubmitBt from '../../components/NewSubmitBtn/NewSubmitBt'
+
 
 
 function PrintingandServices(){
@@ -22,6 +24,17 @@ function PrintingandServices(){
                 
 
                 <Logo />
+
+            </section>
+            <br />
+            <br />
+            <section>
+                <NewSubmitBt 
+                   text = "submit" 
+                   size = "25"
+                
+                />
+
 
             </section>
         </div>

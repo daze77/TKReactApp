@@ -1,6 +1,7 @@
-import React, {useRef, useState} from 'react'
+import React, { useState} from 'react'
 import Social from '../Social/Social'
 import fetchJSON from '../../utils/API'
+import NewSubmitBTN from '../NewSubmitBtn/NewSubmitBt'
 import './Footer.css'
 
 
@@ -27,32 +28,69 @@ function Subscriptions(){
         setTimeout(function() {setsubScriptionConfirm(false)}, 5000)
 
         
-
-    
     }
 
 
     return(
         <>
             <form className="row g-3 subscriptions mb-3" onSubmit={subscriptionSubmit} >
-                <div className="col-md-3"></div>
-                <div className=" col-md-3 ">
+                <div className=" input-group col-md-3 ">
                     <div className="form-floating " >
-                    <div className={`${alertType} ${!subScriptionConfirm ?  "subscriptionAlert" : ""}`}>{subScriptionMessage}</div>
+                        <div className={`${alertType} ${!subScriptionConfirm ?  "subscriptionAlert" : ""}`}>
+                            {subScriptionMessage}
+                        </div>
                         <input  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" type="email" className={`form-control ${!subScriptionConfirm ?  "" : "subscriptionAlert"} subScriptionEmail`} id="floatingInputGrid " placeholder="name@example.com"   value={email} onChange={handleChange} required/>
                         <label htmlFor="floatingInputGrid " className={`form-label ${!subScriptionConfirm ?  "" : "subscriptionAlert"}`}>Email address</label>
                     </div>
+                    <button type="submit" className={`btn btn-dark btn-lg ${!subScriptionConfirm ?  "" : "subscriptionAlert"}`} >
+                            <NewSubmitBTN 
+                                size="35"
+                                text="Subscribe"
+                            />
+                        </button>
                 </div>
-                <div className="col-md-3 pt-2 d-grid d-md-block">
-                    <button type="submit" className={`btn btn-primary btn-lg ${!subScriptionConfirm ?  "" : "subscriptionAlert"}`}  >Subscribe</button>
-                </div>              
+
                 <div className="col-md-3 pt-4">
                     <Social />
                 </div>
  
 
 
-            </form>               
+            </form>            
+
+
+
+
+
+{/* Testing Section */}
+            <form className="row test justify-content-around g-3 mb-3"  >
+                <div className=" col">
+                    <div className="input-group">
+                        <div className="form-floating " >
+
+                            <input  type="email" className="form-control"  id="floatingInputGrid " placeholder="name@example.com" value={email} />
+                            <label htmlFor="floatingInputGrid ">Email address</label>  
+     
+                                                             
+                        </div>                    
+                        <button type="submit" className='btn btn-dark btn-sm testbtn '>
+                            <NewSubmitBTN 
+                                size="35"
+                                text="Subscribe"
+                            
+                            />
+                        
+                        </button> 
+                     
+                    </div>  
+                </div   >
+            </form>     
+
+         
+
+            {/* <div className="col-md-3 pt-4">
+                    <Social />
+                </div> */}
             
 
             

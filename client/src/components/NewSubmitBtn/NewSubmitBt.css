@@ -1,0 +1,38 @@
+
+
+.link--arrowed {
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+}
+.link--arrowed .arrow-icon {
+  position: relative;
+  top: -1px;
+  transition: transform, stroke 0.3s ease;
+  /* transition: stroke 1s ease; */
+  vertical-align: middle;
+  stroke: #27ace1;
+
+}
+.link--arrowed .arrow-icon--circle {
+  transition: stroke-dashoffset, stroke, 1s ease;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+
+}
+
+.link--arrowed:hover .arrow-icon {
+  transform: translate3d(5px, 0, 0);
+  stroke: #64b60d
+}
+.link--arrowed:hover .arrow-icon--circle {
+  stroke-dashoffset: 0;
+  stroke: #64b60d;
+
+
+}
+
+
+
+
+
