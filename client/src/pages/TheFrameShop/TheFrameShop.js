@@ -22,7 +22,7 @@ function TheFrameShop(){
                 <p>If you do not find what you are looking for, please email us at sales@tonykoukos.com with finish and size and we will do our best to source your required moulding.
                 </p>
 
-                <h9>About the moulding….</h9>
+                <h6>About the moulding….</h6>
                 <p>Quality, style & design fuel our passion.</p>
                 <p>The most exclusive materials fashioned by the hands of skilled artisans whose superior craftsmanship guarantee a product of exceptional quality. 
                     All mouldings are handcrafted in Italy.

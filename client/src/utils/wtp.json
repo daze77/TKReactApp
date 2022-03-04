@@ -10,27 +10,6 @@
         "SubLink":[
             {
                 "Id": 1.1,
-                "Title": "bib028c-a",
-                "Image": "b/i/bib028c-a.jpg",
-                "ImageName": "bib028c-a",
-                "Link": ""
-            },
-            {
-                "Id": 1.2,
-                "Title": "bib028c-a",
-                "Image": "b/i/bib028c-a.jpg",
-                "ImageName": "bib028c-a",
-                "Link": ""
-            },
-            {
-                "Id": 1.3,
-                "Title": "bib028c-a",
-                "Image": "b/i/bib028c-a.jpg",
-                "ImageName": "bib028c-a",
-                "Link": ""
-            },
-            {
-                "Id": 1.1,
                 "Title": "cop001c-a",
                 "Image": "c/o/cop001c-a.jpg",
                 "ImageName": "cop001c-a",

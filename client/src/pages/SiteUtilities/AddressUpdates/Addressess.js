@@ -29,7 +29,7 @@ function CorpAddress(props){
     return(
         <>
  
-            <h2 class="mb-3">Address List</h2>
+            <h2 className="mb-3">Address List</h2>
             <p>List of corporate addressess saved to database</p>
             
             {addresses.map(addr =>  
@@ -43,21 +43,22 @@ function CorpAddress(props){
                             <small>{calcTime(addr.updatedAt)}</small>
                         </div>
                         <div>
-                            <div>
-                                <p className="m-1">
+                            <div className="m-1">
+                                <p>
                                     {addr.address}<br/>
                                     {(addr.address2) && addr.address2} {addr.address2 && <br/>}
-                                    {(addr.addressNickName) && `(${addr.addressNickName})`}  {(addr.addressNickName) && <br/>}
-                                    <div className="d-flex w-100 justify-content-between">
-                                    <small>{addr.city} {addr.province} {addr.postalCode} {addr.country}</small>
-                                    
-                                        <small></small>
-                                        <div>
+                                    {(addr.addressNickName) && `(${addr.addressNickName})`} 
+                                    <span className="d-flex justify-content-between">
+                                        <small>{addr.city} {addr.province} {addr.postalCode} {addr.country}</small>
+                                        <span>
                                             <small onClick={() => props.grabAddressDetails(addr._id)} className="me-2"><i className="fa fa-i-cursor" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ></i></small>                        
                                             <small onClick={() => props.handleDelete(addr._id)} className="ms-2"><i className="far fa-trash-alt"></i></small>
-                                        </div>
-                                    </div>
+
+                                        </span>
+
+                                    </span>
                                 </p>
+  
                             </div>
                         </div>
                     </div>

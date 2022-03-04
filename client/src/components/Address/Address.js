@@ -5,20 +5,12 @@ import fetchJSON from "../../utils/API"
 
 
 function AddressCard(){
-    const [{ currentAddress, ...state }, dispatch ]= useStoreContext()
-    console.log(state)
-
-    console.log('this is the current address', currentAddress)
-
-
-
-
+    const [{ currentAddress }, dispatch ]= useStoreContext()
 
     useEffect(() => {
 
         async function loadCompanyData(){
             const {allAddresses, currentAddress}  = await fetchJSON('/api/compaddresses')
-            console.log('use effect all addresses', allAddresses)
                     
             dispatch({type: "UPDATE_ADDRESS", addresses: allAddresses, currentAddress: currentAddress})
         }

@@ -2,11 +2,6 @@ import React, { useEffect, useState } from 'react'
 import fetchJSON from '../../../utils/API'
 import './SubscriptionList.css'
 
-
-
-
-
-
 function SubscriptionList(){
     const [subList, setSubList] = useState([])
 
@@ -37,20 +32,16 @@ function SubscriptionList(){
         }
     }
 
-
     async function handleDelete(id){
-        const results = await fetchJSON('/api/subscriptList', "post", {id})
-        
+        const results = await fetchJSON('/api/subscriptList', "post", {id})        
         setSubList(results.results)
     }
 
-
     async function getSubscriptLink(){
         const results = await fetchJSON('/api/subscriptList')
+
         setSubList(results)
     }
-
-
 
     useEffect(() => {
         getSubscriptLink()
@@ -63,7 +54,7 @@ function SubscriptionList(){
                 <h2 >Subscribers</h2>
                 <p>Please find below the list of emails subscribed</p>
                 {subList.map(item => 
-                    < div className = "addressListGroup subList list-group p-1" >
+                    < div className = "addressListGroup subList list-group p-1" key={item._id}>
                         <div className="list-group-item list-group-item-action addressList" aria-current="false">
 
                             <div className="d-flex w-100 justify-content-between">

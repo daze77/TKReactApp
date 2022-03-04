@@ -6,7 +6,7 @@ import { Route } from 'react-router-dom'
 function SubPageRoutes(props){
     return ( 
         <>
-            <Route exact path={`/${props.Link}`} component={props.SubPage} /> 
+            <Route key={props._id} exact path={`/${props.Link}`} component={props.SubPage} /> 
         </>
     )
 }

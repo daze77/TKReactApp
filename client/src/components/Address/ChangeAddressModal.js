@@ -16,7 +16,7 @@ function ChangeAddressModal(props){
                         </div>
                         <div className='checkMark' style={props.showCheckModal === "none" ? { display: 'none' } : { display: 'block' }}>
                             <div className="modal-body">
-                                <form className="needs-validation" novalidate>
+                                <form className="needs-validation" noValidate>
                                     <div className="form-floating mb-3">
                                         <input onChange={props.handleInput} name="addressName" type="text" className="form-control" id="addressName" placeholder="Address Name" value={props.myInput.addressName} />
                                         <label htmlFor="addressName">Address Name</label>
@@ -44,7 +44,7 @@ function ChangeAddressModal(props){
                                             </div>
                                             <div className="form-floating col">
                                                 <select onChange={props.handleInput} name="province" type="text" className="form-control" id="province" placeholder="Province" value={props.myInput.province} required>
-                                                <option selected diabled value="">Open this select menu</option>
+                                                <option selected diabled="true" value="">Open this select menu</option>
                                                     <option value="Alberta">Alberta</option>
                                                     <option value="British Columbia">British Columbia</option>
                                                     <option value="Manitoba">Manitoba</option>

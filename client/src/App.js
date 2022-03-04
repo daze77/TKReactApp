@@ -5,7 +5,7 @@ import {StoreProvider} from "./utils/GlobalStore"
 import WTPSubpage from './pages/WTP/WTPSubpage' 
 
 import WTPRouterPages from './utils/BrowserRoutes'
-import WTPJSON from './utils/wtp'
+import WTPJSON from './utils/wtp.json'
 
 
 
@@ -207,6 +207,8 @@ function App(location) {
       {/* The following are the routes for all the WTP Subpages */}
          {WTPJSON.map(a => (
             <WTPRouterPages 
+                key={a.ImageName}
+                _id={a.ImageName}
                 Link={a.Link}
                 SubPage={WTPSubpage}
             />

@@ -11,7 +11,6 @@ function BasktBtn(){
         function basketLength(){
             const localStorageItems = (localStorage.TKBasket) ? JSON.parse(localStorage.TKBasket) : []
 
-            console.log(localStorageItems)
             let count = 0
             if(localStorageItems.length === 0){
                 count = 0
@@ -19,7 +18,6 @@ function BasktBtn(){
                 localStorageItems[1].basket.forEach(item => {
                 count = count + item.quantity
             })
-            console.log(count) 
             }
             
           dispatch({type:'SHOPPING_BASKET_COUNT', basketCount:count})
@@ -27,18 +25,14 @@ function BasktBtn(){
         }
     useEffect(()=>{
         basketLength()
-
-        // if(localStorage.TKBasket){
-        //         basketLength()
-        //     }
     },[])
 
     return(
         <>
 
             <Link to='/CheckoutPage'>
-                <i class={`fas fa-shopping-bag ${basketCount>0? `shopingBagwItems`:""}`}>
-                    {basketCount>0 &&<div class="basktItems ">
+                <i className={`fas fa-shopping-bag ${basketCount>0? `shopingBagwItems`:""}`}>
+                    {basketCount>0 &&<div className="basktItems ">
                         {basketCount}
                     </div>}
                 </i>

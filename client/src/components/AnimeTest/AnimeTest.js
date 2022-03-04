@@ -283,7 +283,7 @@ return(
                             </svg>
                         </div>
                         <div className="logo-letter letter-m">
-                            <svg className="bounced" viewBox="0 0 340 240" width="340" height="240" fill="none" fill-rule="evenodd">
+                            <svg className="bounced" viewBox="0 0 340 240" width="340" height="240" fill="none" fillRule="evenodd">
                                 <path className="line"
                                     d="M240,220 L240,60 C240,28.954305 231.344172,20 220.666667,20 C171.555556,20 254.832031,20 170,20 C85.1679688,20 168.444444,20 119.333333,20 C108.655828,20 100,28.954305 100,60 L100,220"
                                     data-d2="M310,220 L310,60 C310,28.954305 301.344172,20 290.666667,20 C241.555556,20 254.832031,110 170,110 C85.1679688,110 98.4444444,20 49.3333333,20 C38.6558282,20 30,28.954305 30,60 L30,220"
