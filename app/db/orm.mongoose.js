@@ -276,5 +276,5 @@ module.exports = {
    getGALPrice,
    subscritpions,
    getSubscriptions,
-   delsubscritpion
+   delsubscritpion,
 };

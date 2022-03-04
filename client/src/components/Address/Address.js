@@ -5,26 +5,30 @@ import fetchJSON from "../../utils/API"
 
 
 function AddressCard(){
-    const [{ currentAddress }, dispatch ]= useStoreContext()
+    const [{ currentAddress, ...state }, dispatch ]= useStoreContext()
+    console.log(state)
+
+    console.log('this is the current address', currentAddress)
 
 
 
 
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        async function loadCompanyData(){
-            const {allAddresses, currentAddress}  = await fetchJSON('/api/compaddresses')
+    //     async function loadCompanyData(){
+    //         const {allAddresses, currentAddress}  = await fetchJSON('/api/compaddresses')
+    //         console.log('use effect all addresses', allAddresses)
                     
-            dispatch({type: "UPDATE_ADDRESS", addresses: allAddresses, currentAddress: currentAddress})
-        }
-        loadCompanyData()        
-    },[dispatch])
+    //         dispatch({type: "UPDATE_ADDRESS", addresses: allAddresses, currentAddress: currentAddress})
+    //     }
+    //     loadCompanyData()        
+    // },[dispatch])
 
 
    return (
         <>  
-            <div className="addressCardFormat">
+            {/* <div className="addressCardFormat">
                 <span>({currentAddress.addressName})</span><br/>
                 <span>{currentAddress.address}</span><br/>
                 {(currentAddress.address2) && 
@@ -34,7 +38,7 @@ function AddressCard(){
                 }
                 <span>{currentAddress.city}, {currentAddress.province} {currentAddress.postalCode}</span><br/>
                 <span>{currentAddress.country}</span><br/>
-            </div>
+            </div> */}
         </>
     )
 }
