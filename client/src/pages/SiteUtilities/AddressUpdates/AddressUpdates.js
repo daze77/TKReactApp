@@ -24,12 +24,18 @@ function DatabaseUpdates(){
         phone: ""
     })
 
+    const [modalInput, setModalInput] = useState({...myInput})
+
+
     const [showItem, setShowItem] = useState('block')
     const [showCheckModal, setShowCheckModal] = useState('block')
 
   
 
     function handleInput(event){
+
+        console.log(event.target.form.id)
+
         let nam = event.target.name
         let val
 
@@ -45,8 +51,7 @@ function DatabaseUpdates(){
             val = value
         }else{val = event.target.value}
 
-             
-        setmyInput({...myInput, [nam]: val})
+         event.target.form.id === 'modalForm' ? setModalInput({...modalInput, [nam]: val}) : setmyInput({...myInput, [nam]: val})
         
 
 
@@ -54,6 +59,7 @@ function DatabaseUpdates(){
 
     function handleFormSubmit(event){
         event.preventDefault()
+
 
         const form = event.target.form
 
@@ -108,7 +114,7 @@ function DatabaseUpdates(){
             form.classList.add('was-validated')
             return
         }
-        const updatedAddress = myInput
+        const updatedAddress = modalInput
         const {status, allAddresses, message} = await fetchJSON('/api/updatedaddress', 'post',  updatedAddress)
 
         if(!status){
@@ -160,7 +166,7 @@ function DatabaseUpdates(){
 
     function grabAddressDetails(id){
         const editAddress = addresses.filter(addr => addr._id === id)
-        setmyInput(...editAddress)
+        setModalInput(...editAddress)
     }
 
     function clearModal(){
@@ -201,6 +207,7 @@ function DatabaseUpdates(){
                         <ChangeAddressModal 
                           handleInput = {handleInput}
                           myInput = {myInput}
+                          modalInput = {modalInput}
                           updateAddress = {updateAddress}
                           showCheckModal = {showCheckModal}
                           clearModal = {clearModal}
