@@ -16,19 +16,31 @@ function SubscriptionList(){
         let dateInMil = new Date(date)
         let today = new Date()
         let diff = (today - dateInMil)/1000
+
+
         switch(true){
             case (diff < 60):
                 return `${Math.round(diff)} seconds ago`;
+            case (diff < 90):
+                // console.log(diff)
+                return `${Math.round(diff/60)} mininute ago`;
             case (diff < 3600):
                 return `${Math.round(diff/60)} mininutes ago`;
+            case (diff < 5400):
+                return `${Math.round(diff/3600)} hour ago`;
             case (diff < 86400):
                 return `${Math.round(diff/3600)} hours ago`;
+            case (diff < 129600):
+                return `${Math.round(diff/3600)} day ago`;
             case (diff < 604800):
                 return `${Math.round(diff/86400)} days ago`;
+            case (diff < 907200):
+                return `${Math.round(diff/604800)} week ago`;
             case (diff < 31449600):
                 return `${Math.round(diff/604800)} weeks ago`;
             default:
                 return `a while ago`;
+
         }
     }
 
