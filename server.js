@@ -1,6 +1,6 @@
 require( 'dotenv' ).config() // looks for .env ; process.env gets it's values
 
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 const path = require('path')
 const express = require('express')
 const apiRouter = require('./app/router')

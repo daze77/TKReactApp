@@ -14,21 +14,21 @@ function AddressCard(){
 
 
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     async function loadCompanyData(){
-    //         const {allAddresses, currentAddress}  = await fetchJSON('/api/compaddresses')
-    //         console.log('use effect all addresses', allAddresses)
+        async function loadCompanyData(){
+            const {allAddresses, currentAddress}  = await fetchJSON('/api/compaddresses')
+            console.log('use effect all addresses', allAddresses)
                     
-    //         dispatch({type: "UPDATE_ADDRESS", addresses: allAddresses, currentAddress: currentAddress})
-    //     }
-    //     loadCompanyData()        
-    // },[dispatch])
+            dispatch({type: "UPDATE_ADDRESS", addresses: allAddresses, currentAddress: currentAddress})
+        }
+        loadCompanyData()        
+    },[dispatch])
 
 
    return (
         <>  
-            {/* <div className="addressCardFormat">
+            <div className="addressCardFormat">
                 <span>({currentAddress.addressName})</span><br/>
                 <span>{currentAddress.address}</span><br/>
                 {(currentAddress.address2) && 
@@ -38,7 +38,7 @@ function AddressCard(){
                 }
                 <span>{currentAddress.city}, {currentAddress.province} {currentAddress.postalCode}</span><br/>
                 <span>{currentAddress.country}</span><br/>
-            </div> */}
+            </div>
         </>
     )
 }
