@@ -14,7 +14,6 @@ return(
     <>
         <div className="container ">
             <div className="hambMenu">
-            {/* className="hambmenuitem" */}
                 <div  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >
                     <i className="fas fa-chevron-right fa-md "></i>
                     <i className="fas fa-chevron-right fa-md"></i>

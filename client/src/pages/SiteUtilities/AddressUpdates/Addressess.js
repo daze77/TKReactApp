@@ -36,42 +36,44 @@ function CorpAddress(props){
      
     return(
         <>
- 
-            <h2 className="mb-3">Address List</h2>
-            <p>List of corporate addressess saved to database</p>
-            
-            {addresses.map(addr =>  
-                <div key={addr._id} className=" addressListGroup list-group p-1 mb-3"> 
-                    <div  className="list-group-item list-group-item-action addressList" aria-current="false">
-                        <div  className="d-flex w-100 justify-content-between">
-                            <h5 className="mb-">
-                                <input className="form-check-input me-2" type="radio" name="flexRadioDefault" id={addr._id} checked={addr.addressflag} onChange={props.defaultAddressChange} />
-                                    {addr.addressName ? addr.addressName : addr.address }
-                            </h5>
-                            <small>{calcTime(addr.updatedAt)}</small>
-                        </div>
-                        <div>
-                            <div className="m-1">
-                                <p>
-                                    {addr.address}<br/>
-                                    {(addr.address2) && addr.address2} {addr.address2 && <br/>}
-                                    {(addr.addressNickName) && `(${addr.addressNickName})`} 
-                                    <span className="d-flex justify-content-between">
-                                        <small>{addr.city} {addr.province} {addr.postalCode} {addr.country}</small>
-                                        <span>
-                                            <small onClick={() => props.grabAddressDetails(addr._id)} className="me-2"><i className="fa fa-i-cursor" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ></i></small>                        
-                                            <small onClick={() => props.handleDelete(addr._id)} className="ms-2"><i className="far fa-trash-alt"></i></small>
+            <div className="container">
+                <h2 className="mb-3">Address List</h2>
+                <p>List of corporate addressess saved to database</p>
+                
+                {addresses.map(addr =>  
+                    <div key={addr._id} className=" addressListGroup list-group p-1 mb-3"> 
+                        <div  className="list-group-item list-group-item-action addressList" aria-current="false">
+                            <div  className="d-flex w-100 justify-content-between">
+                                <h5 className="mb-">
+                                    <input className="form-check-input me-2" type="radio" name="flexRadioDefault" id={addr._id} checked={addr.addressflag} onChange={props.defaultAddressChange} />
+                                        {addr.addressName ? addr.addressName : addr.address }
+                                </h5>
+                                <small>{calcTime(addr.updatedAt)}</small>
+                            </div>
+                            <div>
+                                <div className="m-1">
+                                    <p>
+                                        {addr.address}<br/>
+                                        {(addr.address2) && addr.address2} {addr.address2 && <br/>}
+                                        {(addr.addressNickName) && `(${addr.addressNickName})`} 
+                                        <span className="d-flex justify-content-between">
+                                            <small>{addr.city} {addr.province} {addr.postalCode} {addr.country}</small>
+                                            <span>
+                                                <small onClick={() => props.grabAddressDetails(addr._id)} className="me-2"><i className="fa fa-i-cursor" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ></i></small>                        
+                                                <small onClick={() => props.handleDelete(addr._id)} className="ms-2"><i className="far fa-trash-alt"></i></small>
+
+                                            </span>
 
                                         </span>
-
-                                    </span>
-                                </p>
-  
+                                    </p>
+    
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            )} 
+                )} 
+
+            </div>
 
 
     </>

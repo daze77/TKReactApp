@@ -6,7 +6,7 @@ function AddressForm(props){
 
     return(
         <>
-            <form className="needs-validation" noValidate>
+            <form className="container needs-validation" noValidate>
                 <div className="form-floating mb-3">
                     <input onChange={props.handleInput} name="addressName" type="text" className="form-control" id="addressName" placeholder="Address Name" value={props.myInput.addressName} />
                     <label htmlFor="addressName">Address Name               
