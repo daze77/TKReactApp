@@ -4,6 +4,7 @@
   display: inline-block;
   height: 2rem;
   line-height: 2rem;
+  white-space: nowrap;
 }
 .link--arrowed .arrow-icon {
   position: relative;
@@ -31,6 +32,12 @@
 
 
 }
+
+.input-group .link--arrowed{
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
+
 
 
 

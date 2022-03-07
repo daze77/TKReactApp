@@ -58,6 +58,8 @@ footer a, a:link, a:visited, a:hover, a:active{
 
 .subscriptions {
     padding: 15px 25px;
+    margin-top: 0px;
+
 }
 
 
@@ -86,25 +88,6 @@ footer a, a:link, a:visited, a:hover, a:active{
 
 
 
-/* Testing Section */
 
-.test{
-    /* position: relative; */
-}
 
-.test1{
-    /* position: absolute; */
-    /* margin: auto;
-    left:50% */
-    display: inline-block;
-}
 
-.testbtn{
-    margin-left: 100px;
-    
-}
-
-.input-group .link--arrowed{
-    margin-right: 15px;
-    font-size: 1.1rem;
-}
