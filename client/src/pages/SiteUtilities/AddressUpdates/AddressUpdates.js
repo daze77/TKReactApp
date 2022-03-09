@@ -7,6 +7,8 @@ import fetchJSON from '../../../utils/API'
 import './AddressUpdates.css'
 
 
+
+
 function DatabaseUpdates(){
 
     const [{ addresses, currentAddress},dispatch ]= useStoreContext()
@@ -30,10 +32,9 @@ function DatabaseUpdates(){
     const [showItem, setShowItem] = useState('block')
     const [showCheckModal, setShowCheckModal] = useState('block')
 
-  
+    // FormValidation("test")
 
     function handleInput(event){
-
 
         let nam = event.target.name
         let val
@@ -52,8 +53,6 @@ function DatabaseUpdates(){
 
          event.target.form.id === 'modalForm' ? setModalInput({...modalInput, [nam]: val}) : setmyInput({...myInput, [nam]: val})
         
-
-
     }
 
     function handleFormSubmit(event){
