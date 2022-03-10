@@ -5,7 +5,7 @@ import NewSubmitBTN from '../NewSubmitBtn/NewSubmitBt'
 import './Footer.css'
 
 
-
+import CheckMarkSubmit from '../../components/CheckMarkSubmit/CheckMarkSubmit'
 
 
 
@@ -16,6 +16,7 @@ function Subscriptions(){
     const [subScriptionConfirm, setsubScriptionConfirm] = useState(false)
     const [subScriptionMessage, setSubscriptionMessage] = useState("")
     const [alertType, setAlertType] = useState("alert-success")
+    const [validity, setValidity] = useState(true)
 
     function handleChange(e){
         let nam = e.target.name 
@@ -33,8 +34,18 @@ function Subscriptions(){
             val = value
         }else{val = e.target.value}
 
+        setemail(e.target.value)  
+        
+        let formValidity = document.querySelector('form').classList.contains('was-validated')
+        console.log(formValidity)
+        let inputValidation = document.querySelector(".emailSubscribe").querySelector('input:invalid') === null
 
-        setemail(e.target.value)   
+        
+        if(formValidity === true){
+            document.querySelector(".emailSubscribe").querySelector('input:invalid') === null ? setValidity(true) : setValidity(false)
+        }
+        
+
     }
 
     async function subscriptionSubmit(e){
@@ -45,6 +56,7 @@ function Subscriptions(){
 
         if(!form.checkValidity()){
             form.classList.add('was-validated')
+            setValidity(false)
             return
         }
 
@@ -68,19 +80,25 @@ function Subscriptions(){
             <div className="row align-items-center subscriptions">
 
                 <div className="col-md-6 offset-md-3" >
+                <CheckMarkSubmit 
+
+                    display = {subScriptionConfirm}
+                        
+                    
+                    
+                        />
                     <form className="needs-validation emailSubscribe"  id='emailSubscribe' novalidate>
-                        <div className=" input-group flex-nowrap mb-3">
+                        <div className=" input-group flex-nowrap mb-3 has-validation">
                             <div className="form-floating " >
                                 <div className={`${alertType} ${!subScriptionConfirm ?  "subscriptionAlert" : ""}`}>
                                     {subScriptionMessage}
                                 </div>
-                                <input  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" type="email" className={`form-control ${!subScriptionConfirm ?  "" : "subscriptionAlert"} subScriptionEmail`} id="floatingInputGrid " placeholder="name@example.com"   name='email' value={email} onChange={handleChange} required/>
-                                <label htmlFor="floatingInputGrid " className={`form-label ${!subScriptionConfirm ?  "" : "subscriptionAlert"}`}>Email address</label>
-                                <div className="invalid-feedback" >
-                                    Please enter a valid email address
-                                </div>
+                                <input  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" type="email" className={`form-control ${!subScriptionConfirm ?  "" : "subscriptionAlert"} subScriptionEmail`} id="floatingInputValue " placeholder="name@example.com"  name='email' value={email} onChange={handleChange} required/>
+
+                                <label htmlFor="floatingInputValue " className={`form-label ${!subScriptionConfirm ?  "" : "subscriptionAlert"} ${validity ? '' : "lablehide"}`} >Email address</label>
+                                <label htmlFor="floatingInputInvalid" className={`text-nowrap ${validity ? 'lablehide' : ''} `}>Invalid email address </label>
                             </div>
-                            <button type="submit" onClick={subscriptionSubmit} className={`btn btn-dark  ${!subScriptionConfirm ?  "" : "subscriptionAlert"}`} >
+                            <button type="submit" onClick={subscriptionSubmit} className={`btn btn-dark  ${!subScriptionConfirm ?  "" : "subscriptionAlert"} `} >
                                     <NewSubmitBTN 
                                         size="35"
                                         text="Subscribe"
@@ -89,10 +107,16 @@ function Subscriptions(){
                         </div>
 
 
+                
+                        
+
+
         
 
 
                     </form>   
+
+
                 </div>
                 <div className="col-md-3 ">
                         <Social />

@@ -76,7 +76,7 @@ footer a, a:link, a:visited, a:hover, a:active{
     font-size: 0.8rem;
 }
 
-.subscriptionAlert{
+.subscriptionAlert, .lablehide{
     display: none;    
 }
 
@@ -85,9 +85,4 @@ footer a, a:link, a:visited, a:hover, a:active{
   border-left: 0px;
   border-right: 0px;
 }
-
-
-
-
-
 
