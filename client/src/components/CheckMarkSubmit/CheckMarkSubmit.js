@@ -5,25 +5,40 @@ import './CheckMarkSubmit.css'
 
 function CheckMarkSubmit(props){
 
-    console.log(props.display)
+
 
     const [myCheckClass, setmyCheckClass] = useState(false)
 
+    let circleLoader = props.subResponse ? "circle-loader" : ""
+
+    circleLoader === "circle-loader" ? setTimeout(()=>setmyCheckClass(true),2000) : console.log('false')
+
+
     let loadComplete = !myCheckClass ? "" : "load-complete"
     let loadcheckmark = !myCheckClass ? "" : 'checkmark'
-    let circleLoader = props.display ? "circle-loader" : ""
-    function handleToggle(){
-        setTimeout(() => {
-            setmyCheckClass(true)
-        }, 3000)
 
-    }
+  
+
 
     return(
         <>
+        <div className="checkcenter">
+
             <div class={`${circleLoader} ${loadComplete}`}>
-                <div class={`draw ${loadcheckmark}`}></div>
+
+                <div class={`draw ${loadcheckmark}`}>
+    
+
+                </div>
+
+
+
             </div>
+
+        </div>
+                <div className={`${props.alertType} ${!props.subScriptionConfirm ? "subscriptionAlert" : ""} mb-3`}>
+                    {props.subScriptionMessage}
+                </div>
         </>
     )
 }

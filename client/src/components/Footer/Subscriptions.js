@@ -8,8 +8,6 @@ import './Footer.css'
 import CheckMarkSubmit from '../../components/CheckMarkSubmit/CheckMarkSubmit'
 
 
-
-
 function Subscriptions(){
 
     const [email, setemail] = useState('')
@@ -17,6 +15,7 @@ function Subscriptions(){
     const [subScriptionMessage, setSubscriptionMessage] = useState("")
     const [alertType, setAlertType] = useState("alert-success")
     const [validity, setValidity] = useState(true)
+    const [subResponse, setSubResponse] = useState(false)
 
     function handleChange(e){
         let nam = e.target.name 
@@ -37,10 +36,8 @@ function Subscriptions(){
         setemail(e.target.value)  
         
         let formValidity = document.querySelector('form').classList.contains('was-validated')
-        console.log(formValidity)
-        let inputValidation = document.querySelector(".emailSubscribe").querySelector('input:invalid') === null
 
-        
+        // this needs to be refactored - why not do and instead of nesting and if in an if
         if(formValidity === true){
             document.querySelector(".emailSubscribe").querySelector('input:invalid') === null ? setValidity(true) : setValidity(false)
         }
@@ -63,12 +60,13 @@ function Subscriptions(){
 
         setsubScriptionConfirm(true)
         const {message, status} = await fetchJSON('/api/subscription', 'post', {email})
-        setAlertType((status===false) ? "alert-danger" : "alert-success")
-        setSubscriptionMessage(message)
+        setAlertType((status===false) ? "alert-danger" : "")
+        setSubResponse(status)
+        setSubscriptionMessage((status===false) ? message : "")
         setemail("")
         form.classList.remove('was-validated')
 
-        setTimeout(function() {setsubScriptionConfirm(false)}, 5000)
+        setTimeout(function() {setsubScriptionConfirm(false)}, 9000)
 
         
     }
@@ -80,71 +78,39 @@ function Subscriptions(){
             <div className="row align-items-center subscriptions">
 
                 <div className="col-md-6 offset-md-3" >
-                <CheckMarkSubmit 
+                    <div className="centerItems">
+                        <form className="needs-validation emailSubscribe"  id='emailSubscribe' novalidate>
+                            <div className={`input-group flex-nowrap mb-3 has-validation ${!subScriptionConfirm ?  "" : "subscriptionAlert"} `}>
+                                <div className="form-floating " >
+                                    <input  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" type="email" className={`form-control  subScriptionEmail`} id="floatingInputValue " placeholder="name@example.com"  name='email' value={email} onChange={handleChange} required/>
 
-                    display = {subScriptionConfirm}
-                        
-                    
-                    
-                        />
-                    <form className="needs-validation emailSubscribe"  id='emailSubscribe' novalidate>
-                        <div className=" input-group flex-nowrap mb-3 has-validation">
-                            <div className="form-floating " >
-                                <div className={`${alertType} ${!subScriptionConfirm ?  "subscriptionAlert" : ""}`}>
-                                    {subScriptionMessage}
+                                    <label htmlFor="floatingInputValue " className={`form-label  ${validity ? '' : "lablehide"}`} >Email address</label>
+                                    <label htmlFor="floatingInputInvalid" className={`text-nowrap ${validity ? 'lablehide' : ''} `}>Invalid email address </label>
                                 </div>
-                                <input  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" type="email" className={`form-control ${!subScriptionConfirm ?  "" : "subscriptionAlert"} subScriptionEmail`} id="floatingInputValue " placeholder="name@example.com"  name='email' value={email} onChange={handleChange} required/>
-
-                                <label htmlFor="floatingInputValue " className={`form-label ${!subScriptionConfirm ?  "" : "subscriptionAlert"} ${validity ? '' : "lablehide"}`} >Email address</label>
-                                <label htmlFor="floatingInputInvalid" className={`text-nowrap ${validity ? 'lablehide' : ''} `}>Invalid email address </label>
+                                <button type="submit" onClick={subscriptionSubmit} className={`btn btn-dark `} >
+                                        <NewSubmitBTN 
+                                            size="35"
+                                            text="Subscribe"
+                                        />
+                                </button>
                             </div>
-                            <button type="submit" onClick={subscriptionSubmit} className={`btn btn-dark  ${!subScriptionConfirm ?  "" : "subscriptionAlert"} `} >
-                                    <NewSubmitBTN 
-                                        size="35"
-                                        text="Subscribe"
-                                    />
-                            </button>
+                        </form>
                         </div>
 
-
-                
-                        
-
-
-        
-
-
-                    </form>   
-
+                        <CheckMarkSubmit 
+                        subResponse = {subResponse}
+                        alertType = {alertType}
+                        subScriptionConfirm = {subScriptionConfirm}
+                        subScriptionMessage = {subScriptionMessage}
+                        />
 
                 </div>
                 <div className="col-md-3 ">
                         <Social />
                 </div>
-                
-
-                
             </div>     
-            
-            
-            
-            
-            
-            
-            
         </div>
-                    
-
-
-
-
     
-
-         
-
-            
-
-            
         </>
     )
 }

@@ -86,3 +86,9 @@ footer a, a:link, a:visited, a:hover, a:active{
   border-right: 0px;
 }
 
+
+.centerItems{
+    position: relative;
+    left:15%;
+
+}
