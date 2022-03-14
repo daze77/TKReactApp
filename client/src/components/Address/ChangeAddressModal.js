@@ -12,7 +12,7 @@ function ChangeAddressModal(props){
                     <div className="modal-content utilitiesCard">
                         <div className="modal-header">
                             <h1 className="modal-title" id="exampleModalLabel">Address Update</h1>
-                            <button onClick={props.clearModal} type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button  type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={props.clearModal}></button>
                         </div>
                         <div className='checkMark' style={props.showCheckModal === "none" ? { display: 'none' } : { display: 'block' }}>
                             <div className="modal-body">

@@ -168,18 +168,9 @@ function DatabaseUpdates(){
     }
 
     function clearModal(){
-        setmyInput({  
-        addressNickName:"",      
-        addressName: "",
-        address: "",
-        address2: "",
-        city: "",
-        province: "",
-        postalCode: "",
-        country: "",
-        email: "",
-        phone: ""})
-        setShowCheckModal('block')
+        setTimeout(()=>setShowCheckModal('block'),1000)
+
+        
     }
 
      return(
