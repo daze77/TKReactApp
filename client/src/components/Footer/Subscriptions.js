@@ -66,7 +66,10 @@ function Subscriptions(){
         setemail("")
         form.classList.remove('was-validated')
 
-        setTimeout(function() {setsubScriptionConfirm(false)}, 9000)
+        setTimeout(function() {
+            setsubScriptionConfirm(false)
+            setSubResponse(false)
+        }, 9000)
 
         
     }
@@ -79,8 +82,8 @@ function Subscriptions(){
 
                 <div className="col-md-6 offset-md-3" >
                     <div className="centerItems">
-                        <form className="needs-validation emailSubscribe"  id='emailSubscribe' novalidate>
-                            <div className={`input-group flex-nowrap mb-3 has-validation ${!subScriptionConfirm ?  "" : "subscriptionAlert"} `}>
+                        <form className={`needs-validation emailSubscribe ${!subScriptionConfirm ?  "" : "subscriptionAlert"}`}  id='emailSubscribe' novalidate>
+                            <div className={`input-group flex-nowrap mb-3 has-validation  `}>
                                 <div className="form-floating " >
                                     <input  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" type="email" className={`form-control  subScriptionEmail`} id="floatingInputValue " placeholder="name@example.com"  name='email' value={email} onChange={handleChange} required/>
 
@@ -95,15 +98,15 @@ function Subscriptions(){
                                 </button>
                             </div>
                         </form>
-                        </div>
 
-                        <CheckMarkSubmit 
+                        
+                    </div>
+                    <CheckMarkSubmit 
                         subResponse = {subResponse}
                         alertType = {alertType}
                         subScriptionConfirm = {subScriptionConfirm}
                         subScriptionMessage = {subScriptionMessage}
-                        />
-
+                    />
                 </div>
                 <div className="col-md-3 ">
                         <Social />
