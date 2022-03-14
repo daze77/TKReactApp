@@ -41,6 +41,7 @@ function ShowsTVFilm(){
                        <Card
                             className = 'card h-100 mb-1'
                             idName = 'cardformat'
+                            key={media._id}
                             _id={media._id}
                             Title={media.Title}
                             Text={media.Text}

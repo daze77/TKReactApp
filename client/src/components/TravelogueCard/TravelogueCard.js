@@ -13,7 +13,7 @@ import './TravelogueCard.css'
 
 
 function TravelogueCard(){
-    console.log("length of JSON", TravelLogueJSON.length)
+    // console.log("length of JSON", TravelLogueJSON.length)
 
 
     const Col1 = TravelLogueJSON.filter((Country, index) => (index < 15))
@@ -39,6 +39,7 @@ function TravelogueCard(){
             <Col>
                 {Col1.map((places) =>(
                     <TravelLocations
+                        _id={places.Id.toString()}
                         Country={places.Country}
                         Cities={places.Cities.map((cities)=> <li className="visitedcities"><i className="fas fa-caret-right"></i> {cities}</li>)}
                     />
@@ -48,6 +49,7 @@ function TravelogueCard(){
             <Col>
                 {Col2.map((places) =>(
                     <TravelLocations
+                        _id={places.Id.toString()}
                         Country={places.Country}
                         Cities={places.Cities.map((cities)=> <li className="visitedcities"><i className="fas fa-caret-right"></i> {cities}</li>)}
                     />
@@ -56,6 +58,7 @@ function TravelogueCard(){
             <Col>
                 {Col3.map((places) =>(
                     <TravelLocations
+                        _id={places.Id.toString()}
                         Country={places.Country}
                         Cities={places.Cities.map((cities)=> <li className="visitedcities"><i className="fas fa-caret-right"></i> {cities}</li>)}
                     />
@@ -64,6 +67,7 @@ function TravelogueCard(){
             <Col>
                 {Col4.map((places) =>(
                     <TravelLocations
+                        _id={places.Id.toString()}
                         Country={places.Country}
                         Cities={places.Cities.map((cities)=> <li className="visitedcities"><i className="fas fa-caret-right"></i> {cities}</li>)}
                     />

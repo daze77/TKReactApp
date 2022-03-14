@@ -11,7 +11,7 @@ function TravelLocations(props){
     return(
     <>
 
-        <ul id="travListStyle">
+        <ul key={props._id} id="travListStyle">
             <li id="travelList"><span className="visitedcountries">{props.Country}</span>
                 <ul id="cityliststyle">
                     {props.Cities}

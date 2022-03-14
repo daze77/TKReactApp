@@ -5,14 +5,7 @@ import './TravelTips.css'
 function TravelTips() {
 
  
-    const allParagraphs = Array.from(document.querySelectorAll("p"))
-    console.log('new P', allParagraphs)
 
-    const test = ["a","b","c","d","e"]
-    console.log(test)
-
-    let allP = document.querySelector("p")
-    console.log('this is p what now', allP)
 
 
 
