@@ -14,9 +14,9 @@ function SubFooter(){
     }
     return (
         <>  
-            <div id="subfooter" className="d-flex justify-content-center align-items-end ">
-                <span id="subcopyright" className="align-bottom">&copy; Copyright {getFullYear()} </span> 
-                <strong id="subfooterCo" className="align-self-center"><Link to="/">Tony Koukos</Link> </strong>, All Rights Reserved.
+            <div id="subfooter" className="d-flex justify-content-center align-items-center ">
+                <span id="subcopyright" >&copy; Copyright {getFullYear()} </span> 
+                <strong id="subfooterCo" ><Link to="/">Tony Koukos</Link> </strong>, All Rights Reserved.
             </div>
         </>
     )
