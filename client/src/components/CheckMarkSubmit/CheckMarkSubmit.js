@@ -5,7 +5,6 @@ import './CheckMarkSubmit.css'
 
 function CheckMarkSubmit(props){
 
-    console.log('[[[]]]', props.subResponse)
 
     const [myCheckClass, setmyCheckClass] = useState(false)
 
@@ -13,10 +12,8 @@ function CheckMarkSubmit(props){
     useEffect(()=>{
          if(props.subResponse === true){
         setTimeout(()=>setmyCheckClass(true),2000)
-        console.log('checkclass true', myCheckClass)
     }else {
         setmyCheckClass(false)
-        console.log('checkclass false', myCheckClass)
 
     }   
     },[myCheckClass, props.subResponse])
@@ -26,8 +23,8 @@ function CheckMarkSubmit(props){
     return(
         <>
         <div className="checkcenter">
-            <div class={`${props.subResponse? "circle-loader":""} ${myCheckClass ? "load-complete" : ""}`}>
-                <div class={`draw ${myCheckClass ? "checkmark" : ""}`}>
+            <div className={`${props.subResponse? "circle-loader":""} ${myCheckClass ? "load-complete" : ""}`}>
+                <div className={`draw ${myCheckClass ? "checkmark" : ""}`}>
                 </div>
             </div>
         </div>

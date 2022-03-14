@@ -62,7 +62,7 @@ function CheckoutPage(){
     return(
         <>
         <div className="container">
-        <table class="table">
+        <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -94,7 +94,7 @@ function CheckoutPage(){
                         <td></td>
                         <td></td>
                         <td></td>
-                        {showCktBttn && <td><button type="button" class="btn btn-success btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal">Check Out: $ {totalCost}</button></td>}
+                        {showCktBttn && <td><button type="button" className="btn btn-success btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal">Check Out: $ {totalCost}</button></td>}
                     </tr>
                 </tbody>
             </table>

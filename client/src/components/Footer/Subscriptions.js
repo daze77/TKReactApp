@@ -82,7 +82,7 @@ function Subscriptions(){
 
                 <div className="col-md-6 offset-md-3" >
                     <div className="centerItems">
-                        <form className={`needs-validation emailSubscribe ${!subScriptionConfirm ?  "" : "subscriptionAlert"}`}  id='emailSubscribe' novalidate>
+                        <form className={`needs-validation emailSubscribe ${!subScriptionConfirm ?  "" : "subscriptionAlert"}`}  id='emailSubscribe' noValidate>
                             <div className={`input-group flex-nowrap mb-3 has-validation  `}>
                                 <div className="form-floating " >
                                     <input  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" type="email" className={`form-control  subScriptionEmail`} id="floatingInputValue " placeholder="name@example.com"  name='email' value={email} onChange={handleChange} required/>
