@@ -61,43 +61,53 @@ function CheckoutPage(){
 
     return(
         <>
-        <div className="container">
-        <table className="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Item Name</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
+        <div className="container utilitiesCard">
+            <div className="utilitiesCard-header">
+                <h1>Shopping Basket</h1>
+            </div>
+            <table className="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Item Name</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            {basketList[1].basket.map((item, index) => (
+                                <CheckoutPageHoverStatus
+
+                                    index = {index}
+                                    title = {item.title}
+                                    quantity = {item.quantity}
+                                    price = {item.price}
+                                    total = {item.total}
+                                    handleDel={handleDel}
+
+                                />
+                        ))} 
                     
-                        {basketList[1].basket.map((item, index) => (
-                            <CheckoutPageHoverStatus
-
-                                index = {index}
-                                title = {item.title}
-                                quantity = {item.quantity}
-                                price = {item.price}
-                                total = {item.total}
-                                handleDel={handleDel}
-
-                            />
-                    ))} 
-                   
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th scope="row">Total</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        {showCktBttn && <td><button type="button" className="btn btn-success btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal">Check Out: $ {totalCost}</button></td>}
-                    </tr>
-                </tbody>
+                    </tbody>
+                    {/* <tbody>
+                        <tr>
+                            <th scope="row">Total</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            {showCktBttn && <td><button type="button" className="btn btn-success btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal">Check Out: $ {totalCost}</button></td>}
+                        </tr>
+                    </tbody> */}
             </table>
+
+            <div className="utilitiesCard-footer">
+                            <div className="text-end"><span className="pe-3">Total</span>
+
+                            {showCktBttn && <button type="button" className="btn btn-success btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal">Check Out: $ {totalCost}</button>}</div>
+
+            </div>
         </div>
 
         {showCktBttn && <CheckoutButtonModal />}

@@ -62,7 +62,7 @@ function SubscriptionList(){
 
     return(
         <>
-            <div className="container utilitiesCard">
+            <div className="container utilitiesCard-card">
                 <h2 >Subscribers</h2>
                 <p>Please find below the list of emails subscribed</p>
                 {subList.map(item => 
