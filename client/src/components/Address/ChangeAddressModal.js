@@ -67,7 +67,7 @@ function ChangeAddressModal(props){
                                     <div className="mb-3">
                                         <div className="row">
                                             <div className="form-floating col">
-                                                <input onChange={props.handleInput} name="postalCode" type="text" className="form-control" id="postalCode" placeholder="Postal Code" value={props.modalInput.postalCode} pattern="[a-zA-Z]{1}[1-9]{1}[a-zA-Z]{1}[./\s/-]{0,1}[1-9]{1}[a-zA-Z]{1}[1-9]{1}" required/>
+                                                <input onChange={props.handleInput} name="postalCode" type="text" className="form-control" id="postalCode" placeholder="Postal Code" value={props.modalInput.postalCode} pattern="[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}[./\s/-]{0,1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}" required/>
                                                 <label htmlFor="postalCode" className="form-label">Postal Code</label>
 
                                             </div>
@@ -86,7 +86,7 @@ function ChangeAddressModal(props){
 
                                             </div>
                                             <div className="form-floating col">
-                                                <input onChange={props.handleInput} name="phone" type="text" className="form-control" id="phone" placeholder="Phone Number" value={props.modalInput.phone} pattern="[1-9]{3}[./\s/-]{0,1}[1-9]{3}[./\s/-]{0,1}[1-9]{4}" required/>
+                                                <input onChange={props.handleInput} name="phone" type="text" className="form-control" id="phone" placeholder="Phone Number" value={props.modalInput.phone} pattern="[0-9]{3}[./\s/-]{0,1}[0-9]{3}[./\s/-]{0,1}[0-9]{4}" required/>
                                                 <label htmlFor="phone" className="form-label">Phone Number</label>
 
                                             </div>

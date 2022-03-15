@@ -28,11 +28,9 @@ function DatabaseUpdates(){
 
     const [modalInput, setModalInput] = useState({...myInput})
 
-
     const [showItem, setShowItem] = useState('block')
     const [showCheckModal, setShowCheckModal] = useState('block')
 
-    // FormValidation("test")
 
     function handleInput(event){
 
@@ -40,7 +38,13 @@ function DatabaseUpdates(){
         let val
 
         if(nam === 'phone'){
-            let value = event.target.value.replace(/[.-\s]/g,".").trim()
+            let value = event.target.value.replace(/[.-\s]/g,"").trim()
+
+
+            value.length > 6 ? value = value.slice(0,3) + '.' + value.slice(3,6) + '.' + value.slice(6,10)
+                : value.length > 3 ? value = value.slice(0,3) + '.' + value.slice(3,6)
+                : value +=""
+                
             val = value
         }else if(nam === 'postalCode'){ 
             let value = event.target.value.toUpperCase().trim().replace(/[\s]/g,"")

@@ -58,7 +58,7 @@ function AddressForm(props){
                 <div className="mb-3">
                     <div className="row">
                         <div className="form-floating col">
-                            <input onChange={props.handleInput} name="postalCode" type="text" className="form-control" id="postalCode" placeholder="Postal Code" value={props.myInput.postalCode} required pattern="[a-zA-Z]{1}[1-9]{1}[a-zA-Z]{1}[./\s/-]{0,1}[1-9]{1}[a-zA-Z]{1}[1-9]{1}"/>
+                            <input onChange={props.handleInput} name="postalCode" type="text" className="form-control" id="postalCode" placeholder="Postal Code" value={props.myInput.postalCode} required pattern="[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}[./\s/-]{0,1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}"/>
                             <label htmlFor="postalCode" >Postal Code</label>
                             <div className="invalid-feedback" >
                             Please enter a valid postal code
@@ -83,7 +83,7 @@ function AddressForm(props){
 
                         </div>
                         <div className="form-floating col">
-                            <input onChange={props.handleInput} name="phone" type="text" className="form-control" id="phone" placeholder="Phone Number" value={props.myInput.phone} required pattern="[1-9]{3}[./\s/-]{0,1}[1-9]{3}[./\s/-]{0,1}[1-9]{4}"/>
+                            <input onChange={props.handleInput} name="phone" type="text" className="form-control" id="phone" placeholder="Phone Number" value={props.myInput.phone} required pattern="[1-9]{3}[./\s/-]{0,1}[1-9]{3}[./\s/-]{0,1}[0-9]{4}"/>
                             <label htmlFor="phone" >Phone Number</label>
                             <div className="invalid-feedback">
                             Please enter a valid phone number
