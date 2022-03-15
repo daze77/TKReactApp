@@ -64,8 +64,8 @@ function Login(){
             <div className="container">
                 { authOk ? <Redirect to='/' /> : '' }
                 <form ref={refForm}>
-                <div className="card mt-5">
-                    <div className="card-header">
+                <div className="utilitiesCard mt-5">
+                    <div className="utilitiesCard-header">
                         <h1>Login</h1>
                     </div>
                     <div className="card-body">
@@ -84,7 +84,7 @@ function Login(){
                             </div>
                         </div>
                     </div>                    
-                    <div className="card-footer">
+                    <div className="utilitiesCard-footer">
                         <button onClick={userLogin} type="button" className="btn btn-primary mx-1">Login</button>
                         &nbsp; 
                         <input ref={inputRememberMe} id='rememberMe' type="checkbox" />                        

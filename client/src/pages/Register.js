@@ -55,40 +55,40 @@ function Register(){
     return (
         <>
             { authOk ? <Redirect to='/' /> : '' }
-            <form ref={refForm}>
-            <div className="card mt-5">
-                <div className="card-header">
-                    <h1>User Registration</h1>
-                </div>
-                <div className="card-body">
-                    <div className="mb-3">
-                        <label for="name">First Name</label>
-                        <input ref={inputName} type="text" id="name" className="form-control" required />
-                        <div className="invalid-feedback">
-                            Please enter a name
-                        </div>
+            <form className="container " ref={refForm}>
+                <div className="utilitiesCard   mt-5">
+                    <div className="utilitiesCard-header">
+                        <h1>User Registration</h1>
                     </div>
-                    <div className="mb-3">
-                        <label for="email">Email Address</label>
-                        <input ref={inputEmail} id="email" type="email" className="form-control" required />
-                        <div className="invalid-feedback">
-                            Please enter an email
+                    <div className="card-body">
+                        <div className="mb-3">
+                            <label for="name">First Name</label>
+                            <input ref={inputName} type="text" id="name" className="form-control" required />
+                            <div className="invalid-feedback">
+                                Please enter a name
+                            </div>
                         </div>
+                        <div className="mb-3">
+                            <label for="email">Email Address</label>
+                            <input ref={inputEmail} id="email" type="email" className="form-control" required />
+                            <div className="invalid-feedback">
+                                Please enter an email
+                            </div>
 
-                    </div>
-                    <div className="mb-3">
-                        <label for="userPassword">Password</label>
-                        <input ref={inputPassword} id="userPassword" type="password" className="form-control"  pattern=".{8,}" required />
-                        <div className="invalid-feedback">
-                            Please enter a password (8 chars min)
+                        </div>
+                        <div className="mb-3">
+                            <label for="userPassword">Password</label>
+                            <input ref={inputPassword} id="userPassword" type="password" className="form-control" pattern=".{8,}" required />
+                            <div className="invalid-feedback">
+                                Please enter a password (8 chars min)
+                            </div>
                         </div>
                     </div>
+                    <div className="utilitiesCard-footer">
+                        <button onClick={registerUser} className="btn btn-primary mx-1" >Register</button>
+                        <Link to="/login" className="font-weight-light text-muted mx-3">Already Registered?</Link>
+                    </div>
                 </div>
-                <div className="card-footer">
-                    <button onClick={registerUser} className="btn btn-primary mx-1" >Register</button>
-                    <Link to="/login" className="font-weight-light text-muted mx-3">Already Registered?</Link>
-                </div>
-            </div>
             </form>
         </>
     )
