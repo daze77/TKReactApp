@@ -7,7 +7,6 @@ import fetchJSON from "../../utils/API"
 function AddressCard(){
     const [{ currentAddress }, dispatch ]= useStoreContext()
 
-    console.log('this is the current address', currentAddress)
 
     useEffect(() => {
 
