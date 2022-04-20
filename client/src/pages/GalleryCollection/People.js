@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { useStoreContext } from "../../utils/GlobalStore"
+import {useLocation} from 'react-router-dom'
+
 
 import Row from '../../components/Row/Row'
 import Card from '../../components/Card/Card'
@@ -9,20 +11,20 @@ import fetchJSON from '../../utils/API'
 function People(props) {
 
     const [{basketCount, ...data } , dispatch]= useStoreContext()
-    const clickedItem = props.location
+    const clickedItem = useLocation().state
     const [GALImages, setGALImages] = useState([])
     const [URL, setURL] = useState({})
 
     async function loadGALItems(){
         if(clickedItem){
-            const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {ImageName: clickedItem})
+            const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: clickedItem})
             SubLink.forEach(item => item.showPrice=false)
             setGALImages(SubLink)
             setURL({URL: URL, Page: "GalleryCollection"})
     
         }else{
             const hrefLINK = window.location.pathname.split(`/`)[2].toLowerCase()
-            const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {ImageName: hrefLINK})
+            const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: hrefLINK})
             SubLink.forEach(item => item.showPrice=false)
             setGALImages(SubLink)
             setURL({URL: URL, Page: "GalleryCollection"})

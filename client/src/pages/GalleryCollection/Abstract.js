@@ -12,32 +12,32 @@ function Abstract(props) {
     // console.log('abstract location', useLocation().pathname)
 
  const [{  basketCount, ...data } , dispatch]= useStoreContext()
- const clickedItem = useLocation().pathname
+ const clickedItem = useLocation().state
  const [GALImages, setGALImages] = useState([])
  const [URL, setURL] = useState({})
 
-//  console.log(clickedItem)
+ console.log(clickedItem)
 
  async function loadGALItems(){
 
 
-    // if(clickedItem){
-    //     const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {ImageName: clickedItem})
-    //     SubLink.forEach(item => item.showPrice=false)
-    //     setGALImages(SubLink)
-    //     setURL({URL: URL, Page: "GalleryCollection"})
+    if(clickedItem){
+        const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: clickedItem})
+        SubLink.forEach(item => item.showPrice=false)
+        setGALImages(SubLink)
+        setURL({URL: URL, Page: "GalleryCollection"})
 
 
-    // }else{
+    }else{
         const hrefLINK = window.location.pathname.split(`/`)[2].toLowerCase()
-        const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {ImageName: hrefLINK})
+        const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: hrefLINK})
         SubLink.forEach(item => item.showPrice=false)
         setGALImages(SubLink)
         setURL({URL: URL, Page: "GalleryCollection"})
         // console.log('this is GALImages', GALImages)
         // console.log('this is URL', URL)
 
-    // } 
+    } 
 
 
  }

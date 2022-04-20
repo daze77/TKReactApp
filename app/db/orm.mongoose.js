@@ -187,11 +187,12 @@ async function getANDImages(){
 }
 
 async function getGALImages(title){
+   console.log('this is ORM TITLE', title)
    let results
    let GALDetails =[]
    if(title){
-      const {ImageName} = title
-      results = await db.gallerys.find({ImageName})
+      const {Title} = title
+      results = await db.gallerys.find({Title})
 
       for (const {SubLink} of results){
          [GALDetails] = [{SubLink}] 

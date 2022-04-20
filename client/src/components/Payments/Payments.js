@@ -25,7 +25,7 @@ const stripePromise = loadStripe("pk_test_51JzCTiJvID62zcJ6KOIASxQEYMpSBjGfIBaF8
 
       const results = await fetchJSON("/api/create-payment-intent", 'post', localStorageLS)
       setClientSecret(results.clientSecret);
-
+      console.log('these are payments results', results)
     }
 
     useEffect(() => {
@@ -42,6 +42,8 @@ const stripePromise = loadStripe("pk_test_51JzCTiJvID62zcJ6KOIASxQEYMpSBjGfIBaF8
     appearance,
   };
 
+
+  console.log('payments options', options)
   return (
     <div >
       {clientSecret && (
