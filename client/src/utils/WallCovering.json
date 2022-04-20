@@ -6,7 +6,7 @@
         "Title": "ABSTRACT",
         "Image": "3076c92197d714527451ec2344bef87f.jpeg",
         "ImageName": "3076c92197d714527451ec2344bef87f",
-        "Link": "WallCoverings/Abstract",
+        "Link": "Abstract",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -226,7 +226,7 @@
         "Title": "ARCHITECTURAL",
         "Image": "d0e0ee70aef7ccf1456dabf32893c11b.jpg",
         "ImageName": "d0e0ee70aef7ccf1456dabf32893c11b",
-        "Link": "WallCoverings/Architectural",
+        "Link": "Architectural",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -403,7 +403,7 @@
         "Title": "ASIATIC",
         "Image": "754963207b9ab4e8e8d6bca9e76b7217.jpg",
         "ImageName": "754963207b9ab4e8e8d6bca9e76b7217",
-        "Link": "WallCoverings/Asiatic",
+        "Link": "Asiatic",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -463,7 +463,7 @@
         "Title": "DETAILS",
         "Image": "1aa82394147bc526eafcd66d0b92d801.jpg",
         "ImageName": "1aa82394147bc526eafcd66d0b92d801",
-        "Link": "WallCoverings/Details",
+        "Link": "Details",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -530,7 +530,7 @@
         "Title": "DEZINE",
         "Image": "97ca532e3550d229924961a2062cb366.jpg",
         "ImageName": "97ca532e3550d229924961a2062cb366",
-        "Link": "WallCoverings/Dezine",
+        "Link": "Dezine",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -870,7 +870,7 @@
         "Title": "ETHNICA",
         "Image": "6ba67fad6877a0254fee2cb78443c8e3.jpg",
         "ImageName": "6ba67fad6877a0254fee2cb78443c8e3",
-        "Link": "WallCoverings/Ethnica",
+        "Link": "Ethnica",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -1134,7 +1134,7 @@
         "Title": "EXOTICA",
         "Image": "5a2467650b270c24e127df8b3791a739.jpg",
         "ImageName": "5a2467650b270c24e127df8b3791a739",
-        "Link": "WallCoverings/Exotica",
+        "Link": "Exotica",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -1431,7 +1431,7 @@
         "Title": "FLORAL",
         "Image": "cbf586e73febf9fd61123179a604239e.jpg",
         "ImageName": "cbf586e73febf9fd61123179a604239e",
-        "Link": "WallCoverings/Floral",
+        "Link": "Floral",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -1575,7 +1575,7 @@
         "Title": "LA BIBLIOTHEQUE",
         "Image": "8ba9f3077fb103fe4e79f07f4b8faed2.jpg",
         "ImageName": "8ba9f3077fb103fe4e79f07f4b8faed2",
-        "Link": "WallCoverings/LaBibliotheque",
+        "Link": "LaBibliotheque",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -1691,7 +1691,7 @@
         "Title": "LA PARISIENNE",
         "Image": "668f9c765a51e361b5aeb3dbc391faaf.jpg",
         "ImageName": "668f9c765a51e361b5aeb3dbc391faaf",
-        "Link": "WallCoverings/LaParisienne",
+        "Link": "LaParisienne",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -1836,7 +1836,7 @@
         "Title": "LUCE",
         "Image": "f2a1f0d257feff8a87be736ced631892.jpg",
         "ImageName": "f2a1f0d257feff8a87be736ced631892",
-        "Link": "WallCoverings/Luce",
+        "Link": "Luce",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -1966,7 +1966,7 @@
         "Title": "MOTIF",
         "Image": "787a0fbf851d448c706062a81292ec45.jpg",
         "ImageName": "787a0fbf851d448c706062a81292ec45",
-        "Link": "WallCoverings/Motif",
+        "Link": "Motif",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -2166,7 +2166,7 @@
         "Title": "ORGANICA",
         "Image": "81630034524f0cc16c19b0945ec28c86.jpg",
         "ImageName": "81630034524f0cc16c19b0945ec28c86",
-        "Link": "WallCoverings/Organica",
+        "Link": "Organica",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -2386,7 +2386,7 @@
         "Title": "STEEL",
         "Image": "9f4ce19ecf4747f4fa5b72b5206c6487.jpg",
         "ImageName": "9f4ce19ecf4747f4fa5b72b5206c6487",
-        "Link": "WallCoverings/Steel",
+        "Link": "Steel",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -2719,7 +2719,7 @@
         "Title": "STRIPES",
         "Image": "1b2f98a5831d84bee0d37920397ffcb5.jpg",
         "ImageName": "1b2f98a5831d84bee0d37920397ffcb5",
-        "Link": "WallCoverings/Stripes",
+        "Link": "Stripes",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -3255,7 +3255,7 @@
         "Title": "SUBWAY",
         "Image": "a15620d2d066a93005993751a36c7258.jpg",
         "ImageName": "a15620d2d066a93005993751a36c7258",
-        "Link": "WallCoverings/Subway",
+        "Link": "Subway",
         "SubLink":[
             {
                 "Id": 1.1,
@@ -3350,7 +3350,7 @@
         "Title": "WOOD",
         "Image": "0dfbad29d0924f567ecc663e646f3a1f.jpg",
         "ImageName": "0dfbad29d0924f567ecc663e646f3a1f",
-        "Link": "WallCoverings/Wood",
+        "Link": "Wood",
         "SubLink":[
             {
                 "Id": 1.1,

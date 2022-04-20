@@ -24,6 +24,7 @@ function router( app ){
    const stripe = require("stripe")('sk_test_51JzCTiJvID62zcJ68B18msCM9E17M9OSzxyNF5746507gKM8peVUt4tUMd2HWQeC9pAbdAFJBDTgViW9c8tL6l3p00tDzWeqvC');
 
    async function calCosts(b){
+      console.log('this is the b', b)
 
       let totalBasketCost = 0
       let priceList =[]
@@ -236,6 +237,7 @@ function router( app ){
 
    //stripe end point
    app.post("/api/create-payment-intent", async (req, res) => {
+      console.log('this s the body', req.body)
 
       const x = req.body[1].basket
       const {totalBasketCost} = await calCosts(x)

@@ -7,6 +7,9 @@ import {useCreateObserver}  from '../LazyLoadImages/IntersectionObserver'
 
 
 function GalleryCard (props) {
+    console.log('did the propsget passed', props)
+
+
     let Title = props.Title.toUpperCase()
 
     const [isInView, setIsInView] = useState(false);
@@ -27,10 +30,8 @@ function GalleryCard (props) {
     return(
         <>
             <Col key={props._id} classstyle = 'gallerycard' style={isInView ? {maxHeight:"auto"} : {height:"1000px"}}>
-                <Link to={{
-                    pathname: props.Link,
-                    state: props.Title
-                    }}>
+                <Link to={props.Link}
+                    state={props.Title}>
                     <div  ref={imgRef}  className="card gallerygrid"  > 
                          <img className="card-img" src={isInView ? props.ImageName : ""} alt={props.ImageName}/>
                         <div className="card-img-overlay">

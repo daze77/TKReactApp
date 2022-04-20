@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Route} from "react-router-dom"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import {StoreProvider} from "./utils/GlobalStore"
 
 import WTPSubpage from './pages/WTP/WTPSubpage' 
@@ -9,7 +9,7 @@ import WTPJSON from './utils/wtp.json'
 
 
 
-// components
+// elements
 
 import NavBar from './components/NavBar/NavBar'
 import Footer from './components/Footer/Footer'
@@ -130,37 +130,35 @@ function App(location) {
 
       <NavBar />
       <ScrollToTop />
-        {/* <Route exact path='/Payments' component={Payments} /> */}
 
+      <Routes >
+        <Route exact path='/Login' element={<Login/>} />
+        <Route exact path='/UserProfile' element={<UserProfile/>} />
+        <Route exact path='/UtilitiesPage' element={<UtilitiesPage/>} />
 
+        <Route exact path='/Logout' element={<Logout/>} />
+        <Route exact path='/Register' element={<Register/>} />
+        <Route exact path={'/'} element={<Homepage/>} />
+        <Route exact path='/About' element={<About/>} />
 
-        <Route exact path='/Login' component={Login} />
-        <Route exact path='/UserProfile' component={UserProfile} />
-        <Route exact path='/UtilitiesPage' component={UtilitiesPage} />
+        <Route exact path='/TheArtist' element={<TheArtist/>} />
+        <Route exact path='/HospitalityandDesign' element={<HospitalityandDesign/>} />
+        <Route exact path='/Lighting' element={<Lighting/>} />
+        <Route exact path='/TheFrameShop' element={<TheFrameShop/>} />
+        <Route exact path='/Installations' element={<Installations/>} />
 
-        <Route exact path='/Logout' component={Logout} />
-        <Route exact path='/Register' component={Register} />
-        <Route exact path={['/', 'index']} component={Homepage} />
-        <Route exact path='/About' component={About} />
+        <Route exact path='/PrintingandServices' element={<PrintingandServices/>} />
+        <Route exact path='/Testimonials' element={<Testimonials/>} />
+        <Route exact path='/Contact' element={<Contact/>} />
+        <Route exact path='/PrivacyPolicy' element={<PrivacyPolicy/>} />
+        <Route exact path='/Travelogue' element={<Travelogue/>} />
+        <Route exact path='/Videos' element={<Videos/>} />
+        <Route exact path='/Travel-Tips' element={<TravelTips/>} />
+        <Route exact path='/ReturnPolicy' element={<ReturnPolicy/>} />
+        <Route exact path='/CustomerService' element={<CustomerService/>} />
+        <Route exact path='/ArtandDesign' element={<ArtandDesign/>} />
 
-        <Route exact path='/TheArtist' component={TheArtist} />
-        <Route exact path='/HospitalityandDesign' component={HospitalityandDesign} />
-        <Route exact path='/Lighting' component={Lighting} />
-        <Route exact path='/TheFrameShop' component={TheFrameShop} />
-        <Route exact path='/Installations' component={Installations} />
-
-        <Route exact path='/PrintingandServices' component={PrintingandServices} />
-        <Route exact path='/Testimonials' component={Testimonials} />
-        <Route exact path='/Contact' component={Contact} />
-        <Route exact path='/PrivacyPolicy' component={PrivacyPolicy} />
-        <Route exact path='/Travelogue' component={Travelogue} />
-        <Route exact path='/Videos' component={Videos} />
-        <Route exact path='/Travel-Tips' component={TravelTips} />
-        <Route exact path='/ReturnPolicy' component={ReturnPolicy} />
-        <Route exact path='/CustomerService' component={CustomerService} />
-        <Route exact path='/ArtandDesign' component={ArtandDesign} />
-
-        <Route exact path='/CheckoutPage' component={CheckoutPage} />
+        <Route exact path='/CheckoutPage' element={<CheckoutPage/>} />
 
 
 
@@ -170,42 +168,44 @@ function App(location) {
 
       {/* The following are all the routes for the GalleryCollection and SubPages */}
 
-        <Route exact path='/GalleryCollection' component={GalleryCollection} />
-        <Route exact path='/GalleryCollection/Abstract' component={Abstract} />
-        <Route exact path='/GalleryCollection/Classics' component={Classics} />
-        <Route exact path='/GalleryCollection/Opulence' component={Opulence} />
-        <Route exact path='/GalleryCollection/People' component={People} />
-        <Route exact path='/GalleryCollection/TheModern' component={TheModern} />
-        <Route exact path='/GalleryCollection/Urbano' component={Urbano} />
-        <Route exact path='/WorldTravelPhotography' component={WTP} />
-        <Route exact path='/HomePageAlternate' component={HomePageAlternate} />
-        <Route exact path='/TestPage' component={TestPage} />
+        <Route exact path='/GalleryCollection' element={<GalleryCollection/>} />
+        <Route exact path='/GalleryCollection/Abstract' element={<Abstract/>} />
+        <Route exact path='/GalleryCollection/Classics' element={<Classics/>} />
+        <Route exact path='/GalleryCollection/Opulence' element={<Opulence/>} />
+        <Route exact path='/GalleryCollection/People' element={<People/>} />
+        <Route exact path='/GalleryCollection/TheModern' element={<TheModern/>} />
+        <Route exact path='/GalleryCollection/Urbano' element={<Urbano/>} />
+        <Route exact path='/WorldTravelPhotography' element={<WTP/>} />
+        <Route exact path='/HomePageAlternate' element={<HomePageAlternate/>} />
+        <Route exact path='/TestPage' element={<TestPage/>} />
 
 
       {/* The following are all the routes for the WallCoverings and SubPages */}
-        <Route exact path='/WallCoverings' component={WallCoverings} />
-        <Route exact path='/WallCoverings/Abstract' component={WCAbstract} />
-        <Route exact path='/WallCoverings/Architectural' component={WCArchitectural} />
-        <Route exact path='/WallCoverings/Asiatic' component={WCAsiatic} />
-        <Route exact path='/WallCoverings/Details' component={WCDetails} />
-        <Route exact path='/WallCoverings/Dezine' component={WCDezine} />
-        <Route exact path='/WallCoverings/Ethnica' component={WCEthnica} />
-        <Route exact path='/WallCoverings/Exotica' component={WCExotica} />
-        <Route exact path='/WallCoverings/Floral' component={WCFloral} />
-        <Route exact path='/WallCoverings/LaBibliotheque' component={WCLaBibliotheque} />
-        <Route exact path='/WallCoverings/LaParisienne' component={WCLaParisienne} />
-        <Route exact path='/WallCoverings/Luce' component={WCLuce} />
-        <Route exact path='/WallCoverings/Motif' component={WCMotif} />
-        <Route exact path='/WallCoverings/Organica' component={WCOrganica} />
-        <Route exact path='/WallCoverings/Steel' component={WCSteel} />
-        <Route exact path='/WallCoverings/Stripes' component={WCStripes} />
-        <Route exact path='/WallCoverings/Subway' component={WCSubway} />
-        <Route exact path='/WallCoverings/Wood' component={WCWood} />
+        <Route exact path='/WallCoverings' element={<WallCoverings/>}/>
+
+        <Route exact path='/WallCoverings/Abstract' element={<WCAbstract/>} />
+        <Route exact path='/WallCoverings/Architectural' element={<WCArchitectural/>} />
+        <Route exact path='/WallCoverings/Asiatic' element={<WCAsiatic/>} />
+        <Route exact path='/WallCoverings/Details' element={<WCDetails/>} />
+        <Route exact path='/WallCoverings/Dezine' element={<WCDezine/>} />
+        <Route exact path='/WallCoverings/Ethnica' element={<WCEthnica/>} />
+        <Route exact path='/WallCoverings/Exotica' element={<WCExotica/>} />
+        <Route exact path='/WallCoverings/Floral' element={<WCFloral/>} />
+        <Route exact path='/WallCoverings/LaBibliotheque' element={<WCLaBibliotheque/>} />
+        <Route exact path='/WallCoverings/LaParisienne' element={<WCLaParisienne/>} />
+        <Route exact path='/WallCoverings/Luce' element={<WCLuce/>} />
+        <Route exact path='/WallCoverings/Motif' element={<WCMotif/>} />
+        <Route exact path='/WallCoverings/Organica' element={<WCOrganica/>} />
+        <Route exact path='/WallCoverings/Steel' element={<WCSteel/>} />
+        <Route exact path='/WallCoverings/Stripes' element={<WCStripes/>} />
+        <Route exact path='/WallCoverings/Subway' element={<WCSubway/>} />
+        <Route exact path='/WallCoverings/Wood' element={<WCWood/>} />
+
 
 
 
       {/* The following are the routes for all the WTP Subpages */}
-         {WTPJSON.map(a => (
+         {/* {WTPJSON.map(a => (
             <WTPRouterPages 
                 key={a.ImageName}
                 _id={a.ImageName}
@@ -213,8 +213,8 @@ function App(location) {
                 SubPage={WTPSubpage}
             />
 
-       ))}
-         
+       ))} */}
+      </Routes>
 
       <Footer />
       </BrowserRouter>

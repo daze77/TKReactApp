@@ -9,20 +9,20 @@ import fetchJSON from '../../utils/API'
 function People(props) {
 
     const [{basketCount, ...data } , dispatch]= useStoreContext()
-    const clickedItem = props.location.state
+    const clickedItem = props.location
     const [GALImages, setGALImages] = useState([])
     const [URL, setURL] = useState({})
 
     async function loadGALItems(){
         if(clickedItem){
-            const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: clickedItem})
+            const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {ImageName: clickedItem})
             SubLink.forEach(item => item.showPrice=false)
             setGALImages(SubLink)
             setURL({URL: URL, Page: "GalleryCollection"})
     
         }else{
-            const hrefLINK = window.location.pathname.split(`/`)[2].toUpperCase()
-            const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: hrefLINK})
+            const hrefLINK = window.location.pathname.split(`/`)[2].toLowerCase()
+            const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {ImageName: hrefLINK})
             SubLink.forEach(item => item.showPrice=false)
             setGALImages(SubLink)
             setURL({URL: URL, Page: "GalleryCollection"})

@@ -62,7 +62,7 @@ function NavBar(){
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarHeadings" aria-controls="navBarHeadings" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                         </button>
-                        <NavLink to="/" className="navbar-brand nav-link" activeClassName="active"><LogoSymbol  /> </NavLink>
+                        <NavLink to="/" className="navbar-brand nav-link" ><LogoSymbol  /> </NavLink>
                         <div className="collapse navbar-collapse me-1 ms-5 " id="navBarHeadings">
                             <ul className="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
                                 <li className="nav-item dropdown">

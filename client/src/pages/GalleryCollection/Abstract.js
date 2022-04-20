@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { useStoreContext } from "../../utils/GlobalStore"
+import {useLocation} from 'react-router-dom'
 
 import Row from '../../components/Row/Row'
 import Card from '../../components/Card/Card'
@@ -7,29 +8,44 @@ import fetchJSON from '../../utils/API'
 
 
 function Abstract(props) {
+    // console.log('abstract props', props)
+    // console.log('abstract location', useLocation().pathname)
+
  const [{  basketCount, ...data } , dispatch]= useStoreContext()
- const clickedItem = props.location.state
+ const clickedItem = useLocation().pathname
  const [GALImages, setGALImages] = useState([])
  const [URL, setURL] = useState({})
 
+//  console.log(clickedItem)
+
  async function loadGALItems(){
 
-    if(clickedItem){
-        const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: clickedItem})
-        SubLink.forEach(item => item.showPrice=false)
-        setGALImages(SubLink)
-        setURL({URL: URL, Page: "GalleryCollection"})
 
-    }else{
-        const hrefLINK = window.location.pathname.split(`/`)[2].toUpperCase()
-        const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: hrefLINK})
+    // if(clickedItem){
+    //     const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {ImageName: clickedItem})
+    //     SubLink.forEach(item => item.showPrice=false)
+    //     setGALImages(SubLink)
+    //     setURL({URL: URL, Page: "GalleryCollection"})
+
+
+    // }else{
+        const hrefLINK = window.location.pathname.split(`/`)[2].toLowerCase()
+        const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {ImageName: hrefLINK})
         SubLink.forEach(item => item.showPrice=false)
         setGALImages(SubLink)
         setURL({URL: URL, Page: "GalleryCollection"})
-    } 
+        // console.log('this is GALImages', GALImages)
+        // console.log('this is URL', URL)
+
+    // } 
+
+
  }
 
  function addToBasket(e){
+     console.log('adding this to basekt',e)
+     console.log('adding this to basekt',clickedItem)
+
     let basketLocalStorage = localStorage.TKBasket ? JSON.parse(localStorage.TKBasket) : [{"email": `${data.email}`}, {basket: []}]
     const [,{basket}] = basketLocalStorage
 
@@ -122,8 +138,10 @@ return(
 
             </Row>
         </section>   
+
+
+
     </div>
-  
   
     </>
 )

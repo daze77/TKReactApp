@@ -5,8 +5,7 @@
 const mongoose = require( 'mongoose' )
 const bcrypt = require( 'bcrypt' )
 
-mongoose.connect(process.env.MONGODB_URI,
-   {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+mongoose.connect(process.env.MONGODB_URI)
 
 // include mongoose models (it will include each file in the models directory)
 const db = require( './models' )
@@ -190,10 +189,9 @@ async function getANDImages(){
 async function getGALImages(title){
    let results
    let GALDetails =[]
-
    if(title){
-      const {Title} = title
-      results = await db.gallerys.find({Title})
+      const {ImageName} = title
+      results = await db.gallerys.find({ImageName})
 
       for (const {SubLink} of results){
          [GALDetails] = [{SubLink}] 
@@ -211,10 +209,11 @@ async function getGALImages(title){
 
 // need to pass title here so that I can get the right information
 async function getGALPrice(id, clickedItem){
+   console.log('id and clicked item', id, clickedItem)
   
    const [results] = await db.gallerys.find({'Title': clickedItem, 'SubLink._id':id},{'SubLink.$':1})
-   // console.log('orm results', results)
-   // console.log('from ORM', results.SubLink)
+   console.log('orm results', results)
+   console.log('from ORM', results.SubLink)
    return(results.SubLink)
 }
 

@@ -64,13 +64,13 @@ function NavLogin(){
                                 Welcome back <u>{name}</u>
                             </div>
                             <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li className="nav-item"> <NavLink to="/Logout" className="nav-link" activeClassName="active">Logout</NavLink></li>
-                                <li className="nav-item"> <NavLink to="/UtilitiesPage" className="nav-link" activeClassName="active">Utilities Page</NavLink></li>
-                                <li className="nav-item"> <NavLink to="/UserProfile" className="nav-link" activeClassName="active">User Profile</NavLink></li>
+                                <li className="nav-item"> <NavLink to="/Logout" className="nav-link">Logout</NavLink></li>
+                                <li className="nav-item"> <NavLink to="/UtilitiesPage" className="nav-link" >Utilities Page</NavLink></li>
+                                <li className="nav-item"> <NavLink to="/UserProfile" className="nav-link" >User Profile</NavLink></li>
 
                             </ul>
                         </li>}
-                        {!name && <li className="nav-item "> <NavLink to="/Login" className="nav-link" activeClassName="active">Login</NavLink></li>}
+                        {!name && <li className="nav-item "> <NavLink to="/Login" className="nav-link" >Login</NavLink></li>}
                     </ul>
                 </div>
             </div>
