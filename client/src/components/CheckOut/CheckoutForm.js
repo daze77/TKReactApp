@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useStoreContext } from "../../utils/GlobalStore";
 
-import {
-  PaymentElement,
-  useStripe,
-  useElements
-} from "@stripe/react-stripe-js";
+import {PaymentElement, useStripe, useElements} from "@stripe/react-stripe-js";
 
 export default function CheckoutForm() {
   const stripe = useStripe();
@@ -17,8 +13,6 @@ export default function CheckoutForm() {
 
 
   const [{totalCost} ]= useStoreContext()
-
-
 
 
   useEffect(() => {
@@ -79,7 +73,6 @@ export default function CheckoutForm() {
       
     });
 
-    
 
     // This point will only be reached if there is an immediate error when
     // confirming the payment. Otherwise, your customer will be redirected to

@@ -138,7 +138,7 @@ function App(location) {
 
         <Route exact path='/Logout' element={<Logout/>} />
         <Route exact path='/Register' element={<Register/>} />
-        <Route exact path={'/'} element={<Homepage/>} />
+        <Route exact path='/' element={<Homepage/>} />
         <Route exact path='/About' element={<About/>} />
 
         <Route exact path='/TheArtist' element={<TheArtist/>} />
