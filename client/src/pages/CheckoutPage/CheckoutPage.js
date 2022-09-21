@@ -91,22 +91,15 @@ function CheckoutPage(){
                         ))} 
                     
                     </tbody>
-                    {/* <tbody>
-                        <tr>
-                            <th scope="row">Total</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            {showCktBttn && <td><button type="button" className="btn btn-success btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal">Check Out: $ {totalCost}</button></td>}
-                        </tr>
-                    </tbody> */}
             </table>
 
             <div className="utilitiesCard-footer">
-                            <div className="text-end"><span className="pe-3">Total</span>
+                <div className="text-end">
+                    <span className="pe-3">Total</span>
 
-                            {showCktBttn && <button type="button" className="btn btn-success btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal">Check Out: $ {totalCost}</button>}</div>
-
+                    {showCktBttn && <button type="button" className="btn btn-success btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal">Check Out: $ {totalCost}</button>}
+                
+                </div>
             </div>
         </div>
 
