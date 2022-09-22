@@ -17,7 +17,7 @@ export default function CheckoutForm() {
 
   useEffect(() => {
 
-    (window.location.href.split('/')[2] === "localhost:3000") ? setHref('http://localhost:3000') : setHref('https://bthtkapp.herokuapp.com')
+    (window.location.href.split('/')[2] === "localhost:3000") ? setHref('http://localhost:3000') : setHref('https://tkreactapp.onrender.com')
 
 
 
