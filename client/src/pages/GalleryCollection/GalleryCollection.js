@@ -3,9 +3,6 @@ import React from 'react'
 import GalleryCard from '../../components/GalleryCard/GalleryCard'
 import GalleryJSON from '../../utils/GalleryColGrid.json'
 
-
-
-
 import abstract from '../../assets/images/gallery/abstract.jpg'
 import classics from '../../assets/images/gallery/classics.jpg'
 import opulence from '../../assets/images/gallery/opulence.jpg'
@@ -13,10 +10,7 @@ import people from '../../assets/images/gallery/people.jpg'
 import themodern from '../../assets/images/gallery/themodern.jpg'
 import urbano from '../../assets/images/gallery/urbano.jpg'
 
-
-
 import './GalleryCollection.css'
-
 
 function GalleryCollection(){
 
@@ -28,6 +22,9 @@ function GalleryCollection(){
         "themodern": themodern,
         "urbano": urbano,
     }
+
+    console.log(GalleryJSON)
+
 
     return(
     <>

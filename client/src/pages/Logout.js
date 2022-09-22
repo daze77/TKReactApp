@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Navigate } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import { useStoreContext } from "../utils/GlobalStore"
 import fetchJSON from "../utils/API"
 
@@ -21,7 +21,7 @@ function Logout(){
 
     return (
         <>
-            { !authOk && <Navigate to='/login' /> }
+            { !authOk && <Redirect to='/login' /> }
             <h1>Please wait, logging out...</h1>
         </>
     )

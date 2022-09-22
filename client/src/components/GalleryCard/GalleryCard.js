@@ -7,7 +7,7 @@ import {useCreateObserver}  from '../LazyLoadImages/IntersectionObserver'
 
 
 function GalleryCard (props) {
-    console.log('did the propsget passed', props)
+    // console.log('did the propsget passed', props)
 
 
     let Title = props.Title.toUpperCase()
@@ -33,7 +33,7 @@ function GalleryCard (props) {
                 <Link to={props.Link}
                     state={props.Title}>
                     <div  ref={imgRef}  className="card gallerygrid"  > 
-                         <img className="card-img" src={isInView ? props.ImageName : ""} alt={props.ImageName}/>
+                         <img className="card-img" src={isInView ? props.ImageName : ""} alt={'Picture'}/>
                         <div className="card-img-overlay">
                             <h5 className="card-title w-100 ">{Title}</h5>
                             {(propsCheck) ? <button type="button" class="btn btn-primary" onClick={() => props.AddToBasket({"Title": props.Title, "ID": props._id, "ImageName": props.ImageName, "URL": URL})}>Buy</button> : ''}

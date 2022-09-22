@@ -28,7 +28,7 @@ function WallCoverings(){
                         Id = {wc.Id}
                         Title = {wc.Title}
                         ImageName = {URL + wc.Image}
-                        Link = {wc.Link}
+                        Link = {'WallCoverings/' + wc.Link}
                         />
                     ))}
 

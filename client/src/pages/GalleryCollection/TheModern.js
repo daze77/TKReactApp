@@ -19,6 +19,7 @@ function TheModern(props) {
 
 
  async function loadGALItems(){
+    console.log('hi we are here')
     if(clickedItem){
         const {URL, SubLink} = await fetchJSON('/api/GALpull', 'post', {Title: clickedItem})
         SubLink.forEach(item => item.showPrice=false)

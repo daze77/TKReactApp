@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react"
-import { Navigate, Link } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import { useStoreContext } from "../utils/GlobalStore"
 import fetchJSON from "../utils/API"
 
@@ -54,7 +54,7 @@ function Register(){
 
     return (
         <>
-            { authOk ? <Navigate to='/' /> : '' }
+            { authOk ? <Redirect to='/' /> : '' }
             <form className="container " ref={refForm}>
                 <div className="utilitiesCard   mt-5">
                     <div className="utilitiesCard-header">

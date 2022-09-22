@@ -190,9 +190,7 @@ async function getGALImages(title){
    let results
    let GALDetails =[]
    if(title){
-      const {Title} = title
-      results = await db.gallerys.find({Title})
-
+      results = await db.gallerys.find({title})
       for (const {SubLink} of results){
          [GALDetails] = [{SubLink}] 
       }
@@ -209,8 +207,10 @@ async function getGALImages(title){
 
 // need to pass title here so that I can get the right information
 async function getGALPrice(id, clickedItem){
+   console.log(id, clickedItem)
   
-   const [results] = await db.gallerys.find({'Title': clickedItem, 'SubLink._id':id},{'SubLink.$':1})
+const [results] = await db.gallerys.find({'SubLink._id': id}, {'SubLink.$':1})
+   console.log('these are the results from the subLink sarch',results.Price)
 
    return(results.SubLink)
 }

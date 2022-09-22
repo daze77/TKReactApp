@@ -24,7 +24,7 @@ function router( app ){
    const stripe = require("stripe")('sk_test_51JzCTiJvID62zcJ68B18msCM9E17M9OSzxyNF5746507gKM8peVUt4tUMd2HWQeC9pAbdAFJBDTgViW9c8tL6l3p00tDzWeqvC');
 
    async function calCosts(b){
-      // console.log('this is the b', b)
+      console.log('this is the b', b)
 
       let totalBasketCost = 0
       let priceList =[]
@@ -32,7 +32,8 @@ function router( app ){
       for (let i=0; i<b.length; i++){
 
          if(b[i].page === "GalleryCollection"){
-            let [results] = await orm.getGALPrice(b[i].id, b[i].clickedItem)
+            
+            let [results] = await orm.getGALPrice(b[i].id, b[i].title)
             
             priceList.push({
                id: results._id, 
@@ -159,11 +160,14 @@ function router( app ){
    })
 
    app.post('/api/GALpull', async function (req, res){
+      console.log('ROUTER')
       const JSONLIST = await orm.getGALImages(req.body)
+      console.log('ROUTER', JSONLIST)
       res.send(JSONLIST)
    })
 
-   app.get('/api/GALpull', async function (req, res){      
+   app.get('/api/GALpull', async function (req, res){ 
+      console.log('ROUTER GET')     
       const JSONLIST = await orm.getGALImages()
       res.send(JSONLIST)
    })
